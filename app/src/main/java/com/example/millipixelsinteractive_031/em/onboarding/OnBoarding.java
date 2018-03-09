@@ -35,7 +35,7 @@ public class OnBoarding extends Activity {
     ViewPager view_pager;
 
     @BindView(R.id.btn_skip)
-    Button btn_skip;
+    com.example.millipixelsinteractive_031.em.typeface.FontsClassLight btn_skip;
 
     OnboardViewpagerAdapter onboardViewpagerAdapter;
 

@@ -28,6 +28,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/margin_10_dp"
         android:padding="@dimen/padding_5dp"
         android:gravity="center"
         android:layout_marginTop="@dimen/margin_15_dp"
