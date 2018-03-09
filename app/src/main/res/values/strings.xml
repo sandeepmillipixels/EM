@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EM</string>
+    <string name="skip">Skip</string>
+
+    <string name="login">Login</string>
+
+    <string name="signup">Signup</string>
+    <string name="verify">Verify</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="change_number">Change Number</string>
+    <string name="not_received_otp">Did not receive OTP?</string>
+    <string name="resend_otp">Resend OTP?</string>
+    <string name="enter_phone_email">Enter your Phone Number and Email</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_phone">Enter Phone Number</string>
+    <string name="enter_your_phone">Enter Your Phone Number</string>
+    <string name="copyright">Copyrights 2018. All Rights Reserved.</string>
+    <string name="verify_mobile">Verify Mobile Number</string>
+    <string name="splashText">Keep eye on your \n every expenses</string>
+    <string name="wallet">Wallet</string>
+    <string name="saving">Saving</string>
+
+    <string name="saving_desc"> Sed ut perspiciatis unde omnis iste natus error sit \n
+    voluptatem accusantium doloremque laudantium \n
+    totam rem aperiam, eaque ipsa quae ab illo \n
+    inventore veritatis et quasi </string>
+    <string name="wallet_description">Lorem ipsum dolor sit amet, consectetur adip \n
+        iscing elit, sed do eiusmod tempor incididunt \n
+        ut labore et dolore magna aliqua ut enim \n
+        ad minim veniam</string>
+
+</resources>

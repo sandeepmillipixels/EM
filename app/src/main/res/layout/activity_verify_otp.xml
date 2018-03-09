@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:background="@drawable/app_gradient"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"></LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtSkip"
+                android:layout_margin="18dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:text="@string/skip"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_marginTop="72dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo_head"
+                android:layout_width="180dp"
+                android:layout_height="80dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_below="@+id/imgLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="12dp"
+                    android:id="@+id/layout_action"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:text="Verify Otp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/login_container"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/verify_otp_card_layout"></include>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2ad0ff</color>
+    <color name="colorSecondary">#30abff</color>
+    <color name="colorPrimaryDark">#239dcc</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="splasgDesc">#737373</color>
+
+    <color name="selectedColor">#30abff</color>
+    <color name="unselectedColor">#c0e6ff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="colorTransGrey">#f0f0f0</color>
+
+    <color name="dotColor">#F0F0F0</color>
+
+    <array name="array_dot_active">
+        <item>@color/selectedColor</item>
+        <item>@color/selectedColor</item>
+        <item>@color/selectedColor</item>
+        <item>@color/selectedColor</item>
+    </array>
+
+
+    <array name="array_dot_inactive">
+        <item>@color/unselectedColor</item>
+        <item>@color/unselectedColor</item>
+        <item>@color/unselectedColor</item>
+        <item>@color/unselectedColor</item>
+    </array>
+</resources>
