@@ -23,7 +23,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
+    <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
         android:textStyle="bold"
         android:textSize="14sp"
         android:id="@+id/txtEnterText"
@@ -35,7 +35,7 @@
         android:text="@string/enter_phone_email"
          />
 
-    <EditText
+    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
         android:hint="@string/enter_email"
         android:id="@+id/edtEmail"
         android:singleLine="true"
@@ -60,7 +60,7 @@
         android:layout_below="@+id/spnCountarySignup"
         android:layout_width="match_parent"
         android:layout_height="0.4dp"></View>
-    <EditText
+    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
         android:hint="@string/enter_phone"
         android:id="@+id/edtPhone"
         android:textSize="14sp"
@@ -71,7 +71,7 @@
         android:layout_below="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <Button
+    <com.example.millipixelsinteractive_031.em.typeface.FontButton
         android:id="@+id/btnSendOtpSignup"
         android:layout_marginBottom="36dp"
         android:layout_below="@+id/edtPhone"

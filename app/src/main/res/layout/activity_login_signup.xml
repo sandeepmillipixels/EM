@@ -46,11 +46,11 @@
                 android:layout_height="wrap_content" />
             <ImageView
                 android:id="@+id/imgLogo"
-                android:layout_marginTop="72dp"
+                android:layout_marginTop="@dimen/margin_70_dp"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/logo_head"
-                android:layout_width="180dp"
-                android:layout_height="80dp" />
+                android:layout_width="@dimen/logo_width"
+                android:layout_height="@dimen/logo_height" />
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_below="@+id/imgLogo"
@@ -59,6 +59,7 @@
                 <LinearLayout
                     android:layout_marginRight="40dp"
                     android:layout_marginLeft="40dp"
+                    android:layout_marginTop="@dimen/margin_30_dp"
                     android:layout_marginBottom="12dp"
                     android:id="@+id/layout_action"
                     android:orientation="horizontal"
@@ -66,17 +67,17 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:textSize="18sp"
                         android:id="@+id/txtLogin"
-                        android:textColor="@color/white"
-                        android:text="Login"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="Login"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/txtSignup"
                         android:alpha="0.6"
-                        android:layout_marginLeft="12dp"
+                        android:layout_marginLeft="@dimen/margin_15_dp"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:text="Sign up"
