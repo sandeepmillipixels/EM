@@ -34,23 +34,10 @@
         android:layout_marginTop="24dp"
         android:text="@string/enter_phone_email"
          />
-
-    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-        android:hint="@string/enter_email"
-        android:id="@+id/edtEmail"
-        android:singleLine="true"
-        android:lines="1"
-        android:imeOptions="actionNext"
-        android:textSize="14sp"
-        android:layout_marginTop="32dp"
-        android:layout_below="@+id/txtEnterText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/spnCountarySignup"
         android:layout_marginTop="24dp"
-        android:layout_below="@+id/edtEmail"
+        android:layout_below="@+id/txtEnterText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <View
@@ -60,6 +47,20 @@
         android:layout_below="@+id/spnCountarySignup"
         android:layout_width="match_parent"
         android:layout_height="0.4dp"></View>
+
+
+    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+        android:hint="@string/enter_email"
+        android:id="@+id/edtEmail"
+        android:singleLine="true"
+        android:lines="1"
+        android:imeOptions="actionNext"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
         android:hint="@string/enter_phone"
         android:id="@+id/edtPhone"
@@ -68,7 +69,7 @@
         android:lines="1"
         android:imeOptions="actionDone"
         android:layout_marginTop="24dp"
-        android:layout_below="@+id/divider"
+        android:layout_below="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <com.example.millipixelsinteractive_031.em.typeface.FontButton

@@ -3,6 +3,7 @@ package com.example.millipixelsinteractive_031.em.login_signup;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.AppCompatSpinner;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,14 +32,19 @@ import butterknife.OnClick;
 
 public class LoginSignupActivity extends Activity {
 
-    EditText mobileEditText;
-    EditText emailEditText;
-    Button submitButton;
+    @BindView(R.id.edtPhone)
+    EditText edtPhone;
+
+    @BindView(R.id.edtEmail)
+    EditText edtEmail;
+
+    @BindView(R.id.edtPhoneLogin)
+    EditText edtPhoneLogin;
+
     String email;
     String mobileNumber;
     private List<String> country_list = new ArrayList<>();
-    @BindView(R.id.spnCountary)
-    AppCompatSpinner spnCountary;
+
 
 
     @BindView(R.id.spnCountarySignup)
@@ -66,7 +72,7 @@ public class LoginSignupActivity extends Activity {
         country_list.add("Singapore");
         country_list.add("Austria");
         setSpinner();
-        setSpinnerCountry();
+
         if (getIntent().getExtras() != null){
             if (getIntent().getExtras().containsKey(Constants.LOGIN)){
                 onLoginTapped();
@@ -74,27 +80,6 @@ public class LoginSignupActivity extends Activity {
                 onSignupTapped();
             }
         }
-//        submitButton.setOnClickListener(submitButton_listener);
-
-    }
-
-    private void setSpinnerCountry() {
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, country_list);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spnCountarySignup.setAdapter(adapter);
-        spnCountarySignup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
     }
 
     @OnClick(R.id.txtSignup)
@@ -112,21 +97,46 @@ public class LoginSignupActivity extends Activity {
     }
 
     @OnClick(R.id.btnSendOtpLogin)
-    public void onSendOtpLogin(){
-        Intent intent = new Intent(this, VerifyOtpActity.class);
-        startActivity(intent);
-
+    public void onSendOtpLogin(View v){
+        if(mobileNumber.length()==0){
+            Snackbar.make(v,"Please enter phone number.",2000).show();
+        }
+        else if(!(mobileNumber.length() >0 && mobileNumber.length()>=10 && mobileNumber.length()<=13)){
+            Snackbar.make(v,"Please enter valid phone number.",2000).show();
+        }else {
+            Intent intent = new Intent(this, VerifyOtpActity.class);
+            startActivity(intent);
+        }
     }
 
     @OnClick(R.id.btnSendOtpSignup)
-    public void onSendOtpSignup(){
-        Intent intent = new Intent(this, VerifyOtpActity.class);
-        startActivity(intent);
+    public void onSendOtpSignup(View v){
+        mobileNumber=edtPhone.getText().toString().trim();
+        email=edtPhone.getText().toString().trim();
+
+        if(mobileNumber.length()==0){
+            Snackbar.make(v,"Please enter phone number.",2000).show();
+        }
+        else if(!(mobileNumber.length() >0 && mobileNumber.length()>=10 && mobileNumber.length()<=13)){
+            Snackbar.make(v,"Please enter valid phone number.",2000).show();
+        }
+        else if(email.length()==0){
+            Snackbar.make(v,"Please enter email address.",2000).show();
+        }
+        else if(!Utilities.emailValidation(email)){
+            Snackbar.make(v,"Please enter valid email address.",2000).show();
+        }
+        else {
+            Intent intent = new Intent(this, VerifyOtpActity.class);
+            startActivity(intent);
+        }
+
 
     }
 
     @OnClick(R.id.txtLogin)
     public void onLoginTapped(){
+        mobileNumber = edtPhoneLogin.getText().toString().trim();
         txtSignup.setAlpha(0.6f);
         txtLogin.setAlpha(1);
         signup_container.setVisibility(View.GONE);
@@ -136,15 +146,12 @@ public class LoginSignupActivity extends Activity {
     private void setSpinner(){
         ArrayAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, country_list);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spnCountary.setAdapter(adapter);
-        spnCountary.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spnCountarySignup.setAdapter(adapter);
+        spnCountarySignup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-
-
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
@@ -152,32 +159,5 @@ public class LoginSignupActivity extends Activity {
         });
 
     }
-    private View.OnClickListener submitButton_listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mobileNumber=mobileEditText.getText().toString();
-                email=emailEditText.getText().toString();
 
-                if(mobileNumber.length()==0){
-
-                }
-
-                else if(!(mobileNumber.length() >0 && mobileNumber.length()>=10 && mobileNumber.length()<=13)){
-
-
-                }
-
-                else if(email.length()==0){
-
-                }
-
-                else if(!Utilities.emailValidation(email)){
-
-                }
-
-                else {
-
-                }
-            }
-        };
 }

@@ -38,7 +38,8 @@
 
             <android.support.v7.widget.AppCompatSpinner
                 android:id="@+id/spnCountary"
-                android:layout_marginTop="32dp"
+                android:visibility="invisible"
+
                 android:layout_below="@+id/txtEnterText"
 
                 android:layout_width="match_parent"
@@ -46,6 +47,7 @@
 
 
             <View
+                android:visibility="invisible"
                 android:id="@+id/divider_spinner"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/black"
@@ -55,12 +57,12 @@
 
             <EditText
                 android:hint="@string/enter_your_phone"
-                android:id="@+id/edtPhone"
+                android:id="@+id/edtPhoneLogin"
                 android:singleLine="true"
                 android:lines="1"
                 android:imeOptions="actionNext"
                 android:textSize="14sp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="12dp"
                 android:layout_below="@+id/divider_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -68,7 +70,7 @@
             <Button
                 android:id="@+id/btnSendOtpLogin"
                 android:layout_marginBottom="36dp"
-                android:layout_below="@+id/edtPhone"
+                android:layout_below="@+id/edtPhoneLogin"
                 android:layout_centerHorizontal="true"
                 android:paddingLeft="60dp"
                 android:layout_marginTop="28dp"
