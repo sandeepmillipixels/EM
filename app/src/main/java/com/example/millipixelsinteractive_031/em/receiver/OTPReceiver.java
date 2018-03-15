@@ -30,6 +30,7 @@ public class OTPReceiver extends BroadcastReceiver {
             String sender = smsMessage.getDisplayOriginatingAddress();
 
             String messageBody = smsMessage.getMessageBody();
+          //  messageBody = messageBody.substring(0, messageBody.length()-1);
 
             mListener.autoFillOTP(messageBody);
         }

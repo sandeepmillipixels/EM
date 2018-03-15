@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:id="@+id/txtEnterText"
@@ -38,9 +38,9 @@
 
             <android.support.v7.widget.AppCompatSpinner
                 android:id="@+id/spnCountary"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="@dimen/margin_10_dp"
                 android:layout_below="@+id/txtEnterText"
-
+                android:visibility="invisible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -51,6 +51,7 @@
                 android:background="@android:color/black"
                 android:layout_below="@+id/spnCountary"
                 android:layout_width="match_parent"
+                android:visibility="invisible"
                 android:layout_height="0.4dp"></View>
 
             <EditText
@@ -60,7 +61,6 @@
                 android:lines="1"
                 android:imeOptions="actionNext"
                 android:textSize="14sp"
-                android:layout_marginTop="24dp"
                 android:layout_below="@+id/divider_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

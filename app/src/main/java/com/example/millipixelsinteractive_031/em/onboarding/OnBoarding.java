@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
+import com.example.millipixelsinteractive_031.em.dashboard.Dashboard;
 import com.example.millipixelsinteractive_031.em.login_signup.LoginSignupActivity;
 import com.example.millipixelsinteractive_031.em.utils.Constants;
 
@@ -105,8 +106,7 @@ public class OnBoarding extends Activity {
 
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {
-                // last page. make button text to GOT IT
-               // btn_skip.setVisibility(View.GONE);
+
             } else {
                 // still pages are left
 
@@ -127,7 +127,7 @@ public class OnBoarding extends Activity {
 
     @OnClick(R.id.btn_skip)
     public void onSkip(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
     }
 
