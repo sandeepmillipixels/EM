@@ -66,6 +66,9 @@
         android:textSize="14sp"
         android:singleLine="true"
         android:lines="1"
+        android:maxLength="13"
+        android:elevation="5dp"
+
         android:imeOptions="actionDone"
         android:layout_marginTop="24dp"
         android:layout_below="@+id/divider"
@@ -75,6 +78,7 @@
         android:id="@+id/btnSendOtpSignup"
         android:layout_marginBottom="36dp"
         android:layout_below="@+id/edtPhone"
+        android:inputType="number"
         android:layout_centerHorizontal="true"
         android:paddingLeft="60dp"
         android:layout_marginTop="28dp"

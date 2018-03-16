@@ -29,7 +29,7 @@
 
         <com.example.millipixelsinteractive_031.em.typeface.FontsClass
             android:layout_below="@+id/total_spending_title"
-            android:id="@+id/total_amountTextView"
+            android:id="@+id/txtTotalAmount"
             android:textColor="@color/white"
             android:text="$3000"
             android:textSize="@dimen/size_20dp"

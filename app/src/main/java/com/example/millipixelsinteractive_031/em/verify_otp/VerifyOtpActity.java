@@ -1,11 +1,14 @@
 package com.example.millipixelsinteractive_031.em.verify_otp;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
@@ -19,20 +22,22 @@ import butterknife.OnClick;
 
 public class VerifyOtpActity extends AppCompatActivity {
 
-    @BindView(R.id.first_digit_EditText)
-    EditText first_digit_EditText;
-
-    @BindView(R.id.second_digit_EditText)
-    EditText second_digit_EditText;
-
-    @BindView(R.id.third_digit_EditText)
-    EditText third_digit_EditText;
-
-    @BindView(R.id.fourth_digit_EditText)
-    EditText fourth_digit_EditText;
-
     @BindView(R.id.btnVerify)
     Button btnVerify;
+    @BindView(R.id.edt1)
+    EditText edt1;
+
+    @BindView(R.id.edt2)
+    EditText edt2;
+
+    @BindView(R.id.edt3)
+    EditText edt3;
+
+    @BindView(R.id.edt4)
+    EditText edt4;
+
+    @BindView(R.id.txtResendOtp)
+    TextView txtResendOtp;
 
 
     @Override
@@ -42,40 +47,50 @@ public class VerifyOtpActity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
-        OTPReceiver.bindListener(new SmsView() {
+//        OTPReceiver.bindListener(new SmsView() {
+//
+//            @Override
+//            public void autoFillOTP(String otp) {
+//
+//                    char first = otp.charAt(0);
+//                    char second = otp.charAt(1);
+//                    char third = otp.charAt(2);
+//                    char fourth = otp.charAt(3);
+//
+//                    first_digit_EditText.setText(String.valueOf(first));
+//                    second_digit_EditText.setText(String.valueOf(second));
+//                    third_digit_EditText.setText(String.valueOf(third));
+//                    fourth_digit_EditText.setText(String.valueOf(fourth));
+//
+//
+//                Log.e("OTP",otp);
 
-            @Override
-            public void autoFillOTP(String otp) {
-
-                    char first = otp.charAt(0);
-                    char second = otp.charAt(1);
-                    char third = otp.charAt(2);
-                    char fourth = otp.charAt(3);
-
-                    first_digit_EditText.setText(String.valueOf(first));
-                    second_digit_EditText.setText(String.valueOf(second));
-                    third_digit_EditText.setText(String.valueOf(third));
-                    fourth_digit_EditText.setText(String.valueOf(fourth));
-
-
-                Log.e("OTP",otp);
-
-            }
-        });
+//            }
+//        });
 
     }
     @OnClick(R.id.btnChangeNumber)
     public void onChangeNumber(){
         finish();
     }
-    @OnClick(R.id.txtSkip)
-    public void onSkipped(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+
+    @OnClick(R.id.txtResendOtp)
+    public void onResendOtp(View v){
+        Snackbar.make(v,"OTP sent to selected phone number.",2000).show();
     }
 
+
     @OnClick(R.id.btnVerify)
-    public void verify(){
+    public void onVerify(View v){
+        if (edt1.getText().toString().trim().length() == 1 && edt2.getText().toString().trim().length() == 1 && edt3.getText().toString().trim().length() == 1 && edt4.getText().toString().trim().length() == 1){
+            Intent intent = new Intent(this, Dashboard.class);
+            startActivity(intent);
+        }else {
+            Snackbar.make(v,"Please enter OTP.",2000).show();
+        }
+    }
+    @OnClick(R.id.txtSkip)
+    public void onSkipped(){
         Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
     }

@@ -23,14 +23,12 @@ import android.widget.TextView;
 
 import com.example.millipixelsinteractive_031.em.R;
 import com.example.millipixelsinteractive_031.em.adapter.DashboardAdapter;
-import com.example.millipixelsinteractive_031.em.adapter.PagerAdapter;
 import com.example.millipixelsinteractive_031.em.adapter.ViewPagerAdapter;
 import com.example.millipixelsinteractive_031.em.addexpense.AddExpense;
-import com.example.millipixelsinteractive_031.em.database.SqliteDatabaseClass;
+import com.example.millipixelsinteractive_031.em.database.AllExpensesDataSource;
 import com.example.millipixelsinteractive_031.em.fragments.MonthlyExpenseFragment;
-import com.example.millipixelsinteractive_031.em.model.Data;
 
-import java.util.ArrayList;
+import java.sql.SQLException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -46,20 +44,21 @@ public class Dashboard extends AppCompatActivity
 
     DashboardAdapter adapter;
 
-    ArrayList<Data>arrayList;
-
-    SqliteDatabaseClass db;
-
     @BindView(R.id.viewPager)
     ViewPager viewPager;
+
+    @BindView(R.id.txtTotalAmount)
+    TextView txtTotalAmount;
+    AllExpensesDataSource allExpensesDataSource;
+
+    float totalAmount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         ButterKnife.bind(this);
-
-        db=new SqliteDatabaseClass(this);
+        allExpensesDataSource = new AllExpensesDataSource(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -68,10 +67,8 @@ public class Dashboard extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent=new Intent(Dashboard.this,AddExpense.class);
                 startActivity(intent);
-
             }
         });
 
@@ -83,13 +80,21 @@ public class Dashboard extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
+        getTotalAmoutExpense();
 
+    }
 
+    private void getTotalAmoutExpense(){
+        try {
+            allExpensesDataSource.open();
+            totalAmount = allExpensesDataSource.getSumAllExpenses();
+            allExpensesDataSource.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        txtTotalAmount.setText("$"+totalAmount);
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -117,7 +122,7 @@ public class Dashboard extends AppCompatActivity
 //        getMenuInflater().inflate(R.menu.dashboard, menu);
 //        return true;
 //    }
-//
+
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
 //        // Handle action bar item clicks here. The action bar will

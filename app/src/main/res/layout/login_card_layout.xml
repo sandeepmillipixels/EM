@@ -56,19 +56,22 @@
 
             <EditText
                 android:hint="@string/enter_your_phone"
-                android:id="@+id/edtPhone"
+                android:id="@+id/edtPhoneLogin"
                 android:singleLine="true"
                 android:lines="1"
-                android:imeOptions="actionNext"
+                android:maxLength="13"
+                android:inputType="number"
+                android:imeOptions="actionDone"
                 android:textSize="14sp"
                 android:layout_below="@+id/divider_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <Button
+                android:elevation="5dp"
                 android:id="@+id/btnSendOtpLogin"
                 android:layout_marginBottom="36dp"
-                android:layout_below="@+id/edtPhone"
+                android:layout_below="@+id/edtPhoneLogin"
                 android:layout_centerHorizontal="true"
                 android:paddingLeft="60dp"
                 android:layout_marginTop="28dp"

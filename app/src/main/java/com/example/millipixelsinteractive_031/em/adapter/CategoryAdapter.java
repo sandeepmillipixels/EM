@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.millipixelsinteractive_031.em.R;
+import com.example.millipixelsinteractive_031.em.model.ExpenseCategory;
 
 
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
 
-    List<String> arrayList;
+    List<ExpenseCategory> arrayList;
     String symbol;
 
     Context context;
@@ -44,7 +45,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         }
     }
 
-    public CategoryAdapter(List<String> arrayList, Context context,OnItemClickListener listener) {
+    public CategoryAdapter(List<ExpenseCategory> arrayList, Context context, OnItemClickListener listener) {
         this.arrayList = arrayList;
         this.context = context;
         this.listener=listener;
@@ -61,9 +62,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
-        holder.catTextview.setText(arrayList.get(position));
+        holder.catTextview.setText(arrayList.get(position).getCatName());
 
-        String catName=arrayList.get(position);
+        String catName=arrayList.get(position).getCatName();
 
 
         if(catName!=null && catName.equalsIgnoreCase("Food")){

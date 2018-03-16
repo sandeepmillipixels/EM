@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.example.millipixelsinteractive_031.em.R;
 import com.example.millipixelsinteractive_031.em.adapter.DashboardAdapter;
-import com.example.millipixelsinteractive_031.em.database.SqliteDatabaseClass;
 import com.example.millipixelsinteractive_031.em.model.Data;
 
 import java.util.ArrayList;
@@ -25,8 +24,6 @@ import butterknife.BindView;
  * create an instance of this fragment.
  */
 public class MonthlyExpenseFragment extends Fragment {
-
-    SqliteDatabaseClass db;
 
     DashboardAdapter adapter;
 
@@ -51,9 +48,6 @@ public class MonthlyExpenseFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
 
-
-
-
         }
     }
 
@@ -63,30 +57,34 @@ public class MonthlyExpenseFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.dashboard_fragment,
                 container, false);
-
-
         recyclerView=rootView.findViewById(R.id.recyclerView);
-        db=new SqliteDatabaseClass(getActivity());
-
-
-
+        setAdapter();
+        getMonthlyDate();
         return rootView;
+    }
+
+    private void setAdapter(){
+
+    }
+
+    private void getMonthlyDate(){
+
     }
 
     @Override
     public void onResume() {
         super.onResume();
 
-        arrayList= db.getAllRecords();
+//        arrayList= db.getAllRecords();
 
-        if(arrayList.size()!=0){
-            adapter=new DashboardAdapter(arrayList,getActivity());
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-            recyclerView.setLayoutManager(mLayoutManager);
-            recyclerView.setItemAnimator(new DefaultItemAnimator());
-            recyclerView.setAdapter(adapter);
-
-        }
+//        if(arrayList.size()!=0){
+//            adapter=new DashboardAdapter(arrayList,getActivity());
+//            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+//            recyclerView.setLayoutManager(mLayoutManager);
+//            recyclerView.setItemAnimator(new DefaultItemAnimator());
+//            recyclerView.setAdapter(adapter);
+//
+//        }
 
     }
 }
