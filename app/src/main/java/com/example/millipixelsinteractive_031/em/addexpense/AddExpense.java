@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -26,8 +27,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
 import com.example.millipixelsinteractive_031.em.category.CategoryActivity;
+import com.example.millipixelsinteractive_031.em.dashboard.Dashboard;
 import com.example.millipixelsinteractive_031.em.database.AllExpensesDataSource;
 
 
@@ -99,7 +102,7 @@ public class AddExpense extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_expense);
         ButterKnife.bind(this);
-
+        allExpensesDataSource = new AllExpensesDataSource(this);
         initToolBar();
     }
 
@@ -122,7 +125,7 @@ public class AddExpense extends AppCompatActivity {
     }
 
     @OnClick(R.id.saveButton)
-    public void saveButtonClick(){
+    public void saveButtonClick(View v){
 
         amount=edtAmount.getText().toString();
         category=edtCategoryName.getText().toString();
@@ -130,29 +133,28 @@ public class AddExpense extends AppCompatActivity {
         date=edtDate.getText().toString();
         expense_name=edtExpenseName.getText().toString();
 
-
         if(expense_name.length()==0){
-
-            Toast.makeText(this, "Please enter expense name.", Toast.LENGTH_SHORT).show();
+            Snackbar.make(v,"Please enter expense name.",2000).show();
+//            Toast.makeText(this, "Please enter expense name.", Toast.LENGTH_SHORT).show();
 
         }else if(amount.length()==0){
 
-
-            Toast.makeText(this, "Please enter amount.", Toast.LENGTH_SHORT).show();
+            Snackbar.make(v,"Please enter amount.",2000).show();
+//            Toast.makeText(this, "Please enter amount.", Toast.LENGTH_SHORT).show();
 
         }else if(category.length()==0){
-
-            Toast.makeText(this, "Please select category.", Toast.LENGTH_SHORT).show();
+            Snackbar.make(v,"Please select category.",2000).show();
+//            Toast.makeText(this, "Please select category.", Toast.LENGTH_SHORT).show();
 
         }else if(date.length()==0){
-
-            Toast.makeText(this, "Please select date.", Toast.LENGTH_SHORT).show();
+            Snackbar.make(v,"Please select date.",2000).show();
+//            Toast.makeText(this, "Please select date.", Toast.LENGTH_SHORT).show();
 
         }else{
             AllExpenses allExpenses = new AllExpenses();
             allExpenses.setCategory_id(catId);
             allExpenses.setCategory_name(category);
-            allExpenses.setExpense_name(amount);
+            allExpenses.setExpense_name(expense_name);
             allExpenses.setExpense_amount(amount);
             allExpenses.setExpense_date(date+" "+ Utility.getCurrentTime());
             allExpenses.setExpense_date_milli(Utility.getTimeInMilli(date+" "+ Utility.getCurrentTime()));
@@ -164,6 +166,10 @@ public class AddExpense extends AppCompatActivity {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            Snackbar.make(v,"Expense successfully added.",2000).show();
+//            Intent intent = new Intent( AddExpense.this, Dashboard.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            startActivity(intent);
         }
 
 
@@ -243,7 +249,7 @@ public class AddExpense extends AppCompatActivity {
             if (data != null && data.getExtras() != null){
                 category = data.getStringExtra("catName");
                 catId = data.getLongExtra("catId",0);
-                edtCategoryName.setText(catName);
+                edtCategoryName.setText(category);
             }
         }
     }

@@ -117,7 +117,7 @@ public class LoginSignupActivity extends Activity {
 
     @OnClick(R.id.txtSkip)
     public void onSkipped(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
     }
 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.millipixelsinteractive_031.em.addexpense.ExpenseListBycategoryActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_gradient"
+        android:layout_height="@dimen/topbar_height">
+
+
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/container"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:id="@+id/ico_categories"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+            <RelativeLayout
+                android:padding="8dp"
+                android:orientation="vertical"
+
+                android:layout_toRightOf="@id/ico_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtCategoryName"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:text="Food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/txtAmount"
+                    android:text="0.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:visibility="gone"
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/rvExpenseList" android:layout_height="wrap_content" android:layout_width="match_parent" />
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

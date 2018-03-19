@@ -3,6 +3,7 @@ package com.example.millipixelsinteractive_031.em.category;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import android.view.View;
 import com.example.millipixelsinteractive_031.em.R;
 import com.example.millipixelsinteractive_031.em.adapter.CategoryAdapter;
 import com.example.millipixelsinteractive_031.em.addexpense.AddExpense;
+import com.example.millipixelsinteractive_031.em.dashboard.Dashboard;
 import com.example.millipixelsinteractive_031.em.database.ExpenseCategoryDataSource;
 import com.example.millipixelsinteractive_031.em.model.ExpenseCategory;
 
@@ -47,7 +49,21 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
         ButterKnife.bind(this);
         initToolBar();
         getCategories();
+        setAdapter();
 //        arrayList= Arrays.asList(getResources().getStringArray(R.array.categoryArray));
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CategoryActivity.this,AddEditCategoryActivity.class);
+                intent.putExtra("isNew",true);
+                startActivityForResult(intent,100);
+            }
+        });
+    }
+
+    private void setAdapter(){
         adapter=new CategoryAdapter(expenseCategoryArrayList,this,this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         category_recyclerView.setLayoutManager(mLayoutManager);
@@ -92,5 +108,13 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
          finish();
 
 
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 100 && resultCode == RESULT_OK){
+            getCategories();
+            setAdapter();
+        }
     }
 }

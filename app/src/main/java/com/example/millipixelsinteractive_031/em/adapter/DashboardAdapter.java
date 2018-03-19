@@ -1,6 +1,7 @@
 package com.example.millipixelsinteractive_031.em.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -13,8 +14,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
-import com.example.millipixelsinteractive_031.em.model.Data;
+import com.example.millipixelsinteractive_031.em.addexpense.ExpenseListBycategoryActivity;
+import com.example.millipixelsinteractive_031.em.model.ExpenseCategory;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -28,7 +31,7 @@ import java.util.ArrayList;
 
 public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyViewHolder> {
 
-    ArrayList<Data>arrayList;
+    ArrayList<ExpenseCategory>arrayList;
     String symbol;
 
     Context context;
@@ -51,7 +54,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
         }
     }
 
-    public DashboardAdapter(ArrayList<Data>arrayList, Context context) {
+    public DashboardAdapter(ArrayList<ExpenseCategory>arrayList, Context context) {
         this.arrayList=arrayList;
         this.context=context;
 
@@ -71,13 +74,18 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
 
 
 
-        holder.categoryNameTextView.setText(arrayList.get(position).getCategory());
-        holder.categoryTextView.setText(arrayList.get(position).getCategory());
-        holder.dateTextView.setText(arrayList.get(position).getDate());
+        holder.categoryNameTextView.setText(arrayList.get(position).getCatName());
         holder.amountTextView.setText("$"+arrayList.get(position).getAmount());
+        holder.layout_dashboard_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context,ExpenseListBycategoryActivity.class);
+                intent.putExtra("category",arrayList.get(position));
+                context.startActivity(intent);
+            }
+        });
 
-
-        String catName=arrayList.get(position).getCategory();
+        String catName=arrayList.get(position).getCatName();
 
 
         if(catName!=null && catName.equalsIgnoreCase("Food")){

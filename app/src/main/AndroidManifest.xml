@@ -5,13 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
+
     <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:allowBackup="true"
         android:name=".ExpenseManagerApplication"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -52,9 +53,14 @@
         <activity
             android:name=".dashboard.Dashboard"
             android:label="@string/title_activity_dashboard"
+            android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme" />
-        <activity android:name=".addexpense.AddExpense"></activity>
-        <activity android:name=".category.CategoryActivity"></activity>
+        <activity android:name=".addexpense.AddExpense" android:screenOrientation="portrait"/>
+        <activity android:name=".category.CategoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".addexpense.ExpenseListBycategoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".settings.BackupActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".settings.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".category.AddEditCategoryActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
