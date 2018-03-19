@@ -191,14 +191,12 @@ public class AddExpense extends AppCompatActivity {
     @OnClick(R.id.firstImage)
     public void firstImageClick(){
 
-       // if(cameraPermission()!=true && StoragePermission()!=true){
-            takePicture();
-
-//        }else{
-//            cameraPermission();
-//            StoragePermission();
-//        }
-
+        int MyVersion = Build.VERSION.SDK_INT;
+        if (MyVersion > Build.VERSION_CODES.LOLLIPOP_MR1) {
+            if (!checkIfAlreadyhavePermission()) {
+                requestForSpecificPermission();
+            }
+        }
     }
 
     @OnClick(R.id.secondImage)
@@ -208,22 +206,18 @@ public class AddExpense extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if (requestCode == 0) {
-            if (ContextCompat.checkSelfPermission(this,
-                    Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(getApplicationContext(),
-                        "FlagUp Requires Access to Camara.", Toast.LENGTH_SHORT)
-                        .show();
-                finish();
-            } else if (ContextCompat.checkSelfPermission(this,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(getApplicationContext(),
-                        "FlagUp Requires Access to Your Storage.",
-                        Toast.LENGTH_SHORT).show();
-                finish();
-            } else {
-                takePicture();
-            }
+        switch (requestCode) {
+            case 101:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    takePicture();
+
+                } else {
+                    //not granted
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 
@@ -320,5 +314,18 @@ public class AddExpense extends AppCompatActivity {
                 }, mYear, mMonth, mDay);
         datePickerDialog.show();
     }
+
+    private boolean checkIfAlreadyhavePermission() {
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.GET_ACCOUNTS);
+        if (result == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    private void requestForSpecificPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
+    }
+
 
 }
