@@ -31,10 +31,12 @@ public class ExpenseManagerDatabaseHandler extends SQLiteOpenHelper {
 
     public static final String KEY_CATEGORY_ID = "category_id";
     public static final String KEY_EXPENSE_CATEGORY_NAME = "category_name";
+    public static final String KEY_EXPENSE_NAME = "expense_name";
     public static final String KEY_EXPENSE_AMOUNT = "expense_amount";
     public static final String KEY_EXPENSE_DATE = "expense_date";
     public static final String KEY_EXPENSE_DATE_MILLI = "expense_date_milli";
     public static final String KEY_EXPENSE_NOTE = "expense_note";
+    public static final String KEY_EXPENSE_IMAGE = "expense_image";
 
 
 
@@ -53,7 +55,7 @@ public class ExpenseManagerDatabaseHandler extends SQLiteOpenHelper {
         db.execSQL(CREATE_EXPENSE_CATEGORY_TABLE);
 
         String CREATE_ALL_EXPENSE_TABLE = "CREATE TABLE " + TABLE_ALL_EXPENSES + "("
-                + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_CATEGORY_ID + " INTEGER," + KEY_EXPENSE_CATEGORY_NAME + " TEXT," + KEY_EXPENSE_AMOUNT + " TEXT," +  KEY_EXPENSE_DATE + " TEXT,"+  KEY_EXPENSE_DATE_MILLI + " INTEGER," + KEY_EXPENSE_NOTE + " TEXT" + ")";
+                + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_CATEGORY_ID + " INTEGER," + KEY_EXPENSE_CATEGORY_NAME + " TEXT,"+ KEY_EXPENSE_NAME + " TEXT," + KEY_EXPENSE_AMOUNT + " TEXT," +  KEY_EXPENSE_DATE + " TEXT,"+  KEY_EXPENSE_DATE_MILLI + " INTEGER," + KEY_EXPENSE_NOTE + " TEXT,"+ KEY_EXPENSE_IMAGE + " TEXT" + ")";
 
         db.execSQL(CREATE_ALL_EXPENSE_TABLE);
     }

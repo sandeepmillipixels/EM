@@ -60,20 +60,21 @@
         android:layout_below="@+id/spnCountarySignup"
         android:layout_width="match_parent"
         android:layout_height="0.4dp"></View>
+
     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
         android:hint="@string/enter_phone"
         android:id="@+id/edtPhone"
-        android:textSize="14sp"
-        android:singleLine="true"
-        android:lines="1"
-        android:maxLength="13"
-        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_marginTop="24dp"
 
         android:imeOptions="actionDone"
-        android:layout_marginTop="24dp"
-        android:layout_below="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:lines="1"
+        android:maxLength="13"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
     <com.example.millipixelsinteractive_031.em.typeface.FontButton
         android:id="@+id/btnSendOtpSignup"
         android:layout_marginBottom="36dp"
@@ -84,6 +85,7 @@
         android:layout_marginTop="28dp"
         android:paddingRight="60dp"
         android:textAllCaps="false"
+        android:elevation="5dp"
         android:textColor="@color/white"
         android:text="@string/send_otp"
         android:background="@drawable/app_round_button_drawable"

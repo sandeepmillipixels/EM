@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class AllExpensesDataSource {
     private SQLiteDatabase database;
     private ExpenseManagerDatabaseHandler dbHelper;
-    private String[] allColumns = {ExpenseManagerDatabaseHandler._ID, ExpenseManagerDatabaseHandler.KEY_CATEGORY_ID, ExpenseManagerDatabaseHandler.KEY_EXPENSE_CATEGORY_NAME, ExpenseManagerDatabaseHandler.KEY_EXPENSE_AMOUNT, ExpenseManagerDatabaseHandler.KEY_EXPENSE_DATE, ExpenseManagerDatabaseHandler.KEY_EXPENSE_DATE_MILLI, ExpenseManagerDatabaseHandler.KEY_EXPENSE_NOTE};
+    private String[] allColumns = {ExpenseManagerDatabaseHandler._ID, ExpenseManagerDatabaseHandler.KEY_CATEGORY_ID, ExpenseManagerDatabaseHandler.KEY_EXPENSE_CATEGORY_NAME,ExpenseManagerDatabaseHandler.KEY_EXPENSE_NAME, ExpenseManagerDatabaseHandler.KEY_EXPENSE_AMOUNT, ExpenseManagerDatabaseHandler.KEY_EXPENSE_DATE, ExpenseManagerDatabaseHandler.KEY_EXPENSE_DATE_MILLI, ExpenseManagerDatabaseHandler.KEY_EXPENSE_NOTE, ExpenseManagerDatabaseHandler.KEY_EXPENSE_IMAGE};
 
     public AllExpensesDataSource(Context context) {
         dbHelper = new ExpenseManagerDatabaseHandler(context);
@@ -40,10 +40,12 @@ public class AllExpensesDataSource {
         ContentValues contentValues = new ContentValues();
         contentValues.put(ExpenseManagerDatabaseHandler.KEY_CATEGORY_ID, expense.getCategory_id());
         contentValues.put(ExpenseManagerDatabaseHandler.KEY_EXPENSE_CATEGORY_NAME, expense.getCategory_name());
+        contentValues.put(ExpenseManagerDatabaseHandler.KEY_EXPENSE_NAME, expense.getExpense_name());
         contentValues.put(ExpenseManagerDatabaseHandler.KEY_EXPENSE_AMOUNT, expense.getExpense_amount());
         contentValues.put(ExpenseManagerDatabaseHandler.KEY_EXPENSE_DATE, expense.getExpense_date());
         contentValues.put(ExpenseManagerDatabaseHandler.KEY_EXPENSE_DATE_MILLI, expense.getExpense_date_milli());
         contentValues.put(ExpenseManagerDatabaseHandler.KEY_EXPENSE_NOTE, expense.getExpense_note());
+        contentValues.put(ExpenseManagerDatabaseHandler.KEY_EXPENSE_IMAGE, expense.getExpense_image());
         long insertId = database.insert(ExpenseManagerDatabaseHandler.TABLE_ALL_EXPENSES, null, contentValues);
         Cursor cursor = database.query(ExpenseManagerDatabaseHandler.TABLE_ALL_EXPENSES,
                 allColumns, ExpenseManagerDatabaseHandler._ID + " = " + insertId, null,
@@ -177,10 +179,12 @@ public class AllExpensesDataSource {
         localExpenses.setId(cursor.getLong(0));
         localExpenses.setCategory_id(cursor.getLong(1));
         localExpenses.setCategory_name(cursor.getString(2));
-        localExpenses.setExpense_amount(cursor.getString(3));
-        localExpenses.setExpense_date(cursor.getString(4));
-        localExpenses.setExpense_date_milli(cursor.getLong(5));
-        localExpenses.setExpense_note(cursor.getString(6));
+        localExpenses.setExpense_name(cursor.getString(3));
+        localExpenses.setExpense_amount(cursor.getString(4));
+        localExpenses.setExpense_date(cursor.getString(5));
+        localExpenses.setExpense_date_milli(cursor.getLong(6));
+        localExpenses.setExpense_note(cursor.getString(7));
+        localExpenses.setExpense_image(cursor.getString(8));
         return localExpenses;
     }
     public void exportData() {

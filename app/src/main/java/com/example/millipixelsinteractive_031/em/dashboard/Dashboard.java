@@ -27,6 +27,7 @@ import com.example.millipixelsinteractive_031.em.adapter.ViewPagerAdapter;
 import com.example.millipixelsinteractive_031.em.addexpense.AddExpense;
 import com.example.millipixelsinteractive_031.em.database.AllExpensesDataSource;
 import com.example.millipixelsinteractive_031.em.fragments.MonthlyExpenseFragment;
+import com.example.millipixelsinteractive_031.em.settings.SettingsActivity;
 
 import java.sql.SQLException;
 
@@ -50,7 +51,7 @@ public class Dashboard extends AppCompatActivity
     @BindView(R.id.txtTotalAmount)
     TextView txtTotalAmount;
     AllExpensesDataSource allExpensesDataSource;
-
+    ViewPagerAdapter viewPagerAdapter;
     float totalAmount = 0;
 
     @Override
@@ -82,9 +83,10 @@ public class Dashboard extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
-        getTotalAmoutExpense();
+
 
     }
+
 
     private void getTotalAmoutExpense(){
         try {
@@ -98,11 +100,11 @@ public class Dashboard extends AppCompatActivity
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(MonthlyExpenseFragment.newInstance(), "Monthly");
-        adapter.addFragment(MonthlyExpenseFragment.newInstance(), "Weekly");
-        adapter.addFragment(MonthlyExpenseFragment.newInstance(), "Daily");
-        viewPager.setAdapter(adapter);
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.addFragment(MonthlyExpenseFragment.newInstance(), "Monthly");
+        viewPagerAdapter.addFragment(MonthlyExpenseFragment.newInstance(), "Weekly");
+        viewPagerAdapter.addFragment(MonthlyExpenseFragment.newInstance(), "Daily");
+        viewPager.setAdapter(viewPagerAdapter);
 
         setCustomFont();
     }
@@ -158,6 +160,10 @@ public class Dashboard extends AppCompatActivity
 //
 //        }
 
+        if (id == R.id.nav_manage){
+            Intent intent = new Intent(Dashboard.this, SettingsActivity.class);
+            startActivity(intent);
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -166,6 +172,9 @@ public class Dashboard extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
+        getTotalAmoutExpense();
+        viewPagerAdapter.notifyDataSetChanged();
+
     }
 
     public void setCustomFont() {

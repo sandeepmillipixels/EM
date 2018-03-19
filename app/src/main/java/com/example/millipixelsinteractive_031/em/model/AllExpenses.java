@@ -13,6 +13,15 @@ public class AllExpenses {
     String expense_date;
     long expense_date_milli;
     String expense_note;
+    String expense_image = "image.jpg";
+
+    public String getExpense_image() {
+        return expense_image;
+    }
+
+    public void setExpense_image(String expense_image) {
+        this.expense_image = expense_image;
+    }
 
     public long getExpense_date_milli() {
         return expense_date_milli;

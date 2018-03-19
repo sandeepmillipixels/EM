@@ -41,6 +41,8 @@
             android:layout_width="match_parent"
             android:textColor="@color/colorPrimary"
             android:hint="@string/expense_name"
+            android:singleLine="true"
+            android:maxLines="1"
             android:imeOptions="actionNext"
             android:textSize="14sp"
             android:layout_height="wrap_content" />
@@ -56,8 +58,10 @@
             android:layout_width="match_parent"
             android:textColor="@color/colorPrimary"
             android:hint="@string/amount"
-            android:imeOptions="actionNext"
             android:textSize="14sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
             android:inputType="number"
             android:layout_height="wrap_content" />
         </android.support.design.widget.TextInputLayout>
@@ -75,6 +79,9 @@
             android:hint="@string/category"
             android:clickable="true"
             android:textSize="14sp"
+            android:singleLine="true"
+            android:maxLines="1"
+
             android:imeOptions="actionNext"
             android:focusable="false"
             android:layout_height="wrap_content" />
@@ -89,8 +96,11 @@
             android:textColor="@color/colorPrimary"
             android:hint="@string/notes"
             android:layout_marginTop="@dimen/margin_10_dp"
-            android:imeOptions="actionNext"
+
             android:textSize="14sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
             android:layout_height="wrap_content" />
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -108,7 +118,8 @@
             android:imeOptions="actionDone"
             android:inputType="date"
             android:textSize="14sp"
-
+            android:singleLine="true"
+            android:maxLines="1"
             android:layout_height="wrap_content" />
 
         </android.support.design.widget.TextInputLayout>
