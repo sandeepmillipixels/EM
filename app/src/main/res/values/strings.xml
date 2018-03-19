@@ -21,6 +21,7 @@
     <string name="splashText">Keep eye on your \n every expense</string>
     <string name="wallet">Wallet</string>
     <string name="saving">Saving</string>
+    <string name="select_country">Select Country</string>
 
     <string name="total_spending">Total Spendings Monthly</string>
 
