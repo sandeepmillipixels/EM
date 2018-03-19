@@ -45,7 +45,18 @@ public class ExpenseCategoryDataSource {
         ExpenseCategory Categories1 = cursorToCategoriesModal(cursor);
         Log.e("", "" + Categories1);
     }
-
+    public ArrayList<ExpenseCategory> getAllCategories(String catName) {
+        ArrayList<ExpenseCategory> arrayList = new ArrayList<ExpenseCategory>();
+        Cursor cursor = database.query(ExpenseManagerDatabaseHandler.TABLE_EXPENSE_CATEGORY,
+                allColumns,ExpenseManagerDatabaseHandler.KEY_CATEGORY_NAME + " = " + "'" + catName +"'" + "COLLATE NOCASE", null,
+                null, null, null);
+//        cursor.moveToFirst();
+        while (cursor.moveToNext()) {
+            ExpenseCategory Categories1 = cursorToCategoriesModal(cursor);
+            arrayList.add(Categories1);
+        }
+        return arrayList;
+    }
     public ArrayList<ExpenseCategory> getAllCategories() {
         ArrayList<ExpenseCategory> arrayList = new ArrayList<ExpenseCategory>();
         Cursor cursor = database.query(ExpenseManagerDatabaseHandler.TABLE_EXPENSE_CATEGORY,

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/layout_categories"
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_local_bar_black_24dp"
+                android:id="@+id/ico_categories"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/ico_categories"
+                android:text="@string/categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"></View>
+
+        <RelativeLayout
+            android:id="@+id/layout_backup"
+            android:padding="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_backup_black_24dp"
+                android:id="@+id/ico_backup"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/ico_backup"
+                android:text="@string/backup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"></View>
+    </LinearLayout>
+</LinearLayout>
