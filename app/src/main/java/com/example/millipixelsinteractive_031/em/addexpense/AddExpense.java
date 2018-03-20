@@ -179,6 +179,7 @@ public class AddExpense extends AppCompatActivity {
     public void categoryEditTextClick(){
 
         Intent intent=new Intent(this, CategoryActivity.class);
+        intent.putExtra("select",true);
         startActivityForResult(intent,100);
     }
 

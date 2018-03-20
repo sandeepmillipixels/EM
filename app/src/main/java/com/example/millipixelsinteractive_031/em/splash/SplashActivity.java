@@ -34,17 +34,15 @@ public class SplashActivity extends Activity {
         Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Roboto_Light.ttf");
         splash_textView.setTypeface(typeFace);
         splash_textView.setText(Html.fromHtml("Keep eye on your <br>every <b>expense</b>"));
-//        new Handler().postDelayed(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//
-//                Intent i = new Intent(SplashActivity.this, OnBoarding.class);
-//                startActivity(i);
-//
-//                finish();
-//            }
-//        }, SPLASH_TIME_OUT);
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                Intent i = new Intent(SplashActivity.this, OnBoarding.class);
+                startActivity(i);
+                finish();
+            }
+        }, SPLASH_TIME_OUT);
 
 
     }
