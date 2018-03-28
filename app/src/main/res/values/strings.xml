@@ -25,6 +25,8 @@
 
     <string name="total_spending">Total Monthly Expense</string>
 
+    <string name="total_spending2">Total Spending</string>
+
     <string name="monthly">Monthly</string>
     <string name="weekly">Weekly</string>
     <string name="daily">Daily</string>

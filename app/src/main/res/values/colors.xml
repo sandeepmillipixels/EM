@@ -33,6 +33,7 @@
     <color name="dotColor">#F0F0F0</color>
 
     <color name="greenFloating">#3cd690</color>
+    <color name="greenFloatingT">#513cd690</color>
     <color name="red_button">#f61e4d</color>
 
     <array name="array_dot_active">

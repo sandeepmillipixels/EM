@@ -50,38 +50,42 @@
            android:layout_alignParentTop="true"
            android:text="@string/total_spending"
            android:textColor="@color/white"
-           android:textSize="@dimen/size_15dp" />
+           android:textSize="@dimen/size_17dp" />
 
        <com.example.millipixelsinteractive_031.em.typeface.FontsClass
            android:layout_below="@+id/total_spending_title"
            android:id="@+id/txtTotalAmount"
            android:textColor="@color/white"
            android:text="$3000"
-           android:textSize="@dimen/size_16dp"
+           android:textSize="@dimen/size_20dp"
+           android:layout_marginTop="@dimen/margin_10_dp"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
 
        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
            android:id="@+id/textView3"
-           android:layout_width="wrap_content"
+           android:layout_width="match_parent"
+          android:gravity="center"
            android:layout_height="wrap_content"
-           android:layout_alignBottom="@+id/total_spending_title"
-           android:layout_alignParentEnd="true"
-           android:layout_alignParentRight="true"
-           android:textSize="@dimen/size_15dp"
+           android:layout_alignParentTop="true"
+           android:layout_toEndOf="@+id/total_spending_title"
+           android:layout_toRightOf="@+id/total_spending_title"
+           android:text="Budget"
            android:textColor="@color/white"
-           android:text="Bugdet" />
+           android:textSize="@dimen/size_17dp" />
 
        <com.example.millipixelsinteractive_031.em.typeface.FontsClass
            android:id="@+id/textView4"
-           android:layout_width="wrap_content"
+           android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:layout_alignLeft="@+id/textView3"
            android:layout_alignStart="@+id/textView3"
            android:layout_below="@+id/textView3"
            android:text="$4000"
+           android:gravity="center"
+           android:layout_marginTop="@dimen/margin_10_dp"
            android:textColor="@color/white"
-           android:textSize="@dimen/size_16dp" />
+           android:textSize="@dimen/size_20dp" />
 
 
    </RelativeLayout>
@@ -93,6 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue"
+        android:paddingTop="@dimen/padding_10dp"
         app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
         app:tabIndicatorColor="@color/greenFloating"
         app:tabSelectedTextColor="@color/white"

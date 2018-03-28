@@ -109,7 +109,7 @@ public class Dashboard extends AppCompatActivity
         mChart.getDescription().setEnabled(false);
 
         // enable touch gestures
-        mChart.setTouchEnabled(true);
+        mChart.setTouchEnabled(false);
 
         // enable scaling and dragging
         mChart.setDragEnabled(false);
@@ -133,7 +133,7 @@ public class Dashboard extends AppCompatActivity
 
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.removeAllLimitLines(); // reset all limit lines to avoid overlapping lines
-        leftAxis.setAxisMaximum(100f);
+        leftAxis.setAxisMaximum(50f);
         leftAxis.setAxisMinimum(0f);
         //leftAxis.setYOffset(20f);
         leftAxis.enableGridDashedLine(50f, 10f, 0f);
@@ -290,15 +290,29 @@ public class Dashboard extends AppCompatActivity
 
         ArrayList<Entry> values = new ArrayList<Entry>();
 
-        int xIndex = 0;
-        ArrayList<Integer> colors = new ArrayList<Integer>();
 
-        for (int i = 0; i < count; i++) {
 
-            float val = (float) (Math.random() * range) + 3;
-            values.add(new Entry(i, val, getResources().getDrawable(R.drawable.app_round_button_drawable)));
+        ArrayList<Integer> data1= new ArrayList<>();
+        data1.add(10);
+        data1.add(40);
+        data1.add(15);
+        data1.add(30);
+        data1.add(10);
+        data1.add(40);
 
+
+        for (int i = 0; i <= data1.size() - 1; i++) {
+
+            values.add(new Entry(i,data1.get(i)));
         }
+
+
+//        for (int i = 0; i < count; i++) {
+//
+//            float val = (float) (Math.random() * range) + 3;
+//            values.add(new Entry(i, val, getResources().getDrawable(R.drawable.app_round_button_drawable)));
+//
+//        }
 
 
 
@@ -321,6 +335,9 @@ public class Dashboard extends AppCompatActivity
             set1 = new LineDataSet(values, "");
             set1.setDrawIcons(false);
 
+            set1.enableDashedLine(10f, 5f, 0f);
+            set1.enableDashedHighlightLine(10f, 5f, 0f);
+
             // set the line to be drawn like this "- - - - - -"
             //set1.enableDashedLine(10f, 5f, 0f);
             // set1.enableDashedHighlightLine(10f, 5f, 0f);
@@ -337,14 +354,14 @@ public class Dashboard extends AppCompatActivity
             set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
             set1.setFormSize(15.f);
             set1.setDrawValues(false);
-            set1.setDrawHorizontalHighlightIndicator(false);
-            set1.setDrawVerticalHighlightIndicator(false);
+            set1.setDrawFilled(true);
+
 
 
 
             if (Utils.getSDKInt() >= 18) {
                 // fill drawable only supported on api level 18 and above
-                Drawable drawable = ContextCompat.getDrawable(this, R.drawable.app_gradient);
+                Drawable drawable = ContextCompat.getDrawable(this, R.drawable.chart_filed);
                 set1.setFillDrawable(drawable);
             } else {
                 set1.setFillColor(Color.WHITE);
