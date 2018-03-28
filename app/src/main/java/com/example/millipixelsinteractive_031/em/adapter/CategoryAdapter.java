@@ -117,10 +117,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         });
 
 
-
-
-
-
     }
 
     @Override
