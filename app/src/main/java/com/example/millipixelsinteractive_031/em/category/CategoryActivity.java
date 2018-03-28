@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.View;
 
 import com.example.millipixelsinteractive_031.em.R;
@@ -17,6 +20,7 @@ import com.example.millipixelsinteractive_031.em.addexpense.AddExpense;
 import com.example.millipixelsinteractive_031.em.dashboard.Dashboard;
 import com.example.millipixelsinteractive_031.em.database.ExpenseCategoryDataSource;
 import com.example.millipixelsinteractive_031.em.model.ExpenseCategory;
+import com.example.millipixelsinteractive_031.em.transitions.TransitionHelper;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -42,14 +46,17 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
     Toolbar toolbar;
     ExpenseCategoryDataSource expenseCategoryDataSource;
     ArrayList<ExpenseCategory> expenseCategoryArrayList = new ArrayList<ExpenseCategory>();
+    boolean isSelect = false ;
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.category);
+        setupWindowAnimations();
         ButterKnife.bind(this);
         initToolBar();
         getCategories();
         setAdapter();
+
 //        arrayList= Arrays.asList(getResources().getStringArray(R.array.categoryArray));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -61,8 +68,23 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
                 startActivityForResult(intent,100);
             }
         });
+        if (getIntent().getExtras() != null && getIntent().getExtras().containsKey("select")){
+            isSelect = true ;
+            fab.setVisibility(View.GONE);
+        }
+
     }
 
+
+    private void setupWindowAnimations(){
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            Slide slide = new Slide();
+            slide.setDuration(500);
+            slide.setSlideEdge(Gravity.LEFT);
+            getWindow().setReenterTransition(slide);
+            getWindow().setExitTransition(slide);
+        }
+    }
     private void setAdapter(){
         adapter=new CategoryAdapter(expenseCategoryArrayList,this,this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -101,11 +123,20 @@ public class CategoryActivity extends AppCompatActivity implements CategoryAdapt
     }
     @Override
     public void onItemClick(int pos) {
-        Intent intent=new Intent();
-        intent.putExtra("catName",expenseCategoryArrayList.get(pos).getCatName());
-        intent.putExtra("catId",expenseCategoryArrayList.get(pos).getId());
-        setResult(RESULT_OK,intent);
-         finish();
+        if (isSelect){
+            Intent intent=new Intent();
+            intent.putExtra("catName",expenseCategoryArrayList.get(pos).getCatName());
+            intent.putExtra("catId",expenseCategoryArrayList.get(pos).getId());
+            setResult(RESULT_OK,intent);
+            finish();
+        }else {
+//            final Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants()
+            Intent intent = new Intent(CategoryActivity.this,AddEditCategoryActivity.class);
+            intent.putExtra("isNew",false);
+            intent.putExtra("category",expenseCategoryArrayList.get(pos));
+            startActivityForResult(intent,100);
+        }
+
 
 
     }

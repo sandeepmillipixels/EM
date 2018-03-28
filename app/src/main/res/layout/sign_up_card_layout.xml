@@ -113,7 +113,7 @@
             android:id="@+id/edtPhone"
             android:textSize="14sp"
             android:singleLine="true"
-
+            android:inputType="number"
             android:lines="1"
             android:backgroundTint="@android:color/transparent"
             android:maxLength="13"
