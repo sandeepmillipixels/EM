@@ -48,7 +48,7 @@ public class AddEditCategoryActivity extends AppCompatActivity {
             }else {
                 title = "Edit Category";
                 expenseCategory = getIntent().getParcelableExtra("category");
-                edtCategory.setText(expenseCategory.getCatName());
+                edtCategory.setText(expenseCategory. getCatName());
             }
         }
         setListeners();
@@ -56,10 +56,9 @@ public class AddEditCategoryActivity extends AppCompatActivity {
 
     }
     private void setUpToolbar(){
-        toolbar.setTitle(R.string.action_settings);
+        toolbar.setTitle(title);
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         setSupportActionBar(toolbar);
-
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         toolbar.setNavigationOnClickListener(
                 new View.OnClickListener() {
@@ -68,7 +67,6 @@ public class AddEditCategoryActivity extends AppCompatActivity {
                         onBackPressed();
                     }
                 }
-
         );
     }
 
