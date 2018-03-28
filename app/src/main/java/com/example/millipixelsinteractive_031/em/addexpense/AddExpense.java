@@ -167,6 +167,7 @@ public class AddExpense extends AppCompatActivity {
                 e.printStackTrace();
             }
             Snackbar.make(v,"Expense successfully added.",2000).show();
+            finish();
 //            Intent intent = new Intent( AddExpense.this, Dashboard.class);
 //            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
 //            startActivity(intent);

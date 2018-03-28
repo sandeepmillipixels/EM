@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,61 +14,65 @@
 
 
     </android.support.v7.widget.Toolbar>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_marginTop="?attr/actionBarSize"
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/record_total_amount_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RelativeLayout
-            android:visibility="gone"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
-            android:padding="8dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/blue"
+        android:padding="@dimen/padding_15_dp"
+
+        android:layout_height="100dp">
+
+
+        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+            android:id="@+id/total_spending_title_record"
             android:layout_width="wrap_content"
-            android:id="@+id/container"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:textSize="16sp"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:layout_centerVertical="true"
-                android:id="@+id/ico_categories"
-                android:layout_width="48dp"
-                android:layout_height="48dp" />
-            <RelativeLayout
-                android:padding="8dp"
-                android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/margin_20_dp"
+            android:layout_alignParentTop="true"
+            android:text="@string/total_spending2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_15dp" />
 
-                android:layout_toRightOf="@id/ico_categories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/txtCategoryName"
-                    android:textColor="@android:color/black"
-                    android:textSize="22sp"
-                    android:text="Food"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:layout_alignParentRight="true"
-                    android:id="@+id/txtAmount"
-                    android:text="0.0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </RelativeLayout>
+        <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+            android:layout_below="@+id/total_spending_title_record"
+            android:id="@+id/txtTotalAmount"
+            android:textColor="@color/white"
+            android:text="$3000"
+            android:textSize="@dimen/size_16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-        </RelativeLayout>
 
-        <View
-            android:visibility="gone"
-            android:background="@android:color/black"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
-        <android.support.v7.widget.RecyclerView
 
-            android:id="@+id/rvExpenseList" android:layout_height="wrap_content" android:layout_width="match_parent" />
+    </RelativeLayout>
 
-    </LinearLayout>
-</android.support.design.widget.CoordinatorLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:layout_below="@+id/record_total_amount_layout"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        app:tabIndicatorColor="@color/greenFloating"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white"
+        app:tabMode="scrollable"
+        app:tabGravity="center"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_record"
+        android:layout_below="@+id/tabLayout_record"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+
+</RelativeLayout>
