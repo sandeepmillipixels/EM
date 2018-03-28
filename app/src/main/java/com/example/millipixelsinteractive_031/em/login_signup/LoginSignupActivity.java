@@ -2,8 +2,11 @@ package com.example.millipixelsinteractive_031.em.login_signup;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatSpinner;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,14 +15,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
+import com.example.millipixelsinteractive_031.em.adapter.SpinnerAdapter;
 import com.example.millipixelsinteractive_031.em.dashboard.Dashboard;
+import com.example.millipixelsinteractive_031.em.model.CountryCodeData;
 import com.example.millipixelsinteractive_031.em.utils.Constants;
 import com.example.millipixelsinteractive_031.em.utils.Utilities;
 import com.example.millipixelsinteractive_031.em.verify_otp.VerifyOtpActity;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,6 +59,11 @@ public class LoginSignupActivity extends Activity {
     private List<String> country_list = new ArrayList<>();
 
 
+    @BindView(R.id.divider_line)
+    View divider_line;
+
+    @BindView(R.id.edtCode)
+    EditText edtCode;
 
     @BindView(R.id.spnCountarySignup)
     AppCompatSpinner spnCountarySignup;
@@ -62,16 +79,16 @@ public class LoginSignupActivity extends Activity {
     @BindView(R.id.signup_container)
     LinearLayout signup_container;
 
+    String json = null;
+
+    SpinnerAdapter adapter;
+    List<CountryCodeData> data;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_signup);
         ButterKnife.bind(this);
-        country_list.add("India");
-        country_list.add("New York");
-        country_list.add("Sri Lanka");
-        country_list.add("Singapore");
-        country_list.add("Austria");
         setSpinner();
         if (getIntent().getExtras() != null){
             if (getIntent().getExtras().containsKey(Constants.LOGIN)){
@@ -80,6 +97,8 @@ public class LoginSignupActivity extends Activity {
                 onSignupTapped();
             }
         }
+
+        loadJSONFromAsset();
 //        submitButton.setOnClickListener(submitButton_listener);
 
     }
@@ -91,6 +110,10 @@ public class LoginSignupActivity extends Activity {
         signup_container.setVisibility(View.VISIBLE);
         login_container.setVisibility(View.GONE);
     }
+
+
+
+
 
     @OnClick(R.id.txtSkip)
     public void onSkipped(){
@@ -147,12 +170,40 @@ public class LoginSignupActivity extends Activity {
     }
 
     private void setSpinner(){
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, country_list);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        loadJSONFromAsset();
+
+        try {
+            data=new ArrayList<>();
+
+            JSONArray jArray = new JSONArray(json);
+
+            for(int i=0;i<jArray.length();i++){
+                JSONObject json_data = jArray.getJSONObject(i);
+                CountryCodeData codeData = new CountryCodeData();
+                codeData.setDial_code(json_data.getString("dial_code"));
+                codeData.setCode(json_data.getString("code"));
+                codeData.setName(json_data.getString("name"));
+                data.add(codeData);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        adapter = new SpinnerAdapter(this,
+                R.layout.custom_country_item,
+                data);
+
         spnCountarySignup.setAdapter(adapter);
+
+
         spnCountarySignup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                edtCode.setText(data.get(i).getDial_code());
 
             }
             @Override
@@ -161,6 +212,22 @@ public class LoginSignupActivity extends Activity {
             }
         });
 
+    }
+
+    public String loadJSONFromAsset() {
+
+        try {
+            InputStream is = getAssets().open("country_codes.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 
 }

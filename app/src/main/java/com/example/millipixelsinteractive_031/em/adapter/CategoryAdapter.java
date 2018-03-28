@@ -26,7 +26,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
     List<ExpenseCategory> arrayList;
     String symbol;
-
     Context context;
     private final OnItemClickListener listener;
 
@@ -41,7 +40,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
             catTextview = view.findViewById(R.id.catTextview);
             catImageView=view.findViewById(R.id.catImageView);
             cat_layout=view.findViewById(R.id.cat_layout);
-
         }
     }
 
@@ -66,44 +64,28 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
         String catName=arrayList.get(position).getCatName();
 
-
         if(catName!=null && catName.equalsIgnoreCase("Food")){
-
             holder.catImageView.setImageResource(R.drawable.ic_heart);
             holder.cat_layout.setBackgroundColor(Color.parseColor("#fcf7f7"));
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("Grocery")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#f0f7fb"));
             holder.catImageView.setImageResource(R.drawable.ic_groceries);
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("Traveling")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#fcf7ec"));
-
             holder.catImageView.setImageResource(R.drawable.ic_luggage);
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("Fashion")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#fcf7f7"));
-
             holder.catImageView.setImageResource(R.drawable.ic_shirt);
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("Entertainment")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#f6f7f9"));
-
             holder.catImageView.setImageResource(R.drawable.ic_tickets);
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("HealthCare")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#fcf7f7"));
-
             holder.catImageView.setImageResource(R.drawable.ic_heart);
 
         }
@@ -115,12 +97,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                 }
             }
         });
-
-
-
-
-
-
     }
 
     @Override

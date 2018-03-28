@@ -38,8 +38,10 @@ public class SplashActivity extends Activity {
 
             @Override
             public void run() {
+
                 Intent i = new Intent(SplashActivity.this, OnBoarding.class);
                 startActivity(i);
+
                 finish();
             }
         }, SPLASH_TIME_OUT);
