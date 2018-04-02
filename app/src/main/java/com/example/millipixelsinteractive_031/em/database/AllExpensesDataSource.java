@@ -96,6 +96,7 @@ public class AllExpensesDataSource {
     }
 
     public float getSum(String category){
+        database = dbHelper.getReadableDatabase();
         Cursor cur = database.rawQuery("SELECT SUM(" + ExpenseManagerDatabaseHandler.KEY_EXPENSE_AMOUNT + ") FROM " + ExpenseManagerDatabaseHandler.TABLE_ALL_EXPENSES + " WHERE " + ExpenseManagerDatabaseHandler.KEY_EXPENSE_CATEGORY_NAME + " = " + "'" + category + "'" , null );
         if(cur.moveToFirst())
         {

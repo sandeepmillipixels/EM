@@ -58,7 +58,7 @@
             android:layout_marginTop="14dp"
             android:progress="30"
             android:thumb="@null"
-
+            android:focusableInTouchMode="false"
             android:layout_toLeftOf="@+id/percentTextView"
             android:layout_below="@+id/categoryNameTextView"
             android:layout_toRightOf="@+id/card_view"
