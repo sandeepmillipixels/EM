@@ -32,8 +32,8 @@ public class ExpenseListBycategoryActivity extends AppCompatActivity {
     @BindView(R.id.viewPager_record)
     ViewPager viewPager;
 
-    @BindView(R.id.total_spending_title_record)
-    TextView total_spending_title_record;
+    @BindView(R.id.txtTotalAmount)
+    TextView txtTotalAmount;
 
     ViewPagerAdapter viewPagerAdapter;
     AllExpensesDataSource allExpensesDataSource;
@@ -50,15 +50,21 @@ public class ExpenseListBycategoryActivity extends AppCompatActivity {
 
         allExpensesDataSource = new AllExpensesDataSource(this);
 
+
+
         if (getIntent().getExtras() != null){
             expenseCategory = getIntent().getParcelableExtra("category");
         }
 
-//        totlaExpense=allExpensesDataSource.getSum(expenseCategory.getCatName());
-//
-//        total_spending_title_record.setText(String.valueOf(totlaExpense));
+        String categoryName=expenseCategory.getCatName();
+
+        totlaExpense=allExpensesDataSource.getSum(categoryName);
+
+        txtTotalAmount.setText(String.valueOf("$"+totlaExpense));
 
         initToolBar();
+        viewPager.setOffscreenPageLimit(3);
+
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
 
