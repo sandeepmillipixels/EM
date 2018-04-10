@@ -241,8 +241,6 @@ public class AddExpense extends AppCompatActivity {
             }
 
             filePath= "photo_" + partFilename + ".jpg";
-
-
             photo = getImageFileFromSDCard(filePath);
 
             firstImage.setImageBitmap(photo);
