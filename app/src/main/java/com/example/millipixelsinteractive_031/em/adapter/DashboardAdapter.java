@@ -12,7 +12,9 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
+import android.os.Build;
 import android.os.Environment;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -81,10 +83,11 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
         return new MyViewHolder(itemView);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
-
+        holder.seekBar.setEnabled(false);
 
         holder.categoryNameTextView.setText(arrayList.get(position).getCatName());
         int progress = (int)(arrayList.get(position).getAmount()*100)/300;
@@ -201,6 +204,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
         return bitmap;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private LayerDrawable getDrawable(int color){
         LayerDrawable layerDrawable = (LayerDrawable) context.getResources()
                 .getDrawable(R.drawable.progress);
