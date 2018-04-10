@@ -44,6 +44,8 @@ public class TabbedActivity extends AppCompatActivity {
 
     private ViewPager mPager;
     private static int currentPage = 0;
+    public static String PAGE = "page";
+    public static String PATH = "path";
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -52,13 +54,16 @@ public class TabbedActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_filter:
-
+                    Intent intent = new Intent(TabbedActivity.this,ImageFilterActivity.class);
+                    intent.putExtra(PATH,arrayList.get(currentPage));
+                    intent.putExtra(PAGE,currentPage);
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_crop:
 
                     return true;
                 case R.id.navigation_rotate:
-
+                    arrayList.get(currentPage);
                     return true;
                 case R.id.navigation_delete:
 
@@ -112,7 +117,6 @@ public class TabbedActivity extends AppCompatActivity {
             show_box_hint_textView.setVisibility(View.VISIBLE);
 
         }
-
         adapter=new SlidingImage_Adapter(TabbedActivity.this,arrayList);
         mPager.setAdapter(adapter);
         adapter.notifyDataSetChanged();
