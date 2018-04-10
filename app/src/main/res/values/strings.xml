@@ -61,6 +61,8 @@
 
     <string name="shoebox">ShowBox</string>
 
+    <string name="crop_image">Edit Slip</string>
+
     <string-array name="categoryArray">
         <item>Food</item>
         <item>Grocery</item>

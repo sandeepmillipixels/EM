@@ -17,7 +17,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.millipixelsinteractive_031.em.R;
+import com.example.millipixelsinteractive_031.em.cropimage.ImageCropActivity;
 import com.example.millipixelsinteractive_031.em.imagepicker.ImagePicker;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -45,6 +48,11 @@ public class TabbedActivity extends AppCompatActivity {
     private ViewPager mPager;
     private static int currentPage = 0;
 
+    TextView show_box_hint_textView;
+
+    Bitmap photo;
+
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -56,14 +64,24 @@ public class TabbedActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_crop:
 
-                    return true;
-                case R.id.navigation_rotate:
+                    if(arrayList.size()!=0){
+                        Intent intent=new Intent(TabbedActivity.this, ImageCropActivity.class);
+                        intent.putExtra("path",arrayList.get(currentPage).toString());
+                        startActivityForResult(intent,CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE);
+                    }
 
                     return true;
+
                 case R.id.navigation_delete:
 
-                    arrayList.remove(currentPage);
-                    adapter.notifyDataSetChanged();
+                    if(arrayList.size()!=0){
+                        arrayList.remove(currentPage);
+                        if(currentPage==0){
+                            show_box_hint_textView.setVisibility(View.VISIBLE);
+                        }
+                        adapter.notifyDataSetChanged();
+                    }
+
 
                     return true;
             }
@@ -100,7 +118,7 @@ public class TabbedActivity extends AppCompatActivity {
 
         mPager =findViewById(R.id.pager);
 
-        TextView show_box_hint_textView=findViewById(R.id.show_box_hint_textView);
+         show_box_hint_textView=findViewById(R.id.show_box_hint_textView);
 
         android.support.design.widget.FloatingActionButton add_images_floating_button=findViewById(R.id.add_images_floating_button);
 
@@ -151,6 +169,22 @@ public class TabbedActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         switch (requestCode) {
+
+            case CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE:
+
+
+
+//                CropImage.ActivityResult result = CropImage.getActivityResult(data);
+//                if (resultCode == RESULT_OK) {
+//                    Uri resultUri = result.getUri();
+//
+//                    arrayList.add(currentPage,getRealPathFromURI(resultUri));
+//
+//                } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+//                    Exception error = result.getError();
+//                }
+
+
             case SECOND_PIC_REQ:
                 String imagePathFromResult = ImagePicker.getImagePathFromResult(TabbedActivity.this,
                         requestCode, resultCode, data);
@@ -169,17 +203,19 @@ public class TabbedActivity extends AppCompatActivity {
             default:
                 if (data != null){
 
-                   Bitmap photo = ImagePicker.getImageFromResult(TabbedActivity.this,
+                    photo = ImagePicker.getImageFromResult(TabbedActivity.this,
                             requestCode, resultCode, data);
                     if (photo == null){
                         return;
                     }
+                    show_box_hint_textView.setVisibility(View.GONE);
                     // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
                     Uri tempUri = getImageUri(getApplicationContext(), photo);
 
                     if (tempUri != null) {
                         arrayList.add(getRealPathFromURI(tempUri));
-                    }adapter.notifyDataSetChanged();
+                    }
+                    adapter.notifyDataSetChanged();
                 }
 
         }

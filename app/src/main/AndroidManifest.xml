@@ -54,10 +54,16 @@
 
         <activity android:name=".shoebox.TabbedActivity"></activity>
 
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+
 
         <activity
             android:name=".TabbedActivity"
             android:label="@string/title_activity_tabbed"></activity>
+
+        <activity android:name=".cropimage.ImageCropActivity"></activity>
+
 
         <activity
             android:name=".verify_otp.VerifyOtpActity"
