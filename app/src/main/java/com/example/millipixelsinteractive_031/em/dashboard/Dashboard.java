@@ -1,10 +1,12 @@
 package com.example.millipixelsinteractive_031.em.dashboard;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -24,6 +26,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.millipixelsinteractive_031.em.R;
 import com.example.millipixelsinteractive_031.em.adapter.DashboardAdapter;
@@ -32,6 +35,8 @@ import com.example.millipixelsinteractive_031.em.addexpense.AddExpense;
 import com.example.millipixelsinteractive_031.em.database.AllExpensesDataSource;
 import com.example.millipixelsinteractive_031.em.fragments.MonthlyExpenseFragment;
 import com.example.millipixelsinteractive_031.em.settings.SettingsActivity;
+import com.example.millipixelsinteractive_031.em.shoebox.TabbedActivity;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.LimitLine;
@@ -71,6 +76,8 @@ public class Dashboard extends AppCompatActivity
     ViewPagerAdapter viewPagerAdapter;
     float totalAmount = 0;
 
+    FloatingActionsMenu rightLabels;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,25 +85,64 @@ public class Dashboard extends AppCompatActivity
         ButterKnife.bind(this);
         allExpensesDataSource = new AllExpensesDataSource(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+
+
+        rightLabels =findViewById(R.id.fab);
+        com.getbase.floatingactionbutton.FloatingActionButton shoe_box = new com.getbase.floatingactionbutton.FloatingActionButton(this);
+        shoe_box.setTitle("Add to shoebox");
+        shoe_box.setColorNormalResId(R.color.pink);
+        shoe_box.setIcon(R.drawable.ic_collections_bookmark_black_24dp);
+        rightLabels.addButton(shoe_box);
+
+        shoe_box.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(Dashboard.this,AddExpense.class);
-                startActivity(intent);
+            public void onClick(View v) {
+                Intent intent=new Intent(Dashboard.this,TabbedActivity.class);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(Dashboard.this).toBundle());
+                }else{
+                    startActivity(intent);
+                }
+
+                rightLabels.collapse();
+
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+
+        com.getbase.floatingactionbutton.FloatingActionButton add_expense = new com.getbase.floatingactionbutton.FloatingActionButton(this);
+        add_expense.setTitle("Add a expense");
+        add_expense.setIcon(R.drawable.ic_tag_add_expense);
+        rightLabels.addButton(add_expense);
+        rightLabels.removeButton(add_expense);
+        rightLabels.addButton(add_expense);
+
+        add_expense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Dashboard.this,AddExpense.class);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(Dashboard.this).toBundle());
+                }else{
+                    startActivity(intent);
+                }
+
+                rightLabels.collapse();
+            }
+        });
+
+
+        DrawerLayout drawer =findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
@@ -199,7 +245,7 @@ public class Dashboard extends AppCompatActivity
     }
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

@@ -1,25 +1,32 @@
 package com.example.millipixelsinteractive_031.em.addexpense;
 
 import android.Manifest;
-import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.content.DialogInterface;
+import android.app.Dialog;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
+
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -27,32 +34,47 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
 import com.example.millipixelsinteractive_031.em.category.CategoryActivity;
-import com.example.millipixelsinteractive_031.em.dashboard.Dashboard;
 import com.example.millipixelsinteractive_031.em.database.AllExpensesDataSource;
 
-
+import com.example.millipixelsinteractive_031.em.imagepicker.ImagePicker;
 import com.example.millipixelsinteractive_031.em.model.AllExpenses;
 import com.example.millipixelsinteractive_031.em.utils.Utility;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.PdfWriter;
 
+import com.squareup.picasso.Picasso;
+
+
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
+
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class AddExpense extends AppCompatActivity {
+    public static final String CACHED_IMG_KEY = "img_key";
+
+    public static final int SECOND_PIC_REQ = 1313;
+    public static final int GALLERY_ONLY_REQ = 1212;
+
+
+    Image image;
 
 
     @BindView(R.id.edtAmount)
@@ -82,29 +104,63 @@ public class AddExpense extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
+    @BindView(R.id.pdfButton)
+    Button pdfButton;
+
     String amount,category,notes,date,expense_name;
 
     long catId = 0;
 
-    String filePath;
-
-    private static final int CAMERA_REQUEST = 1888;
-
-    private static final int STORAGE_REQUEST = 1000;
-
-    String catName;
-    private int mYear, mMonth, mDay, mHour, mMinute;
+    Bitmap photo;
+    private int mYear, mMonth, mDay;
 
     AllExpensesDataSource allExpensesDataSource;
 
+    ArrayList<String> imagesUri;
+    ArrayList<String> tempUris;
+
+
+    String path;
+
+    Dialog dialog;
+    String catName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_expense);
         ButterKnife.bind(this);
         allExpensesDataSource = new AllExpensesDataSource(this);
+
+        imagesUri = new ArrayList<>();
+        tempUris = new ArrayList<>();
+
+        dialog=new Dialog(this);
+
         initToolBar();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String path = prefs.getString(CACHED_IMG_KEY, "");
+        File cached = new File(path);
+        if (cached.exists()) {
+            Picasso.with(this).load(cached).into(firstImage);
+        }
     }
+
+   public void createPdf() {
+
+       if (imagesUri.size() == 0) {
+           if (tempUris.size() == 0) {
+               return;
+           } else {
+               imagesUri = (ArrayList<String>) tempUris.clone();
+           }
+       }
+
+
+       new CreatingPdf().execute();
+
+
+    }
+
 
     public void initToolBar() {
 
@@ -126,6 +182,7 @@ public class AddExpense extends AppCompatActivity {
 
     @OnClick(R.id.saveButton)
     public void saveButtonClick(View v){
+
 
         amount=edtAmount.getText().toString();
         category=edtCategoryName.getText().toString();
@@ -168,13 +225,23 @@ public class AddExpense extends AppCompatActivity {
             }
             Snackbar.make(v,"Expense successfully added.",2000).show();
             finish();
-//            Intent intent = new Intent( AddExpense.this, Dashboard.class);
-//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//            startActivity(intent);
+
         }
 
 
     }
+
+
+
+
+    @OnClick(R.id.pdfButton)
+        public void convertToPDF(){
+
+        createPdf();
+
+    }
+
+
 
     @OnClick(R.id.edtCategoryName)
     public void categoryEditTextClick(){
@@ -211,7 +278,6 @@ public class AddExpense extends AppCompatActivity {
         switch (requestCode) {
             case 101:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
                     takePicture();
 
                 } else {
@@ -225,39 +291,90 @@ public class AddExpense extends AppCompatActivity {
 
 
     public void takePicture() {
-        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(cameraIntent, CAMERA_REQUEST);
+        // width and height will be at least 600px long (optional).
+
+        ImagePicker.pickImage(AddExpense.this, "Select your image:");
+
+
     }
 
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-            String partFilename = currentDateFormat();
-            try {
-                storeCameraPhotoInSDCard(photo, partFilename);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
+        switch (requestCode) {
+            case SECOND_PIC_REQ:
+                String imagePathFromResult = ImagePicker.getImagePathFromResult(AddExpense.this,
+                        requestCode, resultCode, data);
+                if (imagePathFromResult != null) {
+                    String path = "file:///" + imagePathFromResult;
+                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(AddExpense.this);
+                    prefs.edit().putString(CACHED_IMG_KEY, imagePathFromResult).apply();
+                    Picasso.with(AddExpense.this).load(path).into(firstImage);
+                }
+                break;
+            case GALLERY_ONLY_REQ:
+                String pathFromGallery = "file:///" + ImagePicker.getImagePathFromResult(AddExpense.this, requestCode,
+                        resultCode, data);
+                Picasso.with(AddExpense.this).load(pathFromGallery).into(firstImage);
+                break;
 
-            filePath= "photo_" + partFilename + ".jpg";
+            case 100:
+                if (data != null && data.getExtras() != null){
+                    catName = data.getStringExtra("catName");
+                    edtCategoryName.setText(catName);
+                }
+                break;
+            default:
+                if (data != null){
+                    photo = ImagePicker.getImageFromResult(AddExpense.this,
+                            requestCode, resultCode, data);
+                    if (photo == null){
+                        return;
+                    }
+                    // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
+                    Uri tempUri = getImageUri(getApplicationContext(), photo);
 
+                    // CALL THIS METHOD TO GET THE ACTUAL PATH
+                    File finalFile = new File(getRealPathFromURI(tempUri));
+                    String imagePathFromResult1 = ImagePicker.getImagePathFromResult(AddExpense.this,
+                            requestCode, resultCode, data);
+                    if (imagePathFromResult1 != null) {
+                        String path = "file:///" + imagePathFromResult1;
+                        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(AddExpense.this);
+                        prefs.edit().putString(CACHED_IMG_KEY, imagePathFromResult1).apply();
+                        Picasso.with(AddExpense.this).load(path).into(firstImage);
+                        tempUris.add(getRealPathFromURI(tempUri));
+                    }
+                }
 
-            photo = getImageFileFromSDCard(filePath);
-
-            firstImage.setImageBitmap(photo);
-        }else if (requestCode == 100 && resultCode == RESULT_OK){
-            if (data != null && data.getExtras() != null){
-                category = data.getStringExtra("catName");
-                catId = data.getLongExtra("catId",0);
-                edtCategoryName.setText(category);
-            }
         }
+        InputStream is = ImagePicker.getInputStreamFromResult(AddExpense.this, requestCode, resultCode, data);
+        if (is != null) {
+//            textView.setText("Got input stream!");
+            try {
+                is.close();
+            } catch (IOException ex) {
+                // ignore
+            }
+        } else {
+//            textView.setText("Failed to get input stream!");
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+    public Uri getImageUri(Context inContext, Bitmap inImage) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+        return Uri.parse(path);
     }
 
-
-
+    public String getRealPathFromURI(Uri uri) {
+        Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+        cursor.moveToFirst();
+        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+        return cursor.getString(idx);
+    }
     private String currentDateFormat(){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HH_mm_ss");
         String  currentTimeStamp = dateFormat.format(new Date());
@@ -330,4 +447,99 @@ public class AddExpense extends AppCompatActivity {
     }
 
 
+    public class CreatingPdf extends AsyncTask<String, String, String> {
+
+        // Progress dialog
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog.show();
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+
+
+
+            path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDFfiles/";
+
+            File folder = new File(path);
+            if (!folder.exists()) {
+                boolean success = folder.mkdir();
+                if (!success) {
+                    Toast.makeText(AddExpense.this, "Error on creating application folder", Toast.LENGTH_SHORT).show();
+                    return null;
+                }
+            }
+
+            path = path + System.currentTimeMillis() + ".pdf";
+
+
+
+            Document document = new Document(PageSize.A4, 0, 0, 0, 0);
+
+            Log.v("stage 2", "Document Created");
+
+            Rectangle documentRect = document.getPageSize();
+
+            try {
+                PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(path));
+
+                Log.v("Stage 3", "Pdf writer");
+
+                document.open();
+
+                Log.v("Stage 4", "Document opened");
+                for (int i = 0; i < imagesUri.size(); i++) {
+
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    photo.compress(Bitmap.CompressFormat.PNG, 70, stream);
+
+                    image = Image.getInstance(imagesUri.get(i));
+
+                    document.add(image);
+
+                    document.newPage();
+
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            document.close();
+            imagesUri.clear();
+            tempUris.clear();
+
+
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            dialog.dismiss();
+            openPdf();
+
+        }
+    }
+
+
+    void openPdf() {
+        File file = new File(path);
+
+        Intent target = new Intent(Intent.ACTION_VIEW);
+        target.setDataAndType(Uri.fromFile(file),"application/pdf");
+        target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+
+        Intent intent = Intent.createChooser(target, "Open File");
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            // Instruct the user to install a PDF reader here, or something
+        }
+    }
 }
