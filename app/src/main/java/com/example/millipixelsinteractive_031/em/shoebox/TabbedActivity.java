@@ -1,34 +1,50 @@
 package com.example.millipixelsinteractive_031.em.shoebox;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
 import com.example.millipixelsinteractive_031.em.cropimage.ImageCropActivity;
 import com.example.millipixelsinteractive_031.em.imagepicker.ImagePicker;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageActivity;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class TabbedActivity extends AppCompatActivity {
@@ -51,15 +67,33 @@ public class TabbedActivity extends AppCompatActivity {
     TextView show_box_hint_textView;
 
     Bitmap photo;
+    public static String PAGE = "page";
+    public static String PATH = "path";
 
+    ProgressDialog dialog;
+
+    Button done_pdf_button;
+
+    Image image;
+
+    String path;
+
+    ArrayList<String> tempUris;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        public boolean onNavigationItemSelected(MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_filter:
+
+                    if(arrayList.size()!=0){
+                        Intent intent1 = new Intent(TabbedActivity.this,ImageFilterActivity.class);
+                        intent1.putExtra(PATH,arrayList.get(currentPage));
+                        intent1.putExtra(PAGE,currentPage);
+                        startActivity(intent1);
+                    }
 
                     return true;
                 case R.id.navigation_crop:
@@ -118,13 +152,22 @@ public class TabbedActivity extends AppCompatActivity {
 
         mPager =findViewById(R.id.pager);
 
-         show_box_hint_textView=findViewById(R.id.show_box_hint_textView);
+        dialog=new ProgressDialog(this);
+
+        dialog.setTitle("Please wait...");
+        dialog.setMessage("Converting images to PDF.");
+
+
+        show_box_hint_textView=findViewById(R.id.show_box_hint_textView);
+
 
         android.support.design.widget.FloatingActionButton add_images_floating_button=findViewById(R.id.add_images_floating_button);
 
         initToolBar();
 
         arrayList=new ArrayList<>();
+
+        tempUris=new ArrayList<>();
 
         if(arrayList.size()==0){
             show_box_hint_textView.setVisibility(View.VISIBLE);
@@ -160,10 +203,31 @@ public class TabbedActivity extends AppCompatActivity {
             }
         });
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         BottomNavigationViewHelper.disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+
+
+
+    public void createPdf() {
+
+        if (arrayList.size() == 0) {
+            if (tempUris.size() == 0) {
+                return;
+            } else {
+                arrayList = (ArrayList<String>) tempUris.clone();
+            }
+        }
+
+
+        new CreatingPdf().execute();
+
+
+    }
+
+
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -172,17 +236,15 @@ public class TabbedActivity extends AppCompatActivity {
 
             case CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE:
 
+                CropImage.ActivityResult result = CropImage.getActivityResult(data);
+                if (resultCode == RESULT_OK) {
+                    Uri resultUri = result.getUri();
 
+                    arrayList.add(currentPage,getRealPathFromURI(resultUri));
 
-//                CropImage.ActivityResult result = CropImage.getActivityResult(data);
-//                if (resultCode == RESULT_OK) {
-//                    Uri resultUri = result.getUri();
-//
-//                    arrayList.add(currentPage,getRealPathFromURI(resultUri));
-//
-//                } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-//                    Exception error = result.getError();
-//                }
+                } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                    Exception error = result.getError();
+                }
 
 
             case SECOND_PIC_REQ:
@@ -236,5 +298,115 @@ public class TabbedActivity extends AppCompatActivity {
         int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
         return cursor.getString(idx);
     }
+
+    public class CreatingPdf extends AsyncTask<String, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog.show();
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+
+
+
+            path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDFfiles/";
+
+            File folder = new File(path);
+            if (!folder.exists()) {
+                boolean success = folder.mkdir();
+                if (!success) {
+                    Toast.makeText(TabbedActivity.this, "Error on creating application folder", Toast.LENGTH_SHORT).show();
+                    return null;
+                }
+            }
+
+            path = path + System.currentTimeMillis() + ".pdf";
+
+
+
+            Document document = new Document(PageSize.A4, 0, 0, 0, 0);
+
+            Rectangle documentRect = document.getPageSize();
+
+            try {
+                PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(path));
+
+
+                document.open();
+
+                for (int i = 0; i < arrayList.size(); i++) {
+
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    photo.compress(Bitmap.CompressFormat.PNG, 70, stream);
+
+                    image = Image.getInstance(arrayList.get(i));
+
+                    document.add(image);
+
+                    document.newPage();
+
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            document.close();
+            arrayList.clear();
+            tempUris.clear();
+
+
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            dialog.dismiss();
+            openPdf();
+
+        }
+    }
+
+
+    void openPdf() {
+        File file = new File(path);
+
+        Intent target = new Intent(Intent.ACTION_VIEW);
+        target.setDataAndType(Uri.fromFile(file),"application/pdf");
+        target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+
+        Intent intent = Intent.createChooser(target, "Open File");
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            // Instruct the user to install a PDF reader here, or something
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_tabbed, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_done){
+            createPdf();
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+
+//    @OnClick(R.id.done_pdf_button)
+//        public void onDoneButtonClick(){
+//        createPdf();
+//    }
 
 }

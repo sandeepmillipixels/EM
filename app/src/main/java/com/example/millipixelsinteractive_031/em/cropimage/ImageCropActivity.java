@@ -16,8 +16,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.millipixelsinteractive_031.em.R;
-import com.example.millipixelsinteractive_031.em.shoebox.TabbedActivity;
-import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.ByteArrayOutputStream;
@@ -81,6 +79,7 @@ public class ImageCropActivity extends AppCompatActivity {
 
 
     }
+
     public Uri getImageUri(Context inContext, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
@@ -129,10 +128,12 @@ public class ImageCropActivity extends AppCompatActivity {
     @OnClick(R.id.done_crop_button)
     void doneCroping(){
 
-        Uri uri=getImageUri(this,bitmap);
+        cropImageView.getCroppedImageAsync();
+// or
+        bitmap= cropImageView.getCroppedImage();
 
         Intent intent=new Intent();
-        intent.putExtra("uri",uri.toString());
+        intent.putExtra("uri",bitmap);
         setResult(RESULT_OK,intent);
         finish();
 

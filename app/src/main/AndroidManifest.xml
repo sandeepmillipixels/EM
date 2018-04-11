@@ -59,6 +59,9 @@
             android:name=".TabbedActivity"
             android:label="@string/title_activity_tabbed"></activity>
 
+        <activity android:name=".cropimage.ImageCropActivity"></activity>
+        <activity android:name=".shoebox.ImageFilterActivity"></activity>
+
         <activity
             android:name=".verify_otp.VerifyOtpActity"
             android:screenOrientation="portrait"
