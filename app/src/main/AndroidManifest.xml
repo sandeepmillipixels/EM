@@ -88,7 +88,8 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".shoebox.ImageFilterActivity"></activity>
+        <activity android:name=".shoebox.ImageFilterActivity" />
+        <activity android:name=".shoebox.ShowShoeboxActivity"></activity>
     </application>
 
 </manifest>

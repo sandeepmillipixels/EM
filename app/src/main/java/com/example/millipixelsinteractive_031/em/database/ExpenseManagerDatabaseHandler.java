@@ -18,12 +18,20 @@ public class ExpenseManagerDatabaseHandler extends SQLiteOpenHelper {
 
     // Product table name
     public static final String TABLE_EXPENSE_CATEGORY = "expense_category";
+    public static final String TABLE_SHOEBOX= "shoe_box";
     public static final String TABLE_ALL_EXPENSES = "all_expense";
 
     // TABLE_EXPENSE_CATEGORY Columns names
     public static final String _ID = "_id";
     public static final String KEY_CATEGORY_NAME = "category_name";
     public static final String KEY_CATEGORY_COLOR = "category_color";
+
+
+    // TABLE_SHOEBOX_CATEGORY Columns names
+    public static final String SHOEBOX_ID = "_id";
+    public static final String KEY_SHOEBOX_NAME = "shoebox_name";
+    public static final String KEY_SHOEBOX_TIME = "shoebox_time";
+    public static final String KEY_SHOEBOX_DATE = "shoebox_date";
 
 
 
@@ -54,6 +62,12 @@ public class ExpenseManagerDatabaseHandler extends SQLiteOpenHelper {
 
         db.execSQL(CREATE_EXPENSE_CATEGORY_TABLE);
 
+
+        String CREATE_SHOEBOX_TABLE = "CREATE TABLE " + TABLE_SHOEBOX + "("
+                + SHOEBOX_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_SHOEBOX_NAME + " TEXT,"+ KEY_SHOEBOX_TIME + " TEXT," + KEY_SHOEBOX_DATE + " TEXT" + ")";
+
+        db.execSQL(CREATE_SHOEBOX_TABLE);
+
         String CREATE_ALL_EXPENSE_TABLE = "CREATE TABLE " + TABLE_ALL_EXPENSES + "("
                 + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_CATEGORY_ID + " INTEGER," + KEY_EXPENSE_CATEGORY_NAME + " TEXT,"+ KEY_EXPENSE_NAME + " TEXT," + KEY_EXPENSE_AMOUNT + " TEXT," +  KEY_EXPENSE_DATE + " TEXT,"+  KEY_EXPENSE_DATE_MILLI + " INTEGER," + KEY_EXPENSE_NOTE + " TEXT,"+ KEY_EXPENSE_IMAGE + " TEXT" + ")";
 
@@ -64,6 +78,7 @@ public class ExpenseManagerDatabaseHandler extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_EXPENSE_CATEGORY);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_ALL_EXPENSES);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SHOEBOX);
         // Create tables again
         onCreate(db);
     }

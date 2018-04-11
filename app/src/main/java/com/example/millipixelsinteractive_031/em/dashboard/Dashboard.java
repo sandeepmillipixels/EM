@@ -35,6 +35,7 @@ import com.example.millipixelsinteractive_031.em.addexpense.AddExpense;
 import com.example.millipixelsinteractive_031.em.database.AllExpensesDataSource;
 import com.example.millipixelsinteractive_031.em.fragments.MonthlyExpenseFragment;
 import com.example.millipixelsinteractive_031.em.settings.SettingsActivity;
+import com.example.millipixelsinteractive_031.em.shoebox.ShowShoeboxActivity;
 import com.example.millipixelsinteractive_031.em.shoebox.TabbedActivity;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.github.mikephil.charting.charts.LineChart;
@@ -84,12 +85,8 @@ public class Dashboard extends AppCompatActivity
         setContentView(R.layout.activity_dashboard);
         ButterKnife.bind(this);
         allExpensesDataSource = new AllExpensesDataSource(this);
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
         rightLabels =findViewById(R.id.fab);
         com.getbase.floatingactionbutton.FloatingActionButton shoe_box = new com.getbase.floatingactionbutton.FloatingActionButton(this);
         shoe_box.setTitle("Add to shoebox");
@@ -297,6 +294,9 @@ public class Dashboard extends AppCompatActivity
 
         if (id == R.id.nav_manage){
             Intent intent = new Intent(Dashboard.this, SettingsActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_shoebox){
+            Intent intent = new Intent(Dashboard.this, ShowShoeboxActivity.class);
             startActivity(intent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
