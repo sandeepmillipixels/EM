@@ -11,11 +11,14 @@ import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.millipixelsinteractive_031.em.R;
+import com.example.millipixelsinteractive_031.em.shoebox.TabbedActivity;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.ByteArrayOutputStream;
@@ -36,8 +39,6 @@ public class ImageCropActivity extends AppCompatActivity {
     @BindView(R.id.fabCrop)
     FloatingActionButton crop_button;
 
-    @BindView(R.id.done_crop_button)
-    Button done_crop_button;
 
     String path;
 
@@ -46,6 +47,10 @@ public class ImageCropActivity extends AppCompatActivity {
     Bitmap bitmap;
 
     Toolbar toolbar;
+
+    Bitmap cropped;
+
+    int page=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +63,7 @@ public class ImageCropActivity extends AppCompatActivity {
         initToolBar();
 
         path=getIntent().getStringExtra("path");
+        page = getIntent().getIntExtra(TabbedActivity.PAGE,0);
 
         if(path!=null){
             BitmapFactory.Options bmOptions = new BitmapFactory.Options();
@@ -81,10 +87,15 @@ public class ImageCropActivity extends AppCompatActivity {
     }
 
     public Uri getImageUri(Context inContext, Bitmap inImage) {
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+
+        if(inImage!=null){
+            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+            path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+
+        }
         return Uri.parse(path);
+
     }
 
 
@@ -92,18 +103,16 @@ public class ImageCropActivity extends AppCompatActivity {
     void doneOnClick(){
 
         cropImageView.getCroppedImageAsync();
-// or
-        Bitmap cropped = cropImageView.getCroppedImage();
+        cropped = cropImageView.getCroppedImage();
         cropImageView.setImageBitmap(cropped);
+
+
     }
 
 
     @OnClick(R.id.fabRotate)
     void cropImageView(){
 
-//        cropImageView.getCroppedImageAsync();
-// or
-//        Bitmap cropped = cropImageView.rotateImage(90);
         cropImageView.rotateImage(90);
     }
 
@@ -125,21 +134,37 @@ public class ImageCropActivity extends AppCompatActivity {
         );
     }
 
-    @OnClick(R.id.done_crop_button)
-    void doneCroping(){
 
-        cropImageView.getCroppedImageAsync();
-// or
-        bitmap= cropImageView.getCroppedImage();
-
-        Intent intent=new Intent();
-        intent.putExtra("uri",bitmap);
-        setResult(RESULT_OK,intent);
-        finish();
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_crop, menu);
+        return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_crop){
 
+            Uri uriPath=getImageUri(this,cropped);
+
+            String path=getRealPathFromURI(uriPath);
+
+            Intent intent=new Intent();
+            intent.putExtra("path",path);
+            intent.putExtra("position",page);
+            setResult(RESULT_OK,intent);
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+    public String getRealPathFromURI(Uri uri) {
+        Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+        cursor.moveToFirst();
+        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+        return cursor.getString(idx);
+    }
 
 
 }

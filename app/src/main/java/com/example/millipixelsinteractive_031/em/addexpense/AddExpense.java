@@ -40,6 +40,7 @@ import com.example.millipixelsinteractive_031.em.database.AllExpensesDataSource;
 
 import com.example.millipixelsinteractive_031.em.imagepicker.ImagePicker;
 import com.example.millipixelsinteractive_031.em.model.AllExpenses;
+import com.example.millipixelsinteractive_031.em.shoebox.TabbedActivity;
 import com.example.millipixelsinteractive_031.em.utils.Utility;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Image;
@@ -73,7 +74,6 @@ public class AddExpense extends AppCompatActivity {
     public static final int SECOND_PIC_REQ = 1313;
     public static final int GALLERY_ONLY_REQ = 1212;
 
-
     Image image;
 
 
@@ -104,8 +104,6 @@ public class AddExpense extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-    @BindView(R.id.pdfButton)
-    Button pdfButton;
 
     String amount,category,notes,date,expense_name;
 
@@ -131,35 +129,16 @@ public class AddExpense extends AppCompatActivity {
         ButterKnife.bind(this);
         allExpensesDataSource = new AllExpensesDataSource(this);
 
-        imagesUri = new ArrayList<>();
-        tempUris = new ArrayList<>();
-
-        dialog=new Dialog(this);
 
         initToolBar();
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String path = prefs.getString(CACHED_IMG_KEY, "");
-        File cached = new File(path);
-        if (cached.exists()) {
-            Picasso.with(this).load(cached).into(firstImage);
-        }
+//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+//        String path = prefs.getString(CACHED_IMG_KEY, "");
+//        File cached = new File(path);
+//        if (cached.exists()) {
+//            Picasso.with(this).load(cached).into(firstImage);
+//        }
     }
 
-   public void createPdf() {
-
-       if (imagesUri.size() == 0) {
-           if (tempUris.size() == 0) {
-               return;
-           } else {
-               imagesUri = (ArrayList<String>) tempUris.clone();
-           }
-       }
-
-
-       new CreatingPdf().execute();
-
-
-    }
 
 
     public void initToolBar() {
@@ -228,19 +207,7 @@ public class AddExpense extends AppCompatActivity {
 
         }
 
-
     }
-
-
-
-
-    @OnClick(R.id.pdfButton)
-        public void convertToPDF(){
-
-        createPdf();
-
-    }
-
 
 
     @OnClick(R.id.edtCategoryName)
@@ -293,7 +260,10 @@ public class AddExpense extends AppCompatActivity {
     public void takePicture() {
         // width and height will be at least 600px long (optional).
 
-        ImagePicker.pickImage(AddExpense.this, "Select your image:");
+        Intent intent =new Intent(AddExpense.this, TabbedActivity.class);
+        startActivity(intent);
+
+        //ImagePicker.pickImage(AddExpense.this, "Select your image:");
 
 
     }
@@ -310,13 +280,13 @@ public class AddExpense extends AppCompatActivity {
                     String path = "file:///" + imagePathFromResult;
                     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(AddExpense.this);
                     prefs.edit().putString(CACHED_IMG_KEY, imagePathFromResult).apply();
-                    Picasso.with(AddExpense.this).load(path).into(firstImage);
+                    //Picasso.with(AddExpense.this).load(path).into(firstImage);
                 }
                 break;
             case GALLERY_ONLY_REQ:
                 String pathFromGallery = "file:///" + ImagePicker.getImagePathFromResult(AddExpense.this, requestCode,
                         resultCode, data);
-                Picasso.with(AddExpense.this).load(pathFromGallery).into(firstImage);
+               // Picasso.with(AddExpense.this).load(pathFromGallery).into(firstImage);
                 break;
 
             case 100:
@@ -343,7 +313,7 @@ public class AddExpense extends AppCompatActivity {
                         String path = "file:///" + imagePathFromResult1;
                         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(AddExpense.this);
                         prefs.edit().putString(CACHED_IMG_KEY, imagePathFromResult1).apply();
-                        Picasso.with(AddExpense.this).load(path).into(firstImage);
+                      //  Picasso.with(AddExpense.this).load(path).into(firstImage);
                         tempUris.add(getRealPathFromURI(tempUri));
                     }
                 }
@@ -374,36 +344,6 @@ public class AddExpense extends AppCompatActivity {
         cursor.moveToFirst();
         int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
         return cursor.getString(idx);
-    }
-    private String currentDateFormat(){
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HH_mm_ss");
-        String  currentTimeStamp = dateFormat.format(new Date());
-        return currentTimeStamp;
-    }
-
-    private void storeCameraPhotoInSDCard(Bitmap bitmap, String currentDate) throws FileNotFoundException {
-        File outputFile = new File(Environment.getExternalStorageDirectory(), "photo_" + currentDate + ".jpg");
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
-            fileOutputStream.flush();
-            fileOutputStream.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    private Bitmap getImageFileFromSDCard(String filename){
-        Bitmap bitmap = null;
-        File imageFile = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+ "/" + filename);
-        try {
-            FileInputStream fis = new FileInputStream(imageFile);
-            bitmap = BitmapFactory.decodeStream(fis);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return bitmap;
     }
 
     @Override
@@ -446,100 +386,4 @@ public class AddExpense extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
     }
 
-
-    public class CreatingPdf extends AsyncTask<String, String, String> {
-
-        // Progress dialog
-
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            dialog.show();
-        }
-
-        @Override
-        protected String doInBackground(String... params) {
-
-
-
-            path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDFfiles/";
-
-            File folder = new File(path);
-            if (!folder.exists()) {
-                boolean success = folder.mkdir();
-                if (!success) {
-                    Toast.makeText(AddExpense.this, "Error on creating application folder", Toast.LENGTH_SHORT).show();
-                    return null;
-                }
-            }
-
-            path = path + System.currentTimeMillis() + ".pdf";
-
-
-
-            Document document = new Document(PageSize.A4, 0, 0, 0, 0);
-
-            Log.v("stage 2", "Document Created");
-
-            Rectangle documentRect = document.getPageSize();
-
-            try {
-                PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(path));
-
-                Log.v("Stage 3", "Pdf writer");
-
-                document.open();
-
-                Log.v("Stage 4", "Document opened");
-                for (int i = 0; i < imagesUri.size(); i++) {
-
-                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                    photo.compress(Bitmap.CompressFormat.PNG, 70, stream);
-
-                    image = Image.getInstance(imagesUri.get(i));
-
-                    document.add(image);
-
-                    document.newPage();
-
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            document.close();
-            imagesUri.clear();
-            tempUris.clear();
-
-
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            dialog.dismiss();
-            openPdf();
-
-        }
-    }
-
-
-    void openPdf() {
-        File file = new File(path);
-
-        Intent target = new Intent(Intent.ACTION_VIEW);
-        target.setDataAndType(Uri.fromFile(file),"application/pdf");
-        target.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-
-        Intent intent = Intent.createChooser(target, "Open File");
-        try {
-            startActivity(intent);
-        } catch (ActivityNotFoundException e) {
-            // Instruct the user to install a PDF reader here, or something
-        }
-    }
 }
