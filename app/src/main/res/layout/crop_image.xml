@@ -6,21 +6,12 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_crop_image"
+        android:theme="@style/AppTheme.ActionBar"
         android:layout_width="0dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:background="@drawable/app_gradient"
         android:layout_height="@dimen/topbar_height">
-        <Button
-            android:id="@+id/done_crop_button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Done"
-            android:background="@null"
-            android:layout_marginLeft="@dimen/margin_10_dp"
-            android:textColor="@color/white"
-            android:layout_gravity="right"
-            />
 
 
     </android.support.v7.widget.Toolbar>
@@ -40,7 +31,7 @@
             android:id="@+id/cropImageView"
             android:layout_width="match_parent"
 
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             />
     </LinearLayout>
 
