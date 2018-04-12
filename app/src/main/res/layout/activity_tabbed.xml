@@ -11,21 +11,33 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_shoebox"
         android:layout_width="match_parent"
+        android:theme="@style/AppTheme.ActionBar"
         android:background="@drawable/app_gradient"
         android:layout_height="@dimen/topbar_height">
 
-
+        <!--<Button-->
+            <!--android:id="@+id/done_pdf_button"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="Done"-->
+            <!--android:background="@null"-->
+            <!--android:layout_marginLeft="@dimen/margin_10_dp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:layout_gravity="right"-->
+            <!--/>-->
 
     </android.support.v7.widget.Toolbar>
 
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
+
+        app:layout_constraintTop_toBottomOf="@id/toolbar_shoebox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/navigation"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/show_box_hint_textView"

@@ -22,7 +22,7 @@ public class ShowShoeboxActivity extends AppCompatActivity {
     }
     public void initToolBar() {
 
-        toolbar.setTitle(R.string.filter);
+        toolbar.setTitle(R.string.shoebox);
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         setSupportActionBar(toolbar);
 

@@ -78,6 +78,10 @@
             android:name=".category.AddEditCategoryActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".cropimage.ImageCropActivity"
+            android:screenOrientation="portrait" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.millipixelsinteractive_031.em.provider"
