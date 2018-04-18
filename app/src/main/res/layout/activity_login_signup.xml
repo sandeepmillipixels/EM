@@ -35,7 +35,7 @@
             </LinearLayout>
 
 
-            <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
                 android:id="@+id/txtSkip"
                 android:layout_margin="18dp"
                 android:layout_alignParentRight="true"

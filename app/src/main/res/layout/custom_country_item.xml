@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:id="@+id/code_textview"
             android:padding="@dimen/size_12dp"
             android:textColor="@color/black"
