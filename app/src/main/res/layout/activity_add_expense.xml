@@ -171,21 +171,6 @@
             android:paddingRight="60dp"
             android:layout_height="wrap_content" />
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontButton
-            android:id="@+id/pdfButton"
-            android:text="Create PDF"
-
-            android:layout_marginTop="@dimen/margin_10_dp"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/app_round_button_drawable"
-            android:inputType="number"
-            android:textColor="@color/white"
-            android:paddingLeft="60dp"
-            android:paddingRight="60dp"
-            android:layout_height="wrap_content" />
-
-
 
     </LinearLayout>
 

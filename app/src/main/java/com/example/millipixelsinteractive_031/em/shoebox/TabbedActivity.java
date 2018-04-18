@@ -1,32 +1,28 @@
 package com.example.millipixelsinteractive_031.em.shoebox;
 
-import android.app.Dialog;
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
 import com.example.millipixelsinteractive_031.em.cropimage.ImageCropActivity;
 import com.example.millipixelsinteractive_031.em.imagepicker.ImagePicker;
@@ -44,7 +40,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 
 
 public class TabbedActivity extends AppCompatActivity {
@@ -72,13 +68,14 @@ public class TabbedActivity extends AppCompatActivity {
 
     ProgressDialog dialog;
 
-    Button done_pdf_button;
-
     Image image;
 
     String path;
 
+    boolean visibility=false;
+
     ArrayList<String> tempUris;
+    MenuItem registrar;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -101,6 +98,7 @@ public class TabbedActivity extends AppCompatActivity {
                     if(arrayList.size()!=0){
                         Intent intent=new Intent(TabbedActivity.this, ImageCropActivity.class);
                         intent.putExtra("path",arrayList.get(currentPage).toString());
+                        intent.putExtra(PAGE,currentPage);
                         startActivityForResult(intent,CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE);
                     }
 
@@ -112,8 +110,13 @@ public class TabbedActivity extends AppCompatActivity {
                         arrayList.remove(currentPage);
                         if(currentPage==0){
                             show_box_hint_textView.setVisibility(View.VISIBLE);
+                            visibility=false;
+                            registrar.setVisible(visibility);
                         }
                         adapter.notifyDataSetChanged();
+                    }else{
+                        visibility=false;
+                        registrar.setVisible(visibility);
                     }
 
 
@@ -171,6 +174,7 @@ public class TabbedActivity extends AppCompatActivity {
 
         if(arrayList.size()==0){
             show_box_hint_textView.setVisibility(View.VISIBLE);
+            visibility=true;
 
         }
 
@@ -181,7 +185,8 @@ public class TabbedActivity extends AppCompatActivity {
         add_images_floating_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ImagePicker.pickImage(TabbedActivity.this, "Select your image:");
+
+                requestForSpecificPermission();
             }
         });
 
@@ -208,7 +213,20 @@ public class TabbedActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
-
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 101:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    ImagePicker.pickImage(TabbedActivity.this, "Select your image:");
+                } else {
+                    //not granted
+                }
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
 
     public void createPdf() {
 
@@ -226,9 +244,6 @@ public class TabbedActivity extends AppCompatActivity {
 
     }
 
-
-
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
@@ -238,9 +253,16 @@ public class TabbedActivity extends AppCompatActivity {
 
                 CropImage.ActivityResult result = CropImage.getActivityResult(data);
                 if (resultCode == RESULT_OK) {
-                    Uri resultUri = result.getUri();
 
-                    arrayList.add(currentPage,getRealPathFromURI(resultUri));
+                    String path=data.getExtras().getString("path");
+                    int position=data.getExtras().getInt("position");
+
+                   // arrayList.remove(currentPage);
+
+                    arrayList.set(position,path);
+
+                   // arrayList.add(position,path);
+                   adapter.notifyDataSetChanged();
 
                 } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                     Exception error = result.getError();
@@ -276,6 +298,8 @@ public class TabbedActivity extends AppCompatActivity {
 
                     if (tempUri != null) {
                         arrayList.add(getRealPathFromURI(tempUri));
+                        visibility=true;
+                        registrar.setVisible(visibility);
                     }
                     adapter.notifyDataSetChanged();
                 }
@@ -392,11 +416,18 @@ public class TabbedActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_tabbed, menu);
+
+         registrar = menu.findItem(R.id.action_done);
+        registrar.setVisible(!visibility);
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+
+
         if (item.getItemId() == R.id.action_done){
             createPdf();
         }
@@ -404,9 +435,8 @@ public class TabbedActivity extends AppCompatActivity {
 
     }
 
-//    @OnClick(R.id.done_pdf_button)
-//        public void onDoneButtonClick(){
-//        createPdf();
-//    }
+    private void requestForSpecificPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
+    }
 
 }

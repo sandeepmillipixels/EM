@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 
 import com.example.millipixelsinteractive_031.em.R;
+import com.example.millipixelsinteractive_031.em.view.FilterImageView;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -30,8 +31,8 @@ public class ImageFilterActivity extends AppCompatActivity {
     int page = 0;
     String path = "";
     @BindView(R.id.imgFilter)
-    ImageView imgFilter;
-    SeekBar  seekBright, seekContrast;
+    FilterImageView imgFilter;
+    SeekBar  seekBright, seekContrast,seekSeturation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class ImageFilterActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         seekBright = (SeekBar) findViewById(R.id.seekBright);
         seekContrast = (SeekBar) findViewById(R.id.seekContrast);
+        seekSeturation = (SeekBar) findViewById(R.id.seekSeturation);
         initToolBar();
         if (getIntent().getExtras() != null){
             path = getIntent().getStringExtra(TabbedActivity.PATH);
@@ -52,20 +54,18 @@ public class ImageFilterActivity extends AppCompatActivity {
     }
 
     private void setListeners() {
-        seekBright.setMax(510);
-        seekBright.setProgress(255);
-        seekContrast.setMax(90);
-        seekContrast.setProgress(0);
+
         seekBright.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 //                imgFilter.setColorFilter(setBrightness(progress));
-                imgFilter.buildDrawingCache();
-                Bitmap bmap = imgFilter.getDrawingCache();
-//                imgFilter.setImageBitmap(bmap);
-//                brightnessValue = progress - 255;
-//                processingBitmap_Brightness(bmap);
-                imgFilter.setImageBitmap(changeBitmapContrastBrightness(bmap,(int)(seekContrast.getProgress()+10)/10,(progress-255)));
+//                imgFilter.buildDrawingCache();
+//                Bitmap bmap = imgFilter.getDrawingCache();
+////                imgFilter.setImageBitmap(bmap);
+////                brightnessValue = progress - 255;
+////                processingBitmap_Brightness(bmap);
+//                imgFilter.setImageBitmap(changeBitmapContrastBrightness(bmap,(int)(seekContrast.getProgress()+10)/10,(progress-255)));
+                imgFilter.setBright(progress / 10f);
             }
 
             @Override
@@ -82,9 +82,27 @@ public class ImageFilterActivity extends AppCompatActivity {
         seekContrast.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                imgFilter.buildDrawingCache();
-                Bitmap bmap = imgFilter.getDrawingCache();
-                imgFilter.setImageBitmap(changeBitmapContrastBrightness(bmap,(int)(progress+10)/10,(seekBright.getProgress()-255)));
+//                imgFilter.buildDrawingCache();
+//                Bitmap bmap = imgFilter.getDrawingCache();
+//                imgFilter.setImageBitmap(changeBitmapContrastBrightness(bmap,(int)(progress+10)/10,(seekBright.getProgress()-255)));
+                imgFilter.setContrast(progress / 10f);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        seekSeturation.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                imgFilter.setSaturation(progress);
             }
 
             @Override
@@ -98,7 +116,7 @@ public class ImageFilterActivity extends AppCompatActivity {
             }
         });
     }
-    public static Bitmap changeBitmapContrastBrightness(Bitmap bmp, float contrast, float brightness) {
+    public Bitmap changeBitmapContrastBrightness(Bitmap bmp, float contrast, float brightness) {
         Log.e("","brightness"+brightness);
         ColorMatrix cm = new ColorMatrix(new float[]
                 {
@@ -107,7 +125,6 @@ public class ImageFilterActivity extends AppCompatActivity {
                         0, 0, contrast, 0, brightness,
                         0, 0, 0, 1, 0
                 });
-
         Bitmap ret = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), bmp.getConfig());
 
         Canvas canvas = new Canvas(ret);
@@ -150,4 +167,5 @@ public class ImageFilterActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
+
 }
