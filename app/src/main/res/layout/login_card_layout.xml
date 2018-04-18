@@ -24,14 +24,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:id="@+id/txtEnterText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="24dp"
                 android:text="@string/enter_your_phone"
                 />
@@ -60,7 +59,7 @@
                 android:singleLine="true"
                 android:lines="1"
                 android:maxLength="13"
-                android:inputType="number"
+                android:inputType="textEmailAddress"
                 android:imeOptions="actionDone"
                 android:textSize="14sp"
                 android:layout_below="@+id/divider_spinner"

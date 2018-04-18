@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.example.millipixelsinteractive_031.em.addexpense.AddExpense">
+    tools:context="com.application.millipixels.expense_rocket.addexpense.AddExpense">
 
 
     <android.support.v7.widget.Toolbar
@@ -36,7 +36,7 @@
             android:layout_marginTop="@dimen/margin_15_dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+        <com.application.millipixels.expense_rocket.typeface.FontEditText
             android:id="@+id/edtExpenseName"
             android:layout_width="match_parent"
             android:textColor="@color/colorPrimary"
@@ -53,7 +53,7 @@
             android:layout_marginTop="@dimen/margin_20_dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+        <com.application.millipixels.expense_rocket.typeface.FontEditText
             android:id="@+id/edtAmount"
             android:layout_width="match_parent"
             android:textColor="@color/colorPrimary"
@@ -71,7 +71,7 @@
             android:layout_marginTop="@dimen/margin_20_dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+        <com.application.millipixels.expense_rocket.typeface.FontEditText
             android:id="@+id/edtCategoryName"
 
             android:textColor="@color/colorPrimary"
@@ -90,7 +90,7 @@
             android:layout_marginTop="@dimen/margin_20_dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+        <com.application.millipixels.expense_rocket.typeface.FontEditText
             android:id="@+id/edtNotes"
             android:layout_width="match_parent"
             android:textColor="@color/colorPrimary"
@@ -108,7 +108,7 @@
             android:layout_marginTop="@dimen/margin_20_dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+        <com.application.millipixels.expense_rocket.typeface.FontEditText
             android:id="@+id/edtDate"
             android:layout_width="match_parent"
             android:hint="@string/date"
@@ -157,7 +157,7 @@
         </LinearLayout>
 
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontButton
+        <com.application.millipixels.expense_rocket.typeface.FontButton
             android:id="@+id/saveButton"
             android:text="@string/save"
 

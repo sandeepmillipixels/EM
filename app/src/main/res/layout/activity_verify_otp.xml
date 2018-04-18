@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+                    <com.application.millipixels.expense_rocket.typeface.FontsClass
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:text="Verify Otp"

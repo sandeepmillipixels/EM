@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:padding="8dip" >
-<com.example.millipixelsinteractive_031.em.view.ZoomLayout
+<com.application.millipixels.expense_rocket.view.ZoomLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <ImageView
@@ -15,6 +15,6 @@
         android:layout_gravity="center"
         android:src="@mipmap/ic_launcher"
         android:scaleType="centerCrop" />
-</com.example.millipixelsinteractive_031.em.view.ZoomLayout>
+</com.application.millipixels.expense_rocket.view.ZoomLayout>
 
 </RelativeLayout>

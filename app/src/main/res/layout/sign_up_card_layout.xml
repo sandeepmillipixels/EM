@@ -23,19 +23,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+    <com.application.millipixels.expense_rocket.typeface.FontsClassLight
         android:textStyle="bold"
         android:textSize="14sp"
         android:id="@+id/txtEnterText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:text="@string/enter_phone_email"
          />
 
-    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+    <com.application.millipixels.expense_rocket.typeface.FontEditText
         android:hint="@string/enter_email"
         android:id="@+id/edtEmail"
         android:singleLine="true"
@@ -55,6 +54,7 @@
         android:background="@android:color/black"
         android:layout_below="@+id/edtEmail"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_marginLeft="@dimen/margin_4_dp"
         android:layout_marginRight="@dimen/margin_4_dp"
         android:layout_height="0.4dp"></View>
@@ -65,6 +65,7 @@
         android:id="@+id/spnCountarySignup"
         android:layout_marginTop="24dp"
         android:layout_below="@+id/edtEmail"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <View
@@ -73,6 +74,7 @@
         android:background="@android:color/black"
         android:layout_below="@+id/spnCountarySignup"
         android:layout_width="match_parent"
+
         android:layout_marginLeft="@dimen/margin_4_dp"
         android:layout_marginRight="@dimen/margin_4_dp"
         android:layout_height="0.4dp"></View>
@@ -84,11 +86,12 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_below="@+id/divider"
+        android:visibility="gone"
         android:layout_marginTop="24dp"
         android:layout_height="wrap_content">
 
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+        <com.application.millipixels.expense_rocket.typeface.FontEditText
             android:id="@+id/edtCode"
             android:textSize="14sp"
             android:singleLine="true"
@@ -108,7 +111,7 @@
             android:layout_height="match_parent"></View>
 
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+        <com.application.millipixels.expense_rocket.typeface.FontEditText
             android:hint="@string/enter_phone"
             android:id="@+id/edtPhone"
             android:textSize="14sp"
@@ -133,7 +136,7 @@
         android:layout_height="0.4dp"></View>
 
 
-    <com.example.millipixelsinteractive_031.em.typeface.FontButton
+    <com.application.millipixels.expense_rocket.typeface.FontButton
         android:id="@+id/btnSendOtpSignup"
         android:layout_marginBottom="36dp"
         android:layout_below="@+id/contact_number_layout"

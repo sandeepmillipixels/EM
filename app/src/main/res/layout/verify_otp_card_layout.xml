@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:id="@+id/txtEnterText"
@@ -47,7 +47,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+                    <com.application.millipixels.expense_rocket.typeface.FontEditText
                         android:inputType="numberPassword"
                         android:id="@+id/edt1"
                         android:padding="12dp"
@@ -66,7 +66,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+                    <com.application.millipixels.expense_rocket.typeface.FontEditText
                         android:inputType="numberPassword"
                         android:padding="12dp"
                         android:id="@+id/edt2"
@@ -85,7 +85,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+                    <com.application.millipixels.expense_rocket.typeface.FontEditText
                         android:inputType="numberPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
@@ -105,7 +105,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+                    <com.application.millipixels.expense_rocket.typeface.FontEditText
                         android:inputType="numberPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
@@ -129,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+                <com.application.millipixels.expense_rocket.typeface.FontsClassLight
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
                     android:text="@string/not_received_otp"
@@ -137,7 +137,7 @@
                     android:layout_height="wrap_content" />
 
 
-                <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+                <com.application.millipixels.expense_rocket.typeface.FontsClassLight
                     android:layout_alignParentRight="true"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"
@@ -147,7 +147,7 @@
                     android:layout_height="wrap_content" />
             </RelativeLayout>
 
-            <com.example.millipixelsinteractive_031.em.typeface.FontButton
+            <com.application.millipixels.expense_rocket.typeface.FontButton
                 android:id="@+id/btnVerify"
 
                 android:layout_below="@+id/layout_resend_otp"
@@ -160,7 +160,7 @@
                 android:layout_width="180dp"
                 android:layout_height="wrap_content" />
 
-            <com.example.millipixelsinteractive_031.em.typeface.FontButton
+            <com.application.millipixels.expense_rocket.typeface.FontButton
                 android:layout_marginBottom="36dp"
                 android:layout_below="@+id/btnVerify"
                 android:layout_centerHorizontal="true"

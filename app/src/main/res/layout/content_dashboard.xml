@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.millipixelsinteractive_031.em.dashboard.Dashboard"
+    tools:context="com.application.millipixels.expense_rocket.dashboard.Dashboard"
     tools:showIn="@layout/app_bar_dashboard">
 
 
@@ -41,7 +41,7 @@
        android:layout_below="@+id/dashboard_total_amount_layout"
        android:layout_height="wrap_content">
 
-       <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+       <com.application.millipixels.expense_rocket.typeface.FontsClassLight
            android:id="@+id/total_spending_title"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
            android:textColor="@color/white"
            android:textSize="@dimen/size_17dp" />
 
-       <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+       <com.application.millipixels.expense_rocket.typeface.FontsClass
            android:layout_below="@+id/total_spending_title"
            android:id="@+id/txtTotalAmount"
            android:textColor="@color/white"
@@ -62,7 +62,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
 
-       <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+       <com.application.millipixels.expense_rocket.typeface.FontsClassLight
            android:id="@+id/textView3"
            android:layout_width="match_parent"
           android:gravity="center"
@@ -74,7 +74,7 @@
            android:textColor="@color/white"
            android:textSize="@dimen/size_17dp" />
 
-       <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+       <com.application.millipixels.expense_rocket.typeface.FontsClass
            android:id="@+id/textView4"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"

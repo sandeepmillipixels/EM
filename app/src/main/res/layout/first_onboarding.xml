@@ -12,7 +12,7 @@
 
     </RelativeLayout>
 
-    <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+    <com.application.millipixels.expense_rocket.typeface.FontsClass
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
 
 
 
-    <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+    <com.application.millipixels.expense_rocket.typeface.FontsClassLight
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

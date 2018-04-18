@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.millipixelsinteractive_031.em.addexpense.ExpenseListBycategoryActivity">
+    tools:context="com.application.millipixels.expense_rocket.addexpense.ExpenseListBycategoryActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
         android:layout_height="100dp">
 
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:id="@+id/total_spending_title_record"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/size_15dp" />
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+        <com.application.millipixels.expense_rocket.typeface.FontsClass
             android:layout_below="@+id/total_spending_title_record"
             android:id="@+id/txtTotalAmount"
             android:textColor="@color/white"
