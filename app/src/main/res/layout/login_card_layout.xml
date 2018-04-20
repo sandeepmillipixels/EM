@@ -108,6 +108,7 @@
                 android:paddingLeft="60dp"
                 android:layout_marginTop="2dp"
                 android:paddingRight="60dp"
+                android:visibility="gone"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:text="@string/send_otp"
@@ -125,6 +126,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:text="@string/send_otp"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
