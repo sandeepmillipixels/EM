@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.example.millipixelsinteractive_031.em.R;
+
+import com.application.millipixels.expense_rocket.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

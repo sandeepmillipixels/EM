@@ -6,7 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.example.millipixelsinteractive_031.em.database.ExpenseManagerDatabaseHandler;
+
+import com.application.millipixels.expense_rocket.database.ExpenseManagerDatabaseHandler;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

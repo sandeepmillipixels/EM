@@ -18,7 +18,7 @@
             android:background="@drawable/logo_head" />
 
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:layout_width="wrap_content"
             android:gravity="center"
             android:layout_centerInParent="true"
@@ -30,7 +30,7 @@
             android:id="@+id/splash_textView" />
 
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:layout_width="match_parent"
             android:gravity="center"
             android:text="@string/copyright"

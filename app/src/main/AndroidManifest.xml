@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.millipixelsinteractive_031.em">
+    package="com.application.millipixels.expense_rocket">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"></uses-permission>
     <uses-permission android:name="android.permission.CAMERA" />
 
+
+
     <application
-        android:name=".ExpenseManagerApplication"
+        android:name="com.application.millipixels.expense_rocket.ExpenseManagerApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.application.millipixels.expense_rocket.MainActivity"
             android:screenOrientation="portrait" />
+
         <activity
-            android:name=".onboarding.OnBoarding"
+            android:name="com.application.millipixels.expense_rocket.onboarding.OnBoarding"
             android:screenOrientation="portrait" />
+
         <activity
-            android:name=".login_signup.LoginSignupActivity"
+            android:name="com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
+
         <activity
-            android:name=".splash.SplashActivity"
+            android:name="com.application.millipixels.expense_rocket.splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,61 +45,81 @@
         </activity>
 
         <receiver
-            android:name=".receiver.OTPReceiver"
+            android:name="com.application.millipixels.expense_rocket.receiver.OTPReceiver"
             android:screenOrientation="portrait">
             <intent-filter android:priority="0">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".shoebox.TabbedActivity" />
+        <activity android:name="com.application.millipixels.expense_rocket.shoebox.TabbedActivity"></activity>
+
+
+
+        <activity android:name=".contrast.ContrastActivity"></activity>
+
+        <activity android:name=".gallery.GalleyActivity"></activity>
+
+        <activity android:name=".pdf_opener.PdfOpenActivity"></activity>
+
+
+
         <activity
             android:name=".TabbedActivity"
-            android:label="@string/title_activity_tabbed" />
+            android:label="@string/title_activity_tabbed"></activity>
+
+        <activity android:name="com.application.millipixels.expense_rocket.cropimage.ImageCropActivity"></activity>
+        <activity android:name="com.application.millipixels.expense_rocket.shoebox.ImageFilterActivity"></activity>
+
         <activity
-            android:name=".verify_otp.VerifyOtpActity"
+            android:name="com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
-            android:name=".dashboard.Dashboard"
+            android:name="com.application.millipixels.expense_rocket.dashboard.Dashboard"
             android:label="@string/title_activity_dashboard"
             android:screenOrientation="portrait"
             android:theme="@style/MyMaterialTheme" />
-        <activity
-            android:name=".addexpense.AddExpense"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".category.CategoryActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".addexpense.ExpenseListBycategoryActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".settings.BackupActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".settings.SettingsActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".category.AddEditCategoryActivity"
-            android:screenOrientation="portrait" />
 
-        <activity
-            android:name=".cropimage.ImageCropActivity"
-            android:screenOrientation="portrait" />
-
+        <activity android:name="com.application.millipixels.expense_rocket.addexpense.AddExpense"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.application.millipixels.expense_rocket.category.CategoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.application.millipixels.expense_rocket.addexpense.ExpenseListBycategoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.application.millipixels.expense_rocket.settings.BackupActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.application.millipixels.expense_rocket.settings.SettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.application.millipixels.expense_rocket.category.AddEditCategoryActivity"
+            android:screenOrientation="portrait"/>
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.example.millipixelsinteractive_031.em.provider"
+            android:authorities="com.application.millipixels.expense_rocket.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
 
-        <activity android:name=".shoebox.ImageFilterActivity" />
-        <activity android:name=".shoebox.ShowShoeboxActivity"></activity>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
