@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +29,8 @@ public class GalleryAdapter extends BaseAdapter {
     Activity context;
     List<File>list;
     IOnclick iOnclick;
+
+    int pos;
 
     public GalleryAdapter(Activity context, List<File> list,IOnclick iOnclick) {
 
@@ -64,7 +68,22 @@ public class GalleryAdapter extends BaseAdapter {
         final ImageView imageView = convertView.findViewById(R.id.imageview_gallery);
         final TextView nameTextView = convertView.findViewById(R.id.textview_gallery);
 
-        nameTextView.setText(list.get(position).getName());
+
+                File imgFile = new  File(list.get(position).getPath());
+
+
+        if(imgFile.exists()){
+
+            Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+
+            imageView.setImageBitmap(myBitmap);
+
+        }
+
+        pos=position+1;
+
+        nameTextView.setText("Slip "+pos);
 
 
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +95,6 @@ public class GalleryAdapter extends BaseAdapter {
 //                Intent intent=new Intent(context, PdfOpenActivity.class);
 //                intent.putExtra("path",path);
 //                context.startActivity(intent);
-
 
 
               //  openPdf(path);
