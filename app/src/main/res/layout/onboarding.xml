@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
@@ -36,14 +36,50 @@
     </RelativeLayout>
 
     <LinearLayout
+
         android:gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/onboarding_login_signup_layout"
         android:id="@+id/layoutDots"
         android:layout_width="match_parent"
         android:layout_marginBottom="@dimen/margin_60_dp"
-        android:layout_height="@dimen/size_30dp"
-        android:orientation="horizontal"></LinearLayout>
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+           />
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/FrameLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp" />
+
+            <Button
+                android:id="@+id/fb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#416BC1"
+                android:onClick="onClick"
+                android:text="FaceBook"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/onboarding_login_signup_layout"

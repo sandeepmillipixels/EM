@@ -2,15 +2,24 @@ package com.application.millipixels.expense_rocket.splash;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
+import android.util.Base64;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.gallery.GalleyActivity;
 import com.application.millipixels.expense_rocket.onboarding.OnBoarding;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,7 +46,24 @@ public class SplashActivity extends Activity {
 
             @Override
             public void run() {
-
+                PackageInfo info;
+                try {
+                    info = getPackageManager().getPackageInfo("com.application.millipixels.expense_rocket", PackageManager.GET_SIGNATURES);
+                    for (Signature signature : info.signatures) {
+                        MessageDigest md;
+                        md = MessageDigest.getInstance("SHA");
+                        md.update(signature.toByteArray());
+                        String something = new String(Base64.encode(md.digest(), 0));
+                        //String something = new String(Base64.encodeBytes(md.digest()));
+                        Log.e("hash key", something);
+                    }
+                } catch (PackageManager.NameNotFoundException e1) {
+                    Log.e("name not found", e1.toString());
+                } catch (NoSuchAlgorithmException e) {
+                    Log.e("no such an algorithm", e.toString());
+                } catch (Exception e) {
+                    Log.e("exception", e.toString());
+                }
                 Intent i = new Intent(SplashActivity.this, OnBoarding.class);
                 startActivity(i);
 

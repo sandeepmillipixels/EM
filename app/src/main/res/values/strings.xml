@@ -91,4 +91,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="pick_image_intent_text">Choose an image</string>
+    <string name="facebook_app_id">569502020097138</string>
+    <string name="fb_login_protocol_scheme">fb569502020097138</string>
+    <string name="server_client_id">726909209209-0se81flctvddlmjt1j33kv53m1fjogcf.apps.googleusercontent.com</string>
+
+    <!--<string name="server_client_id">AIzaSyBDpmXxChzca4tWBaLeIZWOKrnhMOeSFqo</string>-->
 </resources>

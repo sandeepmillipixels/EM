@@ -6,6 +6,8 @@ import android.app.Application;
 import com.application.millipixels.expense_rocket.database.ExpenseCategoryDataSource;
 import com.application.millipixels.expense_rocket.model.ExpenseCategory;
 import com.application.millipixels.expense_rocket.utils.Utility;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -20,6 +22,8 @@ public class ExpenseManagerApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         expenseCategoryDataSource = new ExpenseCategoryDataSource(getApplicationContext());
         try {
             expenseCategoryDataSource.open();
