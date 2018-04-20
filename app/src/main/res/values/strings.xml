@@ -23,6 +23,14 @@
     <string name="saving">Saving</string>
     <string name="select_country">Select Country</string>
 
+    <string name="twitter_consumer_key">fXVRs7GGMfkPRgo2GPXoCf9QM</string>
+    <string name="twitter_consumer_secret">vMcvanrynsKJwfX6Tq49Sjz5bsgJEUe62dah7YjC3rvoxk3Tf3</string>
+
+    <string name="twitter_status_fmt">Twitter User: %s</string>
+    <string name="twitter_title_text">Twitter Login</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+
     <string name="total_spending">Total Monthly Expense</string>
 
     <string name="total_spending2">Total Spending</string>

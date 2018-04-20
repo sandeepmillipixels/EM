@@ -150,12 +150,6 @@ public class PdfOpenActivity extends AppCompatActivity implements OnPageChangeLi
             e.printStackTrace();
 
         }
-
-
-
-
-
-
 //        File file = new File(path);
 //
 //        Intent target = new Intent(Intent.ACTION_VIEW);

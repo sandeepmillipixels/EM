@@ -38,8 +38,12 @@ import com.theartofdev.edmodo.cropper.CropImageActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -80,6 +84,10 @@ public class TabbedActivity extends AppCompatActivity {
     ArrayList<String> tempUris;
     MenuItem registrar;
     boolean shoebox = false ;
+
+    String dateTime;
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -303,6 +311,7 @@ public class TabbedActivity extends AppCompatActivity {
                     if (photo == null){
                         return;
                     }
+
                     show_box_hint_textView.setVisibility(View.GONE);
                     // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
                     Uri tempUri = getImageUri(getApplicationContext(), photo);
@@ -348,7 +357,7 @@ public class TabbedActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
 
-
+            path="";
 
             path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDFfiles/";
 
@@ -361,7 +370,19 @@ public class TabbedActivity extends AppCompatActivity {
                 }
             }
 
-            path = path + System.currentTimeMillis() + ".pdf";
+//            path= path + System.currentTimeMillis() + ".jpg";
+//            try {
+//                FileOutputStream fileOutputStream = new FileOutputStream(path);
+//                photo.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+//                fileOutputStream.flush();
+//                fileOutputStream.close();
+//            } catch (FileNotFoundException e) {
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+
+            path = path + dateTime + ".pdf";
 
 
 
@@ -406,6 +427,9 @@ public class TabbedActivity extends AppCompatActivity {
             super.onPostExecute(s);
             dialog.dismiss();
 
+            dateTime="";
+
+            finish();
 
             openShoeBox();
 
@@ -417,6 +441,7 @@ public class TabbedActivity extends AppCompatActivity {
 
     private void openShoeBox(){
         Intent intent=new Intent(this, GalleyActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 
@@ -453,6 +478,8 @@ public class TabbedActivity extends AppCompatActivity {
 
 
         if (item.getItemId() == R.id.action_done){
+             dateTime = currentDateFormat();
+            storeCameraPhoto(photo,dateTime);
             createPdf();
         }
         return super.onOptionsItemSelected(item);
@@ -462,4 +489,41 @@ public class TabbedActivity extends AppCompatActivity {
     private void requestForSpecificPermission() {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
     }
+
+
+
+    private void storeCameraPhoto(Bitmap bitmap,String currentDate){
+
+        path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDFfiles/JPEG/";
+
+        File folder = new File(path);
+        if (!folder.exists()) {
+            boolean success = folder.mkdir();
+            if (!success) {
+                Toast.makeText(TabbedActivity.this, "Error on creating application folder", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+
+        path= path+currentDate + ".jpg";
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(path);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+            fileOutputStream.flush();
+            fileOutputStream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private String currentDateFormat(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        String  currentTimeStamp = dateFormat.format(new Date());
+        return currentTimeStamp;
+    }
+
+
 }
