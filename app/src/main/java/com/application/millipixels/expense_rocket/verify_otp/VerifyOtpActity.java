@@ -1,10 +1,13 @@
 package com.application.millipixels.expense_rocket.verify_otp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -32,27 +35,19 @@ public class VerifyOtpActity extends AppCompatActivity {
     @BindView(R.id.edt4)
     EditText edt4;
 
-    @BindView(R.id.txtResendOtp)
-    TextView txtResendOtp;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_verify_otp);
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(Color.WHITE);
+
+        setContentView(R.layout.otp);
         ButterKnife.bind(this);
 
     }
-    @OnClick(R.id.btnChangeNumber)
-    public void onChangeNumber(){
-        finish();
-    }
-
-    @OnClick(R.id.txtResendOtp)
-    public void onResendOtp(View v){
-        Snackbar.make(v,"OTP sent to selected phone number.",2000).show();
-    }
-
 
     @OnClick(R.id.btnVerify)
     public void onVerify(View v){
@@ -63,9 +58,5 @@ public class VerifyOtpActity extends AppCompatActivity {
             Snackbar.make(v,"Please enter OTP.",2000).show();
         }
     }
-    @OnClick(R.id.txtSkip)
-    public void onSkipped(){
-        Intent intent = new Intent(this, Dashboard.class);
-        startActivity(intent);
-    }
+
 }
