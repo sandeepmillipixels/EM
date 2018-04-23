@@ -2,23 +2,96 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
 
 
     <RelativeLayout
+        android:id="@+id/onboarding_header_layout"
         android:layout_width="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:text="@string/skip"
+        android:layout_marginTop="@dimen/margin_20_dp"
 
         android:layout_height="@dimen/topbar_Height">
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+            android:id="@+id/already_have_account_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_10_dp"
+            android:gravity="right"
+
+            android:textColor="@color/grey_text"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/already_have_account"/>
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+            android:id="@+id/btn_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin"
+
+            android:layout_below="@+id/already_have_account_textView"
+            android:layout_marginRight="@dimen/margin_10_dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/size_15dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/signin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="#00000000"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="20dp">
+        <LinearLayout
+
+            android:gravity="center_horizontal"
+            android:id="@+id/layoutDots"
+            android:layout_width="match_parent"
+
+            android:layout_centerInParent="true"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/onboarding_login_signup_layout"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/margin_70_dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
 
         <com.application.millipixels.expense_rocket.typeface.FontsClassLight
@@ -26,66 +99,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/skip"
-            android:padding="@dimen/padding_10dp"
-            android:layout_marginRight="@dimen/margin_10_dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:textSize="@dimen/size_15dp"
             android:layout_centerVertical="true"
-            android:textColor="@color/selectedColor" />
+            android:textColor="@color/grey_text" />
+
     </RelativeLayout>
 
-    <LinearLayout
-        android:gravity="center_horizontal"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/onboarding_login_signup_layout"
-        android:id="@+id/layoutDots"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="@dimen/margin_60_dp"
-        android:layout_height="@dimen/size_30dp"
-        android:orientation="horizontal"></LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/onboarding_login_signup_layout"
+    <RelativeLayout
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="@color/white"
-        android:layout_marginBottom="@dimen/margin_15_dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_30_dp"
+        android:gravity="center"
         android:layout_height="wrap_content">
 
 
-        <com.application.millipixels.expense_rocket.typeface.FontButton
-            android:id="@+id/btnLogin"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:text="@string/login"
-            android:inputType="number"
-            android:paddingRight="@dimen/padding_50dp"
-            android:paddingLeft="@dimen/padding_50dp"
-            android:layout_marginBottom="@dimen/margin_20_dp"
-            android:textColor="@color/white"
-            android:textAllCaps="false"
+        <Button
+            android:visibility="gone"
             android:background="@drawable/app_round_button_drawable"
-            android:layout_marginRight="@dimen/margin_10_dp"
+            android:id="@+id/get_started_button"
+            android:textColor="@color/white"
+
+            android:text="@string/lets_get_started"
+            android:paddingLeft="@dimen/padding_70dp"
+            android:paddingRight="@dimen/padding_70dp"
+            android:paddingTop="@dimen/padding_20dp"
+            android:paddingBottom="@dimen/padding_20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <com.application.millipixels.expense_rocket.typeface.FontButton
-            android:layout_weight="1"
-            android:id="@+id/btnSignup"
-            android:text="@string/signup"
-            android:inputType="number"
-            android:paddingRight="@dimen/padding_50dp"
-            android:paddingLeft="@dimen/padding_50dp"
-            android:textColor="@color/white"
-            android:layout_marginBottom="@dimen/margin_20_dp"
-            android:textAllCaps="false"
-            android:background="@drawable/app_round_button_drawable"
-            android:layout_width="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_height="wrap_content" />
+    </RelativeLayout>
 
-    </LinearLayout>
+
 
 </RelativeLayout>

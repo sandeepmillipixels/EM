@@ -4,9 +4,10 @@
     <shared>
       <config>
         <devices>
+          <device id="Nexus 5X" />
+          <device id="Nexus One" />
           <device id="Nexus 5" />
           <device id="Nexus 4" />
-          <device id="Nexus One" />
           <device id="pixel_xl" />
           <device id="Galaxy Nexus" />
           <device id="Nexus 7" />
@@ -17,22 +18,316 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="twitterLogin" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5181be-e8a2-4ab1-938e-f3794f966121" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-12-52-325.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-13-18-133.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-25-57-080.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-49-37-169.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-50-25-587.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-52-01-550.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-59-25-669.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-59-48-964.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-14-46-49-175.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-14-55-54-719.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-14-56-11-883.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-15-15-45-156.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-15-21-07-521.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-15-23-32-435.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-15-26-44-911.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-16-02-19-022.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-12-54-54-589.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-12-55-37-107.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-12-59-23-708.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-00-00-144.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-01-54-750.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-03-37-949.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-06-56-395.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-07-59-803.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-11-56-225.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-12-29-100.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-22-39-532.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-24-27-202.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-25-25-074.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-26-57-096.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-35-23-075.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-38-42-663.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-40-39-591.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-43-11-198.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-49-15-912.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-52-52-267.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-53-32-958.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-09-24-752.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-10-58-775.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-17-34-800.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-19-44-009.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-21-00-952.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-22-16-476.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-24-50-837.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-27-50-731.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-29-23-002.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-31-21-919.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-40-37-404.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-40-59-106.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-46-21-908.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-47-28-751.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-16-05-33-503.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-16-10-18-331.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-16-20-10-346.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-16-45-01-315.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-07-55-028.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-10-40-399.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-12-30-973.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-15-00-982.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-21-00-377.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-24-02-707.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-13-16-38-749.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-12-10-033.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-13-13-728.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-25-10-930.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-25-36-849.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-27-59-252.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-37-25-709.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-13-13-04-986.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-13-14-11-384.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-13-15-41-231.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-13-16-57-438.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-00-57-727.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-01-13-388.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-02-36-126.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-04-17-722.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-05-37-510.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-08-26-217.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-08-59-817.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-09-39-641.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-21-39-275.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-27-48-305.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-28-59-911.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-35-40-879.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_customtabs_27_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_android_sdk_4_32_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_applinks_4_32_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_common_4_32_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_core_4_32_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_login_4_32_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_messenger_4_32_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_places_4_32_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_facebook_android_facebook_share_4_32_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_api_phone_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_auth_base_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_core_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_license_11_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_zxing_core_3_3_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_android_1_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_applinks_1_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_parse_bolts_bolts_tasks_1_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/ShoeBoxBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/ShoeboxDataSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/ShowShoeboxActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/view/FilterImageView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/half_circle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_if_facebook_circle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_if_google_circle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_if_twitter_circle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_rocket.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_shoebox.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/otp.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-12-52-325.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-13-18-133.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-25-57-080.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-49-37-169.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-50-25-587.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-52-01-550.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-59-25-669.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-11-10-59-48-964.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-14-46-49-175.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-14-55-54-719.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-14-56-11-883.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-15-15-45-156.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-15-21-07-521.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-15-23-32-435.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-15-26-44-911.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-12-16-02-19-022.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-12-54-54-589.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-12-55-37-107.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-12-59-23-708.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-00-00-144.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-01-54-750.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-03-37-949.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-06-56-395.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-07-59-803.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-11-56-225.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-12-29-100.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-22-39-532.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-24-27-202.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-25-25-074.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-13-26-57-096.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-35-23-075.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-38-42-663.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-40-39-591.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-43-11-198.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-49-15-912.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-52-52-267.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-14-53-32-958.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-09-24-752.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-10-58-775.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-17-34-800.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-19-44-009.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-21-00-952.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-22-16-476.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-24-50-837.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-27-50-731.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-29-23-002.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-31-21-919.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-40-37-404.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-40-59-106.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-46-21-908.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-15-47-28-751.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-16-05-33-503.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-16-10-18-331.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-16-20-10-346.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-18-16-45-01-315.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-07-55-028.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-10-40-399.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-12-30-973.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-15-00-982.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-21-00-377.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-10-24-02-707.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-19-13-16-38-749.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-12-10-033.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-13-13-728.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-25-10-930.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-25-36-849.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-27-59-252.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-12-37-25-709.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-13-13-04-986.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-13-14-11-384.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-13-15-41-231.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-13-16-57-438.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-00-57-727.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-01-13-388.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-02-36-126.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-04-17-722.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-05-37-510.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-08-26-217.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-08-59-817.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-09-39-641.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-21-39-275.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-27-48-305.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-28-59-911.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-20-15-35-40-879.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_ads_identifier_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_base_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_flags_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_measurement_base_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_stats_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_tasks_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_analytics_impl_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_auth_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_common_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_core_15_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_firebase_firebase_iid_15_0_0.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_15_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_android_gms_play_services_basement_11_8_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_core_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_core_runtime_1_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_livedata_core_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_livedata_core_1_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_runtime_1_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_viewmodel_1_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/android_arch_lifecycle_viewmodel_1_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_animated_vector_drawable_27_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_appcompat_v7_27_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_cardview_v7_27_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_constraint_constraint_layout_1_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_design_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_design_27_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_exifinterface_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_exifinterface_27_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_1_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_instrumentation_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_multidex_instrumentation_1_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_recyclerview_v7_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_recyclerview_v7_27_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_compat_27_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_ui_27_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_core_utils_27_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_fragment_27_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_media_compat_27_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_v4_27_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_support_vector_drawable_27_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_core_3_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_rules_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_rules_1_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_1_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_test_runner_1_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_android_support_transition_27_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_android_support_transition_27_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_balysv_material_ripple_1_0_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_balysv_material_ripple_1_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_commonsware_cwac_camera_0_6_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_commonsware_cwac_camera_0_6_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_getbase_floatingactionbutton_1_10_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_getbase_floatingactionbutton_1_10_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_ParkSangGwon_TedPicker_v1_0_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_github_ParkSangGwon_TedPicker_v1_0_10.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_afollestad_material_dialogs_core_0_8_5_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_github_afollestad_material_dialogs_core_0_8_5_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_barteksc_android_pdf_viewer_2_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_github_barteksc_android_pdf_viewer_2_0_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_barteksc_pdfium_android_1_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_github_barteksc_pdfium_android_1_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_dmytrodanylyk_android_morphing_button_98a4986e56.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_github_dmytrodanylyk_android_morphing_button_98a4986e56.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_github_hoanganhtuan95ptit_TwoLineSeekBar_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_github_hoanganhtuan95ptit_TwoLineSeekBar_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_jakewharton_butterknife_8_8_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_jakewharton_butterknife_8_8_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_theartofdev_edmodo_android_image_cropper_2_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_theartofdev_edmodo_android_image_cropper_2_7_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_twitter_sdk_android_tweet_composer_3_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_twitter_sdk_android_tweet_composer_3_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_twitter_sdk_android_tweet_ui_3_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_twitter_sdk_android_tweet_ui_3_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_twitter_sdk_android_twitter_3_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_twitter_sdk_android_twitter_3_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_twitter_sdk_android_twitter_core_3_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_twitter_sdk_android_twitter_core_3_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_wang_avi_library_2_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_wang_avi_library_2_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/info_androidhive_imagefilters_1_0_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/info_androidhive_imagefilters_1_0_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/io_reactivex_rxjava2_rxandroid_2_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/io_reactivex_rxjava2_rxandroid_2_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/me_zhanghai_android_materialprogressbar_library_1_1_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/me_zhanghai_android_materialprogressbar_library_1_1_4.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/ExpenseManagerApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/ExpenseManagerApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/database/ExpenseManagerDatabaseHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/database/ExpenseManagerDatabaseHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_white_24dp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_white_24dp.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_filter.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_filter.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_signup.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_signup.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/first_onboarding.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/first_onboarding.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fourth_onboarding.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fourth_onboarding.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/login_card_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_card_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/onboarding.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/onboarding.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_dashboard_drawer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_dashboard_drawer.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,99 +351,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TabbedActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java">
+      <file leaf-file-name="OnBoarding.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="415" column="30" lean-forward="false" selection-start-line="415" selection-start-column="30" selection-end-line="415" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="338">
+              <caret line="88" column="46" lean-forward="false" selection-start-line="86" selection-start-column="7" selection-end-line="88" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginSignupActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginSignupActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="146" column="46" lean-forward="false" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="46" />
               <folding>
-                <element signature="e#3700#3740#0" expanded="true" />
-                <element signature="e#3758#3801#0" expanded="true" />
-                <element signature="e#10169#11251#0" expanded="true" />
-                <element signature="e#11250#11251#0" expanded="true" />
-                <element signature="e#11633#11694#0" expanded="true" />
-                <element signature="e#11738#11792#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#5958#5959#0" expanded="true" />
+                <element signature="e#6001#6002#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="google-services.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/google-services.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="29" column="55" lean-forward="false" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <file leaf-file-name="sign_in.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_login_signup.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_signup.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="111" column="51" lean-forward="false" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_card_layout.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_card_layout.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="355">
+              <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
               <folding>
-                <element signature="e#4918#4936#0" expanded="true" />
-                <element signature="e#5582#5600#0" expanded="true" />
+                <element signature="e#653#674#0" expanded="true" />
+                <element signature="e#1022#1043#0" expanded="true" />
+                <element signature="e#1134#1150#0" expanded="true" />
+                <element signature="e#1180#1198#0" expanded="true" />
+                <element signature="e#1443#1464#0" expanded="true" />
+                <element signature="e#1490#1517#0" expanded="true" />
+                <element signature="e#1595#1613#0" expanded="true" />
+                <element signature="e#2125#2143#0" expanded="true" />
+                <element signature="e#2175#2196#0" expanded="true" />
+                <element signature="e#2278#2299#0" expanded="true" />
+                <element signature="e#2339#2360#0" expanded="true" />
+                <element signature="e#2558#2579#0" expanded="true" />
+                <element signature="e#2618#2639#0" expanded="true" />
+                <element signature="e#2679#2700#0" expanded="true" />
+                <element signature="e#2936#2957#0" expanded="true" />
+                <element signature="e#2995#3016#0" expanded="true" />
+                <element signature="e#3056#3077#0" expanded="true" />
+                <element signature="e#3109#3130#0" expanded="true" />
+                <element signature="e#3165#3186#0" expanded="true" />
+                <element signature="e#3281#3299#0" expanded="true" />
+                <element signature="e#3709#3730#0" expanded="true" />
+                <element signature="e#4239#4260#0" expanded="true" />
+                <element signature="e#4446#4473#0" expanded="true" />
+                <element signature="e#4789#4810#0" expanded="true" />
+                <element signature="e#5293#5314#0" expanded="true" />
+                <element signature="e#5657#5678#0" expanded="true" />
+                <element signature="e#7350#7368#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,13 +426,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="otp.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/otp.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="176" column="51" lean-forward="false" selection-start-line="176" selection-start-column="51" selection-end-line="176" selection-end-column="51" />
+              <folding>
+                <element signature="e#641#662#0" expanded="true" />
+                <element signature="e#1010#1031#0" expanded="true" />
+                <element signature="e#1122#1138#0" expanded="true" />
+                <element signature="e#1168#1186#0" expanded="true" />
+                <element signature="e#1431#1452#0" expanded="true" />
+                <element signature="e#1478#1504#0" expanded="true" />
+                <element signature="e#1619#1637#0" expanded="true" />
+                <element signature="e#1933#1954#0" expanded="true" />
+                <element signature="e#1989#2010#0" expanded="true" />
+                <element signature="e#2043#2064#0" expanded="true" />
+                <element signature="e#2098#2119#0" expanded="true" />
+                <element signature="e#5791#5812#0" expanded="true" />
+                <element signature="e#5851#5872#0" expanded="true" />
+                <element signature="e#5912#5933#0" expanded="true" />
+                <element signature="e#5965#5986#0" expanded="true" />
+                <element signature="e#6021#6042#0" expanded="true" />
+                <element signature="e#6137#6153#0" expanded="true" />
+                <element signature="e#6563#6584#0" expanded="true" />
+                <element signature="e#7093#7114#0" expanded="true" />
+                <element signature="e#7300#7327#0" expanded="true" />
+                <element signature="e#7643#7664#0" expanded="true" />
+                <element signature="e#8111#8132#0" expanded="true" />
+                <element signature="e#8447#8468#0" expanded="true" />
+                <element signature="e#10012#10030#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="77" lean-forward="false" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+            <state relative-caret-position="336">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerifyOtpActity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="39" column="56" lean-forward="false" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verify_otp_card_layout.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/verify_otp_card_layout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="121" column="27" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="121" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -176,21 +506,13 @@
         <option value="Interface" />
         <option value="Kotlin Class" />
         <option value="Class" />
-        <option value="layoutResourceFile" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setSupportActionBar</find>
-      <find>arrayList</find>
-      <find>registrar</find>
-      <find>inputUrl</find>
-      <find>saveBitmapContrast</find>
-      <find>initView</find>
-      <find>initViewBrightness</find>
-      <find>This is</find>
       <find>finis</find>
       <find>onba</find>
       <find>openP</find>
@@ -213,6 +535,14 @@
       <find>login</find>
       <find>onActivityResult</find>
       <find>Dashboa</find>
+      <find>fir</find>
+      <find>OT</find>
+      <find>setcontent</find>
+      <find>edtPhoneLogin</find>
+      <find>send_otp_button</find>
+      <find>btnSendOtpLogin</find>
+      <find>LoginSignupActivity</find>
+      <find>oncli</find>
     </findStrings>
     <replaceStrings>
       <replace>edtAmount</replace>
@@ -222,6 +552,8 @@
       <replace>AddExpense.this</replace>
       <replace>FloatingActivity</replace>
       <replace>TabbedActivity</replace>
+      <replace>btnVerify</replace>
+      <replace>btnSendOtpLogin</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -2061,17 +2393,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/floating_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/FloatingActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/BottomNavigationViewHelper.java" />
-        <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_dashboard.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_collections_bookmark_black_24dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/dashboard/Dashboard.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/view/ZoomLayout.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/slidingimages_layout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/SlidingImage_Adapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/cropimage/CropImageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/imagepicker/ImagePicker.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/navigation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_tabbed.xml" />
@@ -2107,11 +2428,22 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/pdf_opener/PdfOpenActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_gallery.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/login_card_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/first_onboarding.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/onboarding.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fourth_onboarding.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/half_circle.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_rocket.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/otp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -2202,20 +2534,208 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="EM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="millipixels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_rocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="millipixels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expense_rocket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verify_otp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2394,6 +2914,22 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2402,13 +2938,13 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="device.picker.selection" value="009fabff81a88e79" />
-    <property name="SearchEverywhereHistoryKey" value="logi&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/login_card_layout.xml&#10;Pdf&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/pdf_opener/PdfOpenActivity.java&#10;Ta&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tabbe&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Gallery&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleryAdapter.java&#10;mani&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/AndroidManifest.xml&#10;Add&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;Gall&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;AddEx&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;Dash&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java&#10;signu&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/sign_up_card_layout.xml&#10;Login&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity&#10;Splas&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;Tabbed&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tabb&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tab&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/TabbedActivity.java&#10;Das&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/dashboard/Dashboard.java&#10;color&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;Image&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/imagepicker/ImagePicker.java&#10;DAS&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/dashboard/Dashboard.java&#10;MonTh&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/fragments/MonthlyExpenseFragment.java&#10;sig&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/sign_up_card_layout.xml&#10;otp&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/verify_otp/VerifyOtpActity.java&#10;Mo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/fragments/MonthlyExpenseFragment.java&#10;Cate&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/category/CategoryActivity.java&#10;Main&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/MainActivity.java&#10;OTP&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/verify_otp/VerifyOtpActity.java&#10;colo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;Sign&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/res/layout/activity_login_signup.xml&#10;On&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/onboarding/OnBoarding.java&#10;spl&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/splash/SplashActivity.java&#10;stri&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/res/values/strings.xml&#10;Ver&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/verify_otp/VerifyOtpActity.java&#10;Lo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/login_signup/LoginSignupActivity.java&#10;string&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/res/values/strings.xml&#10;sty&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/res/values-v21/styles.xml&#10;Splash&#9;FILE&#9;file:///Users/millipixelsinteractive_031/EM/app/src/main/res/layout/splash.xml" />
+    <property name="SearchEverywhereHistoryKey" value="colo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;on&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/onboarding.xml&#10;str&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/strings.xml&#10;Sign&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;onbo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;fourth&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/fourth_onboarding.xml&#10;color&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;Onbo&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.onboarding.OnBoarding&#10;logi&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/login_card_layout.xml&#10;Pdf&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/pdf_opener/PdfOpenActivity.java&#10;Ta&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tabbe&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Gallery&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleryAdapter.java&#10;mani&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/AndroidManifest.xml&#10;Add&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;Gall&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;AddEx&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;Dash&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java&#10;signu&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/sign_up_card_layout.xml&#10;Login&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity&#10;Splas&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;Tabbed&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tabb&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tab&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/TabbedActivity.java&#10;Das&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/dashboard/Dashboard.java&#10;Image&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/imagepicker/ImagePicker.java&#10;DAS&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/dashboard/Dashboard.java&#10;MonTh&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/fragments/MonthlyExpenseFragment.java&#10;sig&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/sign_up_card_layout.xml&#10;otp&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/verify_otp/VerifyOtpActity.java&#10;Mo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/fragments/MonthlyExpenseFragment.java&#10;Cate&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/category/CategoryActivity.java&#10;Main&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/MainActivity.java&#10;OTP&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/verify_otp/VerifyOtpActity.java&#10;On&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/onboarding/OnBoarding.java&#10;spl&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/splash/SplashActivity.java&#10;stri&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/res/values/strings.xml&#10;Ver&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/verify_otp/VerifyOtpActity.java&#10;Lo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/login_signup/LoginSignupActivity.java&#10;string&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/res/values/strings.xml&#10;sty&#9;FILE&#9;file:///Users/millipixelsinteractive_024/Downloads/EM/app/src/main/res/values-v21/styles.xml&#10;Splash&#9;FILE&#9;file:///Users/millipixelsinteractive_031/EM/app/src/main/res/layout/splash.xml" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="VectorAssetImportPath" value="/" />
     <property name="DEBUGGABLE_DEVICE" value="lge-nexus_5x-009fabff81a88e79" />
     <property name="DEBUGGABLE_PROCESS" value="com.application.millipixels.expense_rocket" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
+    <property name="VectorAssetImportPath" value="$USER_HOME$/Downloads" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -2517,7 +3053,10 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="com.application.millipixels.expense_rocket.contrast.ContrastActivity" />
-      <method />
+      <method>
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524478139372" />
+      </method>
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -2588,7 +3127,8 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524220904764" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524478139372" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2635,7 +3175,8 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524220904764" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524478139372" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2817,7 +3358,8 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
       <method>
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524220904765" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524478139373" />
       </method>
     </configuration>
     <list size="3">
@@ -2882,28 +3424,29 @@
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36208853" sideWeight="0.53194886" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.055618614" sideWeight="0.9030884" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23041998" sideWeight="0.46379128" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.4680511" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36208853" sideWeight="0.53194886" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27635783" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48694664" sideWeight="0.9030884" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23041998" sideWeight="0.46379128" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2928,7 +3471,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java</url>
-          <line>44</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -2952,13 +3495,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>245</line>
+          <line>221</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>277</line>
+          <line>253</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
@@ -3150,7 +3693,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>372</line>
+          <line>348</line>
           <properties />
           <option name="timeStamp" value="151" />
         </line-breakpoint>
@@ -3160,53 +3703,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/editphoto/Utils.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/editphoto/ui/adapter/BaseAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/editphoto/ui/activity/MainActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/editphoto/ui/fragment/EditPhotoFragment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/editphoto/model/EditType.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/brightness/OnBrightnessListener.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/brightness/Utils.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/brightness/BrightnessView.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/brightness/BrightnessFragment.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/TwoLineSeekBar-1.0.aar/1a7c25c1f7d9f7f9bffb9b811df04a72/jars/classes.jar!/com/hoanganhtuan95ptit/library/TwoLineSeekBar.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="267" column="16" lean-forward="false" selection-start-line="267" selection-start-column="16" selection-end-line="267" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/contrast/BrightnessView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="78" selection-start-column="3" selection-end-line="81" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/cropimage/ImageCropActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/contrast/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/android/support/v7/widget/AppCompatImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="105" column="16" lean-forward="false" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/contrast/EditImageView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2235">
@@ -3223,7 +3719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2505">
           <caret line="167" column="22" lean-forward="false" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3251,7 +3746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="40" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="18" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3272,19 +3766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_expense.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="40" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="18" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3295,7 +3780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3306,7 +3790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3317,7 +3800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="49" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3328,20 +3810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sign_up_card_layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="39" lean-forward="true" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
-          <folding>
-            <element signature="e#1323#1350#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3352,7 +3820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3363,7 +3830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" column="17" lean-forward="false" selection-start-line="33" selection-start-column="2" selection-end-line="41" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3374,7 +3840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3382,9 +3847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding>
-            <element signature="e#1152#1171#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3416,7 +3878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="70" column="31" lean-forward="true" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3424,7 +3885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="2776" column="0" lean-forward="false" selection-start-line="2776" selection-start-column="0" selection-end-line="2776" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3432,7 +3892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="138" column="23" lean-forward="false" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3440,10 +3899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#429#450#0" expanded="false" />
-            <element signature="e#1454#1475#0" expanded="false" />
-          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3454,7 +3909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="85" column="42" lean-forward="false" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3472,31 +3926,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="177" column="5" lean-forward="false" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="77" lean-forward="false" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/GoogleService-Info.plist">
+    <entry file="file://$PROJECT_DIR$/app/GoogleService-Info.plist" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5475">
+          <caret line="415" column="30" lean-forward="false" selection-start-line="415" selection-start-column="30" selection-end-line="415" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/google-services.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3511,36 +3974,73 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/google-services.json">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/first_onboarding.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="251">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#401#423#0" expanded="true" />
+            <element signature="e#665#686#0" expanded="true" />
+            <element signature="e#957#978#0" expanded="true" />
+            <element signature="e#1454#1484#0" expanded="true" />
+            <element signature="e#1565#1583#0" expanded="true" />
+            <element signature="e#1932#1950#0" expanded="true" />
+            <element signature="e#1988#2008#0" expanded="true" />
+            <element signature="e#2071#2112#0" expanded="true" />
+            <element signature="e#2519#2537#0" expanded="true" />
+            <element signature="e#2575#2595#0" expanded="true" />
+            <element signature="e#2658#2691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fourth_onboarding.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="50" column="66" lean-forward="false" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_white_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/apt/debug/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity_ViewBinding.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="415" column="30" lean-forward="false" selection-start-line="415" selection-start-column="30" selection-end-line="415" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        <state relative-caret-position="187">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_signup.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="111" column="51" lean-forward="false" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+        <state relative-caret-position="250">
+          <caret line="69" column="36" lean-forward="false" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
+          <folding>
+            <element signature="e#4672#4691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sign_up_card_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="139" column="20" lean-forward="false" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -3550,11 +4050,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_card_layout.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        <state relative-caret-position="385">
+          <caret line="64" column="48" lean-forward="false" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/onboarding.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/half_circle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
           <folding>
-            <element signature="e#4918#4936#0" expanded="true" />
-            <element signature="e#5582#5600#0" expanded="true" />
+            <element signature="e#653#674#0" expanded="true" />
+            <element signature="e#1022#1043#0" expanded="true" />
+            <element signature="e#1134#1150#0" expanded="true" />
+            <element signature="e#1180#1198#0" expanded="true" />
+            <element signature="e#1443#1464#0" expanded="true" />
+            <element signature="e#1490#1517#0" expanded="true" />
+            <element signature="e#1595#1613#0" expanded="true" />
+            <element signature="e#2125#2143#0" expanded="true" />
+            <element signature="e#2175#2196#0" expanded="true" />
+            <element signature="e#2278#2299#0" expanded="true" />
+            <element signature="e#2339#2360#0" expanded="true" />
+            <element signature="e#2558#2579#0" expanded="true" />
+            <element signature="e#2618#2639#0" expanded="true" />
+            <element signature="e#2679#2700#0" expanded="true" />
+            <element signature="e#2936#2957#0" expanded="true" />
+            <element signature="e#2995#3016#0" expanded="true" />
+            <element signature="e#3056#3077#0" expanded="true" />
+            <element signature="e#3109#3130#0" expanded="true" />
+            <element signature="e#3165#3186#0" expanded="true" />
+            <element signature="e#3281#3299#0" expanded="true" />
+            <element signature="e#3709#3730#0" expanded="true" />
+            <element signature="e#4239#4260#0" expanded="true" />
+            <element signature="e#4446#4473#0" expanded="true" />
+            <element signature="e#4789#4810#0" expanded="true" />
+            <element signature="e#5293#5314#0" expanded="true" />
+            <element signature="e#5657#5678#0" expanded="true" />
+            <element signature="e#7350#7368#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3562,18 +4128,113 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_verify_otp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="81" column="60" lean-forward="false" selection-start-line="81" selection-start-column="60" selection-end-line="81" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_rocket.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/verify_otp_card_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="121" column="27" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="121" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/otp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="176" column="51" lean-forward="false" selection-start-line="176" selection-start-column="51" selection-end-line="176" selection-end-column="51" />
+          <folding>
+            <element signature="e#641#662#0" expanded="true" />
+            <element signature="e#1010#1031#0" expanded="true" />
+            <element signature="e#1122#1138#0" expanded="true" />
+            <element signature="e#1168#1186#0" expanded="true" />
+            <element signature="e#1431#1452#0" expanded="true" />
+            <element signature="e#1478#1504#0" expanded="true" />
+            <element signature="e#1619#1637#0" expanded="true" />
+            <element signature="e#1933#1954#0" expanded="true" />
+            <element signature="e#1989#2010#0" expanded="true" />
+            <element signature="e#2043#2064#0" expanded="true" />
+            <element signature="e#2098#2119#0" expanded="true" />
+            <element signature="e#5791#5812#0" expanded="true" />
+            <element signature="e#5851#5872#0" expanded="true" />
+            <element signature="e#5912#5933#0" expanded="true" />
+            <element signature="e#5965#5986#0" expanded="true" />
+            <element signature="e#6021#6042#0" expanded="true" />
+            <element signature="e#6137#6153#0" expanded="true" />
+            <element signature="e#6563#6584#0" expanded="true" />
+            <element signature="e#7093#7114#0" expanded="true" />
+            <element signature="e#7300#7327#0" expanded="true" />
+            <element signature="e#7643#7664#0" expanded="true" />
+            <element signature="e#8111#8132#0" expanded="true" />
+            <element signature="e#8447#8468#0" expanded="true" />
+            <element signature="e#10012#10030#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="88" column="46" lean-forward="false" selection-start-line="86" selection-start-column="7" selection-end-line="88" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="146" column="46" lean-forward="false" selection-start-line="146" selection-start-column="46" selection-end-line="146" selection-end-column="46" />
           <folding>
-            <element signature="e#3700#3740#0" expanded="true" />
-            <element signature="e#3758#3801#0" expanded="true" />
-            <element signature="e#10169#11251#0" expanded="true" />
-            <element signature="e#11250#11251#0" expanded="true" />
-            <element signature="e#11633#11694#0" expanded="true" />
-            <element signature="e#11738#11792#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5958#5959#0" expanded="true" />
+            <element signature="e#6001#6002#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="55" lean-forward="false" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="39" column="56" lean-forward="false" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

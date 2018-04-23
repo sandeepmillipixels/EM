@@ -15,11 +15,21 @@
     <color name="blue_semi_transparent">#805677fc</color>
     <color name="blue_semi_transparent_pressed">#80738ffe</color>
 
+    <color name="light_grey">#F2F2F2</color>
+    <color name="grey_text">#C5C5C5</color>
+    <color name="purple_text">#57438D</color>
+
 
     <color name="colorPrimary">#292788</color>
     <color name="colorSecondary">#292788</color>
     <color name="colorPrimaryDark">#292788</color>
     <color name="colorAccent">#f61e4d</color>
+
+
+    <!--<color name="colorPrimary">#ffffff</color>-->
+    <!--<color name="colorSecondary">#ffffff</color>-->
+    <!--<color name="colorPrimaryDark">#ffffff</color>-->
+    <!--<color name="colorAccent">#f61e4d</color>-->
 
     <color name="blue">#292788</color>
     <color name="grocery">#f0f7fb</color>
@@ -44,13 +54,13 @@
 
     <color name="greenFloating">#3cd690</color>
     <color name="greenFloatingT">#513cd690</color>
-    <color name="red_button">#f61e4d</color>
+    <color name="red_button">#FE5E57</color>
 
     <array name="array_dot_active">
-        <item>@color/selectedColor</item>
-        <item>@color/selectedColor</item>
-        <item>@color/selectedColor</item>
-        <item>@color/selectedColor</item>
+        <item>@color/grey_text</item>
+        <item>@color/grey_text</item>
+        <item>@color/grey_text</item>
+        <item>@color/grey_text</item>
     </array>
 
 

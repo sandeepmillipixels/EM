@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">EM</string>
+    <string name="already_have_account">Already have an account?</string>
     <string name="skip">Skip</string>
 
     <string name="login">Login</string>
 
+    <string name="where_is_the_receipt">Where is the receipt \n from last week?</string>
+    <string name="with_the_expense_rocket_shoebox">With the ExpenseRocket Shoebox,you \n have one place to store all your receipts.</string>
+    <string name="anytime_anywhere_access">Anytime, Anywhere Access!</string>
 
+    <string name="mailed_datre_night">Mailed Date Night\n expenses to HR?</string>
+    <string name="never_mix_up">Never mix up your business and \n personal receipts.Manage everything in \n one place.</string>
+
+    <string name="lets_get_started">LET\'S GET STARTED</string>
+
+    <string name="sign_in_with_your">Sign in with your mobile number!</string>
+
+    <string name="use_social_signin">Use Social Sign In?</string>
+
+    <string name="we_just_sent_otp">We just sent a OTP to your \n mobile number 93*** ***09.Enter the \n OTP here to sign in. </string>
+
+
+    <string name="signin">Sign In</string>
     <string name="signup">Sign up</string>
     <string name="verify">Verify</string>
     <string name="send_otp">Send OTP</string>
@@ -91,4 +108,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="pick_image_intent_text">Choose an image</string>
+    <string name="facebook_app_id">569502020097138</string>
+    <string name="fb_login_protocol_scheme">fb569502020097138</string>
+    <string name="server_client_id">726909209209-0se81flctvddlmjt1j33kv53m1fjogcf.apps.googleusercontent.com</string>
+
+    <!--<string name="server_client_id">AIzaSyBDpmXxChzca4tWBaLeIZWOKrnhMOeSFqo</string>-->
 </resources>
