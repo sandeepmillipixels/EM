@@ -1,6 +1,7 @@
 package com.application.millipixels.expense_rocket;
 
 import android.*;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -158,6 +159,11 @@ public class EditImageActivity extends AppCompatActivity implements
             }
         });
         initView();
+        if (getIntent().getExtras() != null){
+//            getIntent().getStringExtra("city");
+            shoebox = getIntent().getBooleanExtra("shoebox",false);
+
+        }
     }
 
     public void initToolBar() {
@@ -246,6 +252,14 @@ public class EditImageActivity extends AppCompatActivity implements
 
             case 100:
                 if (data != null && data.getExtras() != null){
+
+                }
+                break;
+            case 200:
+                if (resultCode == Activity.RESULT_OK ){
+                    arrayList.set(currentPage,data.getStringExtra(INPUT_URL));
+                    // arrayList.add(position,path);
+                    adapter.notifyDataSetChanged();
 
                 }
                 break;
@@ -493,31 +507,31 @@ public class EditImageActivity extends AppCompatActivity implements
             case Crop:
                 Intent intent = new Intent(EditImageActivity.this, CropActivity.class);
                 intent.putExtra(INPUT_URL,arrayList.get(currentPage));
-                startActivity(intent);
+                startActivityForResult(intent,200);
 //                ((EditPhotoActivity) getActivity()).addFragmentToStack(CropFragment.create(outputUrl, this));
                 break;
             case Rotate:
                 Intent intentRotate = new Intent(EditImageActivity.this, RotateActivity.class);
                 intentRotate.putExtra(INPUT_URL,arrayList.get(currentPage));
-                startActivity(intentRotate);
+                startActivityForResult(intentRotate,200);
 //                ((EditPhotoActivity) getActivity()).addFragmentToStack(RotateFragment.create(outputUrl, this));
                 break;
             case Saturation:
                 Intent intentSeturation = new Intent(EditImageActivity.this, SeturationActivity.class);
                 intentSeturation.putExtra(INPUT_URL,arrayList.get(currentPage));
-                startActivity(intentSeturation);
+                startActivityForResult(intentSeturation,200);
 //                ((EditPhotoActivity) getActivity()).addFragmentToStack(SaturationFragment.create(outputUrl, this));
                 break;
             case Brightness:
                 Intent intentBrightness = new Intent(EditImageActivity.this, BightnessActivity.class);
                 intentBrightness.putExtra(INPUT_URL,arrayList.get(currentPage));
-                startActivity(intentBrightness);
+                startActivityForResult(intentBrightness,200);
 //                ((EditPhotoActivity) getActivity()).addFragmentToStack(BrightnessFragment.create(outputUrl, this));
                 break;
             case Contrast:
                 Intent intentContrast = new Intent(EditImageActivity.this, ContrastActivity.class);
                 intentContrast.putExtra(INPUT_URL,arrayList.get(currentPage));
-                startActivity(intentContrast);
+                startActivityForResult(intentContrast,200);
 //                ((EditPhotoActivity) getActivity()).addFragmentToStack(ContrastFragment.create(outputUrl, this));
                 break;
         }

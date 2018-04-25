@@ -32,6 +32,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
  * Created by millipixelsinteractive_031 on 16/04/18.
  */
@@ -171,7 +173,7 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
 
     @Override
     public void onClick(int pos) {
-         //if (dashboard!= null &&dashboard.equals("1")){
+         if (dashboard!= null &&dashboard.equals("1")){
              String path=tempList.get(pos).getAbsoluteFile().getPath();
 
              StringTokenizer st = new StringTokenizer(path, "/");
@@ -181,23 +183,20 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
              String pdfFiles = st.nextToken();
              String JPEG = st.nextToken();
              String jpgPath = st.nextToken();
-
              jpgPath=jpgPath.replace(".jpg",".pdf");
-
              jpgPath = "/storage/emulated/0/PDFfiles/"+jpgPath;
-
              Intent intent=new Intent(GalleyActivity.this, PdfOpenActivity.class);
              intent.putExtra("path",jpgPath);
              startActivity(intent);
 
-//         }else {
-//             String path=tempList.get(pos).getAbsoluteFile().getPath();
-//
-//             Intent intent = new Intent();
-//             intent.putExtra("path",path);
-//             setResult(500,intent);
-//             finish();
-//         }
+         }else {
+             String path=tempList.get(pos).getAbsoluteFile().getPath();
+
+             Intent intent = new Intent();
+             intent.putExtra("path",path);
+             setResult(500,intent);
+             finish();
+         }
 
     }
 

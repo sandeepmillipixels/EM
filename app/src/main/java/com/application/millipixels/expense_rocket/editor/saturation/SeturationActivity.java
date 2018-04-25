@@ -1,6 +1,8 @@
 package com.application.millipixels.expense_rocket.editor.saturation;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -157,8 +159,12 @@ public class SeturationActivity extends AppCompatActivity implements View.OnClic
 
                     @Override
                     public void onNext(String url) {
-                        if (onSaturationListener != null)
-                            onSaturationListener.onSaturationPhotoCompleted(url);
+//                        if (onSaturationListener != null)
+//                            onSaturationListener.onSaturationPhotoCompleted(url);
+                        Intent intent = new Intent();
+                        intent.putExtra(INPUT_URL,url);
+                        setResult(Activity.RESULT_OK, intent);
+                        finish();
                     }
 
                     @Override

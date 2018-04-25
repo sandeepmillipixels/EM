@@ -111,6 +111,7 @@ public class OnBoarding extends Activity{
         Intent intent = new Intent(this, LoginSignupActivity.class);
         intent.putExtra(Constants.LOGIN,true);
         startActivity(intent);
+        finish();
     }
 
     @OnClick(R.id.get_started_button)
@@ -175,5 +176,6 @@ public class OnBoarding extends Activity{
     public void onSkip(){
         Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
+        finish();
     }
 }

@@ -265,6 +265,10 @@ public class LoginSignupActivity extends Activity {
                                             String name = object.getString("name"); // 01/31/1980 format
                                             Toast.makeText(LoginSignupActivity.this,"Welcome "+name,Toast.LENGTH_LONG).show();
                                             LoginManager.getInstance().logOut();
+                                            Intent intent = new Intent(LoginSignupActivity.this, Dashboard.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                            startActivity(intent);
+                                            finish();
 
                                         } catch (JSONException e) {
                                             e.printStackTrace();
@@ -344,6 +348,10 @@ public class LoginSignupActivity extends Activity {
     private void updateUIGoogle(@Nullable GoogleSignInAccount account) {
         if (account != null) {
             Toast.makeText(LoginSignupActivity.this,"Welcome "+account.getDisplayName(),Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, Dashboard.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
 //            mStatusTextView.setText(getString(R.string.signed_in_fmt, account.getDisplayName()));
 //
 //            findViewById(R.id.sign_in_button).setVisibility(View.GONE);

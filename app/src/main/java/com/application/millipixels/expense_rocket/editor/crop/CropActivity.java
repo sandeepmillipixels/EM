@@ -1,5 +1,7 @@
 package com.application.millipixels.expense_rocket.editor.crop;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -107,9 +109,14 @@ public class CropActivity extends AppCompatActivity implements TransformImageVie
 
             @Override
             public void onBitmapCropped(@NonNull Uri resultUri, int offsetX, int offsetY, int imageWidth, int imageHeight) {
-                if (onCropListener != null)
-                    onCropListener.onCropPhotoCompleted(resultUri.getPath());
-                back();
+//                if (onCropListener != null)
+//                    onCropListener.onCropPhotoCompleted(resultUri.getPath());
+//                back();
+                Intent intent = new Intent();
+                intent.putExtra(INPUT_URL,resultUri.getPath());
+                setResult(Activity.RESULT_OK, intent);
+                finish();
+
             }
 
             @Override
