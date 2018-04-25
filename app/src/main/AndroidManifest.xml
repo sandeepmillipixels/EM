@@ -5,9 +5,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"></uses-permission>
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
     <uses-permission android:name="android.permission.CAMERA" />
 
 
@@ -119,6 +119,15 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EditImageActivity"
+            android:label="@string/title_activity_edit_image"
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".editor.crop.CropActivity" />
+        <activity android:name=".editor.rotate.RotateActivity" />
+        <activity android:name=".editor.brightness.BightnessActivity" />
+        <activity android:name=".editor.contrast.ContrastActivity" />
+        <activity android:name=".editor.saturation.SeturationActivity"></activity>
 
 
         <activity android:name=".splash.TakeTour">

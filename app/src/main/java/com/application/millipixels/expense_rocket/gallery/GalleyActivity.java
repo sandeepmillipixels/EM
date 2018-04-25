@@ -17,10 +17,11 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.application.millipixels.expense_rocket.EditImageActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.pdf_opener.PdfOpenActivity;
-import com.application.millipixels.expense_rocket.shoebox.TabbedActivity;
+
 
 import java.io.File;
 import java.util.Arrays;
@@ -30,6 +31,8 @@ import java.util.StringTokenizer;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * Created by millipixelsinteractive_031 on 16/04/18.
@@ -154,7 +157,7 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
 
     @OnClick(R.id.fab_shoebox)
      void fab_shoeboxClick(){
-        Intent intent=new Intent(GalleyActivity.this, TabbedActivity.class);
+        Intent intent=new Intent(GalleyActivity.this, EditImageActivity.class);
         intent.putExtra("shoebox",true);
         startActivityForResult(intent,100);
     }
@@ -170,7 +173,7 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
 
     @Override
     public void onClick(int pos) {
-         //if (dashboard!= null &&dashboard.equals("1")){
+         if (dashboard!= null &&dashboard.equals("1")){
              String path=tempList.get(pos).getAbsoluteFile().getPath();
 
              StringTokenizer st = new StringTokenizer(path, "/");
@@ -180,23 +183,20 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
              String pdfFiles = st.nextToken();
              String JPEG = st.nextToken();
              String jpgPath = st.nextToken();
-
              jpgPath=jpgPath.replace(".jpg",".pdf");
-
              jpgPath = "/storage/emulated/0/PDFfiles/"+jpgPath;
-
              Intent intent=new Intent(GalleyActivity.this, PdfOpenActivity.class);
              intent.putExtra("path",jpgPath);
              startActivity(intent);
 
-//         }else {
-//             String path=tempList.get(pos).getAbsoluteFile().getPath();
-//
-//             Intent intent = new Intent();
-//             intent.putExtra("path",path);
-//             setResult(500,intent);
-//             finish();
-//         }
+         }else {
+             String path=tempList.get(pos).getAbsoluteFile().getPath();
+
+             Intent intent = new Intent();
+             intent.putExtra("path",path);
+             setResult(500,intent);
+             finish();
+         }
 
     }
 
