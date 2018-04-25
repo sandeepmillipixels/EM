@@ -1,7 +1,10 @@
 package com.application.millipixels.expense_rocket.verify_otp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.application.millipixels.expense_rocket.R;
@@ -19,7 +23,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class VerifyOtpActity extends AppCompatActivity {
+public class VerifyOtpActity extends Activity {
 
     @BindView(R.id.btnVerify)
     Button btnVerify;
@@ -35,7 +39,11 @@ public class VerifyOtpActity extends AppCompatActivity {
     @BindView(R.id.edt4)
     EditText edt4;
 
+    @BindView(R.id.back_button_otp)
+    ImageView back_button_otp;
 
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,4 +67,14 @@ public class VerifyOtpActity extends AppCompatActivity {
         }
     }
 
+    @OnClick(R.id.back_button_otp)
+    public void onBackBtnClick(){
+
+        onBackPressed();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

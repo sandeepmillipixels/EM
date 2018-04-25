@@ -26,6 +26,11 @@
     <color name="colorAccent">#f61e4d</color>
 
 
+    <color name="colorPrimary_er">#5D91F4</color>
+    <color name="colorSecondary_er">#54478B</color>
+    <color name="colorPrimaryDark_er">#292788</color>
+    <color name="colorAccent_er">#f61e4d</color>
+
     <!--<color name="colorPrimary">#ffffff</color>-->
     <!--<color name="colorSecondary">#ffffff</color>-->
     <!--<color name="colorPrimaryDark">#ffffff</color>-->

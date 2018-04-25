@@ -4,6 +4,12 @@
     <string name="already_have_account">Already have an account?</string>
     <string name="skip">Skip</string>
 
+    <string name="take_a_tour">TAKE THE TOUR</string>
+
+    <string name="app_name_tour"><b>Expense</b>\nRocket</string>
+    <string name="know_what_you_spend">Know what you spend!</string>
+    <string name="expense_rocket_enable_you_to">ExpenseRocket enable you to manage \nyour personal and business expenses in \na single place.it's the answer to your \nprayers!No,really!</string>
+
     <string name="login">Login</string>
 
     <string name="where_is_the_receipt">Where is the receipt \n from last week?</string>

@@ -13,7 +13,7 @@
         android:layout_height="50dp">
 
         <ImageView
-            android:background="@drawable/ic_arrow_back_white_24dp"
+            android:background="@drawable/ic_arrow_back_black_24dp"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/margin_10_dp"
@@ -133,27 +133,32 @@
             android:layout_marginTop="@dimen/margin_10_dp"
             android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/imgGPlus"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_if_google_circle"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp" />
-                <ImageView
-                    android:layout_toLeftOf="@+id/imgGPlus"
-                    android:layout_marginRight="@dimen/margin_50_dp"
-                    android:src="@drawable/ic_if_facebook_circle"
-                    android:layout_width="48dp"
-                    android:id="@+id/imgFb"
-                    android:layout_height="48dp" />
 
-                <ImageView
-                    android:layout_toLeftOf="@+id/imgFb"
-                    android:layout_marginRight="@dimen/margin_50_dp"
-                    android:src="@drawable/ic_if_twitter_circle"
-                    android:layout_width="48dp"
-                    android:id="@+id/imgTwiiter"
-                    android:layout_height="48dp" />
+
+
+            <ImageView
+                android:id="@+id/imgTwiiter"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_if_twitter_circle"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+            <ImageView
+                android:layout_toLeftOf="@+id/imgTwiiter"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:src="@drawable/ic_if_google_circle"
+                android:layout_width="48dp"
+                android:id="@+id/imgGPlus"
+                android:layout_height="48dp" />
+
+            <ImageView
+                android:layout_toLeftOf="@+id/imgGPlus"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:src="@drawable/ic_if_facebook_circle"
+                android:layout_width="48dp"
+                android:id="@+id/imgFb"
+                android:layout_height="48dp" />
+
+
                 <com.google.android.gms.common.SignInButton
                     android:id="@+id/sign_in_button"
                     android:layout_width="wrap_content"
