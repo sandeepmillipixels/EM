@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.application.millipixels.expense_rocket.EditImageActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.shoebox.TabbedActivity;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -66,7 +67,7 @@ public class ImageCropActivity extends AppCompatActivity {
 
 
         path=getIntent().getStringExtra("path");
-        page = getIntent().getIntExtra(TabbedActivity.PAGE,0);
+        page = getIntent().getIntExtra(EditImageActivity.PAGE,0);
 
         if(path!=null){
             BitmapFactory.Options bmOptions = new BitmapFactory.Options();

@@ -15,7 +15,7 @@
     <color name="blue_semi_transparent">#805677fc</color>
     <color name="blue_semi_transparent_pressed">#80738ffe</color>
 
-
+    <color name="colorSelect">@color/mb_gray</color>
     <color name="colorPrimary">#292788</color>
     <color name="colorSecondary">#292788</color>
     <color name="colorPrimaryDark">#292788</color>

@@ -30,7 +30,7 @@ import com.application.millipixels.expense_rocket.database.AllExpensesDataSource
 import com.application.millipixels.expense_rocket.fragments.MonthlyExpenseFragment;
 import com.application.millipixels.expense_rocket.gallery.GalleyActivity;
 import com.application.millipixels.expense_rocket.settings.SettingsActivity;
-import com.application.millipixels.expense_rocket.shoebox.TabbedActivity;
+
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.LimitLine;

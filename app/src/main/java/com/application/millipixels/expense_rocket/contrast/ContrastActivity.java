@@ -131,15 +131,10 @@ public class ContrastActivity extends AppCompatActivity implements View.OnClickL
         seekBar_saturation.reset();
         seekBar_saturation.setSeekLength(-1000, 1000, 0, 1f);
         seekBar_saturation.setOnSeekChangeListener(new TwoLineSeekBar.OnSeekChangeListener() {
-
-
-
-
             @Override
             public void onSeekChanged(float value, float step) {
                 if (llProcess.getVisibility() != View.VISIBLE && !start)
                     llProcess.setVisibility(View.VISIBLE);
-
                 start = false;
                 tvProcess.setText(Float.toString(value / 10f));
                 imageView.setSaturation(value / 10f);
