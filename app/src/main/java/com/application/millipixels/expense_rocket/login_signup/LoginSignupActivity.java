@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,6 +13,8 @@ import android.support.v7.widget.AppCompatSpinner;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -85,39 +88,19 @@ import static android.content.ContentValues.TAG;
 
 public class LoginSignupActivity extends Activity {
 
-    @BindView(R.id.edtPhone)
-    EditText edtPhone;
+//    @BindView(R.id.edtPhone)
+//    EditText edtPhone;
 
-    @BindView(R.id.edtEmail)
-    EditText edtEmail;
+//    @BindView(R.id.edtEmail)
+//    EditText edtEmail;
 
     @BindView(R.id.edtPhoneLogin)
     EditText edtPhoneLogin;
 
     String email;
     String mobileNumber;
-    private List<String> country_list = new ArrayList<>();
 
 
-    @BindView(R.id.divider_line)
-    View divider_line;
-
-    @BindView(R.id.edtCode)
-    EditText edtCode;
-
-    @BindView(R.id.spnCountarySignup)
-    AppCompatSpinner spnCountarySignup;
-
-    @BindView(R.id.txtLogin)
-    TextView txtLogin;
-    @BindView(R.id.txtSignup)
-    TextView txtSignup;
-
-    @BindView(R.id.login_container)
-    LinearLayout login_container;
-
-    @BindView(R.id.signup_container)
-    LinearLayout signup_container;
 
     String json = null;
 
@@ -132,6 +115,7 @@ public class LoginSignupActivity extends Activity {
 
     @BindView(R.id.imgFb)
     ImageView imgFb;
+
     @BindView(R.id.login_button)
     LoginButton loginButton;
 
@@ -144,7 +128,6 @@ public class LoginSignupActivity extends Activity {
     private static final int RC_SIGN_IN = 9001;
     CallbackManager callbackManager;
     private static final String EMAIL = "email";
-//    LoginButton loginButton;
     private GoogleSignInClient mGoogleSignInClient;
 
 
@@ -153,17 +136,18 @@ public class LoginSignupActivity extends Activity {
     @BindView(R.id.twitter_login)
     TwitterLoginButton mLoginButton;
 
-//    @BindView(R.id.firebase_text)
-//    TextView firebase_text;
-//
-//    @BindView(R.id.firebase_detail_text)
-//    TextView firebase_detail_text;
 
     ProgressDialog dialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(Color.WHITE);
+
         FirebaseApp.initializeApp(this);
         // Configure Twitter SDK
         TwitterAuthConfig authConfig =  new TwitterAuthConfig(
@@ -176,7 +160,7 @@ public class LoginSignupActivity extends Activity {
 
         Twitter.initialize(twitterConfig);
 
-        setContentView(R.layout.activity_login_signup);
+        setContentView(R.layout.sign_in);
         ButterKnife.bind(this);
         mAuth = FirebaseAuth.getInstance();
 
@@ -189,14 +173,6 @@ public class LoginSignupActivity extends Activity {
 
         initFacebook();
         initGplus();
-        setSpinner();
-        if (getIntent().getExtras() != null){
-            if (getIntent().getExtras().containsKey(Constants.LOGIN)){
-                onLoginTapped();
-            }else {
-                onSignupTapped();
-            }
-        }
 
         loadJSONFromAsset();
 
@@ -392,23 +368,9 @@ public class LoginSignupActivity extends Activity {
         updateUI(currentUser);
         // [END on_start_sign_in]
     }
-    @OnClick(R.id.txtSignup)
-    public void onSignupTapped(){
-        txtSignup.setAlpha(1);
-        txtLogin.setAlpha(0.6f);
-        signup_container.setVisibility(View.VISIBLE);
-        login_container.setVisibility(View.GONE);
-    }
 
 
 
-
-
-    @OnClick(R.id.txtSkip)
-    public void onSkipped(){
-        Intent intent = new Intent(this, Dashboard.class);
-        startActivity(intent);
-    }
 
 
     @OnClick(R.id.twitter_login)
@@ -430,84 +392,50 @@ public class LoginSignupActivity extends Activity {
         }
     }
 
-    @OnClick(R.id.btnSendOtpSignup)
-    public void onSendOtpSignup(View v){
-        mobileNumber=edtPhone.getText().toString().trim();
-        email=edtEmail.getText().toString().trim();
-
-        if(mobileNumber.length()==0){
-            Snackbar.make(v,"Please enter phone number.",2000).show();
-        }
-        else if(!(mobileNumber.length() >0 && mobileNumber.length()>=10 && mobileNumber.length()<=13)){
-            Snackbar.make(v,"Please enter valid phone number.",2000).show();
-        }
-        else if(email.length()==0){
-            Snackbar.make(v,"Please enter email address.",2000).show();
-        }
-        else if(!Utilities.emailValidation(email)){
-            Snackbar.make(v,"Please enter valid email address.",2000).show();
-        }
-        else {
-            Intent intent = new Intent(this, VerifyOtpActity.class);
-            startActivity(intent);
-        }
-
-
-    }
-
-    @OnClick(R.id.txtLogin)
-    public void onLoginTapped(){
-        mobileNumber = edtPhoneLogin.getText().toString().trim();
-        txtSignup.setAlpha(0.6f);
-        txtLogin.setAlpha(1);
-        signup_container.setVisibility(View.GONE);
-        login_container.setVisibility(View.VISIBLE);
-    }
-
-    private void setSpinner(){
-
-        loadJSONFromAsset();
-
-        try {
-            data=new ArrayList<>();
-
-            JSONArray jArray = new JSONArray(json);
-
-            for(int i=0;i<jArray.length();i++){
-                JSONObject json_data = jArray.getJSONObject(i);
-                CountryCodeData codeData = new CountryCodeData();
-                codeData.setDial_code(json_data.getString("dial_code"));
-                codeData.setCode(json_data.getString("code"));
-                codeData.setName(json_data.getString("name"));
-                data.add(codeData);
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-
-        adapter = new SpinnerAdapter(this,
-                R.layout.custom_country_item,
-                data);
-
-        spnCountarySignup.setAdapter(adapter);
-
-
-        spnCountarySignup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                edtCode.setText(data.get(i).getDial_code());
-
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-    }
+//    private void setSpinner(){
+//
+//        loadJSONFromAsset();
+//
+//        try {
+//            data=new ArrayList<>();
+//
+//            JSONArray jArray = new JSONArray(json);
+//
+//            for(int i=0;i<jArray.length();i++){
+//                JSONObject json_data = jArray.getJSONObject(i);
+//                CountryCodeData codeData = new CountryCodeData();
+//                codeData.setDial_code(json_data.getString("dial_code"));
+//                codeData.setCode(json_data.getString("code"));
+//                codeData.setName(json_data.getString("name"));
+//                data.add(codeData);
+//            }
+//
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//        adapter = new SpinnerAdapter(this,
+//                R.layout.custom_country_item,
+//                data);
+//
+//        spnCountarySignup.setAdapter(adapter);
+//
+//
+//        spnCountarySignup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//
+//                edtCode.setText(data.get(i).getDial_code());
+//
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
+//
+//    }
 
     public String loadJSONFromAsset() {
 
