@@ -218,23 +218,23 @@ public class AddExpense extends AppCompatActivity {
 
     @OnClick(R.id.firstImage)
     public void firstImageClick(){
+        takePicture();
 
-
-        if(path!=null){
-
-            openPdf(path);
-
-        }else{
-
-
-
-        int MyVersion = Build.VERSION.SDK_INT;
-        if (MyVersion > Build.VERSION_CODES.LOLLIPOP_MR1) {
-            if (!checkIfAlreadyhavePermission()) {
-                requestForSpecificPermission();
-            }
-        }
-        }
+//        if(path!=null){
+//
+//            openPdf(path);
+//
+//        }else{
+//
+//
+//
+//        int MyVersion = Build.VERSION.SDK_INT;
+//        if (MyVersion > Build.VERSION_CODES.LOLLIPOP_MR1) {
+//            if (!checkIfAlreadyhavePermission()) {
+//                requestForSpecificPermission();
+//            }
+//        }
+//        }
     }
 
     @OnClick(R.id.secondImage)
@@ -315,10 +315,13 @@ public class AddExpense extends AppCompatActivity {
                 }
                 break;
             case 500:
+                if (data != null){
                     path=data.getStringExtra("path");
                     if(path!=null){
                         Picasso.with(this).load(R.drawable.pdf_icon).into(firstImage);
                     }
+                }
+
                 break;
             default:
                 if (data != null){

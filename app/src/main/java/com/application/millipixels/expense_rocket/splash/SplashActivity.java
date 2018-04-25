@@ -22,7 +22,6 @@ import java.security.NoSuchAlgorithmException;
 
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by millipixelsinteractive_031 on 08/03/18.
@@ -31,17 +30,17 @@ import butterknife.ButterKnife;
 public class SplashActivity extends Activity {
 
     private static int SPLASH_TIME_OUT = 3000;
-    @BindView(R.id.splash_textView)
-    TextView splash_textView;
+//    @BindView(R.id.splash_textView)
+//    TextView splash_textView;
 
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-        ButterKnife.bind(this);
-        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Roboto_Light.ttf");
-        splash_textView.setTypeface(typeFace);
-        splash_textView.setText(Html.fromHtml("Keep eye on your <br>every <b>expense</b>"));
+//        ButterKnife.bind(this);
+//        Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/Roboto_Light.ttf");
+//        splash_textView.setTypeface(typeFace);
+//        splash_textView.setText(Html.fromHtml("Keep eye on your <br>every <b>expense</b>"));
         new Handler().postDelayed(new Runnable() {
 
             @Override
@@ -64,7 +63,7 @@ public class SplashActivity extends Activity {
                 } catch (Exception e) {
                     Log.e("exception", e.toString());
                 }
-                Intent i = new Intent(SplashActivity.this, OnBoarding.class);
+                Intent i = new Intent(SplashActivity.this, TakeTour.class);
                 startActivity(i);
 
                 finish();

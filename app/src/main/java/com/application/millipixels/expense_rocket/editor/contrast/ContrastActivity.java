@@ -1,6 +1,8 @@
 package com.application.millipixels.expense_rocket.editor.contrast;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -157,8 +159,12 @@ public class ContrastActivity extends AppCompatActivity implements View.OnClickL
 
                     @Override
                     public void onNext(String url) {
-                        if (onContrastListener != null)
-                            onContrastListener.onContrastPhotoCompleted(url);
+//                        if (onContrastListener != null)
+//                            onContrastListener.onContrastPhotoCompleted(url);
+                        Intent intent = new Intent();
+                        intent.putExtra(INPUT_URL,url);
+                        setResult(Activity.RESULT_OK, intent);
+                        finish();
                     }
 
                     @Override

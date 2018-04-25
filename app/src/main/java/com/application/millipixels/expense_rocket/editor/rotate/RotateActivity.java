@@ -1,5 +1,7 @@
 package com.application.millipixels.expense_rocket.editor.rotate;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -141,8 +143,10 @@ public class RotateActivity extends AppCompatActivity implements TwoLineSeekBar.
 
                     @Override
                     public void onNext(String url) {
-                        if (onRotateListener != null)
-                            onRotateListener.onRotatePhotoCompleted(url);
+                        Intent intent = new Intent();
+                        intent.putExtra(INPUT_URL,url);
+                        setResult(Activity.RESULT_OK, intent);
+                        finish();
                     }
 
                     @Override
@@ -152,7 +156,7 @@ public class RotateActivity extends AppCompatActivity implements TwoLineSeekBar.
 
                     @Override
                     public void onComplete() {
-                        back();
+
                     }
                 });
     }
