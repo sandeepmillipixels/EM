@@ -20,6 +20,7 @@
     <color name="purple_text">#57438D</color>
 
 
+    <color name="colorSelect">@color/mb_gray</color>
     <color name="colorPrimary">#292788</color>
     <color name="colorSecondary">#292788</color>
     <color name="colorPrimaryDark">#292788</color>

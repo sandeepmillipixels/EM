@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
+import com.application.millipixels.expense_rocket.EditImageActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.squareup.picasso.Picasso;
 
@@ -41,8 +42,8 @@ public class ImageFilterActivity extends AppCompatActivity {
         seekContrast = (SeekBar) findViewById(R.id.seekContrast);
         initToolBar();
         if (getIntent().getExtras() != null){
-            path = getIntent().getStringExtra(TabbedActivity.PATH);
-            page = getIntent().getIntExtra(TabbedActivity.PAGE,0);
+            path = getIntent().getStringExtra(EditImageActivity.PATH);
+            page = getIntent().getIntExtra(EditImageActivity.PAGE,0);
             Uri uri = Uri.fromFile(new File(path));
 
             Picasso.with(this).load(uri)

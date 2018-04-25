@@ -17,10 +17,11 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.application.millipixels.expense_rocket.EditImageActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.pdf_opener.PdfOpenActivity;
-import com.application.millipixels.expense_rocket.shoebox.TabbedActivity;
+
 
 import java.io.File;
 import java.util.Arrays;
@@ -154,7 +155,7 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
 
     @OnClick(R.id.fab_shoebox)
      void fab_shoeboxClick(){
-        Intent intent=new Intent(GalleyActivity.this, TabbedActivity.class);
+        Intent intent=new Intent(GalleyActivity.this, EditImageActivity.class);
         intent.putExtra("shoebox",true);
         startActivityForResult(intent,100);
     }

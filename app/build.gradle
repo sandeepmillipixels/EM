@@ -90,6 +90,8 @@ dependencies {
     implementation 'info.androidhive:imagefilters:1.0.7'
     implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.github.krokyze:ucropnedit:2.2.1-native'
+
 }
 repositories {
     mavenCentral()
