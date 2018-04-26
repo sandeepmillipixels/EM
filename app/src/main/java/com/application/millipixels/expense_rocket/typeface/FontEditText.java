@@ -24,7 +24,7 @@ public class FontEditText extends android.support.v7.widget.AppCompatEditText{
         initRegular();
     }
     public void initRegular() {
-        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto_Light.ttf");
+        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/sf_pro_text_light.ttf");
         setTypeface(tf ,1);
 
     }

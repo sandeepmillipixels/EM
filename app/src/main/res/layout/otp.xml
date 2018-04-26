@@ -6,22 +6,33 @@
 
 
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="horizontal"
         android:id="@+id/sign_in_top_layout"
         android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_30_dp"
         android:layout_height="50dp">
 
         <ImageView
             android:id="@+id/back_button_otp"
-            android:background="@drawable/ic_arrow_back_black_24dp"
+            android:background="@drawable/back"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/margin_10_dp"
+            android:layout_marginLeft="@dimen/margin_20_dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/otp_cloud_imageview"
+            android:background="@drawable/otp_cloud"
+            android:layout_width="150dp"
+            android:layout_marginRight="@dimen/margin_50_dp"
+            android:layout_alignParentRight="true"
             android:layout_height="wrap_content" />
 
 
-    </LinearLayout>
+    </RelativeLayout>
+
+
 
 
 
@@ -31,10 +42,10 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:layout_marginTop="@dimen/margin_50_dp"
+        android:layout_marginTop="@dimen/margin_20_dp"
         android:layout_height="wrap_content">
 
-        <TextView
+        <com.application.millipixels.expense_rocket.typeface.FontsClass
             android:text="@string/signin"
             android:textSize="@dimen/size_30dp"
             android:textColor="@color/purple_text"
@@ -42,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:layout_marginTop="@dimen/margin_10_dp"
             android:text="@string/we_just_sent_otp"
             android:gravity="center"
@@ -78,11 +89,11 @@
                     android:singleLine="true"
                     android:lines="1"
                     android:maxLength="1"
-                    android:background="#f7f7f7"
+                    android:background="@drawable/edittext_shadow"
                     android:imeOptions="actionNext"
                     android:gravity="center"
                     android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_height="70dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -99,10 +110,10 @@
                     android:lines="1"
                     android:maxLength="1"
                     android:imeOptions="actionNext"
+                    android:background="@drawable/edittext_shadow"
                     android:gravity="center"
-                    android:background="#F7F7F7"
                     android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_height="70dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -119,10 +130,10 @@
                     android:id="@+id/edt3"
                     android:imeOptions="actionNext"
                     android:gravity="center"
-                    android:background="#F7F7F7"
+                    android:background="@drawable/edittext_shadow"
                     android:maxLength="1"
                     android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_height="70dp" />
             </LinearLayout>
 
 
@@ -138,11 +149,11 @@
                     android:lines="1"
                     android:imeOptions="actionDone"
                     android:gravity="center"
-                    android:background="#F7F7F7"
+                    android:background="@drawable/edittext_shadow"
                     android:maxLength="1"
                     android:id="@+id/edt4"
                     android:layout_width="50dp"
-                    android:layout_height="60dp" />
+                    android:layout_height="70dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -160,12 +171,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+            android:text="@string/did_not_received"
+            android:layout_width="wrap_content"
+            android:textColor="@color/did_not_received"
+            android:layout_marginTop="@dimen/margin_30_dp"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <RelativeLayout
         android:layout_below="@+id/sign_in_inside_layout"
         android:layout_width="match_parent"
         android:layout_above="@+id/sign_in_bottom_layout"
+        android:visibility="gone"
         android:layout_height="match_parent">
 
 
@@ -187,7 +207,7 @@
         android:padding="@dimen/padding_30dp"
         android:layout_height="wrap_content">
 
-        <TextView
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:id="@+id/use_social_signin_textView"
             android:gravity="center"
 

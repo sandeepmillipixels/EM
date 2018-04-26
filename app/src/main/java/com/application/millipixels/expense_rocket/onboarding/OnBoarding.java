@@ -83,7 +83,9 @@ public class OnBoarding extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(Color.WHITE);
@@ -93,8 +95,7 @@ public class OnBoarding extends Activity{
 
         layouts = new int[]{
                 R.layout.first_onboarding,
-                R.layout.first_onboarding,
-                R.layout.first_onboarding,
+                R.layout.second_onboarding,
                 R.layout.fourth_onboarding};
 
         addBottomDots(0);

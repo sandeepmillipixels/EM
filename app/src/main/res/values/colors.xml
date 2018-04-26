@@ -17,7 +17,7 @@
 
     <color name="light_grey">#F2F2F2</color>
     <color name="grey_text">#C5C5C5</color>
-    <color name="purple_text">#57438D</color>
+    <color name="purple_text">#58458e</color>
 
 
     <color name="colorSelect">@color/mb_gray</color>
@@ -47,12 +47,21 @@
     <color name="text_unselected">#6968a4</color>
 
 
+    <color name="onboarding_top_gradient">#e4f2fb</color>
+    <color name="onboarding_bottom_gradient">#ffffff</color>
+    
+    <color name="onboarding_heading_color">#4f4f4f</color>
+
+
     <color name="splasgDesc">#737373</color>
+
+    <color name="did_not_received">#3399ff</color>
 
     <color name="selectedColor">#292788</color>
     <color name="unselectedColor">#e9e9f3</color>
 
     <color name="white">#ffffff</color>
+    <color name="white70">#bfffffff</color>
     <color name="black">#000000</color>
     <color name="colorTransGrey">#f0f0f0</color>
 
@@ -60,7 +69,7 @@
 
     <color name="greenFloating">#3cd690</color>
     <color name="greenFloatingT">#513cd690</color>
-    <color name="red_button">#FE5E57</color>
+    <color name="red_button">#ff5f58</color>
 
     <array name="array_dot_active">
         <item>@color/grey_text</item>

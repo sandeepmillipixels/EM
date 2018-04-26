@@ -33,7 +33,7 @@ public class FontsClass extends android.support.v7.widget.AppCompatTextView {
     }
 
     public void initRegular() {
-        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto_Regular.ttf");
+        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/sf_pro_text_bold.ttf");
         setTypeface(tf ,1);
 
     }
