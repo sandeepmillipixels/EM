@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.millipixelsinteractive_031.em.MainActivity;
 import com.example.millipixelsinteractive_031.em.R;
+import com.example.millipixelsinteractive_031.em.dashboard.Dashboard;
 import com.example.millipixelsinteractive_031.em.utils.Constants;
 import com.example.millipixelsinteractive_031.em.utils.Utilities;
 import com.example.millipixelsinteractive_031.em.verify_otp.VerifyOtpActity;
@@ -92,7 +93,7 @@ public class LoginSignupActivity extends Activity {
 
     @OnClick(R.id.txtSkip)
     public void onSkipped(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
     }
 

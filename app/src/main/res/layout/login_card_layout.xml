@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:id="@+id/txtEnterText"
@@ -38,31 +38,29 @@
 
             <android.support.v7.widget.AppCompatSpinner
                 android:id="@+id/spnCountary"
-                android:visibility="invisible"
-
+                android:layout_marginTop="@dimen/margin_10_dp"
                 android:layout_below="@+id/txtEnterText"
-
+                android:visibility="invisible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
 
             <View
-                android:visibility="invisible"
                 android:id="@+id/divider_spinner"
                 android:layout_marginTop="4dp"
                 android:background="@android:color/black"
                 android:layout_below="@+id/spnCountary"
                 android:layout_width="match_parent"
+                android:visibility="invisible"
                 android:layout_height="0.4dp"></View>
 
             <EditText
                 android:hint="@string/enter_your_phone"
-                android:id="@+id/edtPhoneLogin"
+                android:id="@+id/edtPhone"
                 android:singleLine="true"
                 android:lines="1"
                 android:imeOptions="actionNext"
                 android:textSize="14sp"
-                android:layout_marginTop="12dp"
                 android:layout_below="@+id/divider_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -70,7 +68,7 @@
             <Button
                 android:id="@+id/btnSendOtpLogin"
                 android:layout_marginBottom="36dp"
-                android:layout_below="@+id/edtPhoneLogin"
+                android:layout_below="@+id/edtPhone"
                 android:layout_centerHorizontal="true"
                 android:paddingLeft="60dp"
                 android:layout_marginTop="28dp"

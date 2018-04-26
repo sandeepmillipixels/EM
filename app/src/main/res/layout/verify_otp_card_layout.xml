@@ -48,6 +48,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+
+                        android:id="@+id/first_digit_EditText"
                         android:inputType="number"
                         android:padding="12dp"
                         android:textSize="14sp"
@@ -65,6 +67,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+                        android:id="@+id/second_digit_EditText"
                         android:inputType="number"
                         android:padding="12dp"
                         android:textSize="14sp"
@@ -82,6 +85,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+                        android:id="@+id/third_digit_EditText"
                         android:inputType="number"
                         android:padding="12dp"
                         android:textSize="14sp"
@@ -100,6 +104,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
+                        android:id="@+id/fourth_digit_EditText"
                         android:inputType="number"
                         android:padding="12dp"
                         android:textSize="14sp"
@@ -139,7 +144,7 @@
                     android:layout_height="wrap_content" />
             </RelativeLayout>
 
-            <Button
+            <com.example.millipixelsinteractive_031.em.typeface.FontButton
                 android:id="@+id/btnVerify"
 
                 android:layout_below="@+id/layout_resend_otp"
@@ -152,7 +157,7 @@
                 android:layout_width="180dp"
                 android:layout_height="wrap_content" />
 
-            <Button
+            <com.example.millipixelsinteractive_031.em.typeface.FontButton
                 android:layout_marginBottom="36dp"
                 android:layout_below="@+id/btnVerify"
                 android:layout_centerHorizontal="true"

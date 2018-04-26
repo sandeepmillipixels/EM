@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,15 +18,14 @@
         android:theme="@style/MyMaterialTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"></activity>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.millipixelsinteractive_031.em.onboarding.OnBoarding"
-            android:screenOrientation="portrait"></activity>
+            android:name=".onboarding.OnBoarding"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".login_signup.LoginSignupActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name=".splash.SplashActivity"
             android:screenOrientation="portrait">
@@ -37,14 +39,21 @@
         <receiver
             android:name=".receiver.OTPReceiver"
             android:screenOrientation="portrait">
-            <intent-filter>
+            <intent-filter android:priority="0">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".verify_otp.VerifyOtpActity"
+        <activity
+            android:name=".verify_otp.VerifyOtpActity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".dashboard.Dashboard"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".addexpense.AddExpense"></activity>
+        <activity android:name=".category.CategoryActivity"></activity>
     </application>
 
 </manifest>

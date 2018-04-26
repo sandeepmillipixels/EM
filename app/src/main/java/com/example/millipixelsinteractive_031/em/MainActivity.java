@@ -31,6 +31,12 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void autoFillOTP(String otp) {
 
+                if (otp!=null && otp.matches("[0-9]+")) {
+
+
+
+                }
+
                 Log.e("OTP",otp);
 
             }
