@@ -4,6 +4,8 @@
     <string name="already_have_account">Already have an account?</string>
     <string name="skip">Skip</string>
 
+    <string name="app_name_tour"></string>
+
     <string name="take_a_tour">TAKE THE TOUR</string>
 
     <string name="get_control">Get Control, Mav!</string>
