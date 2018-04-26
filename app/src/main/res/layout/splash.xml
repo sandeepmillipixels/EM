@@ -20,7 +20,7 @@
         android:id="@+id/imageView_rocket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:transitionName="profile"
+
         android:layout_alignEnd="@+id/imageView"
         android:layout_alignRight="@+id/imageView"
         android:layout_below="@+id/imageView"
@@ -33,40 +33,24 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView_rocket"
-        android:layout_marginLeft="@dimen/margin_50_dp"
-        android:layout_marginStart="@dimen/margin_50_dp"
-        android:text="@string/expense"
+        android:layout_marginLeft="@dimen/margin_60_dp"
+        android:layout_marginStart="@dimen/margin_60_dp"
+        android:text="@string/app_name_tour"
         android:textColor="@color/white"
-        android:letterSpacing="-0.05"
-        android:textSize="@dimen/size_48sp"
-        android:id="@+id/splash_expense_textView" />
-
-    <com.application.millipixels.expense_rocket.typeface.FontsClassLight
-
-        android:id="@+id/splash_rocket_textView"
-        android:layout_width="wrap_content"
-        android:letterSpacing="-0.05"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/splash_expense_textView"
-        android:layout_alignStart="@+id/splash_expense_textView"
-        android:layout_below="@+id/splash_expense_textView"
-        android:text="@string/rocket"
-        android:layout_marginTop="-16dp"
-        android:textColor="@color/white"
-        android:textSize="@dimen/size_40sp" />
+        android:textSize="@dimen/size_40dp"
+        android:id="@+id/textView5" />
 
 
     <com.application.millipixels.expense_rocket.typeface.FontsClassLight
 
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/splash_rocket_textView"
-        android:layout_alignStart="@+id/splash_rocket_textView"
-        android:layout_below="@+id/splash_rocket_textView"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
         android:text="@string/get_control"
-        android:textColor="@color/white70"
-        android:textSize="@dimen/size_18sp" />
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_20dp" />
 
 
 
