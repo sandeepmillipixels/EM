@@ -14,6 +14,8 @@
         android:layout_marginTop="@dimen/margin_20_dp"
         android:layout_height="wrap_content">
 
+
+
         <ImageView
             android:layout_centerVertical="true"
             android:id="@+id/back_button_otp"
@@ -38,7 +40,6 @@
 
 
 
-
     <LinearLayout
         android:id="@+id/sign_in_inside_layout"
         android:layout_below="@+id/sign_in_top_layout"
@@ -47,6 +48,8 @@
         android:gravity="center"
         android:layout_marginTop="@dimen/margin_30_dp"
         android:layout_height="wrap_content">
+
+
 
         <com.application.millipixels.expense_rocket.typeface.FontsClass
             android:text="@string/signin"
@@ -100,6 +103,7 @@
                     android:id="@+id/edt1"
                     android:textSize="14sp"
                     android:singleLine="true"
+                    android:nextFocusForward="@id/edt2"
                     android:lines="1"
                     android:maxLength="1"
                     android:background="@drawable/edittext_shadow"
@@ -131,6 +135,7 @@
                     android:textSize="14sp"
                     android:singleLine="true"
                     android:lines="1"
+                    android:nextFocusForward="@id/edt3"
                     android:maxLength="1"
                     android:imeOptions="actionNext"
                     android:background="@drawable/edittext_shadow"
@@ -164,6 +169,7 @@
                     android:gravity="center"
                     android:background="@drawable/edittext_shadow"
                     android:maxLength="1"
+                    android:nextFocusForward="@id/edt4"
                     android:layout_width="44dp"
                     android:layout_height="67dp" />
                 </android.support.v7.widget.CardView>
@@ -201,6 +207,7 @@
 
 
         </LinearLayout>
+
 
         <Button
             android:id="@+id/btnVerify"

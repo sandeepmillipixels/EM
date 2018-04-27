@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatSpinner;
 import android.util.Log;
 import android.view.Gravity;
@@ -22,6 +23,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -87,6 +89,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import retrofit2.Call;
+import retrofit2.Response;
 
 import static android.content.ContentValues.TAG;
 
@@ -94,7 +97,7 @@ import static android.content.ContentValues.TAG;
  * Created by millipixelsinteractive_031 on 08/03/18.
  */
 
-public class LoginSignupActivity extends Activity {
+public class LoginSignupActivity extends AppCompatActivity {
 
 //    @BindView(R.id.edtPhone)
 //    EditText edtPhone;
@@ -150,7 +153,9 @@ public class LoginSignupActivity extends Activity {
     ImageView back_button_otp;
 
 
+
     ProgressDialog dialog;
+    ;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -182,9 +187,8 @@ public class LoginSignupActivity extends Activity {
         ButterKnife.bind(this);
         mAuth = FirebaseAuth.getInstance();
 
-        dialog=new ProgressDialog(this);
-        dialog.setMessage("Please Wait....");
-        dialog.setCancelable(false);
+        dialog = new ProgressDialog(this);
+
 
 
 
@@ -412,6 +416,8 @@ public class LoginSignupActivity extends Activity {
     @OnClick(R.id.btnSendOtpLogin)
     public void onSendOtpLogin(View v){
 
+
+
         mobileNumber = edtPhoneLogin.getText().toString().trim();
         if(mobileNumber.length()==0){
             Snackbar.make(v,R.string.error_empty_number,2000).show();
@@ -419,9 +425,15 @@ public class LoginSignupActivity extends Activity {
         else if(!(mobileNumber.length() >0 && mobileNumber.length()>=10 && mobileNumber.length()<=13)){
             Snackbar.make(v,R.string.error_not_valid_number,2000).show();
         }else {
-            Intent intent = new Intent(this, VerifyOtpActity.class);
-            intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
-            startActivity(intent);
+            dialog.setCancelable(false);
+
+            dialog.setMessage("Please wait...");
+
+            dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+
+            dialog.show();
+
+            sendOTPRequest();
         }
     }
 
@@ -496,6 +508,7 @@ public class LoginSignupActivity extends Activity {
     private void handleTwitterSession(TwitterSession session) {
         Log.d(TAG, "handleTwitterSession:" + session);
         // [START_EXCLUDE silent]
+        if (dialog != null && dialog.isShowing())
         dialog.show();
         // [END_EXCLUDE]
 
@@ -521,6 +534,7 @@ public class LoginSignupActivity extends Activity {
                         }
 
                         // [START_EXCLUDE]
+                        if (dialog != null && dialog.isShowing())
                         dialog.dismiss();
                         // [END_EXCLUDE]
                     }
@@ -536,6 +550,7 @@ public class LoginSignupActivity extends Activity {
     }
 
     private void updateUI(FirebaseUser user) {
+        if (dialog != null && dialog.isShowing())
         dialog.dismiss();
         if (user != null) {
 
@@ -554,6 +569,46 @@ public class LoginSignupActivity extends Activity {
 
         }
     }
+    public void sendOTPRequest(){
 
+        ApiInterface apiService =
+                ApiClient.getClient().create(ApiInterface.class);
+
+        Call<OTP> call = apiService.sendOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61","+91"+mobileNumber);
+
+
+        call.enqueue(new retrofit2.Callback<OTP>() {
+            @Override
+            public void onResponse(Call<OTP> call, Response<OTP> response) {
+
+                if(response.isSuccessful()==true){
+
+                    if(response.body()!=null && response.body().isStatus()){
+                        otp=response.body().getData().getOtp();
+
+                        Intent intent=new Intent(LoginSignupActivity.this,VerifyOtpActity.class);
+                        intent.putExtra("otp",otp);
+                        intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
+                        startActivity(intent);
+                    }else {
+
+                    }
+
+                }else {
+                    // server error
+                }
+
+
+
+            }
+
+            @Override
+            public void onFailure(Call<OTP> call, Throwable t) {
+                Log.d("Error",t.getLocalizedMessage());
+            }
+        });
+        if (dialog != null && dialog.isShowing())
+        dialog.dismiss();
+    }
 
 }

@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent">
-    
-    
+
+
     <!---->
     <!--<LinearLayout-->
         <!--android:orientation="horizontal"-->
@@ -17,6 +17,11 @@
     android:id="@+id/top_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+
+
+
+
     <ImageView
 
         android:id="@+id/back_button_otp"
@@ -115,6 +120,7 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
 
     <RelativeLayout
         android:layout_below="@+id/sign_in_inside_layout"
