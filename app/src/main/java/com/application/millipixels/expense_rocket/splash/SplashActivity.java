@@ -5,23 +5,16 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.Html;
 import android.util.Base64;
 import android.util.Log;
-import android.widget.TextView;
+import android.view.animation.AnimationUtils;
 
 import com.application.millipixels.expense_rocket.R;
-import com.application.millipixels.expense_rocket.gallery.GalleyActivity;
-import com.application.millipixels.expense_rocket.onboarding.OnBoarding;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-
-import butterknife.BindView;
 
 /**
  * Created by millipixelsinteractive_031 on 08/03/18.
@@ -63,8 +56,14 @@ public class SplashActivity extends Activity {
                 } catch (Exception e) {
                     Log.e("exception", e.toString());
                 }
+
+
+
                 Intent i = new Intent(SplashActivity.this, TakeTour.class);
+
                 startActivity(i);
+
+                overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
 
                 finish();
             }

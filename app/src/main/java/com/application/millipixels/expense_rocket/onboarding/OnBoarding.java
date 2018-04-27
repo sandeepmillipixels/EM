@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.application.millipixels.expense_rocket.R;
+import com.application.millipixels.expense_rocket.adapter.OnboardingPageTransformer;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
 import com.application.millipixels.expense_rocket.utils.Constants;
@@ -101,6 +102,7 @@ public class OnBoarding extends Activity{
 
         onboardViewpagerAdapter = new OnboardViewpagerAdapter(this, layouts);
         view_pager.setAdapter(onboardViewpagerAdapter);
+        view_pager.setPageTransformer(false, new OnboardingPageTransformer());
         view_pager.addOnPageChangeListener(view_pagerPageChangeListener);
 
     }
