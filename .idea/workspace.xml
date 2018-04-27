@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5181be-e8a2-4ab1-938e-f3794f966121" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/anim/scale_down.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
@@ -32,12 +33,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/edittext_shadow.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edittext_shadow.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/otp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/otp.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,11 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VerifyOtpActity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VerifyOtpActity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="176" column="33" lean-forward="false" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
+            <state relative-caret-position="321">
+              <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
               <folding>
                 <element signature="e#3750#4200#0" expanded="true" />
                 <element signature="e#4199#4200#0" expanded="true" />
@@ -86,51 +85,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginSignupActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginSignupActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="410" column="50" lean-forward="false" selection-start-line="410" selection-start-column="50" selection-end-line="410" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="otp.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/otp.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="60" column="56" lean-forward="false" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="56" />
+            <state relative-caret-position="461">
+              <caret line="440" column="34" lean-forward="false" selection-start-line="440" selection-start-column="34" selection-end-line="440" selection-end-column="34" />
               <folding>
-                <element signature="e#421#442#0" expanded="true" />
-                <element signature="e#817#838#0" expanded="true" />
-                <element signature="e#1525#1546#0" expanded="true" />
-                <element signature="e#2130#2156#0" expanded="true" />
-                <marker date="1524811897000" expanded="false" signature="8609:8630" ph="&quot;20dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="8669:8690" ph="&quot;40dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="8730:8751" ph="&quot;40dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="8783:8804" ph="&quot;20dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="8839:8860" ph="&quot;20dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="9003:9019" ph="&quot;Sign In&quot;" />
-                <marker date="1524811897000" expanded="false" signature="9845:9866" ph="&quot;20dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="10375:10396" ph="&quot;30dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="10691:10718" ph="&quot;Use Social Sign In?&quot;" />
-                <marker date="1524811897000" expanded="false" signature="11508:11529" ph="&quot;50dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="11848:11869" ph="&quot;50dp&quot;" />
-                <marker date="1524811897000" expanded="false" signature="13410:13428" ph="&quot;Send OTP&quot;" />
+                <element signature="e#14739#14740#0" expanded="true" />
+                <element signature="e#14763#14764#0" expanded="true" />
               </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <file leaf-file-name="scale_down.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/scale_down.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="105">
+              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -139,8 +111,8 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="226">
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,41 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign_in.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml">
+      <file leaf-file-name="ScaleAnimation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/animation/ScaleAnimation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="97" column="27" lean-forward="false" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
-              <folding>
-                <element signature="e#535#556#0" expanded="true" />
-                <element signature="e#928#949#0" expanded="true" />
-                <element signature="e#1335#1356#0" expanded="true" />
-                <element signature="e#1689#1710#0" expanded="true" />
-                <element signature="e#2214#2234#0" expanded="true" />
-                <element signature="e#3740#3761#0" expanded="true" />
-                <element signature="e#3799#3820#0" expanded="true" />
-                <element signature="e#3860#3881#0" expanded="true" />
-                <element signature="e#3913#3934#0" expanded="true" />
-                <element signature="e#3969#3990#0" expanded="true" />
-                <element signature="e#4085#4103#0" expanded="true" />
-                <element signature="e#4133#4151#0" expanded="true" />
-                <element signature="e#4561#4582#0" expanded="true" />
-                <element signature="e#5753#5774#0" expanded="true" />
-                <element signature="e#6229#6250#0" expanded="true" />
-                <element signature="e#6569#6590#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dimen.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="26" />
+            <state relative-caret-position="354">
+              <caret line="216" column="23" lean-forward="false" selection-start-line="216" selection-start-column="23" selection-end-line="216" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -192,20 +134,68 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="34" column="125" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="125" />
+            <state relative-caret-position="259">
+              <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OnBoarding.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java">
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="113" column="52" lean-forward="false" selection-start-line="113" selection-start-column="52" selection-end-line="113" selection-end-column="52" />
+            <state relative-caret-position="454">
+              <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="27" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sign_in.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+              <folding>
+                <element signature="e#529#550#0" expanded="true" />
+                <element signature="e#791#812#0" expanded="true" />
+                <element signature="e#1015#1036#0" expanded="true" />
+                <element signature="e#1167#1188#0" expanded="true" />
+                <element signature="e#1837#1858#0" expanded="true" />
+                <element signature="e#2122#2143#0" expanded="true" />
+                <element signature="e#2183#2204#0" expanded="true" />
+                <element signature="e#2706#2727#0" expanded="true" />
+                <element signature="e#3231#3251#0" expanded="true" />
+                <element signature="e#4418#4439#0" expanded="true" />
+                <element signature="e#4792#4813#0" expanded="true" />
+                <element signature="e#4851#4872#0" expanded="true" />
+                <element signature="e#4912#4933#0" expanded="true" />
+                <element signature="e#4965#4986#0" expanded="true" />
+                <element signature="e#5021#5042#0" expanded="true" />
+                <element signature="e#5137#5155#0" expanded="true" />
+                <element signature="e#5185#5203#0" expanded="true" />
+                <element signature="e#5613#5634#0" expanded="true" />
+                <element signature="e#6805#6826#0" expanded="true" />
+                <element signature="e#7281#7302#0" expanded="true" />
+                <element signature="e#7621#7642#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app_round_button_drawable.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/app_round_button_drawable.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -217,18 +207,14 @@
         <option value="valueResourceFile" />
         <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
-        <option value="resourceFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>edtPhoneLogin</find>
-      <find>send_otp_button</find>
-      <find>btnSendOtpLogin</find>
-      <find>LoginSignupActivity</find>
       <find>oncli</find>
       <find>Toast</find>
       <find>skip</find>
@@ -251,9 +237,13 @@
       <find>Login</find>
       <find>card_view:cardUseCompatPadding=&quot;true&quot;</find>
       <find>card_view:cardElevation=&quot;4dp&quot;</find>
+      <find>48dp</find>
       <find>Intent</find>
       <find>70</find>
-      <find>48dp</find>
+      <find>login</find>
+      <find>@onCLi</find>
+      <find>Otp</find>
+      <find>sign_in_top_layout</find>
       <find>16</find>
     </findStrings>
     <replaceStrings>
@@ -2124,7 +2114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/contrast/BrightnessView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/contrast/ContrastView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/imagepicker/ImagePicker.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/contrast/EditImageView.java" />
@@ -2156,7 +2145,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/splash.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/GenericTextWatcher.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/view/Demo.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/onboarding.xml" />
@@ -2165,16 +2153,18 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/Data.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/ApiClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/ApiInterface.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/edittext_shadow.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimen.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/otp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/scale_down.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" />
       </list>
     </option>
   </component>
@@ -2755,7 +2745,7 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="device.picker.selection" value="Nexus_5X_API_24" />
-    <property name="SearchEverywhereHistoryKey" value="OnB&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;sig&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/sign_in.xml&#10;colo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/values/colors.xml&#10;Otp&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;OnBo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;Das&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.dashboard.Dashboard&#10;Ta&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;str&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/values/strings.xml&#10;Sign&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;Add&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.addexpense.AddExpense&#10;onBo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;Splas&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;man&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/AndroidManifest.xml&#10;Veri&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;otp&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/otp.xml&#10;gra&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/build.gradle&#10;tou&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/take_tour.xml&#10;sp&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;signin&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/sign_in.xml&#10;nbo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/drawable/onboarding_gradient.xml&#10;onbo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/onboarding.xml&#10;To&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;Spla&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;Tou&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;onb&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;firs&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/first_onboarding.xml&#10;app&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/drawable/app_gradient.xml&#10;Onbo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;spla&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/splash.xml&#10;Take&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.splash.TakeTour&#10;sign&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;on&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/onboarding.xml&#10;fourth&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/fourth_onboarding.xml&#10;color&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;logi&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/login_card_layout.xml&#10;Pdf&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/pdf_opener/PdfOpenActivity.java&#10;Tabbe&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Gallery&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleryAdapter.java&#10;mani&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/AndroidManifest.xml&#10;Gall&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;AddEx&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;Dash&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java&#10;signu&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/sign_up_card_layout.xml&#10;Login&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity&#10;Tabbed&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tabb&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tab&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/TabbedActivity.java&#10;Image&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/imagepicker/ImagePicker.java&#10;DAS&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/dashboard/Dashboard.java&#10;MonTh&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/fragments/MonthlyExpenseFragment.java" />
+    <property name="SearchEverywhereHistoryKey" value="mani&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/AndroidManifest.xml&#10;si&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/sign_in.xml&#10;OnB&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;sig&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/sign_in.xml&#10;colo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/values/colors.xml&#10;Otp&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;OnBo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;Das&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.dashboard.Dashboard&#10;Ta&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;str&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/values/strings.xml&#10;Sign&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;Add&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.addexpense.AddExpense&#10;onBo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;Splas&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;man&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/AndroidManifest.xml&#10;Veri&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;otp&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/otp.xml&#10;gra&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/build.gradle&#10;tou&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/take_tour.xml&#10;sp&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;signin&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/sign_in.xml&#10;nbo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/drawable/onboarding_gradient.xml&#10;onbo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/onboarding.xml&#10;To&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;Spla&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;Tou&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;onb&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;firs&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/first_onboarding.xml&#10;app&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/drawable/app_gradient.xml&#10;Onbo&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;spla&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/res/layout/splash.xml&#10;Take&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.splash.TakeTour&#10;sign&#9;FILE&#9;file:///Users/millipixelsinteractive_024/ExpenseMangerRepo/EM/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;on&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/onboarding.xml&#10;fourth&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/fourth_onboarding.xml&#10;color&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;logi&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/login_card_layout.xml&#10;Pdf&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/pdf_opener/PdfOpenActivity.java&#10;Tabbe&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Gallery&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleryAdapter.java&#10;Gall&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;AddEx&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;Dash&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java&#10;signu&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/sign_up_card_layout.xml&#10;Login&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity&#10;Tabbed&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tabb&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tab&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/shoebox/TabbedActivity.java&#10;Image&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/imagepicker/ImagePicker.java&#10;DAS&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/example/millipixelsinteractive_031/em/dashboard/Dashboard.java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DEBUGGABLE_DEVICE" value="lge-nexus_5x-009fabff81a88e79" />
     <property name="DEBUGGABLE_PROCESS" value="com.application.millipixels.expense_rocket" />
@@ -2872,7 +2862,7 @@
       <option name="ACTIVITY_CLASS" value="com.application.millipixels.expense_rocket.contrast.ContrastActivity" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524812149762" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524823169788" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -2945,7 +2935,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524812149762" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524823169788" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2993,7 +2983,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524812149763" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524823169788" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -3038,6 +3028,27 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -3168,7 +3179,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524812149765" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1524823169789" />
       </method>
     </configuration>
     <list size="3">
@@ -3298,7 +3309,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>265</line>
+          <line>280</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
@@ -3490,7 +3501,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>368</line>
+          <line>383</line>
           <properties />
           <option name="timeStamp" value="151" />
         </line-breakpoint>
@@ -3506,21 +3517,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_white_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/apt/debug/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity_ViewBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_signup.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -3720,17 +3716,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/app_round_button_drawable.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/millipixelsinteractive_031/em/login_signup/LoginSignupActivity.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/take_tour.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -3874,17 +3859,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -3893,34 +3867,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="34" column="125" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="125" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimen.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="410" column="50" lean-forward="false" selection-start-line="410" selection-start-column="50" selection-end-line="410" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -3953,34 +3903,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="97" column="27" lean-forward="false" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
-          <folding>
-            <element signature="e#535#556#0" expanded="true" />
-            <element signature="e#928#949#0" expanded="true" />
-            <element signature="e#1335#1356#0" expanded="true" />
-            <element signature="e#1689#1710#0" expanded="true" />
-            <element signature="e#2214#2234#0" expanded="true" />
-            <element signature="e#3740#3761#0" expanded="true" />
-            <element signature="e#3799#3820#0" expanded="true" />
-            <element signature="e#3860#3881#0" expanded="true" />
-            <element signature="e#3913#3934#0" expanded="true" />
-            <element signature="e#3969#3990#0" expanded="true" />
-            <element signature="e#4085#4103#0" expanded="true" />
-            <element signature="e#4133#4151#0" expanded="true" />
-            <element signature="e#4561#4582#0" expanded="true" />
-            <element signature="e#5753#5774#0" expanded="true" />
-            <element signature="e#6229#6250#0" expanded="true" />
-            <element signature="e#6569#6590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/GenericTextWatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -3991,13 +3913,111 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="176" column="33" lean-forward="false" selection-start-line="176" selection-start-column="33" selection-end-line="176" selection-end-column="33" />
+        <state relative-caret-position="321">
+          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
           <folding>
             <element signature="e#3750#4200#0" expanded="true" />
             <element signature="e#4199#4200#0" expanded="true" />
             <element signature="e#4234#4665#0" expanded="true" />
             <element signature="e#4664#4665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/app_round_button_drawable.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/view/animation/ScaleAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="216" column="23" lean-forward="false" selection-start-line="216" selection-start-column="23" selection-end-line="216" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/scale_down.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+          <folding>
+            <element signature="e#529#550#0" expanded="true" />
+            <element signature="e#791#812#0" expanded="true" />
+            <element signature="e#1015#1036#0" expanded="true" />
+            <element signature="e#1167#1188#0" expanded="true" />
+            <element signature="e#1837#1858#0" expanded="true" />
+            <element signature="e#2122#2143#0" expanded="true" />
+            <element signature="e#2183#2204#0" expanded="true" />
+            <element signature="e#2706#2727#0" expanded="true" />
+            <element signature="e#3231#3251#0" expanded="true" />
+            <element signature="e#4418#4439#0" expanded="true" />
+            <element signature="e#4792#4813#0" expanded="true" />
+            <element signature="e#4851#4872#0" expanded="true" />
+            <element signature="e#4912#4933#0" expanded="true" />
+            <element signature="e#4965#4986#0" expanded="true" />
+            <element signature="e#5021#5042#0" expanded="true" />
+            <element signature="e#5137#5155#0" expanded="true" />
+            <element signature="e#5185#5203#0" expanded="true" />
+            <element signature="e#5613#5634#0" expanded="true" />
+            <element signature="e#6805#6826#0" expanded="true" />
+            <element signature="e#7281#7302#0" expanded="true" />
+            <element signature="e#7621#7642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="440" column="34" lean-forward="false" selection-start-line="440" selection-start-column="34" selection-end-line="440" selection-end-column="34" />
+          <folding>
+            <element signature="e#14739#14740#0" expanded="true" />
+            <element signature="e#14763#14764#0" expanded="true" />
           </folding>
         </state>
       </provider>
