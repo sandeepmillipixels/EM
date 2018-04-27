@@ -5,9 +5,11 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.AppCompatSpinner;
 import android.util.Log;
@@ -144,9 +146,13 @@ public class LoginSignupActivity extends Activity {
     @BindView(R.id.twitter_login)
     TwitterLoginButton mLoginButton;
 
+    @BindView(R.id.back_button_otp)
+    ImageView back_button_otp;
+
 
     ProgressDialog dialog;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -205,6 +211,11 @@ public class LoginSignupActivity extends Activity {
 //        submitButton.setOnClickListener(submitButton_listener);
     }
 
+
+    @OnClick(R.id.back_button_otp)
+    public void backButtonClick(){
+        finish();
+    }
 
     @OnClick(R.id.imgTwiiter)
     public void onTwiiterTapped(){
@@ -403,10 +414,10 @@ public class LoginSignupActivity extends Activity {
 
         mobileNumber = edtPhoneLogin.getText().toString().trim();
         if(mobileNumber.length()==0){
-            Snackbar.make(v,"Please enter phone number.",2000).show();
+            Snackbar.make(v,R.string.error_empty_number,2000).show();
         }
         else if(!(mobileNumber.length() >0 && mobileNumber.length()>=10 && mobileNumber.length()<=13)){
-            Snackbar.make(v,"Please enter valid phone number.",2000).show();
+            Snackbar.make(v,R.string.error_not_valid_number,2000).show();
         }else {
             Intent intent = new Intent(this, VerifyOtpActity.class);
             intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);

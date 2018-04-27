@@ -11,7 +11,7 @@ import retrofit2.http.POST;
 
 public interface ApiInterface {
 
-    @POST("/mobile/otp")
+    @POST("mobile/otp")
     @FormUrlEncoded
     Call<OTP> sendOtp(@Field("client_id") String clientId,
                              @Field("client_secret") String clientSecret,

@@ -417,14 +417,4 @@ public class AddExpense extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
     }
 
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-
-        Intent intent=new Intent(AddExpense.this, Dashboard.class);
-        startActivity(intent);
-        finish();
-
-    }
 }

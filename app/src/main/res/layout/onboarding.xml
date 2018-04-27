@@ -116,7 +116,7 @@
         <com.application.millipixels.expense_rocket.typeface.FontButton
             android:visibility="gone"
             android:background="@drawable/app_round_button_drawable"
-            android:id="@+id/get_started_button"
+            android:id="@+id/add_an_expense_button"
             android:textColor="@color/white"
 
             android:text="@string/add_an_expense"

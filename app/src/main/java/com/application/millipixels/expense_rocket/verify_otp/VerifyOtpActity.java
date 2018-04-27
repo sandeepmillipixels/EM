@@ -35,6 +35,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import retrofit2.Call;
+import retrofit2.Response;
 
 public class VerifyOtpActity extends Activity {
 
@@ -85,7 +86,7 @@ public class VerifyOtpActity extends Activity {
             txtOtp.setText(text);
         }
 
-//        sendOTPRequest();
+        //sendOTPRequest();
 
 
 
@@ -95,9 +96,10 @@ public class VerifyOtpActity extends Activity {
     public void onVerify(View v){
         if (edt1.getText().toString().trim().length() == 1 && edt2.getText().toString().trim().length() == 1 && edt3.getText().toString().trim().length() == 1 && edt4.getText().toString().trim().length() == 1){
             Intent intent = new Intent(this, Dashboard.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }else {
-            Snackbar.make(v,"Please enter OTP.",2000).show();
+            Snackbar.make(v,R.string.error_enter_otp,2000).show();
         }
     }
 
@@ -179,20 +181,22 @@ public class VerifyOtpActity extends Activity {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<OTP> call = apiService.sendOtp("","","");
+        Call<OTP> call = apiService.sendOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61","+918699769704");
 
-        call.enqueue(new Callback<OTP>() {
+
+        call.enqueue(new retrofit2.Callback<OTP>() {
             @Override
-            public void success(Result<OTP> result) {
+            public void onResponse(Call<OTP> call, Response<OTP> response) {
 
-                otp=result.data.getData().getOtp();
+                Log.d("Result",response.toString());
+
+                otp=response.body().getData().getOtp();
                 setOTPInFields(otp);
-
             }
 
             @Override
-            public void failure(TwitterException exception) {
-
+            public void onFailure(Call<OTP> call, Throwable t) {
+                Log.d("Error",t.getLocalizedMessage());
             }
         });
 

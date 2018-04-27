@@ -10,6 +10,13 @@
 
     <string name="get_control">Get Control, Mav!</string>
 
+    <string name="error_not_valid_number">Enter the valid phone number to sign in!</string>
+    <string name="error_empty_number">You have not enter phone number.</string>
+    <string name="error_enter_otp">Enter the correct code to sign in!</string>
+    <string name="error_otp_not_enter">You have not enter any code.</string>
+
+
+
     <string name="expense">Expense</string>
     <string name="rocket">Rocket</string>
     <string name="know_what_you_spend">Know what you spend!</string>
