@@ -146,6 +146,9 @@ public class LoginSignupActivity extends Activity {
     @BindView(R.id.twitter_login)
     TwitterLoginButton mLoginButton;
 
+    @BindView(R.id.back_button_otp)
+    ImageView back_button_otp;
+
 
     ProgressDialog dialog;
 
@@ -208,6 +211,11 @@ public class LoginSignupActivity extends Activity {
 //        submitButton.setOnClickListener(submitButton_listener);
     }
 
+
+    @OnClick(R.id.back_button_otp)
+    public void backButtonClick(){
+        finish();
+    }
 
     @OnClick(R.id.imgTwiiter)
     public void onTwiiterTapped(){
@@ -412,6 +420,7 @@ public class LoginSignupActivity extends Activity {
             Snackbar.make(v,R.string.error_not_valid_number,2000).show();
         }else {
             Intent intent = new Intent(this, VerifyOtpActity.class);
+            intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
             startActivity(intent);
         }
     }

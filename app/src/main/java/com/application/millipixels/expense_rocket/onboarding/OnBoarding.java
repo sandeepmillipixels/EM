@@ -159,6 +159,12 @@ public class OnBoarding extends Activity{
                 btn_skip.setVisibility(View.GONE);
                 add_an_expense_button.setVisibility(View.VISIBLE);
                 final Animation myAnim = AnimationUtils.loadAnimation(OnBoarding.this, R.anim.bounce);
+
+                // Use bounce interpolator with amplitude 0.2 and frequency 20
+                MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+
+                myAnim.setInterpolator(interpolator);
+
                 add_an_expense_button.startAnimation(myAnim);
 
             } else {
