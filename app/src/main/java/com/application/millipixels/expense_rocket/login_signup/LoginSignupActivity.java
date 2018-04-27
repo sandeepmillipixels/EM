@@ -23,13 +23,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.application.millipixels.expense_rocket.MainActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.adapter.SpinnerAdapter;
+import com.application.millipixels.expense_rocket.api.ApiClient;
+import com.application.millipixels.expense_rocket.api.ApiInterface;
+import com.application.millipixels.expense_rocket.api.OTP;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.model.CountryCodeData;
 import com.application.millipixels.expense_rocket.utils.Constants;
 import com.application.millipixels.expense_rocket.utils.Utilities;
 import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
+import com.google.android.gms.common.api.Api;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -79,6 +84,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
 
 import static android.content.ContentValues.TAG;
 
@@ -122,6 +128,8 @@ public class LoginSignupActivity extends Activity {
     @BindView(R.id.sign_in_button)
     SignInButton signInButton;
 
+    String otp;
+
 
 
     private static final String TAG = "SignInActivity";
@@ -142,6 +150,10 @@ public class LoginSignupActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         Window window = getWindow();
@@ -265,6 +277,10 @@ public class LoginSignupActivity extends Activity {
                                             String name = object.getString("name"); // 01/31/1980 format
                                             Toast.makeText(LoginSignupActivity.this,"Welcome "+name,Toast.LENGTH_LONG).show();
                                             LoginManager.getInstance().logOut();
+                                            Intent intent = new Intent(LoginSignupActivity.this, Dashboard.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                            startActivity(intent);
+                                            finish();
 
                                         } catch (JSONException e) {
                                             e.printStackTrace();
@@ -344,6 +360,10 @@ public class LoginSignupActivity extends Activity {
     private void updateUIGoogle(@Nullable GoogleSignInAccount account) {
         if (account != null) {
             Toast.makeText(LoginSignupActivity.this,"Welcome "+account.getDisplayName(),Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, Dashboard.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
 //            mStatusTextView.setText(getString(R.string.signed_in_fmt, account.getDisplayName()));
 //
 //            findViewById(R.id.sign_in_button).setVisibility(View.GONE);
@@ -380,6 +400,7 @@ public class LoginSignupActivity extends Activity {
 
     @OnClick(R.id.btnSendOtpLogin)
     public void onSendOtpLogin(View v){
+
         mobileNumber = edtPhoneLogin.getText().toString().trim();
         if(mobileNumber.length()==0){
             Snackbar.make(v,"Please enter phone number.",2000).show();

@@ -60,4 +60,8 @@
     <dimen name="padding_60dp">60dp</dimen>
     <dimen name="padding_70dp">70dp</dimen>
 
+    <dimen name="size_18sp">18sp</dimen>
+    <dimen name="size_40sp">40sp</dimen>
+    <dimen name="size_48sp">48sp</dimen>
+
 </resources>

@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent">
 
 
 
     <RelativeLayout
-        android:background="@drawable/app_gradient_new"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_marginLeft="@dimen/margin_30_dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/imageView_rocket"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/cloud_new" />
+
+
+        <ImageView
+            android:id="@+id/imageView_rocket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="profile"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="35dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:background="@drawable/rocket_big" />
+
+
 
 
         <LinearLayout
@@ -20,26 +45,39 @@
             android:layout_centerInParent="true"
             android:layout_height="wrap_content">
 
-            <TextView
+            <com.application.millipixels.expense_rocket.typeface.FontsClass
 
-                android:text="@string/app_name_tour"
+                android:text="@string/expense"
                 android:textColor="@color/white"
-                android:textSize="@dimen/size_40dp"
+                android:letterSpacing="-0.05"
+                android:layout_marginTop="@dimen/margin_80_dp"
+                android:textSize="@dimen/size_48sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <TextView
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+
+                android:text="@string/rocket"
+                android:textColor="@color/white"
+                android:letterSpacing="-0.05"
+                android:textSize="@dimen/size_40sp"
+                android:layout_marginTop="-16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
 
                 android:text="@string/know_what_you_spend"
-                android:textColor="@color/grey_text"
+                android:textColor="@color/white70"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <TextView
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
 
                 android:layout_marginTop="@dimen/margin_20_dp"
                 android:text="@string/expense_rocket_enable_you_to"
                 android:textColor="@color/white"
+                android:lineSpacingExtra="3sp"
                 android:layout_width="wrap_content"
                 android:textSize="@dimen/size_15dp"
                 android:layout_height="wrap_content" />
@@ -55,10 +93,12 @@
            android:layout_height="wrap_content"
            android:id="@+id/linearLayout2">
 
-           <Button
+           <com.application.millipixels.expense_rocket.typeface.FontButton
                android:id="@+id/take_a_tour_btn"
-               android:layout_width="wrap_content"
+               android:layout_width="match_parent"
                android:layout_height="wrap_content"
+               android:layout_marginLeft="@dimen/margin_30_dp"
+               android:layout_marginRight="@dimen/margin_30_dp"
                android:layout_alignTop="@+id/linearLayout2"
                android:layout_centerHorizontal="true"
                android:layout_gravity="center"
@@ -66,15 +106,13 @@
                android:background="@drawable/take_a_tour_drawable"
                android:paddingBottom="@dimen/padding_10dp"
                android:paddingLeft="@dimen/padding_60dp"
-
-
                android:paddingRight="@dimen/padding_60dp"
                android:paddingTop="@dimen/padding_10dp"
                android:text="@string/take_a_tour" />
 
 
 
-           <Button
+           <com.application.millipixels.expense_rocket.typeface.FontButton
                android:text="@string/lets_get_started"
                android:layout_gravity="center"
                android:background="#00000000"
