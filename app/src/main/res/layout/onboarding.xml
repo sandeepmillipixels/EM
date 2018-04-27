@@ -119,7 +119,7 @@
             android:id="@+id/get_started_button"
             android:textColor="@color/white"
 
-            android:text="@string/lets_get_started"
+            android:text="@string/add_an_expense"
             android:paddingLeft="@dimen/padding_70dp"
             android:paddingRight="@dimen/padding_70dp"
             android:paddingTop="@dimen/padding_20dp"

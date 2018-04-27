@@ -1,6 +1,7 @@
 package com.application.millipixels.expense_rocket.onboarding;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -19,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.application.millipixels.expense_rocket.R;
+import com.application.millipixels.expense_rocket.addexpense.AddExpense;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
 import com.application.millipixels.expense_rocket.utils.Constants;
@@ -117,8 +119,12 @@ public class OnBoarding extends Activity{
 
     @OnClick(R.id.get_started_button)
     public void getStartedClick(){
-        Intent intent = new Intent(this, Dashboard.class);
-        startActivity(intent);
+        Intent intent = new Intent(this, AddExpense.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        }else{
+            startActivity(intent);
+        }
         finish();
     }
 

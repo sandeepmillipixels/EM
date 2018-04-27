@@ -23,13 +23,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.application.millipixels.expense_rocket.MainActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.adapter.SpinnerAdapter;
+import com.application.millipixels.expense_rocket.api.ApiClient;
+import com.application.millipixels.expense_rocket.api.ApiInterface;
+import com.application.millipixels.expense_rocket.api.OTP;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.model.CountryCodeData;
 import com.application.millipixels.expense_rocket.utils.Constants;
 import com.application.millipixels.expense_rocket.utils.Utilities;
 import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
+import com.google.android.gms.common.api.Api;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -79,6 +84,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
 
 import static android.content.ContentValues.TAG;
 
@@ -121,6 +127,8 @@ public class LoginSignupActivity extends Activity {
 
     @BindView(R.id.sign_in_button)
     SignInButton signInButton;
+
+    String otp;
 
 
 
@@ -392,6 +400,7 @@ public class LoginSignupActivity extends Activity {
 
     @OnClick(R.id.btnSendOtpLogin)
     public void onSendOtpLogin(View v){
+
         mobileNumber = edtPhoneLogin.getText().toString().trim();
         if(mobileNumber.length()==0){
             Snackbar.make(v,"Please enter phone number.",2000).show();

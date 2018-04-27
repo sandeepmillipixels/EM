@@ -1,6 +1,7 @@
 package com.application.millipixels.expense_rocket.splash;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -9,6 +10,7 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.text.Html;
 import android.util.Base64;
@@ -16,12 +18,16 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.gallery.GalleyActivity;
 import com.application.millipixels.expense_rocket.onboarding.OnBoarding;
+import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
+import com.application.millipixels.expense_rocket.view.Demo;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -37,10 +43,15 @@ import butterknife.ButterKnife;
 public class SplashActivity extends Activity {
 
     private static int SPLASH_TIME_OUT = 3000;
+
+
     @BindView(R.id.splash_expense_textView)
     TextView splash_textView;
+
     @BindView(R.id.imageView_rocket)
     ImageView imageView_rocket;
+
+
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +67,7 @@ public class SplashActivity extends Activity {
 //        splash_textView.setText(Html.fromHtml("Keep eye on your <br>every <b>expense</b>"));
         new Handler().postDelayed(new Runnable() {
 
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void run() {
                 PackageInfo info;
@@ -76,11 +88,16 @@ public class SplashActivity extends Activity {
                 } catch (Exception e) {
                     Log.e("exception", e.toString());
                 }
+
+
                 Intent intent = new Intent(SplashActivity.this, TakeTour.class);
                 ActivityOptionsCompat options = ActivityOptionsCompat.
                         makeSceneTransitionAnimation(SplashActivity.this, (View)imageView_rocket, "profile");
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+
                     startActivity(intent, options.toBundle());
+
+
                 }else {
                     startActivity(intent);
                 }
@@ -92,4 +109,8 @@ public class SplashActivity extends Activity {
 
 
     }
+
+
+
+
 }
