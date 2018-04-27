@@ -53,7 +53,7 @@
     <string name="signin">Sign In</string>
     <string name="signup">Sign up</string>
     <string name="verify">Verify</string>
-    <string name="send_otp">Send OTP</string>
+    <string name="send_otp">Send CODE</string>
     <string name="change_number">Change Number</string>
     <string name="not_received_otp">Did not receive OTP?</string>
     <string name="resend_otp">Resend OTP</string>

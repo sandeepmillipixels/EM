@@ -2,18 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:background="@color/white"
+    android:id="@+id/main_layout"
     android:layout_height="match_parent">
 
 
     <!---->
-    <!--<LinearLayout-->
-        <!--android:orientation="horizontal"-->
-        <!--android:id="@+id/sign_in_top_layout"-->
-        <!--android:layout_width="match_parent"-->
+
      <!---->
         <!--android:layout_height="50dp">-->
 <RelativeLayout
-    android:layout_marginTop="@dimen/margin_20_dp"
+
     android:id="@+id/top_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -23,7 +21,7 @@
 
 
     <ImageView
-
+        android:layout_marginTop="@dimen/margin_20_dp"
         android:id="@+id/back_button_otp"
         android:background="@drawable/back"
         android:layout_width="wrap_content"
@@ -31,21 +29,42 @@
         android:tint="#808080"
         android:layout_marginLeft="@dimen/margin_30_dp"
         android:layout_height="wrap_content" />
-
-
-
-    <!--</LinearLayout>-->
-
     <ImageView
         android:layout_toRightOf="@+id/back_button_otp"
         android:id="@+id/sign_in_cloud_imageview"
-        android:layout_below="@+id/sign_in_top_layout"
+        android:layout_marginTop="@dimen/margin_20_dp"
         android:background="@drawable/signin_cloud"
         android:layout_width="wrap_content"
         android:layout_marginLeft="@dimen/margin_20_dp"
-
-
         android:layout_height="wrap_content" />
+    <LinearLayout
+        android:visibility="gone"
+        android:background="@color/red_button"
+        android:layout_height="96dp"
+        android:orientation="horizontal"
+        android:id="@+id/sign_in_top_layout"
+        android:layout_width="match_parent">
+        <ImageView
+            android:id="@+id/imgErrorBack"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:tint="#FFFFFF"
+            android:layout_marginLeft="@dimen/margin_30_dp"
+            android:layout_height="wrap_content" />
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClass
+            android:text="Please enter a valid phone number"
+            android:id="@+id/txtError"
+            android:layout_marginLeft="@dimen/margin_10_dp"
+            android:layout_marginRight="@dimen/margin_10_dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 </RelativeLayout>
 
 
@@ -87,6 +106,7 @@
             android:inputType="number"
             android:background="#00000000"
             android:textSize="16sp"
+            android:maxLength="13"
             android:paddingTop="@dimen/padding_50dp"
             android:textAlignment="center"
             android:layout_marginLeft="@dimen/margin_20_dp"

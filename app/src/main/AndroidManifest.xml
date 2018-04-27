@@ -32,7 +32,8 @@
         <activity
             android:name="com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
+            android:windowSoftInputMode="adjustResize"
+             />
 
         <activity
             android:name="com.application.millipixels.expense_rocket.splash.SplashActivity"
@@ -74,7 +75,7 @@
         <activity
             android:name="com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateHidden" />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.application.millipixels.expense_rocket.dashboard.Dashboard"
             android:label="@string/title_activity_dashboard"
