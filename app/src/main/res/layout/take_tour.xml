@@ -118,7 +118,7 @@ android:layout_marginLeft="@dimen/margin_30_dp"
                android:background="#00000000"
                android:textColor="@color/white"
                android:layout_marginTop="@dimen/margin_10_dp"
-               android:id="@+id/let_get_started_btn"
+               android:id="@+id/add_an_expense_button_tour"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
 

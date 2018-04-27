@@ -15,6 +15,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -72,8 +74,8 @@ public class OnBoarding extends Activity{
     @BindView(R.id.btn_skip)
     com.application.millipixels.expense_rocket.typeface.FontsClassLight btn_skip;
 
-    @BindView(R.id.get_started_button)
-    Button get_started_button;
+    @BindView(R.id.add_an_expense_button)
+    Button add_an_expense_button;
 
     OnboardViewpagerAdapter onboardViewpagerAdapter;
     private static final String EMAIL = "email";
@@ -97,7 +99,8 @@ public class OnBoarding extends Activity{
 
         layouts = new int[]{
                 R.layout.first_onboarding,
-                R.layout.second_onboarding,
+                R.layout.first_onboarding,
+                R.layout.first_onboarding,
                 R.layout.fourth_onboarding};
 
         addBottomDots(0);
@@ -114,18 +117,13 @@ public class OnBoarding extends Activity{
         Intent intent = new Intent(this, LoginSignupActivity.class);
         intent.putExtra(Constants.LOGIN,true);
         startActivity(intent);
-        finish();
     }
 
-    @OnClick(R.id.get_started_button)
+    @OnClick(R.id.add_an_expense_button)
     public void getStartedClick(){
         Intent intent = new Intent(this, AddExpense.class);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
-        }else{
-            startActivity(intent);
-        }
-        finish();
+        startActivity(intent);
+
     }
 
 
@@ -159,11 +157,19 @@ public class OnBoarding extends Activity{
             if (position == layouts.length - 1) {
 
                 btn_skip.setVisibility(View.GONE);
-                get_started_button.setVisibility(View.VISIBLE);
+                add_an_expense_button.setVisibility(View.VISIBLE);
+                final Animation myAnim = AnimationUtils.loadAnimation(OnBoarding.this, R.anim.bounce);
+
+                // Use bounce interpolator with amplitude 0.2 and frequency 20
+                MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+
+                myAnim.setInterpolator(interpolator);
+
+                add_an_expense_button.startAnimation(myAnim);
 
             } else {
                 // still pages are left
-                get_started_button.setVisibility(View.GONE);
+                add_an_expense_button.setVisibility(View.GONE);
                 btn_skip.setVisibility(View.VISIBLE);
             }
         }

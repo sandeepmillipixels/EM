@@ -30,11 +30,6 @@ public class TakeTour extends Activity {
     Button take_a_tour_btn;
 
 
-    @BindView(R.id.let_get_started_btn)
-    Button let_get_started_btn;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +40,6 @@ public class TakeTour extends Activity {
 
         ButterKnife.bind(this);
 
-
     }
 
 
@@ -54,21 +48,15 @@ public class TakeTour extends Activity {
 
         Intent intent=new Intent(this, OnBoarding.class);
         startActivity(intent);
-        finish();
 
     }
 
-    @OnClick(R.id.let_get_started_btn)
+    @OnClick(R.id.add_an_expense_button_tour)
     public void getStartedBtnClick(){
 
         Intent intent=new Intent(this, AddExpense.class);
+        startActivity(intent);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
-        }else{
-            startActivity(intent);
-        }
-        finish();
 
     }
 
