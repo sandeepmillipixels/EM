@@ -6,13 +6,9 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -26,10 +22,11 @@ import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.api.ApiClient;
 import com.application.millipixels.expense_rocket.api.ApiInterface;
 import com.application.millipixels.expense_rocket.api.OTP;
+import com.application.millipixels.expense_rocket.api.VerifyOTPResponse;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
-import com.twitter.sdk.android.core.Callback;
-import com.twitter.sdk.android.core.Result;
-import com.twitter.sdk.android.core.TwitterException;
+import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
+
+import java.util.StringTokenizer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -61,6 +58,9 @@ public class VerifyOtpActity extends Activity {
     String otp;
     @BindView(R.id.txtOtp)
     TextView txtOtp;
+    String number;
+
+    String token;
 
     public static final String OTP_NUMBER = "otp_number";
 
@@ -81,12 +81,18 @@ public class VerifyOtpActity extends Activity {
         setContentView(R.layout.otp);
         ButterKnife.bind(this);
         if (getIntent().getExtras() != null){
-            String number = getIntent().getStringExtra(OTP_NUMBER);
+
+            number = getIntent().getStringExtra(OTP_NUMBER);
             String text = "We just sent a OTP to your \n mobile number "+ number.substring(0,2)+"***_***"+ number.substring(number.length() - 2) + ". Enter the \n OTP here to sign in.";
             txtOtp.setText(text);
         }
 
-        //sendOTPRequest();
+      otp=getIntent().getStringExtra("otp");
+
+        if(otp!=null){
+            setOTPInFields(otp);
+        }
+
 
 
 
@@ -95,9 +101,10 @@ public class VerifyOtpActity extends Activity {
     @OnClick(R.id.btnVerify)
     public void onVerify(View v){
         if (edt1.getText().toString().trim().length() == 1 && edt2.getText().toString().trim().length() == 1 && edt3.getText().toString().trim().length() == 1 && edt4.getText().toString().trim().length() == 1){
-            Intent intent = new Intent(this, Dashboard.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
+
+
+            verifyOTPRequest();
+
         }else {
             Snackbar.make(v,R.string.error_enter_otp,2000).show();
         }
@@ -132,8 +139,9 @@ public class VerifyOtpActity extends Activity {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 //You can identify which key pressed buy checking keyCode value with KeyEvent.KEYCODE_
-                if(keyCode == KeyEvent.KEYCODE_DEL && edt4.getText().toString().length()!=0 && edt4.hasFocus()) {
+                if(keyCode == KeyEvent.KEYCODE_DEL) {
                     edt3.requestFocus();
+                    edt4.setText("");
                 }
                 return false;
             }
@@ -143,8 +151,9 @@ public class VerifyOtpActity extends Activity {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 //You can identify which key pressed buy checking keyCode value with KeyEvent.KEYCODE_
-                if(keyCode == KeyEvent.KEYCODE_DEL && edt3.getText().toString().length()!=0) {
+                if(keyCode == KeyEvent.KEYCODE_DEL) {
                     edt2.requestFocus();
+                    edt3.setText("");
                 }
                 return false;
             }
@@ -154,12 +163,27 @@ public class VerifyOtpActity extends Activity {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 //You can identify which key pressed buy checking keyCode value with KeyEvent.KEYCODE_
-                if(keyCode == KeyEvent.KEYCODE_DEL && edt2.getText().toString().length()!=0) {
+                if(keyCode == KeyEvent.KEYCODE_DEL) {
                     edt1.requestFocus();
+                    edt2.setText("");
                 }
                 return false;
             }
         });
+
+
+
+            edt1.setOnKeyListener(new View.OnKeyListener() {
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                    //You can identify which key pressed buy checking keyCode value with KeyEvent.KEYCODE_
+                    if(keyCode == KeyEvent.KEYCODE_DEL) {
+                        edt1.setText("");
+                    }
+                    return false;
+                }
+            });
+
 }
 
 
@@ -176,46 +200,69 @@ public class VerifyOtpActity extends Activity {
     }
 
 
-    public void sendOTPRequest(){
 
-        ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
-
-        Call<OTP> call = apiService.sendOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61","+918699769704");
+    public void setOTPInFields(String OTP){
 
 
-        call.enqueue(new retrofit2.Callback<OTP>() {
-            @Override
-            public void onResponse(Call<OTP> call, Response<OTP> response) {
-
-                Log.d("Result",response.toString());
-
-                otp=response.body().getData().getOtp();
-                setOTPInFields(otp);
-            }
-
-            @Override
-            public void onFailure(Call<OTP> call, Throwable t) {
-                Log.d("Error",t.getLocalizedMessage());
-            }
-        });
+//        char firstDigit = OTP.charAt(0);
+//        char secondDigit = OTP.charAt(1);
+//        char thirdDigit = OTP.charAt(2);
+//        char fourthDigit = OTP.charAt(3);
+//
+//
+//        StringTokenizer st = new StringTokenizer(OTP);
+//
+//        String one=st.nextToken();
+//        String two=st.nextToken();
+//        String three=st.nextToken();
+//        String four=st.nextToken();
+//
+//        edt1.setText(one);
+//        edt2.setText(two);
+//        edt3.setText(three);
+//        edt4.setText(four);
 
 
     }
 
-    public void setOTPInFields(String OTP){
-        char firstDigit = OTP.charAt(0);
-        char secondDigit = OTP.charAt(1);
-        char thirdDigit = OTP.charAt(2);
-        char fourthDigit = OTP.charAt(3);
+    public void verifyOTPRequest(){
+
+        ApiInterface apiService =
+                ApiClient.getClient().create(ApiInterface.class);
+
+        Call<VerifyOTPResponse> call = apiService.verifyOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61",otp,"+91"+number);
 
 
-        edt1.setText(firstDigit);
-        edt2.setText(secondDigit);
-        edt3.setText(thirdDigit);
-        edt4.setText(fourthDigit);
+        call.enqueue(new retrofit2.Callback<VerifyOTPResponse>() {
+            @Override
+            public void onResponse(Call<VerifyOTPResponse> call, Response<VerifyOTPResponse> response) {
 
+                if(response.isSuccessful()==true){
 
+                    if(response.body()!=null && response.body().isStatus()){
+                        token=response.body().getData().getToken();
+
+                        if(token!=null){
+                            Intent intent = new Intent(VerifyOtpActity.this, Dashboard.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
+                        }
+
+                    }else {
+
+                    }
+
+                }else {
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<VerifyOTPResponse> call, Throwable t) {
+                Log.d("Error",t.getLocalizedMessage());
+            }
+        });
     }
 
 }

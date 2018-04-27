@@ -9,13 +9,13 @@ public class OTP {
 
     /**
      * status : true
-     * data : {"mobile":"+917837317983","otp":"8416","expires_in":"600000","message":"Hi your one time password for Expense Rocket is 8416 and is valid for 10 minutes.","sid":"SM9228bd960c6e4684b1201d1de59d18ad","status":"queued","updated_at":"2018-04-26 12:04:27","created_at":"2018-04-26 12:04:27","id":3}
+     * data : {"mobile":"+917837317983","otp":"7480","expires_in":"600000","message":"Hi your one time password for Expense Rocket is 7480 and is valid for 10 minutes.","sid":"SM4d24c1b361b24abaa0b8843b450ad743","status":"queued","updated_at":"2018-04-27 11:53:57","created_at":"2018-04-27 11:53:57","id":36}
      * error : null
      */
 
     private boolean status;
     private DataBean data;
-    private Object error;
+    private ErrorResponse error;
 
     public boolean isStatus() {
         return status;
@@ -33,25 +33,25 @@ public class OTP {
         this.data = data;
     }
 
-    public Object getError() {
+    public ErrorResponse getError() {
         return error;
     }
 
-    public void setError(Object error) {
+    public void setError(ErrorResponse error) {
         this.error = error;
     }
 
     public static class DataBean {
         /**
          * mobile : +917837317983
-         * otp : 8416
+         * otp : 7480
          * expires_in : 600000
-         * message : Hi your one time password for Expense Rocket is 8416 and is valid for 10 minutes.
-         * sid : SM9228bd960c6e4684b1201d1de59d18ad
+         * message : Hi your one time password for Expense Rocket is 7480 and is valid for 10 minutes.
+         * sid : SM4d24c1b361b24abaa0b8843b450ad743
          * status : queued
-         * updated_at : 2018-04-26 12:04:27
-         * created_at : 2018-04-26 12:04:27
-         * id : 3
+         * updated_at : 2018-04-27 11:53:57
+         * created_at : 2018-04-27 11:53:57
+         * id : 36
          */
 
         private String mobile;
