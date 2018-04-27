@@ -7,21 +7,27 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
+import android.support.transition.TransitionManager;
 import android.support.v7.widget.AppCompatSpinner;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -76,6 +82,7 @@ import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -96,14 +103,20 @@ import static android.content.ContentValues.TAG;
 
 public class LoginSignupActivity extends Activity {
 
-//    @BindView(R.id.edtPhone)
-//    EditText edtPhone;
+    @BindView(R.id.imgErrorBack)
+    ImageView imgErrorBack;
 
-//    @BindView(R.id.edtEmail)
-//    EditText edtEmail;
+    @BindView(R.id.txtError)
+    TextView txtError;
 
     @BindView(R.id.edtPhoneLogin)
     EditText edtPhoneLogin;
+
+    @BindView(R.id.sign_in_top_layout)
+    LinearLayout sign_in_top_layout;
+
+    @BindView(R.id.top_layout)
+    RelativeLayout top_layout;
 
     String email;
     String mobileNumber;
@@ -267,6 +280,8 @@ public class LoginSignupActivity extends Activity {
                 Log.e("","");
             }
         });
+
+
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
@@ -408,16 +423,29 @@ public class LoginSignupActivity extends Activity {
     public void twitterLogin(){
 
     }
+    @OnClick(R.id.imgErrorBack)
+    public void errorBack(){
+        finish();
+    }
 
     @OnClick(R.id.btnSendOtpLogin)
     public void onSendOtpLogin(View v){
 
         mobileNumber = edtPhoneLogin.getText().toString().trim();
         if(mobileNumber.length()==0){
-            Snackbar.make(v,R.string.error_empty_number,2000).show();
+//            Snackbar.make(v,"Please enter phone number.",2000).show();
+            Animation animation = AnimationUtils.loadAnimation(this, R.anim.scale_down);
+            txtError.setText("Please enter phone number.");
+            sign_in_top_layout.startAnimation(animation);
+            sign_in_top_layout.setVisibility(View.VISIBLE);
         }
         else if(!(mobileNumber.length() >0 && mobileNumber.length()>=10 && mobileNumber.length()<=13)){
-            Snackbar.make(v,R.string.error_not_valid_number,2000).show();
+//            Snackbar.make(v,"Please enter valid phone number.",2000).show();
+            txtError.setText("Please enter valid phone number.");
+            Animation animation = AnimationUtils.loadAnimation(this, R.anim.scale_down);
+            sign_in_top_layout.startAnimation(animation);
+            sign_in_top_layout.setVisibility(View.VISIBLE);
+
         }else {
             Intent intent = new Intent(this, VerifyOtpActity.class);
             intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
