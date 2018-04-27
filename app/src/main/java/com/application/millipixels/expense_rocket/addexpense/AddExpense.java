@@ -31,6 +31,7 @@ import android.widget.ImageView;
 
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.category.CategoryActivity;
+import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.database.AllExpensesDataSource;
 
 import com.application.millipixels.expense_rocket.gallery.GalleyActivity;
@@ -144,7 +145,9 @@ public class AddExpense extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        onBackPressed();
+
+                      onBackPressed();
+
                     }
                 }
 

@@ -133,6 +133,12 @@
         <activity android:name=".splash.TakeTour">
         </activity>
 
+
+        <activity android:name=".view.Demo">
+
+
+        </activity>
+
     </application>
 
 </manifest>

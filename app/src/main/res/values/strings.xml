@@ -4,11 +4,21 @@
     <string name="already_have_account">Already have an account?</string>
     <string name="skip">Skip</string>
 
+    <string name="app_name_tour"></string>
+
     <string name="take_a_tour">TAKE THE TOUR</string>
 
     <string name="get_control">Get Control, Mav!</string>
 
-    <string name="app_name_tour"><b>Expense</b>\nRocket</string>
+    <string name="error_not_valid_number">Enter the valid phone number to sign in!</string>
+    <string name="error_empty_number">You have not enter phone number.</string>
+    <string name="error_enter_otp">Enter the correct code to sign in!</string>
+    <string name="error_otp_not_enter">You have not enter any code.</string>
+
+
+
+    <string name="expense">Expense</string>
+    <string name="rocket">Rocket</string>
     <string name="know_what_you_spend">Know what you spend!</string>
     <string name="expense_rocket_enable_you_to">ExpenseRocket enable you to manage \nyour personal and business expenses in \na single place.it's the answer to your \nprayers!No,really!</string>
 
@@ -21,13 +31,23 @@
     <string name="mailed_datre_night">Mailed Date Night\n expenses to HR?</string>
     <string name="never_mix_up">Never mix up your business and \n personal receipts.Manage everything in \n one place.</string>
 
-    <string name="lets_get_started">LET\'S GET STARTED</string>
+    <string name="did_not_received">Didn\'t receive the code?</string>
+
+    <string name="lets_get_started">ADD AN EXPENSE</string>
 
     <string name="sign_in_with_your">Sign in with your mobile number!</string>
 
     <string name="use_social_signin">Use Social Sign In?</string>
 
     <string name="we_just_sent_otp">We just sent a OTP to your \n mobile number 93*** ***09.Enter the \n OTP here to sign in. </string>
+
+
+
+    <string name="where_does_all_money">Where does all my\nmoney go?</string>
+    
+    <string name="we_designed_experience">We designed ExpenseRocket to give you\nthe answers you seek.Manage money\nbetter.Build a fortune. Simple.</string>
+    
+
 
 
     <string name="signin">Sign In</string>
@@ -93,6 +113,8 @@
     <string name="shoebox_gallery">ShoeBox</string>
 
     <string name="add_expense">Add Expense</string>
+
+    <string name="add_an_expense">Add an Expense</string>
 
     <string name="shoebox">ShoeBox</string>
     <string name="filter">Filter</string>

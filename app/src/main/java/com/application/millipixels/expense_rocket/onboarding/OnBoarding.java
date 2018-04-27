@@ -1,6 +1,7 @@
 package com.application.millipixels.expense_rocket.onboarding;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -14,12 +15,14 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.application.millipixels.expense_rocket.R;
-import com.application.millipixels.expense_rocket.adapter.OnboardingPageTransformer;
+import com.application.millipixels.expense_rocket.addexpense.AddExpense;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
 import com.application.millipixels.expense_rocket.utils.Constants;
@@ -71,8 +74,8 @@ public class OnBoarding extends Activity{
     @BindView(R.id.btn_skip)
     com.application.millipixels.expense_rocket.typeface.FontsClassLight btn_skip;
 
-    @BindView(R.id.get_started_button)
-    Button get_started_button;
+    @BindView(R.id.add_an_expense_button)
+    Button add_an_expense_button;
 
     OnboardViewpagerAdapter onboardViewpagerAdapter;
     private static final String EMAIL = "email";
@@ -84,7 +87,9 @@ public class OnBoarding extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(Color.WHITE);
@@ -102,7 +107,6 @@ public class OnBoarding extends Activity{
 
         onboardViewpagerAdapter = new OnboardViewpagerAdapter(this, layouts);
         view_pager.setAdapter(onboardViewpagerAdapter);
-        view_pager.setPageTransformer(false, new OnboardingPageTransformer());
         view_pager.addOnPageChangeListener(view_pagerPageChangeListener);
 
     }
@@ -115,11 +119,11 @@ public class OnBoarding extends Activity{
         startActivity(intent);
     }
 
-    @OnClick(R.id.get_started_button)
+    @OnClick(R.id.add_an_expense_button)
     public void getStartedClick(){
-        Intent intent = new Intent(this, Dashboard.class);
+        Intent intent = new Intent(this, AddExpense.class);
         startActivity(intent);
-        finish();
+
     }
 
 
@@ -153,11 +157,13 @@ public class OnBoarding extends Activity{
             if (position == layouts.length - 1) {
 
                 btn_skip.setVisibility(View.GONE);
-                get_started_button.setVisibility(View.VISIBLE);
+                add_an_expense_button.setVisibility(View.VISIBLE);
+                final Animation myAnim = AnimationUtils.loadAnimation(OnBoarding.this, R.anim.bounce);
+                add_an_expense_button.startAnimation(myAnim);
 
             } else {
                 // still pages are left
-                get_started_button.setVisibility(View.GONE);
+                add_an_expense_button.setVisibility(View.GONE);
                 btn_skip.setVisibility(View.VISIBLE);
             }
         }
@@ -177,5 +183,6 @@ public class OnBoarding extends Activity{
     public void onSkip(){
         Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
+        finish();
     }
 }

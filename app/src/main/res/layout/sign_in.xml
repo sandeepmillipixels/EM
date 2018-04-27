@@ -10,6 +10,7 @@
         android:orientation="horizontal"
         android:id="@+id/sign_in_top_layout"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="50dp">
 
         <ImageView
@@ -20,20 +21,33 @@
             android:layout_height="wrap_content" />
 
 
+
+
     </LinearLayout>
 
-
+    <ImageView
+        android:id="@+id/sign_in_cloud_imageview"
+        android:layout_below="@+id/sign_in_top_layout"
+        android:background="@drawable/signin_cloud"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_50_dp"
+        android:layout_marginRight="@dimen/margin_50_dp"
+        android:layout_marginTop="@dimen/margin_50_dp"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:id="@+id/sign_in_inside_layout"
-        android:layout_below="@+id/sign_in_top_layout"
+        android:layout_below="@+id/sign_in_cloud_imageview"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:layout_marginTop="@dimen/margin_50_dp"
+        android:layout_marginTop="@dimen/margin_20_dp"
         android:layout_height="wrap_content">
 
-        <TextView
+
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClass
             android:text="@string/signin"
             android:textSize="@dimen/size_30dp"
             android:textColor="@color/purple_text"
@@ -41,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:layout_marginTop="@dimen/margin_10_dp"
             android:text="@string/sign_in_with_your"
             android:layout_width="wrap_content"
@@ -76,7 +90,7 @@
             android:layout_marginRight="@dimen/margin_30_dp"
             android:background="@color/grey_text" />
 
-        <Button
+        <com.application.millipixels.expense_rocket.typeface.FontButton
             android:id="@+id/btnSendOtpLogin"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -103,7 +117,7 @@
             android:layout_marginBottom="@dimen/margin_30_dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_rocket"
+            android:src="@drawable/cloud_rocket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -117,7 +131,7 @@
         android:padding="@dimen/padding_30dp"
         android:layout_height="wrap_content">
 
-        <TextView
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:id="@+id/use_social_signin_textView"
             android:gravity="center"
 

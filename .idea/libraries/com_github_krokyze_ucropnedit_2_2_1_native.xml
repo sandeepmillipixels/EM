@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.github.krokyze:ucropnedit-2.2.1-native">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ucropnedit-2.2.1-native.aar/38462c5b8ef2c1d4c0ca658bdd59f5ef/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ucropnedit-2.2.1-native.aar/38462c5b8ef2c1d4c0ca658bdd59f5ef/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ucropnedit-2.2.1-native.aar/01170a33fe21e9deb426eccfcb035943/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ucropnedit-2.2.1-native.aar/01170a33fe21e9deb426eccfcb035943/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
