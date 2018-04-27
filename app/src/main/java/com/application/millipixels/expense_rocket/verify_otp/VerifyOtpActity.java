@@ -58,7 +58,10 @@ public class VerifyOtpActity extends Activity {
     boolean ignoreChange = false;
 
     String otp;
+    @BindView(R.id.txtOtp)
+    TextView txtOtp;
 
+    public static final String OTP_NUMBER = "otp_number";
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -76,6 +79,11 @@ public class VerifyOtpActity extends Activity {
 
         setContentView(R.layout.otp);
         ButterKnife.bind(this);
+        if (getIntent().getExtras() != null){
+            String number = getIntent().getStringExtra(OTP_NUMBER);
+            String text = "We just sent a OTP to your \n mobile number "+ number.substring(0,2)+"***_***"+ number.substring(number.length() - 2) + ". Enter the \n OTP here to sign in.";
+            txtOtp.setText(text);
+        }
 
 //        sendOTPRequest();
 

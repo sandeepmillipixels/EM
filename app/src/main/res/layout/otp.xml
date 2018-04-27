@@ -10,21 +10,24 @@
         android:orientation="horizontal"
         android:id="@+id/sign_in_top_layout"
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/margin_30_dp"
-        android:layout_height="50dp">
+
+        android:layout_marginTop="@dimen/margin_20_dp"
+        android:layout_height="wrap_content">
 
         <ImageView
+            android:layout_centerVertical="true"
             android:id="@+id/back_button_otp"
             android:background="@drawable/back"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/margin_20_dp"
+            android:tint="#808080"
+            android:layout_marginLeft="@dimen/margin_30_dp"
             android:layout_height="wrap_content" />
 
         <ImageView
             android:id="@+id/otp_cloud_imageview"
             android:background="@drawable/otp_cloud"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_marginRight="@dimen/margin_50_dp"
             android:layout_alignParentRight="true"
             android:layout_height="wrap_content" />
@@ -42,24 +45,25 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:layout_marginTop="@dimen/margin_20_dp"
+        android:layout_marginTop="@dimen/margin_30_dp"
         android:layout_height="wrap_content">
 
         <com.application.millipixels.expense_rocket.typeface.FontsClass
             android:text="@string/signin"
-            android:textSize="@dimen/size_30dp"
+            android:textSize="36sp"
             android:textColor="@color/purple_text"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <com.application.millipixels.expense_rocket.typeface.FontsClassLight
-            android:layout_marginTop="@dimen/margin_10_dp"
+            android:id="@+id/txtOtp"
+            android:layout_marginTop="@dimen/margin_5_dp"
             android:text="@string/we_just_sent_otp"
             android:gravity="center"
             android:layout_width="match_parent"
-            android:textSize="@dimen/size_15dp"
-            android:textColor="@color/grey_text"
+            android:textSize="16sp"
+            android:textColor="@color/light_black"
             android:layout_height="wrap_content" />
 
 
@@ -78,10 +82,19 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:elevation="@dimen/margin_5_dp"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardElevation="3dp"
+                   >
                 <com.application.millipixels.expense_rocket.typeface.FontEditText
                     android:inputType="number"
                     android:id="@+id/edt1"
@@ -92,15 +105,25 @@
                     android:background="@drawable/edittext_shadow"
                     android:imeOptions="actionNext"
                     android:gravity="center"
-                    android:layout_width="50dp"
-                    android:layout_height="70dp" />
+                    android:layout_width="44dp"
+                    android:layout_height="67dp" />
+                </android.support.v7.widget.CardView>
             </LinearLayout>
 
             <LinearLayout
+                android:elevation="@dimen/margin_5_dp"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardElevation="3dp"
+                    >
                 <com.application.millipixels.expense_rocket.typeface.FontEditText
                     android:inputType="number"
 
@@ -112,15 +135,25 @@
                     android:imeOptions="actionNext"
                     android:background="@drawable/edittext_shadow"
                     android:gravity="center"
-                    android:layout_width="50dp"
-                    android:layout_height="70dp" />
+                    android:layout_width="44dp"
+                    android:layout_height="67dp" />
+                </android.support.v7.widget.CardView>
             </LinearLayout>
 
             <LinearLayout
+
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardElevation="3dp"
+                    >
                 <com.application.millipixels.expense_rocket.typeface.FontEditText
                     android:inputType="number"
                     android:textSize="14sp"
@@ -131,16 +164,26 @@
                     android:gravity="center"
                     android:background="@drawable/edittext_shadow"
                     android:maxLength="1"
-                    android:layout_width="50dp"
-                    android:layout_height="70dp" />
+                    android:layout_width="44dp"
+                    android:layout_height="67dp" />
+                </android.support.v7.widget.CardView>
             </LinearLayout>
 
 
             <LinearLayout
+
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:cardUseCompatPadding="true"
+                    card_view:cardElevation="3dp"
+                    >
                 <com.application.millipixels.expense_rocket.typeface.FontEditText
                     android:inputType="number"
                     android:textSize="14sp"
@@ -151,8 +194,9 @@
                     android:background="@drawable/edittext_shadow"
                     android:maxLength="1"
                     android:id="@+id/edt4"
-                    android:layout_width="50dp"
-                    android:layout_height="70dp" />
+                    android:layout_width="44dp"
+                    android:layout_height="67dp" />
+                </android.support.v7.widget.CardView>
             </LinearLayout>
 
 
@@ -167,6 +211,7 @@
             android:layout_marginRight="@dimen/margin_40_dp"
             android:paddingTop="@dimen/padding_20dp"
             android:paddingBottom="@dimen/padding_20dp"
+            android:textSize="@dimen/size_18dp"
             android:background="@drawable/app_round_button_drawable"
             android:text="@string/signin"
             android:layout_width="match_parent"
@@ -176,6 +221,7 @@
         <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:text="@string/did_not_received"
             android:layout_width="wrap_content"
+            android:textSize="16sp"
             android:textColor="@color/did_not_received"
             android:layout_marginTop="@dimen/margin_30_dp"
             android:layout_height="wrap_content" />
@@ -211,7 +257,7 @@
         <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:id="@+id/use_social_signin_textView"
             android:gravity="center"
-
+            android:textColor="@color/light_black"
             android:text="@string/use_social_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -221,7 +267,7 @@
             android:layout_width="match_parent"
             android:gravity="center"
 
-            android:layout_marginTop="@dimen/margin_10_dp"
+            android:layout_marginTop="@dimen/margin_20_dp"
             android:layout_height="wrap_content">
 
 
@@ -229,23 +275,23 @@
                 android:id="@+id/imgTwiiter"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_if_twitter_circle"
-                android:layout_width="48dp"
-                android:layout_height="48dp" />
+                android:layout_width="36dp"
+                android:layout_height="36dp" />
             <ImageView
                 android:layout_toLeftOf="@+id/imgTwiiter"
                 android:layout_marginRight="@dimen/margin_50_dp"
                 android:src="@drawable/ic_if_google_circle"
-                android:layout_width="48dp"
+                android:layout_width="36dp"
                 android:id="@+id/imgGPlus"
-                android:layout_height="48dp" />
+                android:layout_height="36dp" />
 
             <ImageView
                 android:layout_toLeftOf="@+id/imgGPlus"
                 android:layout_marginRight="@dimen/margin_50_dp"
                 android:src="@drawable/ic_if_facebook_circle"
-                android:layout_width="48dp"
+                android:layout_width="36dp"
                 android:id="@+id/imgFb"
-                android:layout_height="48dp" />
+                android:layout_height="36dp" />
 
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/sign_in_button"

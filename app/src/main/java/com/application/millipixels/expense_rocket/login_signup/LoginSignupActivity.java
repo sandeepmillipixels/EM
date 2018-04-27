@@ -409,6 +409,7 @@ public class LoginSignupActivity extends Activity {
             Snackbar.make(v,"Please enter valid phone number.",2000).show();
         }else {
             Intent intent = new Intent(this, VerifyOtpActity.class);
+            intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
             startActivity(intent);
         }
     }
