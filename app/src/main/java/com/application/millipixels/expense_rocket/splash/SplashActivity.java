@@ -2,12 +2,14 @@ package com.application.millipixels.expense_rocket.splash;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.util.Base64;
 import android.util.Log;
@@ -17,6 +19,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.application.millipixels.expense_rocket.R;
+import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -35,6 +38,10 @@ public class SplashActivity extends Activity {
     @BindView(R.id.imageView_rocket)
     ImageView imageView_rocket;
 
+    SharedPreferences sharedPreferences;
+
+    boolean login;
+
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +52,13 @@ public class SplashActivity extends Activity {
 
         setContentView(R.layout.splash);
         ButterKnife.bind(this);
+
+
+        sharedPreferences= PreferenceManager.getDefaultSharedPreferences(this);
+
+        login=sharedPreferences.getBoolean("login",false);
+
+
 
         new Handler().postDelayed(new Runnable() {
 
@@ -70,12 +84,20 @@ public class SplashActivity extends Activity {
                     Log.e("exception", e.toString());
                 }
 
-                Intent intent = new Intent(SplashActivity.this, TakeTour.class);
-                startActivity(intent);
-                finish();
-               }
+                if (login == true) {
+                    Intent intent = new Intent(SplashActivity.this, Dashboard.class);
+                    startActivity(intent);
+                    finish();
+
+                } else {
 
 
+                    Intent intent = new Intent(SplashActivity.this, TakeTour.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+            }
 
         }, SPLASH_TIME_OUT);
 

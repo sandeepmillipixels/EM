@@ -71,7 +71,7 @@
     <color name="greenFloating">#3cd690</color>
     <color name="greenFloatingT">#513cd690</color>
     <color name="red_button">#ff5f58</color>
-
+    <color name="transparent">#00000000</color>
     <array name="array_dot_active">
         <item>@color/grey_text</item>
         <item>@color/grey_text</item>

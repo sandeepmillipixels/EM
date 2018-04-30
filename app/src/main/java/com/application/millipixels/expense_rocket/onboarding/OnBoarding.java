@@ -99,9 +99,9 @@ public class OnBoarding extends Activity{
 
         layouts = new int[]{
                 R.layout.first_onboarding,
-                R.layout.first_onboarding,
-                R.layout.first_onboarding,
-                R.layout.fourth_onboarding};
+                R.layout.second_onboarding,
+                R.layout.third_onboard,
+               };
 
         addBottomDots(0);
 
@@ -117,6 +117,10 @@ public class OnBoarding extends Activity{
         Intent intent = new Intent(this, LoginSignupActivity.class);
         intent.putExtra(Constants.LOGIN,true);
         startActivity(intent);
+    }
+    @OnClick(R.id.back_button_otp)
+    public void backTapped(){
+       finish();
     }
 
     @OnClick(R.id.add_an_expense_button)

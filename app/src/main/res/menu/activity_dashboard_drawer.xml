@@ -35,6 +35,12 @@
                     android:id="@+id/pro_manage"
 
                     android:title="Pro Edition" />
+
+                <item
+                    android:id="@+id/sign_out_manage"
+
+                    android:title="Sign Out" />
+
         </group>
         <group
 

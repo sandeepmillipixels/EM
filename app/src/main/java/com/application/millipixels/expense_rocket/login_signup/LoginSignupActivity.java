@@ -4,9 +4,12 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -18,12 +21,16 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -104,6 +111,18 @@ public class LoginSignupActivity extends AppCompatActivity {
 
 //    @BindView(R.id.edtEmail)
 //    EditText edtEmail;
+@BindView(R.id.imgErrorBack)
+ImageView imgErrorBack;
+
+    @BindView(R.id.txtError)
+    TextView txtError;
+
+
+    @BindView(R.id.sign_in_top_layout)
+    LinearLayout sign_in_top_layout;
+
+    @BindView(R.id.top_layout)
+    RelativeLayout top_layout;
 
     @BindView(R.id.edtPhoneLogin)
     EditText edtPhoneLogin;
@@ -133,8 +152,11 @@ public class LoginSignupActivity extends AppCompatActivity {
     @BindView(R.id.sign_in_button)
     SignInButton signInButton;
 
-    String otp;
+    @BindView(R.id.main_layout)
+    RelativeLayout parentLayout;
 
+
+    String otp;
 
 
     private static final String TAG = "SignInActivity";
@@ -154,8 +176,12 @@ public class LoginSignupActivity extends AppCompatActivity {
 
 
 
+    SharedPreferences prefs;
+
+    SharedPreferences.Editor editor;
+
     ProgressDialog dialog;
-    ;
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -190,6 +216,8 @@ public class LoginSignupActivity extends AppCompatActivity {
         dialog = new ProgressDialog(this);
 
 
+        prefs= PreferenceManager.getDefaultSharedPreferences(this);
+        editor=prefs.edit();
 
 
 
@@ -288,12 +316,18 @@ public class LoginSignupActivity extends AppCompatActivity {
                                         try {
                                             String email = object.getString("email");
 
+
+                                            editor.putBoolean("login",true);
+                                            editor.commit();
+
+
 //                                            String birthday = object.getString("birthday"); // 01/31/1980 format
                                             String name = object.getString("name"); // 01/31/1980 format
                                             Toast.makeText(LoginSignupActivity.this,"Welcome "+name,Toast.LENGTH_LONG).show();
                                             LoginManager.getInstance().logOut();
                                             Intent intent = new Intent(LoginSignupActivity.this, Dashboard.class);
-                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                             startActivity(intent);
                                             finish();
 
@@ -375,8 +409,15 @@ public class LoginSignupActivity extends AppCompatActivity {
     private void updateUIGoogle(@Nullable GoogleSignInAccount account) {
         if (account != null) {
             Toast.makeText(LoginSignupActivity.this,"Welcome "+account.getDisplayName(),Toast.LENGTH_LONG).show();
+
+            editor.putBoolean("login",true);
+            editor.commit();
+
+
+
             Intent intent = new Intent(this, Dashboard.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
 //            mStatusTextView.setText(getString(R.string.signed_in_fmt, account.getDisplayName()));
@@ -420,11 +461,22 @@ public class LoginSignupActivity extends AppCompatActivity {
 
         mobileNumber = edtPhoneLogin.getText().toString().trim();
         if(mobileNumber.length()==0){
-            Snackbar.make(v,R.string.error_empty_number,2000).show();
+//            Snackbar.make(v,R.string.error_empty_number,2000).show();
+            Animation animation = AnimationUtils.loadAnimation(this, R.anim.scale_down);
+            txtError.setText("Please enter phone number.");
+            sign_in_top_layout.startAnimation(animation);
+            sign_in_top_layout.setVisibility(View.VISIBLE);
         }
         else if(!(mobileNumber.length() >0 && mobileNumber.length()>=10 && mobileNumber.length()<=13)){
-            Snackbar.make(v,R.string.error_not_valid_number,2000).show();
+//            Snackbar.make(v,R.string.error_not_valid_number,2000).show();
+            txtError.setText("Please enter valid phone number.");
+            Animation animation = AnimationUtils.loadAnimation(this, R.anim.scale_down);
+            sign_in_top_layout.startAnimation(animation);
+            sign_in_top_layout.setVisibility(View.VISIBLE);
         }else {
+            sign_in_top_layout.setVisibility(View.GONE);
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
             dialog.setCancelable(false);
 
             dialog.setMessage("Please wait...");
@@ -432,8 +484,13 @@ public class LoginSignupActivity extends AppCompatActivity {
             dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
             dialog.show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    sendOTPRequest();
+                }
+            },2000);
 
-            sendOTPRequest();
         }
     }
 
@@ -555,11 +612,18 @@ public class LoginSignupActivity extends AppCompatActivity {
         if (user != null) {
 
             String email=user.getEmail();
+
+
+            editor.putBoolean("login",true);
+            editor.commit();
+
 //
 //            firebase_text.setText(getString(R.string.twitter_status_fmt, user.getDisplayName()));
 //            firebase_detail_text.setText(getString(R.string.firebase_status_fmt, user.getUid()));
 
             Intent intent=new Intent(this,Dashboard.class);
+            //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
 
@@ -582,7 +646,8 @@ public class LoginSignupActivity extends AppCompatActivity {
             public void onResponse(Call<OTP> call, Response<OTP> response) {
 
                 if(response.isSuccessful()==true){
-
+                    if (dialog != null && dialog.isShowing())
+                        dialog.dismiss();
                     if(response.body()!=null && response.body().isStatus()){
                         otp=response.body().getData().getOtp();
 
@@ -592,10 +657,15 @@ public class LoginSignupActivity extends AppCompatActivity {
                         startActivity(intent);
                     }else {
 
+                        showErrorMessage(response.body().getError().getError_message());
+
                     }
 
                 }else {
+                    if (dialog != null && dialog.isShowing())
+                        dialog.dismiss();
                     // server error
+                    showErrorMessage("Server Error. Try again Later.");
                 }
 
 
@@ -604,11 +674,23 @@ public class LoginSignupActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<OTP> call, Throwable t) {
-                Log.d("Error",t.getLocalizedMessage());
+                if (dialog != null && dialog.isShowing())
+                    dialog.dismiss();
+                showErrorMessage("Server Error. Try again Later.");
+
             }
         });
-        if (dialog != null && dialog.isShowing())
-        dialog.dismiss();
+
+    }
+
+    public void showErrorMessage(String message){
+
+
+        txtError.setText(message);
+        Animation animation = AnimationUtils.loadAnimation(LoginSignupActivity.this, R.anim.scale_down);
+        sign_in_top_layout.startAnimation(animation);
+        sign_in_top_layout.setVisibility(View.VISIBLE);
+
     }
 
 }
