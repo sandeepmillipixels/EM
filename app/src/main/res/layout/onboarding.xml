@@ -25,6 +25,16 @@
         android:layout_height="@dimen/topbar_Height">
 
 
+        <ImageView
+            android:layout_marginTop="@dimen/margin_20_dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/back_button_otp"
+            android:background="@drawable/back"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:tint="#808080"
+            android:layout_marginLeft="@dimen/margin_30_dp"
+            android:layout_height="wrap_content" />
         <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:id="@+id/already_have_account_textView"
             android:layout_width="wrap_content"

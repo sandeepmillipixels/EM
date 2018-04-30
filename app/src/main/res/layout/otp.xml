@@ -8,15 +8,16 @@
 
     <RelativeLayout
         android:orientation="horizontal"
-        android:id="@+id/sign_in_top_layout"
+        android:id="@+id/top_layout"
         android:layout_width="match_parent"
 
-        android:layout_marginTop="@dimen/margin_20_dp"
+
         android:layout_height="wrap_content">
 
 
 
         <ImageView
+            android:layout_marginTop="@dimen/margin_20_dp"
             android:layout_centerVertical="true"
             android:id="@+id/back_button_otp"
             android:background="@drawable/back"
@@ -27,13 +28,41 @@
             android:layout_height="wrap_content" />
 
         <ImageView
+            android:layout_marginTop="@dimen/margin_20_dp"
             android:id="@+id/otp_cloud_imageview"
             android:background="@drawable/otp_cloud"
             android:layout_width="wrap_content"
             android:layout_marginRight="@dimen/margin_50_dp"
             android:layout_alignParentRight="true"
             android:layout_height="wrap_content" />
+        <LinearLayout
+            android:visibility="gone"
+            android:background="@color/red_button"
+            android:layout_height="96dp"
+            android:orientation="horizontal"
+            android:id="@+id/sign_in_top_layout"
+            android:layout_width="match_parent">
+            <ImageView
+                android:id="@+id/imgErrorBack"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:tint="#FFFFFF"
+                android:layout_marginLeft="@dimen/margin_30_dp"
+                android:layout_height="wrap_content" />
 
+            <com.application.millipixels.expense_rocket.typeface.FontsClass
+                android:text="Please enter a valid phone number"
+                android:id="@+id/txtError"
+                android:layout_marginLeft="@dimen/margin_10_dp"
+                android:layout_marginRight="@dimen/margin_10_dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 
@@ -42,7 +71,7 @@
 
     <LinearLayout
         android:id="@+id/sign_in_inside_layout"
-        android:layout_below="@+id/sign_in_top_layout"
+        android:layout_below="@+id/top_layout"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:gravity="center"
@@ -227,6 +256,7 @@
 
         <com.application.millipixels.expense_rocket.typeface.FontsClassLight
             android:text="@string/did_not_received"
+            android:id="@+id/btnNotReceived"
             android:layout_width="wrap_content"
             android:textSize="16sp"
             android:textColor="@color/did_not_received"
