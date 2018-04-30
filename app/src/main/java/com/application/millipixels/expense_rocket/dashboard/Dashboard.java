@@ -2,12 +2,14 @@ package com.application.millipixels.expense_rocket.dashboard;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -29,6 +31,7 @@ import com.application.millipixels.expense_rocket.addexpense.AddExpense;
 import com.application.millipixels.expense_rocket.database.AllExpensesDataSource;
 import com.application.millipixels.expense_rocket.fragments.MonthlyExpenseFragment;
 import com.application.millipixels.expense_rocket.gallery.GalleyActivity;
+import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
 import com.application.millipixels.expense_rocket.settings.SettingsActivity;
 
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
@@ -314,6 +317,18 @@ public class Dashboard extends AppCompatActivity
 //        } else if (id == R.id.nav_send) {
 //
 //        }
+
+
+        if(id==R.id.sign_out_manage){
+
+            SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+            preferences.edit().clear().commit();
+
+            Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
+            startActivity(intent);
+            finish();
+
+        }
 
         if (id == R.id.nav_manage){
             Intent intent = new Intent(Dashboard.this, SettingsActivity.class);

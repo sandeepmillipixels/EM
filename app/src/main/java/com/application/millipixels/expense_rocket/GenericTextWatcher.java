@@ -1,9 +1,12 @@
 package com.application.millipixels.expense_rocket;
 
+import android.app.Activity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+
+import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
 
 /**
  * Created by millipixelsinteractive_024 on 26/04/18.
@@ -12,11 +15,13 @@ import android.widget.EditText;
 public class GenericTextWatcher implements TextWatcher {
 
 
+    Activity activity;
 
     private View view;
     EditText editText;
-    public GenericTextWatcher(View view, EditText editText)
+    public GenericTextWatcher(View view, EditText editText,Activity activity)
     {
+        this.activity=activity;
         this.view = view;
         this.editText=editText;
     }
@@ -41,6 +46,8 @@ public class GenericTextWatcher implements TextWatcher {
                     editText.requestFocus();
                 break;
             case R.id.edt4:
+                VerifyOtpActity.hideKeyboard(activity);
+
                 break;
         }
     }
