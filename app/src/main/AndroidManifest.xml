@@ -54,15 +54,13 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.application.millipixels.expense_rocket.shoebox.TabbedActivity"></activity>
+        <activity android:name="com.application.millipixels.expense_rocket.shoebox.TabbedActivity" android:screenOrientation="portrait"></activity>
 
+        <activity android:name=".contrast.ContrastActivity" android:screenOrientation="portrait"></activity>
 
+        <activity android:name=".gallery.GalleyActivity" android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".contrast.ContrastActivity"></activity>
-
-        <activity android:name=".gallery.GalleyActivity"></activity>
-
-        <activity android:name=".pdf_opener.PdfOpenActivity"></activity>
+        <activity android:name=".pdf_opener.PdfOpenActivity" android:screenOrientation="portrait"></activity>
 
 
 
@@ -122,24 +120,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:screenOrientation="portrait"
             android:name=".EditImageActivity"
             android:label="@string/title_activity_edit_image"
             android:theme="@style/MyMaterialTheme" />
-        <activity android:name=".editor.crop.CropActivity" />
-        <activity android:name=".editor.rotate.RotateActivity" />
-        <activity android:name=".editor.brightness.BightnessActivity" />
-        <activity android:name=".editor.contrast.ContrastActivity" />
-        <activity android:name=".editor.saturation.SeturationActivity"></activity>
+        <activity android:name=".editor.crop.CropActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".editor.rotate.RotateActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".editor.brightness.BightnessActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".editor.contrast.ContrastActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".editor.saturation.SeturationActivity" android:screenOrientation="portrait"></activity>
 
 
-        <activity android:name=".splash.TakeTour">
+        <activity android:name=".splash.TakeTour" android:screenOrientation="portrait">
         </activity>
 
-
-        <activity android:name=".view.Demo">
-
-
-        </activity>
 
     </application>
 
