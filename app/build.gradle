@@ -93,6 +93,8 @@ dependencies {
     implementation 'com.github.krokyze:ucropnedit:2.2.1-native'
 
 
+    compile 'com.google.android.gms:play-services-plus:11.8.0'
+
     ///////////////////Retrofit//////////////////////////////////////////////////////
 
     compile 'com.squareup.retrofit2:retrofit:2.1.0'

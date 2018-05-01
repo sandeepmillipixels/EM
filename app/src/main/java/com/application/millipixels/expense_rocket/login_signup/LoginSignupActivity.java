@@ -45,7 +45,11 @@ import com.application.millipixels.expense_rocket.model.CountryCodeData;
 import com.application.millipixels.expense_rocket.utils.Constants;
 import com.application.millipixels.expense_rocket.utils.Utilities;
 import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.plus.Plus;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -106,13 +110,9 @@ import static android.content.ContentValues.TAG;
 
 public class LoginSignupActivity extends AppCompatActivity {
 
-//    @BindView(R.id.edtPhone)
-//    EditText edtPhone;
+    @BindView(R.id.imgErrorBack)
+    ImageView imgErrorBack;
 
-//    @BindView(R.id.edtEmail)
-//    EditText edtEmail;
-@BindView(R.id.imgErrorBack)
-ImageView imgErrorBack;
 
     @BindView(R.id.txtError)
     TextView txtError;
@@ -121,63 +121,64 @@ ImageView imgErrorBack;
     @BindView(R.id.sign_in_top_layout)
     LinearLayout sign_in_top_layout;
 
+
     @BindView(R.id.top_layout)
     RelativeLayout top_layout;
+
 
     @BindView(R.id.edtPhoneLogin)
     EditText edtPhoneLogin;
 
-    String email;
-    String mobileNumber;
-
-
-
-    String json = null;
-
-    SpinnerAdapter adapter;
-    List<CountryCodeData> data;
 
     @BindView(R.id.imgGPlus)
     ImageView imgGPlus;
 
+
     @BindView(R.id.imgTwiiter)
     ImageView imgTwiiter;
+
 
     @BindView(R.id.imgFb)
     ImageView imgFb;
 
+
     @BindView(R.id.login_button)
     LoginButton loginButton;
 
+
     @BindView(R.id.sign_in_button)
     SignInButton signInButton;
+
 
     @BindView(R.id.main_layout)
     RelativeLayout parentLayout;
 
 
-    String otp;
-
-
-    private static final String TAG = "SignInActivity";
-    private static final int RC_SIGN_IN = 9001;
-    CallbackManager callbackManager;
-    private static final String EMAIL = "email";
-    private GoogleSignInClient mGoogleSignInClient;
-
-
-    private FirebaseAuth mAuth;
-
     @BindView(R.id.twitter_login)
     TwitterLoginButton mLoginButton;
+
 
     @BindView(R.id.back_button_otp)
     ImageView back_button_otp;
 
 
+    String mobileNumber;
+    String json = null;
+    String otp;
+
+    SpinnerAdapter adapter;
+    List<CountryCodeData> data;
+
+    CallbackManager callbackManager;
+
+    private static final String TAG = "SignInActivity";
+    private static final int RC_SIGN_IN = 9001;
+    private static final String EMAIL = "email";
+    private GoogleSignInClient mGoogleSignInClient;
+    private FirebaseAuth mAuth;
+
 
     SharedPreferences prefs;
-
     SharedPreferences.Editor editor;
 
     ProgressDialog dialog;
@@ -226,6 +227,8 @@ ImageView imgErrorBack;
 
         loadJSONFromAsset();
 
+
+
         mLoginButton.setCallback(new Callback<TwitterSession>() {
             @Override
             public void success(Result<TwitterSession> result) {
@@ -265,8 +268,11 @@ ImageView imgErrorBack;
 
         // [START build_client]
         // Build a GoogleSignInClient with the options specified by gso.
+
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         // [END build_client]
+
+
 
         // [START customize_button]
         // Set the dimensions of the sign-in button.
@@ -383,6 +389,7 @@ ImageView imgErrorBack;
         // Pass the activity result to the Twitter login button.
         if (requestCode == 140)
         mLoginButton.onActivityResult(requestCode, resultCode, data);
+
         super.onActivityResult(requestCode, resultCode, data);
     }
     // [START handleSignInResult]
@@ -410,16 +417,20 @@ ImageView imgErrorBack;
         if (account != null) {
             Toast.makeText(LoginSignupActivity.this,"Welcome "+account.getDisplayName(),Toast.LENGTH_LONG).show();
 
-            editor.putBoolean("login",true);
-            editor.commit();
+
+
+                editor.putBoolean("login",true);
+                editor.commit();
 
 
 
-            Intent intent = new Intent(this, Dashboard.class);
+                Intent intent = new Intent(this, Dashboard.class);
 //            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            finish();
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+
+
 //            mStatusTextView.setText(getString(R.string.signed_in_fmt, account.getDisplayName()));
 //
 //            findViewById(R.id.sign_in_button).setVisibility(View.GONE);
@@ -435,6 +446,8 @@ ImageView imgErrorBack;
     public void onStart() {
         super.onStart();
 
+
+
         // [START on_start_sign_in]
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
@@ -446,8 +459,12 @@ ImageView imgErrorBack;
     }
 
 
+    @Override
+    protected void onStop() {
+        super.onStop();
 
 
+    }
 
     @OnClick(R.id.twitter_login)
     public void twitterLogin(){
@@ -692,5 +709,4 @@ ImageView imgErrorBack;
         sign_in_top_layout.setVisibility(View.VISIBLE);
 
     }
-
 }
