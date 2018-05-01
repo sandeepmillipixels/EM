@@ -18,58 +18,20 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5181be-e8a2-4ab1-938e-f3794f966121" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/second_onboard.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/third_onboard.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-08-53-41-324.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-08-53-41-324.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-08-54-59-932.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-08-54-59-932.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-01-45-239.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-01-45-239.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-04-34-152.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-04-34-152.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-05-15-999.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-05-15-999.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-06-04-882.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-06-04-882.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-07-16-442.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-07-16-442.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-13-20-060.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-13-20-060.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-14-23-383.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-14-23-383.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-17-10-113.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-17-10-113.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-18-59-529.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-18-59-529.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-21-37-652.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-21-37-652.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-23-15-058.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-23-15-058.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-25-31-363.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-25-31-363.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-27-23-189.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-27-23-189.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-39-50-041.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-39-50-041.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-42-45-855.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-42-45-855.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-48-15-174.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-48-15-174.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-53-55-406.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-53-55-406.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-55-45-592.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-55-45-592.rawproto" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-58-25-970.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2018-04-30-09-58-25-970.rawproto" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_plus_11_8_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_plus_license_11_8_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/prefs/PrefrenceClass.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskJars.bin" />
@@ -77,140 +39,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_27_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_27_0_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_exifinterface_27_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_instrumentation_1_0_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_27_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_1_0_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_balysv_material_ripple_1_0_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_commonsware_cwac_camera_0_6_12.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_android_sdk_4_32_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_applinks_4_32_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_common_4_32_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_core_4_32_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_login_4_32_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_messenger_4_32_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_places_4_32_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_facebook_android_facebook_share_4_32_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_getbase_floatingactionbutton_1_10_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ParkSangGwon_TedPicker_v1_0_10.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_PhilJay_MPAndroidChart_v3_0_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_afollestad_material_dialogs_core_0_8_5_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_barteksc_android_pdf_viewer_2_0_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_barteksc_pdfium_android_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_3_6_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_dmytrodanylyk_android_morphing_button_98a4986e56.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_hoanganhtuan95ptit_TwoLineSeekBar_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_krokyze_ucropnedit_2_2_1_native.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_7_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_impl_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_core_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_license_11_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_zxing_core_3_3_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_itextpdf_itextg_5_5_9_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_8_8_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_jakewharton_butterknife_annotations_8_8_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_opencsv_opencsv_3_9_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_android_1_4_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_applinks_1_4_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_parse_bolts_bolts_tasks_1_4_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_logging_interceptor_3_3_1_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_squareup_okhttp3_logging_interceptor_3_3_1_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_9_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_13_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_5_2_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_1_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_retrofit_2_1_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_theartofdev_edmodo_android_image_cropper_2_7_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_twitter_sdk_android_tweet_composer_3_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_twitter_sdk_android_tweet_ui_3_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_twitter_sdk_android_twitter_3_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_twitter_sdk_android_twitter_core_3_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_twitter_twitter_text_1_14_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_wang_avi_library_2_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_beanutils_commons_beanutils_1_9_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_collections_commons_collections_3_2_2_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_logging_commons_logging_1_2_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__info_androidhive_imagefilters_1_0_7.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxandroid_2_0_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxjava_2_1_7_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__me_zhanghai_android_materialprogressbar_library_1_1_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_5_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_2_30_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jre7_1_2_30_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_reactivestreams_reactive_streams_1_0_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/GenericTextWatcher.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/GenericTextWatcher.java" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/onboard2.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/onboard2.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/onboard3.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/onboard3.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/onboarding.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/onboarding.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/otp.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/otp.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_dashboard_drawer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_dashboard_drawer.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/chart_filed.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/chart_filed.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -227,95 +64,139 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="EM" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="EM" type="f1a62948:ProjectNode" />
+                <item name="EM" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="EM" type="f1a62948:ProjectNode" />
+                <item name="EM" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="EM" type="f1a62948:ProjectNode" />
+                <item name="EM" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginSignupActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginSignupActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="396" column="73" lean-forward="false" selection-start-line="396" selection-start-column="73" selection-end-line="396" selection-end-column="73" />
+            <state relative-caret-position="209">
+              <caret line="694" column="37" lean-forward="false" selection-start-line="694" selection-start-column="37" selection-end-line="694" selection-end-column="37" />
               <folding>
-                <element signature="e#6302#6342#0" expanded="true" />
-                <element signature="e#6360#6403#0" expanded="true" />
-                <element signature="e#9883#11632#0" expanded="true" />
-                <element signature="e#11631#11632#0" expanded="true" />
-                <element signature="e#17255#17403#0" expanded="true" />
-                <element signature="e#17402#17403#0" expanded="true" />
-                <element signature="e#19824#20972#0" expanded="true" />
-                <element signature="e#20971#20972#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#6381#6421#0" expanded="true" />
+                <element signature="e#6439#6482#0" expanded="true" />
+                <element signature="e#7644#7645#0" expanded="true" />
+                <element signature="e#7668#7669#0" expanded="true" />
+                <element signature="e#7734#7735#0" expanded="true" />
+                <element signature="e#7777#7778#0" expanded="true" />
+                <element signature="e#9967#11716#0" expanded="true" />
+                <element signature="e#11715#11716#0" expanded="true" />
+                <element signature="e#12467#12468#0" expanded="true" />
+                <element signature="e#12509#12510#0" expanded="true" />
+                <element signature="e#17444#17592#0" expanded="true" />
+                <element signature="e#17591#17592#0" expanded="true" />
+                <element signature="e#20013#21161#0" expanded="true" />
+                <element signature="e#21160#21161#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="otp.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/otp.xml">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="95" column="61" lean-forward="false" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GalleyActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="159" column="14" lean-forward="false" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrefrenceClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/prefs/PrefrenceClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dashboard.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="232" column="0" lean-forward="true" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+              <folding>
+                <element signature="e#4274#4599#0" expanded="true" />
+                <element signature="e#4598#4599#0" expanded="true" />
+                <element signature="e#5982#6253#0" expanded="true" />
+                <element signature="e#6252#6253#0" expanded="true" />
+                <element signature="e#6426#6457#0" expanded="true" />
+                <element signature="e#6459#6491#0" expanded="true" />
+                <element signature="e#13782#13789#0" expanded="true" />
+                <element signature="e#16388#16402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content_dashboard.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+            <state relative-caret-position="116">
+              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="OnBoarding.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="144" column="50" lean-forward="false" selection-start-line="144" selection-start-column="50" selection-end-line="144" selection-end-column="50" />
+            <state relative-caret-position="604">
+              <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VerifyOtpActity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="269" column="37" lean-forward="false" selection-start-line="269" selection-start-column="37" selection-end-line="269" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6205#6633#0" expanded="true" />
-                <element signature="e#6632#6633#0" expanded="true" />
-                <element signature="e#6673#7098#0" expanded="true" />
-                <element signature="e#7097#7098#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenericTextWatcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/GenericTextWatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dashboard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="316" column="43" lean-forward="false" selection-start-line="316" selection-start-column="43" selection-end-line="316" selection-end-column="43" />
-              <folding>
-                <element signature="e#3653#4217#0" expanded="true" />
-                <element signature="e#4216#4217#0" expanded="true" />
-                <element signature="e#5600#6109#0" expanded="true" />
-                <element signature="e#6108#6109#0" expanded="true" />
-                <element signature="e#6282#6313#0" expanded="true" />
-                <element signature="e#6315#6347#0" expanded="true" />
-                <element signature="e#13183#13190#0" expanded="true" />
-                <element signature="e#15701#15715#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -323,12 +204,9 @@
       <file leaf-file-name="SplashActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding>
-                <element signature="e#1744#3342#0" expanded="true" />
-                <element signature="e#3341#3342#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="464">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -349,22 +227,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Ontent</find>
-      <find>OnAc</find>
-      <find>back</find>
-      <find>Crop</find>
-      <find>Gall</find>
-      <find>Intent</find>
-      <find>Pdf</find>
-      <find>openPdf</find>
-      <find>Shoe</find>
-      <find>pdf</find>
-      <find>shoebox</find>
-      <find>onClick</find>
-      <find>viewPa</find>
-      <find>StartActivity</find>
-      <find>VerifyOtpActity</find>
-      <find>LoginSig</find>
       <find>sign_in_button</find>
       <find>R.La</find>
       <find>dialog</find>
@@ -379,6 +241,22 @@
       <find>Das</find>
       <find>Sett</find>
       <find>Snackbar</find>
+      <find>setForm</find>
+      <find>Legend</find>
+      <find>setMode</find>
+      <find>editor</find>
+      <find>btnNotReceived</find>
+      <find>mGoogleSignInClient</find>
+      <find>Dashboa</find>
+      <find>conne</find>
+      <find>sign</find>
+      <find>Welcome</find>
+      <find>onActivityResult</find>
+      <find>onAc</find>
+      <find>mGoogleApiClient</find>
+      <find>logoutFromGoogle</find>
+      <find>false</find>
+      <find>Intent</find>
     </findStrings>
     <replaceStrings>
       <replace>edtAmount</replace>
@@ -2361,8 +2239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/app_gradient_new.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/app_gradient.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_white_24dp.xml" />
@@ -2390,12 +2266,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/take_tour.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/MyBounceInterpolator.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/animation/MyBounceInterpolator.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/bounce.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/onboarding.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/ApiClient.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/OtpRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/ErrorResponse.java" />
@@ -2403,15 +2277,19 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/VerifyOTP.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/VerifyOTPResponse.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/ApiInterface.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_dashboard_drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/GenericTextWatcher.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/sign_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/otp.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/chart_filed.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/prefs/PrefrenceClass.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java" />
       </list>
     </option>
   </component>
@@ -2436,10 +2314,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2552,6 +2428,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EM" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="values" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2567,6 +2452,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2575,15 +2462,15 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="device.picker.selection" value="009fabff81a88e79" />
-    <property name="SearchEverywhereHistoryKey" value="content&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/content_dashboard.xml&#10;Das&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java&#10;Splas&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;Ver&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;Login&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;gra&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/build.gradle&#10;Veri&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;OnBo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;sign&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;sig&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/sign_in.xml&#10;ApiI&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/api/ApiInterface.java&#10;Api&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/api/ApiClient.java&#10;Take&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;Sign&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;Add&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;OnB&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;Si&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;stri&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/strings.xml&#10;Tak&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;sty&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/styles.xml&#10;Onb&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;Font&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.typeface.FontsClass&#10;Text&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.typeface.FontEditText&#10;Ga&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;Edit&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/EditImageActivity.java&#10;AddE&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;Gal&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;shoe&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/activity_show_shoebox.xml&#10;ta&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/take_tour.xml&#10;co&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;ver&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;otp&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/otp.xml&#10;str&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/strings.xml&#10;manifes&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/AndroidManifest.xml&#10;grad&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/build.gradle&#10;colo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;on&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/onboarding.xml&#10;onbo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;fourth&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/fourth_onboarding.xml&#10;color&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;Onbo&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.onboarding.OnBoarding&#10;logi&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/login_card_layout.xml&#10;Pdf&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/pdf_opener/PdfOpenActivity.java&#10;Ta&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tabbe&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Gallery&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleryAdapter.java&#10;mani&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/AndroidManifest.xml&#10;Gall&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;AddEx&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;Dash&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java" />
+    <property name="SearchEverywhereHistoryKey" value="LOGI&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;Gal&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;Onb&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;Das&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java&#10;Splas&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java&#10;Verify&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;dash&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java&#10;content&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/content_dashboard.xml&#10;Ver&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;Login&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;gra&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/build.gradle&#10;Veri&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;OnBo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;sign&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;sig&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/sign_in.xml&#10;ApiI&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/api/ApiInterface.java&#10;Api&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/api/ApiClient.java&#10;Take&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;Sign&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;Add&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;OnB&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;Si&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java&#10;stri&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/strings.xml&#10;Tak&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/splash/TakeTour.java&#10;sty&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/styles.xml&#10;Font&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.typeface.FontsClass&#10;Text&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.typeface.FontEditText&#10;Ga&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java&#10;Edit&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/EditImageActivity.java&#10;AddE&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/addexpense/AddExpense.java&#10;shoe&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/activity_show_shoebox.xml&#10;ta&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/take_tour.xml&#10;co&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;ver&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java&#10;otp&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/otp.xml&#10;str&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/strings.xml&#10;manifes&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/AndroidManifest.xml&#10;grad&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/build.gradle&#10;colo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;on&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/onboarding.xml&#10;onbo&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java&#10;fourth&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/fourth_onboarding.xml&#10;color&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/values/colors.xml&#10;Onbo&#9;PSI&#9;JAVA://com.application.millipixels.expense_rocket.onboarding.OnBoarding&#10;logi&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/res/layout/login_card_layout.xml&#10;Pdf&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/pdf_opener/PdfOpenActivity.java&#10;Ta&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Tabbe&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/shoebox/TabbedActivity.java&#10;Gallery&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleryAdapter.java&#10;mani&#9;FILE&#9;file:///Users/millipixelsinteractive_031/repos/EM/app/src/main/AndroidManifest.xml" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DEBUGGABLE_DEVICE" value="lge-nexus_5x-009fabff81a88e79" />
     <property name="DEBUGGABLE_PROCESS" value="com.application.millipixels.expense_rocket" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="VectorAssetImportPath" value="$USER_HOME$/Downloads" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1525080910283" />
-    <property name="sync.plugin.last.upgrade.timestamp" value="1525063620807" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1525180966335" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1525174106182" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.parentActivityClass">
@@ -2881,6 +2768,24 @@
       <module name="" />
       <envs />
     </configuration>
+    <configuration name="EM [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signingReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -2995,15 +2900,17 @@
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
       <item index="1" class="java.lang.String" itemvalue="Android JUnit.drawable in app" />
       <item index="2" class="java.lang.String" itemvalue="Android App.ContrastActivity" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.EM [signingReport]" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Android App.ContrastActivity" />
-        <item index="1" class="java.lang.String" itemvalue="Android JUnit.drawable in app" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Gradle.EM [signingReport]" />
+        <item index="1" class="java.lang.String" itemvalue="Android App.ContrastActivity" />
+        <item index="2" class="java.lang.String" itemvalue="Android JUnit.drawable in app" />
       </list>
     </recent_temporary>
   </component>
@@ -3036,30 +2943,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="973" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.11336516" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.124394186" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36208853" sideWeight="0.53194886" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25612354" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.9030884" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.9030884" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.8866348" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05808656" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.8756058" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20501138" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.045558088" sideWeight="0.46379128" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2949886" sideWeight="0.46379128" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3105,13 +3013,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>247</line>
+          <line>250</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>279</line>
+          <line>285</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
@@ -3135,7 +3043,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java</url>
-          <line>393</line>
+          <line>426</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
@@ -3302,12 +3210,6 @@
           <option name="timeStamp" value="150" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>380</line>
-          <properties />
-          <option name="timeStamp" value="151" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/EditImageActivity.java</url>
           <line>219</line>
           <properties />
@@ -3321,13 +3223,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>637</line>
+          <line>654</line>
           <properties />
           <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>600</line>
+          <line>617</line>
           <properties />
           <option name="timeStamp" value="179" />
         </line-breakpoint>
@@ -3339,57 +3241,75 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java</url>
-          <line>101</line>
+          <line>102</line>
           <properties />
           <option name="timeStamp" value="184" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java</url>
-          <line>227</line>
+          <line>228</line>
           <properties />
           <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>610</line>
+          <line>627</line>
           <properties />
           <option name="timeStamp" value="190" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>607</line>
+          <line>624</line>
           <properties />
           <option name="timeStamp" value="191" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java</url>
-          <line>277</line>
+          <line>278</line>
           <properties />
           <option name="timeStamp" value="193" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java</url>
-          <line>95</line>
+          <line>96</line>
           <properties />
           <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java</url>
-          <line>254</line>
+          <line>255</line>
           <properties />
           <option name="timeStamp" value="197" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java</url>
-          <line>256</line>
+          <line>257</line>
           <properties />
           <option name="timeStamp" value="198" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
-          <line>647</line>
+          <line>664</line>
           <properties />
           <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java</url>
+          <line>346</line>
+          <properties />
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java</url>
+          <line>379</line>
+          <properties />
+          <option name="timeStamp" value="208" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/api/OTP.java</url>
@@ -3398,54 +3318,11 @@
           <option name="timeStamp" value="180" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="202" />
+      <option name="time" value="210" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/editor/saturation/SeturationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="162" column="60" lean-forward="false" selection-start-line="161" selection-start-column="24" selection-end-line="162" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/editor/brightness/BightnessActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="166" column="33" lean-forward="false" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/editor/contrast/ContrastActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="166" column="33" lean-forward="false" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/EditImageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="165" column="9" lean-forward="true" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/typeface/FontEditText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="97" lean-forward="false" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/typeface/FontsClassLight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="34" column="97" lean-forward="false" selection-start-line="34" selection-start-column="97" selection-end-line="34" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/typeface/FontsClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -3458,16 +3335,6 @@
         <state relative-caret-position="1335">
           <caret line="113" column="27" lean-forward="false" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="125" column="47" lean-forward="false" selection-start-line="125" selection-start-column="47" selection-end-line="125" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3569,14 +3436,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="66" lean-forward="false" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/MyBounceInterpolator.java">
@@ -3592,14 +3459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="76" column="29" lean-forward="false" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -3632,14 +3491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="473" column="11" lean-forward="false" selection-start-line="473" selection-start-column="11" selection-end-line="473" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="101" column="4" lean-forward="false" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3852,17 +3703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_dashboard_drawer.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3874,20 +3714,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="43" column="41" lean-forward="true" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
+        <state relative-caret-position="2160">
           <caret line="144" column="50" lean-forward="false" selection-start-line="144" selection-start-column="50" selection-end-line="144" selection-end-column="50" />
           <folding />
         </state>
@@ -3895,34 +3724,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/GenericTextWatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
+        <state relative-caret-position="630">
           <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="269" column="37" lean-forward="false" selection-start-line="269" selection-start-column="37" selection-end-line="269" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6205#6633#0" expanded="true" />
-            <element signature="e#6632#6633#0" expanded="true" />
-            <element signature="e#6673#7098#0" expanded="true" />
-            <element signature="e#7097#7098#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="e#1744#3342#0" expanded="true" />
-            <element signature="e#3341#3342#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3939,47 +3743,176 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="316" column="43" lean-forward="false" selection-start-line="316" selection-start-column="43" selection-end-line="316" selection-end-column="43" />
-          <folding>
-            <element signature="e#3653#4217#0" expanded="true" />
-            <element signature="e#4216#4217#0" expanded="true" />
-            <element signature="e#5600#6109#0" expanded="true" />
-            <element signature="e#6108#6109#0" expanded="true" />
-            <element signature="e#6282#6313#0" expanded="true" />
-            <element signature="e#6315#6347#0" expanded="true" />
-            <element signature="e#13183#13190#0" expanded="true" />
-            <element signature="e#15701#15715#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/otp.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+        <state relative-caret-position="462">
+          <caret line="259" column="43" lean-forward="false" selection-start-line="259" selection-start-column="29" selection-end-line="259" selection-end-column="43" />
+          <folding>
+            <element signature="e#10771#10797#0" expanded="false" />
+            <element signature="e#12283#12310#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/verify_otp/VerifyOtpActity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="306" column="109" lean-forward="false" selection-start-line="306" selection-start-column="27" selection-end-line="306" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#11147#11275#0" expanded="true" />
+            <element signature="e#11274#11275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/chart_filed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/onboarding/OnBoarding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/prefs/PrefrenceClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/splash/SplashActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="95" column="61" lean-forward="false" selection-start-line="95" selection-start-column="61" selection-end-line="95" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_dashboard.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_dashboard.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/gallery/GalleyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="159" column="14" lean-forward="false" selection-start-line="159" selection-start-column="8" selection-end-line="159" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/login_signup/LoginSignupActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="396" column="73" lean-forward="false" selection-start-line="396" selection-start-column="73" selection-end-line="396" selection-end-column="73" />
+        <state relative-caret-position="209">
+          <caret line="694" column="37" lean-forward="false" selection-start-line="694" selection-start-column="37" selection-end-line="694" selection-end-column="37" />
           <folding>
-            <element signature="e#6302#6342#0" expanded="true" />
-            <element signature="e#6360#6403#0" expanded="true" />
-            <element signature="e#9883#11632#0" expanded="true" />
-            <element signature="e#11631#11632#0" expanded="true" />
-            <element signature="e#17255#17403#0" expanded="true" />
-            <element signature="e#17402#17403#0" expanded="true" />
-            <element signature="e#19824#20972#0" expanded="true" />
-            <element signature="e#20971#20972#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#6381#6421#0" expanded="true" />
+            <element signature="e#6439#6482#0" expanded="true" />
+            <element signature="e#7644#7645#0" expanded="true" />
+            <element signature="e#7668#7669#0" expanded="true" />
+            <element signature="e#7734#7735#0" expanded="true" />
+            <element signature="e#7777#7778#0" expanded="true" />
+            <element signature="e#9967#11716#0" expanded="true" />
+            <element signature="e#11715#11716#0" expanded="true" />
+            <element signature="e#12467#12468#0" expanded="true" />
+            <element signature="e#12509#12510#0" expanded="true" />
+            <element signature="e#17444#17592#0" expanded="true" />
+            <element signature="e#17591#17592#0" expanded="true" />
+            <element signature="e#20013#21161#0" expanded="true" />
+            <element signature="e#21160#21161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/application/millipixels/expense_rocket/dashboard/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="232" column="0" lean-forward="true" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding>
+            <element signature="e#4274#4599#0" expanded="true" />
+            <element signature="e#4598#4599#0" expanded="true" />
+            <element signature="e#5982#6253#0" expanded="true" />
+            <element signature="e#6252#6253#0" expanded="true" />
+            <element signature="e#6426#6457#0" expanded="true" />
+            <element signature="e#6459#6491#0" expanded="true" />
+            <element signature="e#13782#13789#0" expanded="true" />
+            <element signature="e#16388#16402#0" expanded="true" />
           </folding>
         </state>
       </provider>

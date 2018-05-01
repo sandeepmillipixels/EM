@@ -20,6 +20,8 @@ import android.widget.ImageView;
 
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
+import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
+import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -38,9 +40,9 @@ public class SplashActivity extends Activity {
     @BindView(R.id.imageView_rocket)
     ImageView imageView_rocket;
 
-    SharedPreferences sharedPreferences;
-
-    boolean login;
+//    SharedPreferences sharedPreferences;
+//
+//    boolean login;
 
     @Override
     public void onCreate( Bundle savedInstanceState) {
@@ -54,9 +56,9 @@ public class SplashActivity extends Activity {
         ButterKnife.bind(this);
 
 
-        sharedPreferences= PreferenceManager.getDefaultSharedPreferences(this);
-
-        login=sharedPreferences.getBoolean("login",false);
+//        sharedPreferences= PreferenceManager.getDefaultSharedPreferences(this);
+//
+//        login=sharedPreferences.getBoolean("login",false);
 
 
 
@@ -84,8 +86,14 @@ public class SplashActivity extends Activity {
                     Log.e("exception", e.toString());
                 }
 
-                if (login == true) {
+                if (PrefrenceClass.getLoginSharedPrefrence(SplashActivity.this)) {
                     Intent intent = new Intent(SplashActivity.this, Dashboard.class);
+                    startActivity(intent);
+                    finish();
+
+                }else if(PrefrenceClass.getSignoutSharedPrefrence(SplashActivity.this)){
+
+                    Intent intent = new Intent(SplashActivity.this, LoginSignupActivity.class);
                     startActivity(intent);
                     finish();
 

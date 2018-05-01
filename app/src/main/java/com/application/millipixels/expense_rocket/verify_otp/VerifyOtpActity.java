@@ -34,6 +34,7 @@ import com.application.millipixels.expense_rocket.api.OTP;
 import com.application.millipixels.expense_rocket.api.VerifyOTPResponse;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
+import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
 
 import java.util.StringTokenizer;
 
@@ -88,9 +89,9 @@ public class VerifyOtpActity extends Activity {
     ProgressDialog dialog;
 
 
-    SharedPreferences prefs;
-
-    SharedPreferences.Editor editor;
+//    SharedPreferences prefs;
+//
+//    SharedPreferences.Editor editor;
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -122,8 +123,8 @@ public class VerifyOtpActity extends Activity {
             setOTPInFields(otp);
         }
 
-        prefs= PreferenceManager.getDefaultSharedPreferences(this);
-        editor=prefs.edit();
+//        prefs= PreferenceManager.getDefaultSharedPreferences(this);
+//        editor=prefs.edit();
 
 
         dialog = new ProgressDialog(this);
@@ -296,10 +297,13 @@ public class VerifyOtpActity extends Activity {
 
                         if(token!=null){
 
-                            editor.putBoolean("login",true);
-                            editor.commit();
+                            PrefrenceClass.saveInSharedPrefrence(VerifyOtpActity.this,"login",true);
+
+//                            editor.putBoolean("login",true);
+//                            editor.commit();
 
                             Intent intent = new Intent(VerifyOtpActity.this, Dashboard.class);
+                            intent.putExtra("login",true);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         }
@@ -369,10 +373,8 @@ public class VerifyOtpActity extends Activity {
                     if(response.body()!=null && response.body().isStatus()){
                         otp=response.body().getData().getOtp();
 
-                        Intent intent=new Intent(VerifyOtpActity.this,VerifyOtpActity.class);
-                        intent.putExtra("otp",otp);
-                        intent.putExtra(VerifyOtpActity.OTP_NUMBER,number);
-                        startActivity(intent);
+
+
                     }else {
                         txtError.setText(response.body().getError().getError_message());
                         Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
@@ -404,6 +406,12 @@ public class VerifyOtpActity extends Activity {
         if (dialog != null && dialog.isShowing())
             dialog.dismiss();
 
+                edt1.setText("");
+                edt2.setText("");
+                edt3.setText("");
+                edt4.setText("");
+
+        edt1.requestFocus();
 
     }
 

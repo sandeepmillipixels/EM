@@ -25,6 +25,7 @@ import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.addexpense.AddExpense;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
+import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
 import com.application.millipixels.expense_rocket.utils.Constants;
 
 import butterknife.BindView;
@@ -191,7 +192,9 @@ public class OnBoarding extends Activity{
 
     @OnClick(R.id.btn_skip)
     public void onSkip(){
+
         Intent intent = new Intent(this, Dashboard.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
     }
