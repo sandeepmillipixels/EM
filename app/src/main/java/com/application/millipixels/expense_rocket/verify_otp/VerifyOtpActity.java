@@ -3,13 +3,10 @@ package com.application.millipixels.expense_rocket.verify_otp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
-import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.Snackbar;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -28,23 +25,20 @@ import android.widget.TextView;
 
 import com.application.millipixels.expense_rocket.GenericTextWatcher;
 import com.application.millipixels.expense_rocket.R;
-import com.application.millipixels.expense_rocket.api.ApiClient;
-import com.application.millipixels.expense_rocket.api.ApiInterface;
-import com.application.millipixels.expense_rocket.api.OTP;
-import com.application.millipixels.expense_rocket.api.VerifyOTPResponse;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
-import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
 import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
-
-import java.util.StringTokenizer;
+import com.application.millipixels.models.LoginResponse;
+import com.application.millipixels.models.VerifyOTPResponseRX;
+import com.application.millipixels.ui.presenter.LoginPresenter;
+import com.application.millipixels.ui.presenter.VerifyOTPPresenter;
+import com.application.millipixels.ui.view.LoginViewInterface;
+import com.application.millipixels.ui.view.VerifyViewinterface;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import retrofit2.Call;
-import retrofit2.Response;
 
-public class VerifyOtpActity extends Activity {
+public class VerifyOtpActity extends Activity implements VerifyViewinterface,LoginViewInterface{
 
     @BindView(R.id.imgErrorBack)
     ImageView imgErrorBack;
@@ -75,8 +69,6 @@ public class VerifyOtpActity extends Activity {
     @BindView(R.id.back_button_otp)
     ImageView back_button_otp;
 
-    boolean ignoreChange = false;
-
     String otp;
     @BindView(R.id.txtOtp)
     TextView txtOtp;
@@ -88,11 +80,11 @@ public class VerifyOtpActity extends Activity {
 
     ProgressDialog dialog;
 
+    VerifyOTPPresenter presenter;
 
-//    SharedPreferences prefs;
-//
-//    SharedPreferences.Editor editor;
-
+    LoginPresenter loginPresenter;
+    char[] charArray;
+    String firstDigit,secondDigit,thirdDigit,fourthDigit;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -120,14 +112,12 @@ public class VerifyOtpActity extends Activity {
       otp=getIntent().getStringExtra("otp");
 
         if(otp!=null){
+            charArray=otp.toCharArray();
             setOTPInFields(otp);
         }
 
-//        prefs= PreferenceManager.getDefaultSharedPreferences(this);
-//        editor=prefs.edit();
-
-
         dialog = new ProgressDialog(this);
+
 
 
     }
@@ -136,24 +126,19 @@ public class VerifyOtpActity extends Activity {
     public void onVerify(View v){
         sign_in_top_layout.setVisibility(View.GONE);
         if (edt1.getText().toString().trim().length() == 1 && edt2.getText().toString().trim().length() == 1 && edt3.getText().toString().trim().length() == 1 && edt4.getText().toString().trim().length() == 1){
-            dialog.setCancelable(false);
 
-            dialog.setMessage("Please wait...");
-
-            dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-
-            dialog.show();
+           showProgress();
 
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     verifyOTPRequest();
+                    getUserData();
                 }
             },2000);
 
 
         }else {
-//            Snackbar.make(v,R.string.error_enter_otp,2000).show();
             txtError.setText("Please enter valid OTP.");
             Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
             sign_in_top_layout.startAnimation(animation);
@@ -171,8 +156,6 @@ public class VerifyOtpActity extends Activity {
     public void onBackPressed() {
         super.onBackPressed();
     }
-
-
 
 
     @Override
@@ -239,8 +222,6 @@ public class VerifyOtpActity extends Activity {
 
 }
 
-
-
         return super.dispatchKeyEvent(event);
     }
 
@@ -256,91 +237,69 @@ public class VerifyOtpActity extends Activity {
 
     public void setOTPInFields(String OTP){
 
+        for(int i=0;i<OTP.length();i++){
 
-//        char firstDigit = OTP.charAt(0);
-//        char secondDigit = OTP.charAt(1);
-//        char thirdDigit = OTP.charAt(2);
-//        char fourthDigit = OTP.charAt(3);
-//
-//
-//        StringTokenizer st = new StringTokenizer(OTP);
-//
-//        String one=st.nextToken();
-//        String two=st.nextToken();
-//        String three=st.nextToken();
-//        String four=st.nextToken();
-//
-//        edt1.setText(one);
-//        edt2.setText(two);
-//        edt3.setText(three);
-//        edt4.setText(four);
+            firstDigit=""+charArray[0];
+            secondDigit=""+charArray[1];
+            thirdDigit=""+charArray[2];
+            fourthDigit=""+charArray[3];
+
+        }
+
+            edt1.setText(firstDigit);
+            edt2.setText(secondDigit);
+            edt3.setText(thirdDigit);
+            edt4.setText(fourthDigit);
+
+            edt4.requestFocus();
+
+
 
 
     }
 
     public void verifyOTPRequest(){
 
-        ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
+        String sendOTP=edt1.getText().toString()+edt2.getText().toString()+edt3.getText().toString()+edt4.getText().toString();
 
-        Call<VerifyOTPResponse> call = apiService.verifyOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61",otp,"+91"+number);
+        presenter=new VerifyOTPPresenter(this,"+91"+number,sendOTP);
 
-
-        call.enqueue(new retrofit2.Callback<VerifyOTPResponse>() {
-            @Override
-            public void onResponse(Call<VerifyOTPResponse> call, Response<VerifyOTPResponse> response) {
-
-                if(response.isSuccessful()==true){
-
-                    if(response.body()!=null && response.body().isStatus()){
-                        token=response.body().getData().getToken();
-
-                        if(token!=null){
-
-                            PrefrenceClass.saveInSharedPrefrence(VerifyOtpActity.this,"login",true);
-
-//                            editor.putBoolean("login",true);
-//                            editor.commit();
-
-                            Intent intent = new Intent(VerifyOtpActity.this, Dashboard.class);
-                            intent.putExtra("login",true);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            startActivity(intent);
-                        }
-
-                    }else {
-                        txtError.setText(response.body().getError().getError_message());
-                        Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
-                        sign_in_top_layout.startAnimation(animation);
-                        sign_in_top_layout.setVisibility(View.VISIBLE);
-                    }
-
-                }else {
-                    txtError.setText("Server Error. Try again Later.");
-                    Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
-                    sign_in_top_layout.startAnimation(animation);
-                    sign_in_top_layout.setVisibility(View.VISIBLE);
-
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<VerifyOTPResponse> call, Throwable t) {
-                Log.d("Error",t.getLocalizedMessage());
-                txtError.setText("Server Error. Try again Later.");
-                Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
-                sign_in_top_layout.startAnimation(animation);
-                sign_in_top_layout.setVisibility(View.VISIBLE);
-            }
-        });
-        if (dialog != null && dialog.isShowing())
-            dialog.dismiss();
     }
 
     @OnClick(R.id.btnNotReceived)
     public void resendOtp(){
         sign_in_top_layout.setVisibility(View.GONE);
+
+        showProgress();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                sendOTPRequest();
+                getData();
+            }
+        },2000);
+    }
+
+    public void sendOTPRequest(){
+
+        loginPresenter=new LoginPresenter(this,number);
+
+
+    }
+
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        View view = activity.getCurrentFocus();
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
+    @Override
+    public void showProgress() {
+
         dialog.setCancelable(false);
 
         dialog.setMessage("Please wait...");
@@ -348,83 +307,102 @@ public class VerifyOtpActity extends Activity {
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
         dialog.show();
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                sendOTPRequest();
-            }
-        },2000);
+
     }
 
-    public void sendOTPRequest(){
+    @Override
+    public void hideProgress() {
 
-        ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
-
-        Call<OTP> call = apiService.sendOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61","+91"+number);
-
-
-        call.enqueue(new retrofit2.Callback<OTP>() {
-            @Override
-            public void onResponse(Call<OTP> call, Response<OTP> response) {
-
-                if(response.isSuccessful()==true){
-
-                    if(response.body()!=null && response.body().isStatus()){
-                        otp=response.body().getData().getOtp();
-
-
-
-                    }else {
-                        txtError.setText(response.body().getError().getError_message());
-                        Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
-                        sign_in_top_layout.startAnimation(animation);
-                        sign_in_top_layout.setVisibility(View.VISIBLE);
-                    }
-
-                }else {
-                    // server error
-                    txtError.setText("Server Error. Try again Later.");
-                    Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
-                    sign_in_top_layout.startAnimation(animation);
-                    sign_in_top_layout.setVisibility(View.VISIBLE);
-                }
-
-
-
-            }
-
-            @Override
-            public void onFailure(Call<OTP> call, Throwable t) {
-//                Log.d("Error",t.getLocalizedMessage());
-                txtError.setText("Server Error. Try again Later.");
-                Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
-                sign_in_top_layout.startAnimation(animation);
-                sign_in_top_layout.setVisibility(View.VISIBLE);
-            }
-        });
-        if (dialog != null && dialog.isShowing())
-            dialog.dismiss();
-
-                edt1.setText("");
-                edt2.setText("");
-                edt3.setText("");
-                edt4.setText("");
+        edt1.setText("");
+        edt2.setText("");
+        edt3.setText("");
+        edt4.setText("");
 
         edt1.requestFocus();
 
+        dialog.dismiss();
+
     }
 
+    @Override
+    public void getOTP(LoginResponse response) {
+        if(response!=null) {
 
-    public static void hideKeyboard(Activity activity) {
-        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        //Find the currently focused view, so we can grab the correct window token from it.
-        View view = activity.getCurrentFocus();
-        //If no view currently has focus, create a new one, just so we can grab a window token from it
-        if (view == null) {
-            view = new View(activity);
+            if(response!=null && response.getStatus().equals("true")){
+
+                otp=response.getData().getOtp();
+
+            }else if(response!=null && response.getStatus().equals("false")){
+                showErrorMessage(response.getError());
+            }
+
+            Log.d("Response Status",response.getStatus());
+
+        }else{
+            Log.d("OTP Response","Login response null");
         }
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        hideProgress();
     }
 
+    @Override
+    public void getUserData(VerifyOTPResponseRX response) {
+
+        if(response!=null) {
+
+            if(response!=null && response.getStatus().equals("true")){
+
+                token=response.getStatus();
+
+                if(token!=null){
+                    callNextActivity();
+                }
+
+            }else if(response!=null && response.getStatus().equals("false")){
+
+                showErrorMessage(response.getError());
+
+            }
+
+            Log.d("Verify Response",response.getStatus());
+
+        }else{
+            Log.d("Verify Error","Verify response null");
+        }
+        hideProgress();
+
+    }
+
+    @Override
+    public void displayError(String error) {
+        showErrorMessage(error);
+        hideProgress();
+    }
+
+    public void getUserData(){
+        presenter.getUserData();
+    }
+
+    public void showErrorMessage(String message){
+        txtError.setText(message);
+        Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
+        sign_in_top_layout.startAnimation(animation);
+        sign_in_top_layout.setVisibility(View.VISIBLE);
+    }
+
+    private void getData() {
+
+        loginPresenter.getData();
+
+
+    }
+
+
+    public void callNextActivity(){
+        PrefrenceClass.saveInSharedPrefrence(VerifyOtpActity.this,"login",true);
+
+        Intent intent = new Intent(VerifyOtpActity.this, Dashboard.class);
+        intent.putExtra("login",true);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
 }

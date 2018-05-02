@@ -23,6 +23,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.widget.TextView;
 
 import com.application.millipixels.expense_rocket.R;
@@ -36,7 +38,9 @@ import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivi
 import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
 import com.application.millipixels.expense_rocket.settings.SettingsActivity;
 
+import com.application.millipixels.expense_rocket.socialLogin.SocialLogin;
 import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
+import com.facebook.login.LoginManager;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.LimitLine;
@@ -52,6 +56,11 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.twitter.sdk.android.core.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterConfig;
+import com.twitter.sdk.android.core.TwitterCore;
+import com.twitter.sdk.android.core.TwitterSession;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -90,6 +99,8 @@ public class Dashboard extends AppCompatActivity
     FloatingActionsMenu rightLabels;
 
     boolean login;
+
+    SocialLogin socialLogin;
 
 
     @Override
@@ -346,18 +357,36 @@ public class Dashboard extends AppCompatActivity
 
         if(id==R.id.sign_out_manage){
 
-            Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
 
-            startActivity(intent);
+                   if(PrefrenceClass.fbLogin(this)){
 
-            if(item.getTitle().equals("Sign Out")){
-                PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"onboard",true);
-                PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"login",false);
+                       logoutFromFB();
+
+                   }else if(PrefrenceClass.gmailLogin(this)){
+
+                       logoutFromGmail();
+
+                   }else if(PrefrenceClass.twitterLogin(this)){
+
+                       //logoutFromTwitter();
+
+                   }
+                   else{
+
+                       Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
+
+                       startActivity(intent);
+
+                       if(item.getTitle().equals("Sign Out")){
+
+                           clearLoginPrefs();
+
+                           finish();
+
+                       }
 
 
-                finish();
-            }
-
+                   }
 
 
         }
@@ -370,6 +399,55 @@ public class Dashboard extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void logoutFromGmail(){
+        clearLoginPrefs();
+
+        socialLogin=new SocialLogin(this);
+    }
+
+    public void logoutFromFB(){
+        clearLoginPrefs();
+
+        LoginManager.getInstance().logOut();
+        Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
+
+
+    public void logoutFromTwitter(){
+        clearLoginPrefs();
+        initTwitter();
+
+        CookieSyncManager.createInstance(this);
+        CookieManager cookieManager = CookieManager.getInstance();
+        cookieManager.removeSessionCookie();
+        TwitterCore.getInstance().getSessionManager().clearActiveSession();
+
+        TwitterCore.getInstance().getSessionManager().clearActiveSession();
+        Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+
+    public void initTwitter(){
+
+        TwitterAuthConfig authConfig =  new TwitterAuthConfig(
+
+                getString(R.string.twitter_consumer_key),
+                getString(R.string.twitter_consumer_secret));
+
+        TwitterConfig twitterConfig = new TwitterConfig.Builder(this)
+                .twitterAuthConfig(authConfig)
+                .build();
+
+        Twitter.initialize(twitterConfig);
+
+    }
+
 
     @Override
     protected void onResume() {
@@ -496,6 +574,15 @@ public class Dashboard extends AppCompatActivity
         }
 
 
+    }
+
+    public void clearLoginPrefs(){
+
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"onboard",true);
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"login",false);
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"gmail",false);
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"twitter",false);
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"fb",false);
     }
 
 }
