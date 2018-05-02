@@ -39,4 +39,35 @@ public class PrefrenceClass {
     }
 
 
+    public static boolean gmailLogin(Context context){
+        SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(context);
+        boolean gmail_login=prefs.getBoolean("gmail",false);
+
+        return gmail_login;
+
+
+
+    }
+
+    public static boolean fbLogin(Context context){
+        SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(context);
+        boolean fb_login=prefs.getBoolean("fb",false);
+
+        return fb_login;
+
+
+
+    }
+
+    public static boolean twitterLogin(Context context){
+        SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(context);
+        boolean twitter_login=prefs.getBoolean("twitter",false);
+
+        return twitter_login;
+
+
+
+    }
+
+
 }
