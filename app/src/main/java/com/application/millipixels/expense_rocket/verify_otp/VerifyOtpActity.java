@@ -3,9 +3,11 @@ package com.application.millipixels.expense_rocket.verify_otp;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.Snackbar;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -84,6 +87,12 @@ public class VerifyOtpActity extends Activity {
 
     ProgressDialog dialog;
 
+
+    SharedPreferences prefs;
+
+    SharedPreferences.Editor editor;
+
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +121,10 @@ public class VerifyOtpActity extends Activity {
         if(otp!=null){
             setOTPInFields(otp);
         }
+
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        editor = prefs.edit();
+
 
         dialog = new ProgressDialog(this);
 
@@ -216,6 +229,8 @@ public class VerifyOtpActity extends Activity {
                     //You can identify which key pressed buy checking keyCode value with KeyEvent.KEYCODE_
                     if(keyCode == KeyEvent.KEYCODE_DEL) {
                         edt1.setText("");
+
+
                     }
                     return false;
                 }
@@ -230,10 +245,10 @@ public class VerifyOtpActity extends Activity {
 
 
     public void onFoucus(){
-        edt1.addTextChangedListener(new GenericTextWatcher(edt1,edt2));
-        edt2.addTextChangedListener(new GenericTextWatcher(edt2,edt3));
-        edt3.addTextChangedListener(new GenericTextWatcher(edt3,edt4));
-        edt4.addTextChangedListener(new GenericTextWatcher(edt4,edt1));
+        edt1.addTextChangedListener(new GenericTextWatcher(edt1,edt2,VerifyOtpActity.this));
+        edt2.addTextChangedListener(new GenericTextWatcher(edt2,edt3,VerifyOtpActity.this));
+        edt3.addTextChangedListener(new GenericTextWatcher(edt3,edt4,VerifyOtpActity.this));
+        edt4.addTextChangedListener(new GenericTextWatcher(edt4,edt1,VerifyOtpActity.this));
     }
 
 
@@ -267,7 +282,7 @@ public class VerifyOtpActity extends Activity {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<VerifyOTPResponse> call = apiService.verifyOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61",otp,"+91"+number);
+        Call<VerifyOTPResponse> call = apiService.verifyOtp("1","gUCrznkTcnsHakR9vcp8hEyBhTMKXMO7uTtl19ei","121","+91"+number);
 
 
         call.enqueue(new retrofit2.Callback<VerifyOTPResponse>() {
@@ -280,13 +295,17 @@ public class VerifyOtpActity extends Activity {
                         token=response.body().getData().getToken();
 
                         if(token!=null){
+
+                            editor.putBoolean("login",true);
+                            editor.commit();
+
                             Intent intent = new Intent(VerifyOtpActity.this, Dashboard.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         }
 
                     }else {
-                        txtError.setText(response.body().getError().getError_message());
+//                        txtError.setText(response.body().getError().getError_message());
                         Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
                         sign_in_top_layout.startAnimation(animation);
                         sign_in_top_layout.setVisibility(View.VISIBLE);
@@ -297,7 +316,6 @@ public class VerifyOtpActity extends Activity {
                     Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
                     sign_in_top_layout.startAnimation(animation);
                     sign_in_top_layout.setVisibility(View.VISIBLE);
-
                 }
 
             }
@@ -338,7 +356,7 @@ public class VerifyOtpActity extends Activity {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<OTP> call = apiService.sendOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61","+91"+number);
+        Call<OTP> call = apiService.sendOtp("1","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61","+91"+number);
 
 
         call.enqueue(new retrofit2.Callback<OTP>() {
@@ -355,7 +373,7 @@ public class VerifyOtpActity extends Activity {
                         intent.putExtra(VerifyOtpActity.OTP_NUMBER,number);
                         startActivity(intent);
                     }else {
-                        txtError.setText(response.body().getError().getError_message());
+//                        txtError.setText(response.body().getError().getError_message());
                         Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
                         sign_in_top_layout.startAnimation(animation);
                         sign_in_top_layout.setVisibility(View.VISIBLE);
@@ -384,5 +402,20 @@ public class VerifyOtpActity extends Activity {
         });
         if (dialog != null && dialog.isShowing())
             dialog.dismiss();
+
+
     }
+
+
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
+
 }

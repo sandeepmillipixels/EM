@@ -9,8 +9,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ApiClient {
+//    http://10.0.1.76/stable/expense-rocket/public/api/login
 
-    public static final String BASE_URL = "http://10.0.1.29/expense-rocket-1.0/public/api/";
+    public static final String BASE_URL = "http://10.0.1.76/stable/expense-rocket/public/api/";
     private static Retrofit retrofit = null;
 
 

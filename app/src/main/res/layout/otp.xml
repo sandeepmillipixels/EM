@@ -57,6 +57,7 @@
                 android:id="@+id/txtError"
                 android:layout_marginLeft="@dimen/margin_10_dp"
                 android:layout_marginRight="@dimen/margin_10_dp"
+                android:maxLines="3"
                 android:layout_gravity="center_vertical"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"

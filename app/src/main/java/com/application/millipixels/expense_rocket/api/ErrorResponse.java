@@ -8,7 +8,7 @@ public class ErrorResponse {
      */
 
     private int code;
-    private String error_message;
+    private ErrorMessage error_message;
 
     public int getCode() {
         return code;
@@ -18,11 +18,11 @@ public class ErrorResponse {
         this.code = code;
     }
 
-    public String getError_message() {
+    public ErrorMessage getError_message() {
         return error_message;
     }
 
-    public void setError_message(String error_message) {
+    public void setError_message(ErrorMessage error_message) {
         this.error_message = error_message;
     }
 }

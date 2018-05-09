@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
@@ -150,8 +152,11 @@ ImageView imgErrorBack;
     @BindView(R.id.sign_in_button)
     SignInButton signInButton;
 
-    String otp;
+    @BindView(R.id.main_layout)
+    RelativeLayout parentLayout;
 
+
+    String otp;
 
 
     private static final String TAG = "SignInActivity";
@@ -170,6 +175,10 @@ ImageView imgErrorBack;
     ImageView back_button_otp;
 
 
+
+    SharedPreferences prefs;
+
+    SharedPreferences.Editor editor;
 
     ProgressDialog dialog;
 
@@ -207,6 +216,8 @@ ImageView imgErrorBack;
         dialog = new ProgressDialog(this);
 
 
+        prefs= PreferenceManager.getDefaultSharedPreferences(this);
+        editor=prefs.edit();
 
 
 
@@ -305,12 +316,18 @@ ImageView imgErrorBack;
                                         try {
                                             String email = object.getString("email");
 
+
+                                            editor.putBoolean("login",true);
+                                            editor.commit();
+
+
 //                                            String birthday = object.getString("birthday"); // 01/31/1980 format
                                             String name = object.getString("name"); // 01/31/1980 format
                                             Toast.makeText(LoginSignupActivity.this,"Welcome "+name,Toast.LENGTH_LONG).show();
                                             LoginManager.getInstance().logOut();
                                             Intent intent = new Intent(LoginSignupActivity.this, Dashboard.class);
-                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                             startActivity(intent);
                                             finish();
 
@@ -392,8 +409,15 @@ ImageView imgErrorBack;
     private void updateUIGoogle(@Nullable GoogleSignInAccount account) {
         if (account != null) {
             Toast.makeText(LoginSignupActivity.this,"Welcome "+account.getDisplayName(),Toast.LENGTH_LONG).show();
+
+            editor.putBoolean("login",true);
+            editor.commit();
+
+
+
             Intent intent = new Intent(this, Dashboard.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
 //            mStatusTextView.setText(getString(R.string.signed_in_fmt, account.getDisplayName()));
@@ -588,11 +612,18 @@ ImageView imgErrorBack;
         if (user != null) {
 
             String email=user.getEmail();
+
+
+            editor.putBoolean("login",true);
+            editor.commit();
+
 //
 //            firebase_text.setText(getString(R.string.twitter_status_fmt, user.getDisplayName()));
 //            firebase_detail_text.setText(getString(R.string.firebase_status_fmt, user.getUid()));
 
             Intent intent=new Intent(this,Dashboard.class);
+            //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
 
@@ -607,7 +638,7 @@ ImageView imgErrorBack;
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<OTP> call = apiService.sendOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61","+91"+mobileNumber);
+        Call<OTP> call = apiService.sendOtp("1","gUCrznkTcnsHakR9vcp8hEyBhTMKXMO7uTtl19ei","+91"+mobileNumber);
 
 
         call.enqueue(new retrofit2.Callback<OTP>() {
@@ -625,37 +656,38 @@ ImageView imgErrorBack;
                         intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
                         startActivity(intent);
                     }else {
-                        txtError.setText(response.body().getError().getError_message());
-                        Animation animation = AnimationUtils.loadAnimation(LoginSignupActivity.this, R.anim.scale_down);
-                        sign_in_top_layout.startAnimation(animation);
-                        sign_in_top_layout.setVisibility(View.VISIBLE);
+
+//                        showErrorMessage(response.body().getError().getError_message());
+
                     }
 
                 }else {
                     if (dialog != null && dialog.isShowing())
                         dialog.dismiss();
                     // server error
-                    txtError.setText("Server Error. Try again Later.");
-                    Animation animation = AnimationUtils.loadAnimation(LoginSignupActivity.this, R.anim.scale_down);
-                    sign_in_top_layout.startAnimation(animation);
-                    sign_in_top_layout.setVisibility(View.VISIBLE);
+                    showErrorMessage("Server Error. Try again Later.");
                 }
-
-
 
             }
 
             @Override
             public void onFailure(Call<OTP> call, Throwable t) {
-//                Log.d("Error",t.getLocalizedMessage());
                 if (dialog != null && dialog.isShowing())
                     dialog.dismiss();
-                txtError.setText("Server Error. Try again Later.");
-                Animation animation = AnimationUtils.loadAnimation(LoginSignupActivity.this, R.anim.scale_down);
-                sign_in_top_layout.startAnimation(animation);
-                sign_in_top_layout.setVisibility(View.VISIBLE);
+                showErrorMessage("Server Error. Try again Later.");
+
             }
         });
+
+    }
+
+    public void showErrorMessage(String message){
+
+
+        txtError.setText(message);
+        Animation animation = AnimationUtils.loadAnimation(LoginSignupActivity.this, R.anim.scale_down);
+        sign_in_top_layout.startAnimation(animation);
+        sign_in_top_layout.setVisibility(View.VISIBLE);
 
     }
 
