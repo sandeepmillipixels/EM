@@ -198,6 +198,10 @@ public class AddExpense extends AppCompatActivity {
                 e.printStackTrace();
             }
             Snackbar.make(v,"Expense successfully added.",2000).show();
+
+            Intent intent=new Intent(this,Dashboard.class);
+            //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivityForResult(intent,250);
             finish();
 
         }
@@ -417,4 +421,9 @@ public class AddExpense extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 101);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

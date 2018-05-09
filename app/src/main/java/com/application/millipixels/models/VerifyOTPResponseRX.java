@@ -3,7 +3,7 @@ package com.application.millipixels.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class VerifyOTPResponseRX {
+public class  VerifyOTPResponseRX {
 
     @SerializedName("status")
     @Expose
@@ -15,11 +15,11 @@ public class VerifyOTPResponseRX {
 
 
     @SerializedName("error")
-    private String error;
+    private ErrorResponse error;
 
 
 
-    public VerifyOTPResponseRX(String status, String error, VerifyOTPData data){
+    public VerifyOTPResponseRX(String status, ErrorResponse error, VerifyOTPData data){
 
         this.data=data;
         this.status=status;
@@ -43,12 +43,11 @@ public class VerifyOTPResponseRX {
         this.data = data;
     }
 
-    public String getError() {
+    public ErrorResponse getError() {
         return error;
     }
 
-    public void setError(String error) {
+    public void setError(ErrorResponse error) {
         this.error = error;
     }
-
 }

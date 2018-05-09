@@ -79,7 +79,7 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
 
 
     @BindView(R.id.sign_in_top_layout)
-    LinearLayout sign_in_top_layout;
+    RelativeLayout sign_in_top_layout;
 
 
     @BindView(R.id.top_layout)
@@ -133,7 +133,6 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
 
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
-    private static final String EMAIL = "email";
     private GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
 
@@ -294,8 +293,12 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
     @OnClick(R.id.btnSendOtpLogin)
     public void onSendOtpLogin(View v){
 
+//        Intent intent=new Intent(LoginSignupActivity.this,VerifyOtpActity.class);
+//        intent.putExtra("otp","2134");
+//        intent.putExtra(VerifyOtpActity.OTP_NUMBER,"8699769704");
+//        startActivity(intent);
 
-
+//
         mobileNumber = edtPhoneLogin.getText().toString().trim();
         if(mobileNumber.length()==0){
             Animation animation = AnimationUtils.loadAnimation(this, R.anim.scale_down);
@@ -319,7 +322,7 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
                 @Override
                 public void run() {
                     sendOTPRequest(mobileNumber);
-                    getData();
+                    getData(LoginSignupActivity.this);
                 }
             },2000);
 
@@ -392,7 +395,6 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
 
             PrefrenceClass.saveInSharedPrefrence(this,"login",true);
 
-
             callNextActivity();
 
         }
@@ -446,7 +448,7 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
                 intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
                 startActivity(intent);
             }else if(response!=null && response.getStatus().equals("false")){
-                showErrorMessage(response.getError());
+                showErrorMessage(response.getError().getError_message());
             }
 
             Log.d(TAG,response.getStatus());
@@ -464,10 +466,9 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
         hideProgress();
     }
 
-    private void getData() {
+    private void getData(Context context) {
 
-        presenter.getData();
-
+        presenter.getData(context);
 
     }
 

@@ -16,7 +16,7 @@ public class LoginResponse {
 
     @SerializedName("error")
     @Expose
-    private String error;
+    private ErrorResponse error;
 
 
     public LoginResponse() {
@@ -28,7 +28,7 @@ public class LoginResponse {
      * @param status
      */
 
-    public LoginResponse(String status, Data data, String error) {
+    public LoginResponse(String status, Data data, ErrorResponse error) {
 
         this.status = status;
         this.data = data;
@@ -52,11 +52,11 @@ public class LoginResponse {
         this.data = data;
     }
 
-    public String getError() {
+    public ErrorResponse getError() {
         return error;
     }
 
-    public void setError(String error) {
+    public void setError(ErrorResponse error) {
         this.error = error;
     }
 }

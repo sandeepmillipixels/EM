@@ -62,6 +62,12 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
 
     private static final int MY_CAMERA_REQUEST_CODE = 300;
 
+    int cameraPermission;
+    int writeStoragePermission;
+    int readStoragePermission;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,30 +76,12 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
 
         ButterKnife.bind(this);
 
-        int cameraPermission = ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA);
-        int writeStoragePermission=ContextCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        int readStoragePermission=ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE);
 
         setUpToolbar();
 
         dashboard=getIntent().getStringExtra("dashboard");
 
-
-        if (cameraPermission == PackageManager.PERMISSION_DENIED && writeStoragePermission ==PackageManager.PERMISSION_DENIED && readStoragePermission ==PackageManager.PERMISSION_DENIED){
-
-
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA,Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_CAMERA_REQUEST_CODE);
-
-
-        }else{
-
-
-            path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDFfiles/JPEG/";
-            getFiles();
-
-
-
-        }
+        checkPermission();
 
 
 
@@ -103,6 +91,28 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+
+        switch (requestCode) {
+            case 1: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    getFiles();
+
+                } else {
+                    checkPermission();
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+
+
+
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
 
@@ -199,5 +209,37 @@ public class GalleyActivity extends AppCompatActivity implements GalleryAdapter.
          }
 
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+
+
+    }
+
+    public void checkPermission(){
+        cameraPermission = ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA);
+        writeStoragePermission=ContextCompat.checkSelfPermission(this,Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        readStoragePermission=ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE);
+
+
+        if (cameraPermission == PackageManager.PERMISSION_DENIED && writeStoragePermission ==PackageManager.PERMISSION_DENIED && readStoragePermission ==PackageManager.PERMISSION_DENIED){
+
+
+            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA,Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_CAMERA_REQUEST_CODE);
+
+
+        }else{
+
+
+            path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/PDFfiles/JPEG/";
+            getFiles();
+
+
+
+        }
+    }
+
+
 
 }

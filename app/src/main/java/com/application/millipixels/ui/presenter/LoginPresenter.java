@@ -1,7 +1,9 @@
 package com.application.millipixels.ui.presenter;
 
+import android.content.Context;
 import android.util.Log;
 
+import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.models.LoginResponse;
 import com.application.millipixels.network.NetworkClient;
 import com.application.millipixels.network.NetworkInterface;
@@ -18,6 +20,7 @@ public class LoginPresenter implements LoginPresenterInterface {
     LoginViewInterface loginViewInterface;
     String mobileNumber;
 
+    Context context;
 
 
     public LoginPresenter(LoginViewInterface loginViewInterface, String mobileNumber){
@@ -26,18 +29,20 @@ public class LoginPresenter implements LoginPresenterInterface {
         this.mobileNumber=mobileNumber;
 
 
+
     }
 
 
     @Override
-    public void getData() {
+    public void getData(Context context) {
+        this.context=context;
         getObservable().subscribeWith(getObserver());
     }
 
 
 
     public Observable<LoginResponse> getObservable(){
-        return NetworkClient.getRetrofit().create(NetworkInterface.class).getOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61","+91"+mobileNumber).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        return NetworkClient.getRetrofit().create(NetworkInterface.class).getOtp(context.getResources().getString(R.string.message_client_id),context.getResources().getString(R.string.message_secret_key) ,"+91"+mobileNumber).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
 
     public DisposableObserver<LoginResponse>getObserver(){
@@ -53,6 +58,7 @@ public class LoginPresenter implements LoginPresenterInterface {
             @Override
             public void onError(Throwable e) {
 
+
                 loginViewInterface.displayError(e.getLocalizedMessage());
 
                 Log.d("Call On Error","Error");
@@ -62,6 +68,7 @@ public class LoginPresenter implements LoginPresenterInterface {
             @Override
             public void onComplete() {
                 Log.d("Call On Complete","Complete");
+
 
             }
         };

@@ -280,6 +280,29 @@ public class Dashboard extends AppCompatActivity
     }
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
+        if(data!=null){
+
+            if(requestCode==250){
+                getTotalAmoutExpense();
+                viewPagerAdapter.notifyDataSetChanged();
+
+            }
+        }
+
+
+
+
+
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+
+    }
+
     private void getTotalAmoutExpense(){
         try {
             allExpensesDataSource.open();
@@ -307,6 +330,7 @@ public class Dashboard extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+
         }
     }
 
@@ -584,5 +608,8 @@ public class Dashboard extends AppCompatActivity
         PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"twitter",false);
         PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"fb",false);
     }
+
+
+
 
 }

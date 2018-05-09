@@ -32,7 +32,7 @@ public class FontsClassLight extends android.support.v7.widget.AppCompatTextView
     }
 
     public void initRegular() {
-        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/sf_pro_text_light.ttf");
+        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/sfu_regular.ttf");
         setTypeface(tf ,1);
 
     }
