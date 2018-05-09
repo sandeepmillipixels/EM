@@ -1,6 +1,9 @@
 package com.application.millipixels.ui.presenter;
 
 
+import android.content.Context;
+
+import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.models.VerifyOTPResponseRX;
 import com.application.millipixels.network.NetworkClient;
 import com.application.millipixels.network.NetworkInterface;
@@ -17,6 +20,8 @@ public class VerifyOTPPresenter implements VerifyPresenterinterface {
     String mobileNumber;
     String otp;
 
+    Context context;
+
     VerifyViewinterface verifyViewinterface;
 
     public VerifyOTPPresenter(VerifyViewinterface verifyViewinterface,String mobileNumber,String otp){
@@ -28,7 +33,8 @@ public class VerifyOTPPresenter implements VerifyPresenterinterface {
     }
 
     @Override
-    public void getUserData() {
+    public void getUserData(Context context) {
+        this.context=context;
         observable().subscribeWith(observer());
 
     }
@@ -36,7 +42,7 @@ public class VerifyOTPPresenter implements VerifyPresenterinterface {
 
     public Observable<VerifyOTPResponseRX> observable(){
 
-        return NetworkClient.getRetrofit().create(NetworkInterface.class).verifyOtp("2","3IpCWSVYd20Agpmra7ALyviJeRTEspFDDvyiRy61",otp,mobileNumber).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        return NetworkClient.getRetrofit().create(NetworkInterface.class).verifyOtp(context.getResources().getString(R.string.message_client_id),context.getResources().getString(R.string.message_secret_key),otp,mobileNumber).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }
 
     public DisposableObserver<VerifyOTPResponseRX> observer(){
@@ -52,6 +58,7 @@ public class VerifyOTPPresenter implements VerifyPresenterinterface {
 
             @Override
             public void onError(Throwable e) {
+
 
                 verifyViewinterface.displayError(e.getLocalizedMessage());
             }

@@ -2,6 +2,7 @@ package com.application.millipixels.expense_rocket.verify_otp;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -27,6 +28,7 @@ import com.application.millipixels.expense_rocket.GenericTextWatcher;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
+import com.application.millipixels.models.ErrorResponse;
 import com.application.millipixels.models.LoginResponse;
 import com.application.millipixels.models.VerifyOTPResponseRX;
 import com.application.millipixels.ui.presenter.LoginPresenter;
@@ -48,7 +50,7 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
 
 
     @BindView(R.id.sign_in_top_layout)
-    LinearLayout sign_in_top_layout;
+    RelativeLayout sign_in_top_layout;
 
     @BindView(R.id.top_layout)
     RelativeLayout top_layout;
@@ -104,9 +106,11 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
         ButterKnife.bind(this);
         if (getIntent().getExtras() != null){
 
-            number = getIntent().getStringExtra(OTP_NUMBER);
-            String text = "We just sent a OTP to your \n mobile number "+ number.substring(0,2)+"***_***"+ number.substring(number.length() - 2) + ". Enter the \n OTP here to sign in.";
-            txtOtp.setText(text);
+
+                number = getIntent().getStringExtra(OTP_NUMBER);
+                String text = "We just sent a OTP to your \n mobile number " + number.substring(0, 2) + "***_***" + number.substring(number.length() - 2) + ". Enter the \n OTP here to sign in.";
+                txtOtp.setText(text);
+
         }
 
       otp=getIntent().getStringExtra("otp");
@@ -125,25 +129,28 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
     @OnClick(R.id.btnVerify)
     public void onVerify(View v){
         sign_in_top_layout.setVisibility(View.GONE);
-        if (edt1.getText().toString().trim().length() == 1 && edt2.getText().toString().trim().length() == 1 && edt3.getText().toString().trim().length() == 1 && edt4.getText().toString().trim().length() == 1){
+//        if (edt1.getText().toString().trim().length() == 1 && edt2.getText().toString().trim().length() == 1 && edt3.getText().toString().trim().length() == 1 && edt4.getText().toString().trim().length() == 1){
+////
+////           showProgress();
+////
+////            new Handler().postDelayed(new Runnable() {
+////                @Override
+////                public void run() {
+////                    verifyOTPRequest();
+////                    getUserData(VerifyOtpActity.this);
+////                }
+////            },2000);
+////
+////
+////        }else {
+////            txtError.setText("Please enter valid OTP.");
+////            Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
+////            sign_in_top_layout.startAnimation(animation);
+////            sign_in_top_layout.setVisibility(View.VISIBLE);
+////        }
 
-           showProgress();
-
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    verifyOTPRequest();
-                    getUserData();
-                }
-            },2000);
-
-
-        }else {
-            txtError.setText("Please enter valid OTP.");
-            Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
-            sign_in_top_layout.startAnimation(animation);
-            sign_in_top_layout.setVisibility(View.VISIBLE);
-        }
+        verifyOTPRequest();
+        getUserData(VerifyOtpActity.this);
     }
 
     @OnClick(R.id.back_button_otp)
@@ -276,7 +283,7 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
             @Override
             public void run() {
                 sendOTPRequest();
-                getData();
+                getData(VerifyOtpActity.this);
             }
         },2000);
     }
@@ -333,7 +340,7 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
                 otp=response.getData().getOtp();
 
             }else if(response!=null && response.getStatus().equals("false")){
-                showErrorMessage(response.getError());
+//                showErrorMessage(response.getError().getError_message());
             }
 
             Log.d("Response Status",response.getStatus());
@@ -359,7 +366,7 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
 
             }else if(response!=null && response.getStatus().equals("false")){
 
-                showErrorMessage(response.getError());
+                showErrorMessage(response.getError().getError_message());
 
             }
 
@@ -372,14 +379,15 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
 
     }
 
+
     @Override
     public void displayError(String error) {
         showErrorMessage(error);
         hideProgress();
     }
 
-    public void getUserData(){
-        presenter.getUserData();
+    public void getUserData(Context context){
+        presenter.getUserData(context);
     }
 
     public void showErrorMessage(String message){
@@ -389,9 +397,9 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
         sign_in_top_layout.setVisibility(View.VISIBLE);
     }
 
-    private void getData() {
+    private void getData(Context context) {
 
-        loginPresenter.getData();
+        loginPresenter.getData(context);
 
 
     }

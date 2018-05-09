@@ -9,63 +9,78 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginRight="@dimen/margin_10_dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/cloud_new" />
-
+        android:background="@drawable/ic_group_5" />
     <ImageView
         android:id="@+id/imageView_rocket"
         android:layout_width="wrap_content"
+        android:layout_above="@+id/relative_layout_bottom"
         android:layout_height="wrap_content"
-
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_below="@+id/imageView"
-        android:background="@drawable/rocket_big" />
-
-    <com.application.millipixels.expense_rocket.typeface.FontsClass
-
-        android:id="@+id/splash_expense_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="@dimen/margin_50_dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView_rocket"
-        android:letterSpacing="-0.05"
-        android:text="@string/expense"
-        android:textColor="@color/white"
-        android:textSize="@dimen/size_48sp" />
-
-    <com.application.millipixels.expense_rocket.typeface.FontsClassLight
-
-        android:id="@+id/splash_rocket_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignLeft="@+id/splash_expense_textView"
-        android:layout_alignStart="@+id/splash_expense_textView"
-        android:layout_below="@+id/splash_expense_textView"
-        android:letterSpacing="-0.05"
-        android:layout_marginTop="-10dp"
-        android:text="@string/rocket"
-        android:textColor="@color/white"
-        android:textSize="@dimen/size_40sp" />
+        android:layout_marginRight="@dimen/margin_80_dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_rock" />
 
 
-    <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+    <RelativeLayout
+        android:id="@+id/relative_layout_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_50_dp"
+        android:layout_height="wrap_content">
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/splash_rocket_textView"
-        android:layout_alignStart="@+id/splash_rocket_textView"
-        android:layout_below="@+id/splash_rocket_textView"
-        android:text="@string/get_control"
-        android:textColor="@color/white70"
-        android:textSize="@dimen/size_20dp" />
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClass
+
+            android:id="@+id/splash_expense_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_50_dp"
+            android:layout_alignParentStart="true"
+            android:text="@string/expense"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_48sp" />
+
+        <com.application.millipixels.expense_rocket.typeface.FontThin
+
+            android:id="@+id/splash_rocket_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignLeft="@+id/splash_expense_textView"
+            android:layout_alignStart="@+id/splash_expense_textView"
+            android:layout_below="@+id/splash_expense_textView"
+            android:letterSpacing="-0.05"
+            android:layout_marginTop="-20dp"
+            android:text="@string/rocket"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_40sp" />
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontThin
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/splash_rocket_textView"
+            android:layout_alignStart="@+id/splash_rocket_textView"
+            android:layout_below="@+id/splash_rocket_textView"
+            android:text="@string/intelligence_management"
+            android:textColor="@color/white70"
+            android:textSize="@dimen/size_20dp" />
+
+
+
+
+    </RelativeLayout>
+
 
 
 

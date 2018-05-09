@@ -119,10 +119,6 @@ public class OnBoarding extends Activity{
         intent.putExtra(Constants.LOGIN,true);
         startActivity(intent);
     }
-    @OnClick(R.id.back_button_otp)
-    public void backTapped(){
-       finish();
-    }
 
     @OnClick(R.id.add_an_expense_button)
     public void getStartedClick(){
@@ -161,8 +157,7 @@ public class OnBoarding extends Activity{
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {
 
-                btn_skip.setVisibility(View.GONE);
-                add_an_expense_button.setVisibility(View.VISIBLE);
+
                 final Animation myAnim = AnimationUtils.loadAnimation(OnBoarding.this, R.anim.bounce);
 
                 // Use bounce interpolator with amplitude 0.2 and frequency 20
@@ -170,12 +165,13 @@ public class OnBoarding extends Activity{
 
                 myAnim.setInterpolator(interpolator);
 
-                add_an_expense_button.startAnimation(myAnim);
+                btn_skip.setText(R.string.view_my_dashboard);
+                //add_an_expense_button.startAnimation(myAnim);
 
             } else {
                 // still pages are left
-                add_an_expense_button.setVisibility(View.GONE);
-                btn_skip.setVisibility(View.VISIBLE);
+                btn_skip.setText(R.string.skip);
+
             }
         }
 
