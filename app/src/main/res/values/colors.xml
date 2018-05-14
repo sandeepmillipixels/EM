@@ -15,10 +15,13 @@
     <color name="blue_semi_transparent">#805677fc</color>
     <color name="blue_semi_transparent_pressed">#80738ffe</color>
 
+    <color name="permission_title_color">#FF5F58</color>
+
     <color name="light_grey">#F2F2F2</color>
     <color name="grey_text">#C5C5C5</color>
     <color name="light_black">#CC4A4A4A</color>
     <color name="purple_text">#4A4A4A</color>
+    <color name="permission_remind_later">#809B9B9B</color>
 
     <color name="line_color">#339B9B9B</color>
 

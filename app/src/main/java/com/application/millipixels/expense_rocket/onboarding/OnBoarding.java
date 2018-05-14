@@ -2,6 +2,7 @@ package com.application.millipixels.expense_rocket.onboarding;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -57,11 +58,13 @@ import org.json.JSONObject;
 
 import java.util.Arrays;
 
+import static com.application.millipixels.expense_rocket.onboarding.IntroPageTransformer.ParallaxTransformInformation.PARALLAX_EFFECT_DEFAULT;
+
 /**
  * Created by millipixelsinteractive_031 on 08/03/18.
  */
 
-public class OnBoarding extends Activity{
+public class OnBoarding extends Activity {
 
     private int[] layouts;
     private TextView[] dots;
@@ -102,7 +105,7 @@ public class OnBoarding extends Activity{
                 R.layout.first_onboarding,
                 R.layout.second_onboarding,
                 R.layout.third_onboard,
-               };
+        };
 
         addBottomDots(0);
 
@@ -110,18 +113,27 @@ public class OnBoarding extends Activity{
         view_pager.setAdapter(onboardViewpagerAdapter);
         view_pager.addOnPageChangeListener(view_pagerPageChangeListener);
 
+        IntroPageTransformer pageTransformer = new IntroPageTransformer()
+                .addViewToParallax(new IntroPageTransformer.ParallaxTransformInformation(R.id.card_view_onboarding, 2, 2))
+                .addViewToParallax(new IntroPageTransformer.ParallaxTransformInformation(R.id.card_view_onboarding, -0.65f,
+                        PARALLAX_EFFECT_DEFAULT));
+        view_pager.setPageTransformer(true, pageTransformer);
+
+       // view_pager.setPageTransformer(false, new Transformation());
+
+
     }
 
 
     @OnClick(R.id.signin_button)
-    public void onLoginTapped(){
+    public void onLoginTapped() {
         Intent intent = new Intent(this, LoginSignupActivity.class);
-        intent.putExtra(Constants.LOGIN,true);
+        intent.putExtra(Constants.LOGIN, true);
         startActivity(intent);
     }
 
     @OnClick(R.id.add_an_expense_button)
-    public void getStartedClick(){
+    public void getStartedClick() {
         Intent intent = new Intent(this, AddExpense.class);
         startActivity(intent);
 
@@ -172,6 +184,7 @@ public class OnBoarding extends Activity{
                 // still pages are left
                 btn_skip.setText(R.string.skip);
 
+
             }
         }
 
@@ -187,11 +200,41 @@ public class OnBoarding extends Activity{
 
 
     @OnClick(R.id.btn_skip)
-    public void onSkip(){
+    public void onSkip() {
 
         Intent intent = new Intent(this, Dashboard.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
+    }
+
+    public class Transformation implements ViewPager.PageTransformer {
+
+        @Override
+        public void transformPage(@NonNull View page, float position) {
+
+            int pageWidth = page.getWidth();
+
+            View backgroundView = page.findViewById(R.id.background);
+            View cardView1=page.findViewById(R.id.card_view_onboarding);
+
+
+
+                page.setTranslationX(pageWidth * -position);
+
+
+//            if (position <= -1.0f || position >= 1.0f) {
+//            } else if (position == 0.0f) {
+//            } else {
+//                if (backgroundView != null) {
+//                    backgroundView.setAlpha(1.0f - Math.abs(position));
+//                }
+
+                //Text both translates in/out and fades in/out
+
+
+
+//            }
+        }
     }
 }

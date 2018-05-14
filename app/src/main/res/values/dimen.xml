@@ -61,6 +61,9 @@
     <dimen name="padding_70dp">70dp</dimen>
 
     <dimen name="size_18sp">18sp</dimen>
+    <dimen name="size_20sp">20sp</dimen>
+    <dimen name="size_25sp">25sp</dimen>
+    <dimen name="size_30sp">30sp</dimen>
     <dimen name="size_40sp">40sp</dimen>
     <dimen name="size_48sp">48sp</dimen>
     <dimen name="size_15sp">15sp</dimen>

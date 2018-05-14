@@ -14,9 +14,9 @@ public class LoginResponse {
     @Expose
     private Data data;
 
-    @SerializedName("error")
+    @SerializedName("code")
     @Expose
-    private ErrorResponse error;
+    private ErrorResponse code;
 
 
     public LoginResponse() {
@@ -32,7 +32,7 @@ public class LoginResponse {
 
         this.status = status;
         this.data = data;
-        this.error = error;
+        this.code = error;
 
     }
 
@@ -53,10 +53,10 @@ public class LoginResponse {
     }
 
     public ErrorResponse getError() {
-        return error;
+        return code;
     }
 
     public void setError(ErrorResponse error) {
-        this.error = error;
+        this.code = error;
     }
 }

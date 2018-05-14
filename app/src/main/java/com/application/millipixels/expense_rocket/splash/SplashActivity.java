@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
+import com.application.millipixels.expense_rocket.permissions.PermissionActivity;
 import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
 
 import java.security.MessageDigest;
@@ -101,6 +102,7 @@ public class SplashActivity extends Activity {
 
 
                     Intent intent = new Intent(SplashActivity.this, TakeTour.class);
+                    //Intent intent = new Intent(SplashActivity.this, PermissionActivity.class);
                     startActivity(intent);
                     finish();
                 }

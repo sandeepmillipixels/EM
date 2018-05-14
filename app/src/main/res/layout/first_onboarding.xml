@@ -5,6 +5,7 @@
     android:background="@color/onboarding_background"
     android:layout_height="match_parent">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,12 +23,12 @@
 
 
         <com.application.millipixels.expense_rocket.typeface.FontsClass
-            android:id="@+id/textView"
+            android:id="@+id/first_onboarding_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textView2"
+            android:layout_alignEnd="@+id/first_onboarding_desc"
             android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/textView2"
+            android:layout_alignRight="@+id/first_onboarding_desc"
             android:textColor="@color/white"
             android:gravity="center|left"
             android:layout_marginLeft="@dimen/margin_30_dp"
@@ -36,10 +37,10 @@
 
 
         <com.application.millipixels.expense_rocket.typeface.FontsClassLight
-            android:id="@+id/textView2"
+            android:id="@+id/first_onboarding_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
+            android:layout_below="@+id/first_onboarding_title"
             android:layout_centerHorizontal="true"
             android:textSize="@dimen/size_14dp"
             android:layout_marginLeft="@dimen/margin_60_dp"

@@ -135,6 +135,12 @@
         <activity android:name=".splash.TakeTour">
         </activity>
 
+        <activity android:name=".permissions.PermissionActivity"></activity>
+
+        <activity android:name=".onboarding.StartUpScreens"></activity>
+
+        <activity android:name=".viewpagercard.ViewPagerActivity"></activity>
+
 
         <activity android:name=".view.Demo">
 

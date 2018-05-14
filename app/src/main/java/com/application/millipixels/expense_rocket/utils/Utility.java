@@ -1,7 +1,9 @@
 package com.application.millipixels.expense_rocket.utils;
 
+import android.Manifest;
 import android.content.ContentUris;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
@@ -9,6 +11,11 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.ContextCompat;
+
+import com.application.millipixels.expense_rocket.R;
+import com.application.millipixels.expense_rocket.model.PermissionsModel;
+import com.application.millipixels.expense_rocket.model.PermissionsModel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,12 +27,16 @@ import java.util.Random;
  */
 
 public class Utility {
-    public static String getRandomColor(){
+
+    static PermissionsModel permissions;
+
+    public static String getRandomColor() {
         Random rnd = new Random();
         String hex = String.format("#%02x%02x%02x", rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
         return hex;
     }
-    public static String getCurrentTime(){
+
+    public static String getCurrentTime() {
         SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm:ss");
 
         Date now = new Date();
@@ -36,7 +47,7 @@ public class Utility {
         return strTime;
     }
 
-    public static long getTimeInMilli(String dateTime){
+    public static long getTimeInMilli(String dateTime) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = null;
         try {
@@ -47,6 +58,7 @@ public class Utility {
         long timeInMillis = date.getTime();
         return timeInMillis;
     }
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public static String getPath(final Context context, final Uri uri) {
 
@@ -91,7 +103,7 @@ public class Utility {
                 }
 
                 final String selection = "_id=?";
-                final String[] selectionArgs = new String[] {
+                final String[] selectionArgs = new String[]{
                         split[1]
                 };
 
@@ -114,9 +126,9 @@ public class Utility {
      * Get the value of the data column for this Uri. This is useful for
      * MediaStore Uris, and other file-based ContentProviders.
      *
-     * @param context The context.
-     * @param uri The Uri to query.
-     * @param selection (Optional) Filter used in the query.
+     * @param context       The context.
+     * @param uri           The Uri to query.
+     * @param selection     (Optional) Filter used in the query.
      * @param selectionArgs (Optional) Selection arguments used in the query.
      * @return The value of the _data column, which is typically a file path.
      */
@@ -167,4 +179,33 @@ public class Utility {
     public static boolean isMediaDocument(Uri uri) {
         return "com.android.providers.media.documents".equals(uri.getAuthority());
     }
+
+    public static PermissionsModel getPermission(int permissionType, Context context) {
+
+
+        switch (permissionType) {
+            case Constants.GALLERY: {
+                permissions=new PermissionsModel(R.drawable.ic_per_gallary, context.getResources().getString(R.string.gallery_desc), context.getResources().getString(R.string.enable_gallery_access));
+                return permissions;
+            }
+            case Constants.CAMERA: {
+                permissions=new PermissionsModel(R.drawable.ic_per_camera, context.getResources().getString(R.string.camera_desc), context.getResources().getString(R.string.anable_camera_access));
+                return permissions;
+            }
+            case Constants.NOTIFICATION: {
+
+                permissions=new PermissionsModel(R.drawable.ic_per_noti, context.getResources().getString(R.string.notification_desc), context.getResources().getString(R.string.enable_notification));
+
+                return permissions;
+            }
+            case Constants.LOCATION: {
+                permissions=new PermissionsModel(R.drawable.ic_per_location, context.getResources().getString(R.string.location_desc), context.getResources().getString(R.string.enable_location_access));
+
+                return permissions;
+            }
+        }
+        return permissions;
+    }
+
+
 }

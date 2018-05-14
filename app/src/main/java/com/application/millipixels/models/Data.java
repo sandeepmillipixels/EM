@@ -1,85 +1,36 @@
 package com.application.millipixels.models;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 public class Data {
 
-    @SerializedName("mobile")
-    @Expose
-    private String mobileNumber;
-
-    @SerializedName("otp")
-    @Expose
-    private String otp;
-
-    @SerializedName("expires_in")
-    @Expose
-    private String expires_in;
-
-    @SerializedName("message")
-    @Expose
-    private String message;
-
-    @SerializedName("sid")
-    @Expose
-    private String sid;
-
-    @SerializedName("status")
-    @Expose
-    private String status;
-
-    @SerializedName("updated_at")
-    @Expose
-    private String updated_at;
-
-    @SerializedName("created_at")
-    @Expose
-    private String created_at;
-
-    @SerializedName("id")
-    @Expose
-    private String id;
-
-
-
-    public Data(){
-
-    }
 
     /**
-     * @param mobile
-     * @param otp
-     * @param expires_in
-     * @param message
-     * @param sid
-     * @param status
-     * @param updated_at
-     * @param created_at
-     * @param id"
+     * mobile : +917009331805
+     * otp : 7897
+     * expires_in : 600000
+     * message : Hi your one time password for Expense Rocket is 7897 and is valid for 10 minutes.
+     * sid : SMdf0c664d2623479795c1f08bd27c1160
+     * status : queued
+     * updated_at : 2018-05-10 10:36:21
+     * created_at : 2018-05-10 10:36:21
+     * id : 14
      */
 
-    public Data(String mobile,String otp,String expires_in,String message,String sid,String status,String updated_at,String created_at,String id){
+    private String mobile;
+    private String otp;
+    private String expires_in;
+    private String message;
+    private String sid;
+    private String status;
+    private String updated_at;
+    private String created_at;
+    private int id;
 
-        this.mobileNumber=mobile;
-        this.otp=otp;
-        this.expires_in=expires_in;
-        this.message=message;
-        this.sid=sid;
-        this.status=status;
-        this.updated_at=updated_at;
-        this.created_at=created_at;
-        this.id=id;
-
+    public String getMobile() {
+        return mobile;
     }
 
-
-    public String getMobileNumber() {
-        return mobileNumber;
-    }
-
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getOtp() {
@@ -138,11 +89,11 @@ public class Data {
         this.created_at = created_at;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 }

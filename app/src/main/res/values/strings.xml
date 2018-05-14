@@ -52,6 +52,20 @@
     
 
 
+    <string name="enable_notification">Enable\nNotifications</string>
+    <string name="anable_camera_access">Enable Camera\nAccess</string>
+    <string name="enable_gallery_access">Enable Gallery\nAccess</string>
+    <string name="enable_location_access">Enable Location\nAccess</string>
+
+    <string name="notification_desc">Allow ExpenseRocket to notify you when\nsomething important needs your attention.</string>
+    <string name="camera_desc">Allow ExpenseRocket to access your camera so you can store receipt images with your expense entries.</string>
+    <string name="gallery_desc">Allow ExpenseRocket to access your photo\ngallery to use images of receipts taken with\nyour phone camera or other applications.</string>
+    <string name="location_desc">ExpenseRocket can classify and show your expense receipts by location so you can find your receipts easily.</string>
+
+    <string name="remind_me_later">Remind me later</string>
+    <string name="grant_access">Grant Access</string>
+
+
 
     <string name="signin">Sign In</string>
     <string name="signup">Sign up</string>

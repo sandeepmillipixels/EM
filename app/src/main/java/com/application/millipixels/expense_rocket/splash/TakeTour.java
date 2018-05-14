@@ -18,7 +18,9 @@ import com.application.millipixels.expense_rocket.addexpense.AddExpense;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
 import com.application.millipixels.expense_rocket.onboarding.OnBoarding;
+import com.application.millipixels.expense_rocket.onboarding.StartUpScreens;
 import com.application.millipixels.expense_rocket.typeface.CustomTypefaceSpan;
+import com.application.millipixels.expense_rocket.viewpagercard.ViewPagerActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -68,7 +70,7 @@ public class TakeTour extends Activity {
     @OnClick(R.id.take_a_tour_btn)
     public void tourBtnClick(){
 
-        Intent intent=new Intent(this, OnBoarding.class);
+        Intent intent=new Intent(this, ViewPagerActivity.class);
         startActivity(intent);
 
     }
