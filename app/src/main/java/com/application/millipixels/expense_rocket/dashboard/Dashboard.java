@@ -13,6 +13,7 @@ import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -22,8 +23,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.widget.TextView;
 
+import com.application.millipixels.expense_rocket.CameraActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.adapter.DashboardAdapter;
 import com.application.millipixels.expense_rocket.adapter.ViewPagerAdapter;
@@ -32,8 +36,12 @@ import com.application.millipixels.expense_rocket.database.AllExpensesDataSource
 import com.application.millipixels.expense_rocket.fragments.MonthlyExpenseFragment;
 import com.application.millipixels.expense_rocket.gallery.GalleyActivity;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
+import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
 import com.application.millipixels.expense_rocket.settings.SettingsActivity;
 
+import com.application.millipixels.expense_rocket.socialLogin.SocialLogin;
+import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
+import com.facebook.login.LoginManager;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.LimitLine;
@@ -44,6 +52,16 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.utils.Utils;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.twitter.sdk.android.core.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterConfig;
+import com.twitter.sdk.android.core.TwitterCore;
+import com.twitter.sdk.android.core.TwitterSession;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -69,11 +87,22 @@ public class Dashboard extends AppCompatActivity
 
     @BindView(R.id.txtTotalAmount)
     TextView txtTotalAmount;
+
+    @BindView(R.id.nav_view)
+    NavigationView navigationView;
+
+
+
     AllExpensesDataSource allExpensesDataSource;
     ViewPagerAdapter viewPagerAdapter;
     float totalAmount = 0;
 
     FloatingActionsMenu rightLabels;
+
+    boolean login;
+
+    SocialLogin socialLogin;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +118,9 @@ public class Dashboard extends AppCompatActivity
 
         rightLabels =findViewById(R.id.fab);
 
+        login=getIntent().getBooleanExtra("login",false);
+
+
 
         com.getbase.floatingactionbutton.FloatingActionButton open_shoe_box = new com.getbase.floatingactionbutton.FloatingActionButton(this);
         open_shoe_box.setTitle("Shoebox");
@@ -99,14 +131,9 @@ public class Dashboard extends AppCompatActivity
         open_shoe_box.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Dashboard.this,GalleyActivity.class);
+                Intent intent=new Intent(Dashboard.this,CameraActivity.class);
                 intent.putExtra("dashboard","1");
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(Dashboard.this).toBundle());
-                }else{
-                    startActivity(intent);
-                }
-
+                startActivity(intent);
                 rightLabels.collapse();
 
             }
@@ -148,11 +175,7 @@ public class Dashboard extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Dashboard.this,AddExpense.class);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(Dashboard.this).toBundle());
-                }else{
-                    startActivity(intent);
-                }
+                startActivity(intent);
 
                 rightLabels.collapse();
             }
@@ -230,21 +253,56 @@ public class Dashboard extends AppCompatActivity
         mChart.getXAxis().setTextColor(Color.WHITE);
         mChart.getAxisLeft().setTextColor(Color.WHITE);
 
+
+        mChart.getXAxis().setDrawLabels(false);
+
+
         mChart.getAxisLeft().setDrawGridLines(false);
         mChart.getXAxis().setDrawGridLines(false);
         mChart.getAxisRight().setDrawGridLines(false);
         //mChart.getXAxis().setDrawLabels(false);
         mChart.getLegend().setEnabled(false);   // Hide the legend
 
+
+
         // get the legend (only possible after setting data)
 //        Legend l = mChart.getLegend();
 //
 //        // modify the legend ...
 //        l.setForm(Legend.LegendForm.LINE);
+        Menu nav_Menu = navigationView.getMenu();
+        if(!login && !PrefrenceClass.getLoginSharedPrefrence(Dashboard.this)){
+            nav_Menu.findItem(R.id.sign_out_manage).setTitle("Sign In");
+        }else{
+            nav_Menu.findItem(R.id.sign_out_manage).setTitle("Sign Out");
+        }
 
 
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
+        if(data!=null){
+
+            if(requestCode==250){
+                getTotalAmoutExpense();
+                viewPagerAdapter.notifyDataSetChanged();
+
+            }
+        }
+
+
+
+
+
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+
+    }
 
     private void getTotalAmoutExpense(){
         try {
@@ -273,6 +331,7 @@ public class Dashboard extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+
         }
     }
 
@@ -304,6 +363,8 @@ public class Dashboard extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
+
 //        if (id == R.id.nav_camera) {
 //            // Handle the camera action
 //        } else if (id == R.id.nav_gallery) {
@@ -321,12 +382,37 @@ public class Dashboard extends AppCompatActivity
 
         if(id==R.id.sign_out_manage){
 
-            SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-            preferences.edit().clear().commit();
 
-            Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
-            startActivity(intent);
-            finish();
+                   if(PrefrenceClass.fbLogin(this)){
+
+                       logoutFromFB();
+
+                   }else if(PrefrenceClass.gmailLogin(this)){
+
+                       logoutFromGmail();
+
+                   }else if(PrefrenceClass.twitterLogin(this)){
+
+                       //logoutFromTwitter();
+
+                   }
+                   else{
+
+                       Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
+
+                       startActivity(intent);
+
+                       if(item.getTitle().equals("Sign Out")){
+
+                           clearLoginPrefs();
+
+                           finish();
+
+                       }
+
+
+                   }
+
 
         }
 
@@ -338,6 +424,55 @@ public class Dashboard extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void logoutFromGmail(){
+        clearLoginPrefs();
+
+        socialLogin=new SocialLogin(this);
+    }
+
+    public void logoutFromFB(){
+        clearLoginPrefs();
+
+        LoginManager.getInstance().logOut();
+        Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
+
+
+    public void logoutFromTwitter(){
+        clearLoginPrefs();
+        initTwitter();
+
+        CookieSyncManager.createInstance(this);
+        CookieManager cookieManager = CookieManager.getInstance();
+        cookieManager.removeSessionCookie();
+        TwitterCore.getInstance().getSessionManager().clearActiveSession();
+
+        TwitterCore.getInstance().getSessionManager().clearActiveSession();
+        Intent intent = new Intent(Dashboard.this, LoginSignupActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+
+    public void initTwitter(){
+
+        TwitterAuthConfig authConfig =  new TwitterAuthConfig(
+
+                getString(R.string.twitter_consumer_key),
+                getString(R.string.twitter_consumer_secret));
+
+        TwitterConfig twitterConfig = new TwitterConfig.Builder(this)
+                .twitterAuthConfig(authConfig)
+                .build();
+
+        Twitter.initialize(twitterConfig);
+
+    }
+
 
     @Override
     protected void onResume() {
@@ -374,11 +509,12 @@ public class Dashboard extends AppCompatActivity
 
 
         ArrayList<Integer> data1= new ArrayList<>();
-        data1.add(10);
-        data1.add(40);
+        data1.add(0);
         data1.add(15);
-        data1.add(30);
-        data1.add(10);
+        data1.add(12);
+        data1.add(25);
+        data1.add(20);
+        data1.add(32);
         data1.add(40);
 
 
@@ -416,8 +552,8 @@ public class Dashboard extends AppCompatActivity
             set1 = new LineDataSet(values, "");
             set1.setDrawIcons(false);
 
-            set1.enableDashedLine(10f, 5f, 0f);
-            set1.enableDashedHighlightLine(10f, 5f, 0f);
+            //set1.enableDashedLine(10f, 5f, 0f);
+            //set1.enableDashedHighlightLine(10f, 5f, 0f);
 
             // set the line to be drawn like this "- - - - - -"
             //set1.enableDashedLine(10f, 5f, 0f);
@@ -425,8 +561,8 @@ public class Dashboard extends AppCompatActivity
             set1.setColor(Color.WHITE);
             set1.setCircleColor(getResources().getColor(R.color.greenFloating));
             set1.setValueTextColor(Color.WHITE);
-            set1.setLineWidth(1f);
-            set1.setCircleRadius(4f);
+            set1.setLineWidth(0.2f);
+            set1.setCircleRadius(3f);
             set1.setDrawCircleHole(false);
 
             set1.setValueTextSize(9f);
@@ -436,6 +572,10 @@ public class Dashboard extends AppCompatActivity
             set1.setFormSize(15.f);
             set1.setDrawValues(false);
             set1.setDrawFilled(true);
+
+            set1.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+
+
 
 
 
@@ -460,5 +600,17 @@ public class Dashboard extends AppCompatActivity
 
 
     }
+
+    public void clearLoginPrefs(){
+
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"onboard",true);
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"login",false);
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"gmail",false);
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"twitter",false);
+        PrefrenceClass.saveInSharedPrefrence(Dashboard.this,"fb",false);
+    }
+
+
+
 
 }

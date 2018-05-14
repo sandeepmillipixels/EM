@@ -53,6 +53,7 @@
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:singleLine="true"
+                        android:cursorVisible="false"
                         android:lines="1"
                         android:maxLength="1"
                         android:imeOptions="actionNext"
@@ -71,6 +72,7 @@
                         android:padding="12dp"
                         android:id="@+id/edt2"
                         android:textSize="14sp"
+                        android:cursorVisible="false"
                         android:singleLine="true"
                         android:lines="1"
                         android:maxLength="1"
@@ -95,6 +97,7 @@
                         android:imeOptions="actionNext"
                         android:gravity="center"
                         android:hint="X"
+                        android:cursorVisible="false"
                         android:maxLength="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -115,6 +118,7 @@
                         android:gravity="center"
                         android:hint="X"
                         android:maxLength="1"
+                        android:cursorVisible="false"
                         android:id="@+id/edt4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />

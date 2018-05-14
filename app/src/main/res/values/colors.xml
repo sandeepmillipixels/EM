@@ -17,15 +17,22 @@
 
     <color name="light_grey">#F2F2F2</color>
     <color name="grey_text">#C5C5C5</color>
-    <color name="light_black">#4f4f4f</color>
-    <color name="purple_text">#58458e</color>
+    <color name="light_black">#CC4A4A4A</color>
+    <color name="purple_text">#4A4A4A</color>
+
+    <color name="line_color">#339B9B9B</color>
 
 
     <color name="colorSelect">@color/mb_gray</color>
-    <color name="colorPrimary">#292788</color>
-    <color name="colorSecondary">#292788</color>
-    <color name="colorPrimaryDark">#292788</color>
-    <color name="colorAccent">#f61e4d</color>
+    <color name="colorPrimary">#57479A</color>
+    <color name="colorSecondary">#57479A</color>
+    <color name="colorPrimaryDark">#57479A</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <!--<color name="colorPrimary">#292788</color>-->
+    <!--<color name="colorSecondary">#292788</color>-->
+    <!--<color name="colorPrimaryDark">#292788</color>-->
+    <!--<color name="colorAccent">#f61e4d</color> -->
 
 
     <color name="colorPrimary_er">#5D91F4</color>
@@ -39,6 +46,7 @@
     <!--<color name="colorAccent">#f61e4d</color>-->
 
     <color name="blue">#292788</color>
+    <color name="grey">#407E7E7E</color>
     <color name="grocery">#f0f7fb</color>
     <color name="traveling">#fcf7ec</color>
     <color name="fashion">#fcf7f7</color>
@@ -50,7 +58,7 @@
 
     <color name="onboarding_top_gradient">#e4f2fb</color>
     <color name="onboarding_bottom_gradient">#ffffff</color>
-    
+
     <color name="onboarding_heading_color">#4f4f4f</color>
 
 
@@ -61,16 +69,25 @@
     <color name="selectedColor">#292788</color>
     <color name="unselectedColor">#e9e9f3</color>
 
+    <color name="onboarding_background">#4A90E2</color>
+
+    <color name="button_text_color">#5C4293</color>
+
     <color name="white">#ffffff</color>
-    <color name="white70">#bfffffff</color>
+
+    <color name="white70">#b3ffffff</color>
     <color name="black">#000000</color>
     <color name="colorTransGrey">#f0f0f0</color>
+    <color name="purple">#57479A</color>
+    <color name="dark_purple">#3C3070</color>
+    <color name="dark_purple90">#E63C3070</color>
 
     <color name="dotColor">#F0F0F0</color>
 
     <color name="greenFloating">#3cd690</color>
     <color name="greenFloatingT">#513cd690</color>
-    <color name="red_button">#ff5f58</color>
+    <color name="red_button">#CCFF5F58</color>
+    <color name="red_error">#FF5F58</color>
     <color name="transparent">#00000000</color>
     <array name="array_dot_active">
         <item>@color/grey_text</item>
@@ -86,4 +103,6 @@
         <item>@color/unselectedColor</item>
         <item>@color/unselectedColor</item>
     </array>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

@@ -5,6 +5,9 @@ package com.application.millipixels.expense_rocket.utils;
  */
 
 public interface Constants {
+
+    String CLIENT_ID = "1";
+    String CLIENT_SECRET = "gUCrznkTcnsHakR9vcp8hEyBhTMKXMO7uTtl19ei";
     String SIGN_UP = "sign_up";
     String LOGIN = "login";
 }

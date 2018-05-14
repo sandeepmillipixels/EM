@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent">
 
 
@@ -17,53 +16,78 @@
 
 
         <ImageView
-            android:layout_marginTop="@dimen/margin_20_dp"
+            android:layout_marginTop="@dimen/margin_50_dp"
             android:layout_centerVertical="true"
             android:id="@+id/back_button_otp"
-            android:background="@drawable/back"
+            android:background="@drawable/ic_back_icon"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:tint="#808080"
             android:layout_marginLeft="@dimen/margin_30_dp"
             android:layout_height="wrap_content" />
 
-        <ImageView
-            android:layout_marginTop="@dimen/margin_20_dp"
-            android:id="@+id/otp_cloud_imageview"
-            android:background="@drawable/otp_cloud"
-            android:layout_width="wrap_content"
-            android:layout_marginRight="@dimen/margin_50_dp"
-            android:layout_alignParentRight="true"
-            android:layout_height="wrap_content" />
-        <LinearLayout
+
+        <RelativeLayout
+
+            android:background="@color/red_error"
+            android:layout_height="72dp"
+            android:orientation="vertical"
             android:visibility="gone"
-            android:background="@color/red_button"
-            android:layout_height="96dp"
-            android:orientation="horizontal"
+
             android:id="@+id/sign_in_top_layout"
             android:layout_width="match_parent">
             <ImageView
+                android:layout_centerVertical="true"
                 android:id="@+id/imgErrorBack"
                 android:layout_gravity="center_vertical"
-                android:background="@drawable/back"
+                android:background="@drawable/ic_alert_icon"
                 android:layout_width="wrap_content"
-                android:layout_centerVertical="true"
+
+                android:foregroundGravity="center_vertical"
                 android:tint="#FFFFFF"
-                android:layout_marginLeft="@dimen/margin_30_dp"
+                android:layout_marginLeft="@dimen/margin_20_dp"
                 android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginLeft="@dimen/margin_20_dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imgErrorBack"
+                android:background="@color/red_button"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
 
-            <com.application.millipixels.expense_rocket.typeface.FontsClass
-                android:text="Please enter a valid phone number"
-                android:id="@+id/txtError"
-                android:layout_marginLeft="@dimen/margin_10_dp"
-                android:layout_marginRight="@dimen/margin_10_dp"
-                android:maxLines="3"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
 
-        </LinearLayout>
+                android:layout_width="match_parent">
+
+
+                <com.application.millipixels.expense_rocket.typeface.FontsClass
+                    android:text="Please enter a valid phone number"
+                    android:id="@+id/txtError"
+
+                    android:maxLines="3"
+                    android:textSize="@dimen/size_15sp"
+                    android:layout_marginRight="@dimen/margin_10_dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+                    android:text="Try Again?"
+                    android:id="@+id/try_again_txtError"
+
+                    android:maxLines="1"
+                    android:layout_marginTop="-4dp"
+                    android:textSize="@dimen/size_15sp"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
@@ -120,14 +144,7 @@
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_height="wrap_content">
-                <android.support.v7.widget.CardView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    card_view:cardUseCompatPadding="true"
-                    card_view:cardElevation="3dp"
-                   >
+
                 <com.application.millipixels.expense_rocket.typeface.FontEditText
                     android:inputType="number"
                     android:id="@+id/edt1"
@@ -136,12 +153,12 @@
                     android:nextFocusForward="@id/edt2"
                     android:lines="1"
                     android:maxLength="1"
-                    android:background="@drawable/edittext_shadow"
+                    android:background="@drawable/otp_bg"
                     android:imeOptions="actionNext"
                     android:gravity="center"
                     android:layout_width="44dp"
                     android:layout_height="67dp" />
-                </android.support.v7.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
@@ -150,14 +167,7 @@
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_height="wrap_content">
-                <android.support.v7.widget.CardView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    card_view:cardUseCompatPadding="true"
-                    card_view:cardElevation="3dp"
-                    >
+
                 <com.application.millipixels.expense_rocket.typeface.FontEditText
                     android:inputType="number"
 
@@ -168,11 +178,11 @@
                     android:nextFocusForward="@id/edt3"
                     android:maxLength="1"
                     android:imeOptions="actionNext"
-                    android:background="@drawable/edittext_shadow"
+                    android:background="@drawable/otp_bg"
                     android:gravity="center"
                     android:layout_width="44dp"
                     android:layout_height="67dp" />
-                </android.support.v7.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
@@ -181,14 +191,7 @@
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_height="wrap_content">
-                <android.support.v7.widget.CardView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    card_view:cardUseCompatPadding="true"
-                    card_view:cardElevation="3dp"
-                    >
+
                 <com.application.millipixels.expense_rocket.typeface.FontEditText
                     android:inputType="number"
                     android:textSize="14sp"
@@ -197,12 +200,12 @@
                     android:id="@+id/edt3"
                     android:imeOptions="actionNext"
                     android:gravity="center"
-                    android:background="@drawable/edittext_shadow"
+                    android:background="@drawable/otp_bg"
                     android:maxLength="1"
                     android:nextFocusForward="@id/edt4"
                     android:layout_width="44dp"
                     android:layout_height="67dp" />
-                </android.support.v7.widget.CardView>
+
             </LinearLayout>
 
 
@@ -212,14 +215,7 @@
                 android:layout_width="0dp"
                 android:gravity="center"
                 android:layout_height="wrap_content">
-                <android.support.v7.widget.CardView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    card_view:cardUseCompatPadding="true"
-                    card_view:cardElevation="3dp"
-                    >
+
                 <com.application.millipixels.expense_rocket.typeface.FontEditText
                     android:inputType="number"
                     android:textSize="14sp"
@@ -227,12 +223,12 @@
                     android:lines="1"
                     android:imeOptions="actionDone"
                     android:gravity="center"
-                    android:background="@drawable/edittext_shadow"
+                    android:background="@drawable/otp_bg"
                     android:maxLength="1"
                     android:id="@+id/edt4"
                     android:layout_width="44dp"
                     android:layout_height="67dp" />
-                </android.support.v7.widget.CardView>
+
             </LinearLayout>
 
 
@@ -244,12 +240,12 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/margin_20_dp"
-            android:layout_marginLeft="@dimen/margin_40_dp"
-            android:layout_marginRight="@dimen/margin_40_dp"
-            android:paddingTop="@dimen/padding_20dp"
-            android:paddingBottom="@dimen/padding_20dp"
+            android:layout_marginLeft="@dimen/margin_70_dp"
+            android:layout_marginRight="@dimen/margin_70_dp"
+            android:paddingTop="@dimen/padding_15_dp"
+            android:paddingBottom="@dimen/padding_15_dp"
             android:textSize="@dimen/size_18dp"
-            android:background="@drawable/app_round_button_drawable"
+            android:background="@drawable/app_round_button_drawable_purple"
             android:text="@string/signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -260,9 +256,15 @@
             android:id="@+id/btnNotReceived"
             android:layout_width="wrap_content"
             android:textSize="16sp"
-            android:textColor="@color/did_not_received"
+            android:textColor="@color/red_button"
             android:layout_marginTop="@dimen/margin_30_dp"
             android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30_dp"
+            android:src="@drawable/ic_rocket_neww"/>
 
     </LinearLayout>
 
@@ -288,23 +290,19 @@
         android:id="@+id/sign_in_bottom_layout"
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/half_circle"
-        android:padding="@dimen/padding_30dp"
         android:layout_height="wrap_content">
 
-        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
-            android:id="@+id/use_social_signin_textView"
-            android:gravity="center"
-            android:textColor="@color/light_black"
-            android:text="@string/use_social_signin"
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="5px"
+
+            android:background="@color/line_color" />
 
         <RelativeLayout
-            android:layout_below="@+id/use_social_signin_textView"
+
             android:layout_width="match_parent"
             android:gravity="center"
-
+            android:layout_marginBottom="@dimen/margin_20_dp"
             android:layout_marginTop="@dimen/margin_20_dp"
             android:layout_height="wrap_content">
 
@@ -312,13 +310,13 @@
             <ImageView
                 android:id="@+id/imgTwiiter"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/ic_if_twitter_circle"
+                android:src="@drawable/twitter"
                 android:layout_width="36dp"
                 android:layout_height="36dp" />
             <ImageView
                 android:layout_toLeftOf="@+id/imgTwiiter"
                 android:layout_marginRight="@dimen/margin_50_dp"
-                android:src="@drawable/ic_if_google_circle"
+                android:src="@drawable/google"
                 android:layout_width="36dp"
                 android:id="@+id/imgGPlus"
                 android:layout_height="36dp" />
@@ -326,7 +324,7 @@
             <ImageView
                 android:layout_toLeftOf="@+id/imgGPlus"
                 android:layout_marginRight="@dimen/margin_50_dp"
-                android:src="@drawable/ic_if_facebook_circle"
+                android:src="@drawable/fb"
                 android:layout_width="36dp"
                 android:id="@+id/imgFb"
                 android:layout_height="36dp" />

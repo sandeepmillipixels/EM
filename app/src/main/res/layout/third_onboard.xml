@@ -1,75 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:background="@drawable/onboarding_gradient"
-    android:layout_height="match_parent">
+    app:cardElevation="0dp"
+    app:cardCornerRadius="16dp"
+    android:shape="ring"
+    android:innerRadius="0dp"
 
-
-
-
-
-
-
-    <RelativeLayout
+    app:cardUseCompatPadding="true"
+    android:layout_above="@+id/bottom_layout"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_120_dp"
+        android:background="@color/onboarding_background"
+        android:layout_height="match_parent">
 
-        android:id="@+id/relativeLayout">
-
-        <ImageView
-            android:id="@+id/imageView2"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_30_dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/onboard3" />
+            android:layout_marginTop="@dimen/margin_120_dp"
+            android:id="@+id/relativeLayout">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-    </RelativeLayout>
+            <com.application.millipixels.expense_rocket.typeface.FontsClass
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/textView2"
+                android:textColor="@color/white"
+                android:gravity="center|left"
+                android:layout_marginLeft="@dimen/margin_30_dp"
+                android:text="@string/where_does_all_money"
+                android:textSize="@dimen/size_30dp" />
 
-    <RelativeLayout
-        android:layout_below="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/margin_60_dp"
-        android:layout_height="wrap_content">
+
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/size_14dp"
+                android:layout_marginLeft="@dimen/margin_60_dp"
+                android:layout_marginTop="@dimen/margin_8_dp"
+                android:textColor="@color/white"
+                android:gravity="center|left"
+                android:text="@string/we_designed_experience" />
+        </RelativeLayout>
+        <com.application.millipixels.expense_rocket.typeface.FontButton
+
+        android:background="@drawable/app_round_button_drawable"
+        android:id="@+id/add_an_expense_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_40_dp"
+        android:textColor="@color/button_text_color"
+        android:text="@string/add_an_expense"
+        android:paddingLeft="@dimen/padding_40dp"
+        android:paddingRight="@dimen/padding_40dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+            android:id="@+id/already_have_account_textView" android:layout_marginTop="@dimen/margin_15_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_15_dp"
+            android:gravity="right"
+
+            android:textColor="@color/white70"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/already_have_account"/>
 
 
         <com.application.millipixels.expense_rocket.typeface.FontsClass
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_sign_in"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textView2"
-            android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/textView2"
-            android:textColor="@color/onboarding_heading_color"
-            android:gravity="center"
-            android:text="@string/where_does_all_money"
-            android:textSize="@dimen/size_25dp" />
-
-
-        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:textSize="@dimen/size_14dp"
-            android:layout_marginTop="@dimen/margin_8_dp"
-            android:textColor="@color/onboarding_heading_color"
-            android:gravity="center"
-            android:text="@string/we_designed_experience" />
-
-
-
-
-
-
+            android:text="@string/signin"
+            android:layout_marginTop="-4dp"
+            android:layout_below="@+id/already_have_account_textView"
+            android:layout_marginRight="@dimen/margin_20_dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/size_15dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white70" />
     </RelativeLayout>
-
-
-
-
-
-</RelativeLayout>
+</android.support.v7.widget.CardView>

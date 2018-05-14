@@ -47,7 +47,7 @@ class CropAdapter extends BaseAdapter<CropModel> {
         viewHolder.tv.setText(cropModel.getName());
 
         if (position == positionSelect)
-            viewHolder.item.setBackgroundColor(ContextCompat.getColor(activity, R.color.colorSelect));
+            viewHolder.item.setBackgroundColor(ContextCompat.getColor(activity, R.color.dark_purple));
         else
             viewHolder.item.setBackgroundColor(ContextCompat.getColor(activity, R.color.colorPrimary));
 

@@ -10,16 +10,64 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
+        <RelativeLayout
+            android:id="@+id/onboarding_header_layout"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_30_dp"
+            android:layout_marginRight="@dimen/margin_10_dp"
+            android:layout_marginLeft="@dimen/margin_10_dp"
+            android:layout_height="@dimen/topbar_Height">
+
+
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+                android:id="@+id/already_have_account_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_15_dp"
+                android:gravity="right"
+
+                android:textColor="@color/white70"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/already_have_account"/>
+
+
+            <com.application.millipixels.expense_rocket.typeface.FontsClass
+                android:id="@+id/btn_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signin"
+
+                android:layout_below="@+id/already_have_account_textView"
+                android:layout_marginRight="@dimen/margin_20_dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/size_15dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white70" />
+
+            <Button
+                android:id="@+id/signin_button_take_tour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="#00000000"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-android:layout_marginLeft="@dimen/margin_30_dp"
+            android:layout_marginLeft="@dimen/margin_30_dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/imageView_rocket"
             android:layout_marginTop="60dp"
-            android:background="@drawable/cloud_new" />
+            android:background="@drawable/ic_cloud_next" />
 
 
         <ImageView
@@ -27,11 +75,10 @@ android:layout_marginLeft="@dimen/margin_30_dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:transitionName="profile"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="35dp"
-            android:layout_toEndOf="@+id/imageView"
-            android:layout_toRightOf="@+id/imageView"
-            android:background="@drawable/rocket_big" />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_80_dp"
+            android:layout_below="@+id/imageView"
+            android:background="@drawable/ic_rock" />
 
 
 
@@ -39,8 +86,9 @@ android:layout_marginLeft="@dimen/margin_30_dp"
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:paddingTop="@dimen/padding_50dp"
+            android:paddingTop="@dimen/margin_120_dp"
             android:paddingLeft="@dimen/padding_50dp"
+            android:layout_alignParentBottom="true"
             android:paddingRight="@dimen/padding_50dp"
             android:layout_centerInParent="true"
             android:layout_height="wrap_content">
@@ -55,77 +103,123 @@ android:layout_marginLeft="@dimen/margin_30_dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+            <com.application.millipixels.expense_rocket.typeface.FontThin
 
                 android:text="@string/rocket"
                 android:textColor="@color/white"
                 android:letterSpacing="-0.05"
                 android:textSize="@dimen/size_40sp"
-                android:layout_marginTop="-16dp"
+                android:layout_marginTop="-20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+            <com.application.millipixels.expense_rocket.typeface.FontThin
 
-                android:text="@string/know_what_you_spend"
+                android:text="@string/intelligence_management"
                 android:textColor="@color/white70"
                 android:layout_width="wrap_content"
+                android:textSize="@dimen/size_18dp"
                 android:layout_height="wrap_content" />
 
-            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
 
-                android:layout_marginTop="@dimen/margin_20_dp"
-                android:text="@string/expense_rocket_enable_you_to"
-                android:textColor="@color/white"
-                android:lineSpacingExtra="3sp"
+            <com.application.millipixels.expense_rocket.typeface.FontButton
+                android:id="@+id/add_an_expense_button_tour"
                 android:layout_width="wrap_content"
-                android:textSize="@dimen/size_15dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text_color"
+                android:layout_alignTop="@+id/linearLayout2"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center|left"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/take_a_tour_drawable"
+                android:paddingBottom="@dimen/padding_10dp"
+                android:paddingLeft="@dimen/padding_60dp"
+                android:paddingRight="@dimen/padding_60dp"
+                android:paddingTop="@dimen/padding_10dp"
+                android:text="@string/add_an_expense" />
+
 
         </LinearLayout>
 
 
-       <LinearLayout
-           android:orientation="vertical"
-           android:layout_alignParentBottom="true"
-           android:layout_width="match_parent"
-           android:padding="@dimen/padding_20dp"
-           android:layout_height="wrap_content"
-           android:id="@+id/linearLayout2">
-
-           <com.application.millipixels.expense_rocket.typeface.FontButton
-               android:id="@+id/take_a_tour_btn"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginLeft="@dimen/margin_30_dp"
-               android:layout_marginRight="@dimen/margin_30_dp"
-               android:layout_alignTop="@+id/linearLayout2"
-               android:layout_centerHorizontal="true"
-               android:layout_gravity="center"
-               android:layout_marginTop="20dp"
-               android:background="@drawable/take_a_tour_drawable"
-               android:paddingBottom="@dimen/padding_10dp"
-               android:paddingLeft="@dimen/padding_60dp"
-               android:paddingRight="@dimen/padding_60dp"
-               android:paddingTop="@dimen/padding_10dp"
-               android:text="@string/take_a_tour" />
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_30_dp"
+            android:layout_marginRight="@dimen/margin_30_dp"
+            android:layout_height="70dp">
 
 
-
-           <com.application.millipixels.expense_rocket.typeface.FontButton
-               android:text="@string/lets_get_started"
-               android:layout_gravity="center"
-               android:background="#00000000"
-               android:textColor="@color/white"
-               android:layout_marginTop="@dimen/margin_10_dp"
-               android:id="@+id/add_an_expense_button_tour"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/line_color"
+                android:layout_height="1dp">
 
 
-               />
+            </View>
 
-       </LinearLayout>
+            <Button
+                android:id="@+id/take_a_tour_btn"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/txtLearnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+
+                android:layout_centerVertical="true"
+
+                android:textColor="@color/white70"
+                android:layout_alignParentLeft="true" />
+
+        </RelativeLayout>
+
+
+       <!--<LinearLayout-->
+           <!--android:orientation="vertical"-->
+           <!--android:layout_alignParentBottom="true"-->
+           <!--android:layout_width="match_parent"-->
+           <!--android:padding="@dimen/padding_20dp"-->
+           <!--android:layout_height="wrap_content"-->
+           <!--android:id="@+id/linearLayout2">-->
+
+           <!--<com.application.millipixels.expense_rocket.typeface.FontButton-->
+               <!--android:id="@+id/take_a_tour_btn"-->
+               <!--android:layout_width="match_parent"-->
+               <!--android:layout_height="wrap_content"-->
+               <!--android:layout_marginLeft="@dimen/margin_30_dp"-->
+               <!--android:layout_marginRight="@dimen/margin_30_dp"-->
+               <!--android:layout_alignTop="@+id/linearLayout2"-->
+               <!--android:layout_centerHorizontal="true"-->
+               <!--android:layout_gravity="center"-->
+               <!--android:layout_marginTop="20dp"-->
+               <!--android:background="@drawable/take_a_tour_drawable"-->
+               <!--android:paddingBottom="@dimen/padding_10dp"-->
+               <!--android:paddingLeft="@dimen/padding_60dp"-->
+               <!--android:paddingRight="@dimen/padding_60dp"-->
+               <!--android:paddingTop="@dimen/padding_10dp"-->
+               <!--android:text="@string/take_a_tour" />-->
+
+
+
+           <!--<com.application.millipixels.expense_rocket.typeface.FontButton-->
+               <!--android:text="@string/lets_get_started"-->
+               <!--android:layout_gravity="center"-->
+               <!--android:background="#00000000"-->
+               <!--android:textColor="@color/white"-->
+               <!--android:layout_marginTop="@dimen/margin_10_dp"-->
+               <!--android:id="@+id/add_an_expense_button_tour"-->
+               <!--android:layout_width="wrap_content"-->
+               <!--android:layout_height="wrap_content"-->
+
+
+               <!--/>-->
+
+       <!--</LinearLayout>-->
 
 
 

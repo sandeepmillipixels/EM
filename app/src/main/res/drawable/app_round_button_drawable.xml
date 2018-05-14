@@ -4,8 +4,8 @@
         <shape android:shape="rectangle">
             <gradient
                 android:angle="180"
-                android:endColor="@color/red_button"
-                android:startColor="@color/red_button"
+                android:endColor="@color/white"
+                android:startColor="@color/white"
                 android:type="linear" />
 
             <!--corners allow us to make the rounded corners button-->
