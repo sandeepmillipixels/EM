@@ -66,8 +66,8 @@ public class OnBoarding extends Activity{
     private int[] layouts;
     private TextView[] dots;
 
-    @BindView(R.id.layoutDots)
-    LinearLayout layoutDots;
+//    @BindView(R.id.layoutDots)
+//    LinearLayout layoutDots;
 
     @BindView(R.id.view_pager)
     ViewPager view_pager;
@@ -75,8 +75,8 @@ public class OnBoarding extends Activity{
     @BindView(R.id.btn_skip)
     com.application.millipixels.expense_rocket.typeface.FontsClassLight btn_skip;
 
-    @BindView(R.id.add_an_expense_button)
-    Button add_an_expense_button;
+//    @BindView(R.id.add_an_expense_button)
+//    Button add_an_expense_button;
 
     OnboardViewpagerAdapter onboardViewpagerAdapter;
     private static final String EMAIL = "email";
@@ -104,55 +104,61 @@ public class OnBoarding extends Activity{
                 R.layout.third_onboard,
                };
 
-        addBottomDots(0);
+//        addBottomDots(0);
 
         onboardViewpagerAdapter = new OnboardViewpagerAdapter(this, layouts);
         view_pager.setAdapter(onboardViewpagerAdapter);
         view_pager.addOnPageChangeListener(view_pagerPageChangeListener);
+        // Disable clip to padding
+        view_pager.setClipToPadding(false);
+        // set padding manually, the more you set the padding the more you see of prev & next page
+        view_pager.setPadding(60, 20, 60, 0);
+        // sets a margin b/w individual pages to ensure that there is a gap b/w them
+//        view_pager.setPageMargin(20);
 
     }
 
 
-    @OnClick(R.id.signin_button)
-    public void onLoginTapped(){
-        Intent intent = new Intent(this, LoginSignupActivity.class);
-        intent.putExtra(Constants.LOGIN,true);
-        startActivity(intent);
-    }
+//    @OnClick(R.id.signin_button)
+//    public void onLoginTapped(){
+//        Intent intent = new Intent(this, LoginSignupActivity.class);
+//        intent.putExtra(Constants.LOGIN,true);
+//        startActivity(intent);
+//    }
+//
+//    @OnClick(R.id.add_an_expense_button)
+//    public void getStartedClick(){
+//        Intent intent = new Intent(this, AddExpense.class);
+//        startActivity(intent);
+//
+//    }
 
-    @OnClick(R.id.add_an_expense_button)
-    public void getStartedClick(){
-        Intent intent = new Intent(this, AddExpense.class);
-        startActivity(intent);
 
-    }
-
-
-    private void addBottomDots(int currentPage) {
-        dots = new TextView[layouts.length];
-
-        int[] colorsActive = getResources().getIntArray(R.array.array_dot_active);
-        int[] colorsInactive = getResources().getIntArray(R.array.array_dot_inactive);
-
-        layoutDots.removeAllViews();
-        for (int i = 0; i < dots.length; i++) {
-            dots[i] = new TextView(this);
-            dots[i].setText(Html.fromHtml("&#8226;"));
-            dots[i].setTextSize(35);
-            dots[i].setTextColor(colorsInactive[currentPage]);
-            layoutDots.addView(dots[i]);
-        }
-
-        if (dots.length > 0)
-            dots[currentPage].setTextColor(colorsActive[currentPage]);
-    }
+//    private void addBottomDots(int currentPage) {
+//        dots = new TextView[layouts.length];
+//
+//        int[] colorsActive = getResources().getIntArray(R.array.array_dot_active);
+//        int[] colorsInactive = getResources().getIntArray(R.array.array_dot_inactive);
+//
+//        layoutDots.removeAllViews();
+//        for (int i = 0; i < dots.length; i++) {
+//            dots[i] = new TextView(this);
+//            dots[i].setText(Html.fromHtml("&#8226;"));
+//            dots[i].setTextSize(35);
+//            dots[i].setTextColor(colorsInactive[currentPage]);
+//            layoutDots.addView(dots[i]);
+//        }
+//
+//        if (dots.length > 0)
+//            dots[currentPage].setTextColor(colorsActive[currentPage]);
+//    }
 
     //  viewpager change listener
     ViewPager.OnPageChangeListener view_pagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int position) {
-            addBottomDots(position);
+//            addBottomDots(position);
 
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {

@@ -28,19 +28,20 @@ import com.application.millipixels.expense_rocket.GenericTextWatcher;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
-import com.application.millipixels.models.ErrorResponse;
+import com.application.millipixels.expense_rocket.utils.Constants;
+import com.application.millipixels.expense_rocket.utils.Utilities;
 import com.application.millipixels.models.LoginResponse;
 import com.application.millipixels.models.VerifyOTPResponseRX;
-import com.application.millipixels.ui.presenter.LoginPresenter;
-import com.application.millipixels.ui.presenter.VerifyOTPPresenter;
-import com.application.millipixels.ui.view.LoginViewInterface;
-import com.application.millipixels.ui.view.VerifyViewinterface;
 
+import com.application.millipixels.network.NetworkClient;
+import com.application.millipixels.network.NetworkInterface;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Response;
 
-public class VerifyOtpActity extends Activity implements VerifyViewinterface,LoginViewInterface{
+public class VerifyOtpActity extends Activity{
 
     @BindView(R.id.imgErrorBack)
     ImageView imgErrorBack;
@@ -82,9 +83,8 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
 
     ProgressDialog dialog;
 
-    VerifyOTPPresenter presenter;
 
-    LoginPresenter loginPresenter;
+
     char[] charArray;
     String firstDigit,secondDigit,thirdDigit,fourthDigit;
 
@@ -105,12 +105,9 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
         setContentView(R.layout.otp);
         ButterKnife.bind(this);
         if (getIntent().getExtras() != null){
-
-
                 number = getIntent().getStringExtra(OTP_NUMBER);
                 String text = "We just sent a OTP to your \n mobile number " + number.substring(0, 2) + "***_***" + number.substring(number.length() - 2) + ". Enter the \n OTP here to sign in.";
                 txtOtp.setText(text);
-
         }
 
       otp=getIntent().getStringExtra("otp");
@@ -129,30 +126,86 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
     @OnClick(R.id.btnVerify)
     public void onVerify(View v){
         sign_in_top_layout.setVisibility(View.GONE);
-//        if (edt1.getText().toString().trim().length() == 1 && edt2.getText().toString().trim().length() == 1 && edt3.getText().toString().trim().length() == 1 && edt4.getText().toString().trim().length() == 1){
-////
-////           showProgress();
-////
-////            new Handler().postDelayed(new Runnable() {
-////                @Override
-////                public void run() {
-////                    verifyOTPRequest();
-////                    getUserData(VerifyOtpActity.this);
-////                }
-////            },2000);
-////
-////
-////        }else {
-////            txtError.setText("Please enter valid OTP.");
-////            Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
-////            sign_in_top_layout.startAnimation(animation);
-////            sign_in_top_layout.setVisibility(View.VISIBLE);
-////        }
+        if (edt1.getText().toString().trim().length() == 1 && edt2.getText().toString().trim().length() == 1 && edt3.getText().toString().trim().length() == 1 && edt4.getText().toString().trim().length() == 1){
 
-        verifyOTPRequest();
-        getUserData(VerifyOtpActity.this);
+           showProgress();
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    verifyOTPRequest(otp);
+
+                }
+            },2000);
+
+
+        }else {
+            txtError.setText("Please enter valid OTP.");
+            Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
+            sign_in_top_layout.startAnimation(animation);
+            sign_in_top_layout.setVisibility(View.VISIBLE);
+        }
+
+//        verifyOTPRequest();
+//        getUserData(VerifyOtpActity.this);
     }
 
+    public void sendOTPRequest(String num){
+        Call<LoginResponse> call = NetworkClient.getRetrofit().create(NetworkInterface.class).getOtp(Constants.CLIENT_ID,Constants.CLIENT_SECRET,"+91"+num);
+        call.enqueue(new retrofit2.Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+
+                if (response.isSuccessful())
+                {
+                    if (response.body().isStatus()){
+                        showErrorMessage("One time Password has been sent\nto registered mobile number.");
+                    }else {
+                        showErrorMessage(response.body().getError().getError_message().getMessage().get(0));
+                    }
+                }
+                else
+                {
+                    showErrorMessage(Utilities.getErrorMessage(response.errorBody()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                showErrorMessage(t.getLocalizedMessage());
+            }
+        });
+        hideProgress();
+
+    }
+    public void verifyOTPRequest(String otp){
+        Call<VerifyOTPResponseRX> call = NetworkClient.getRetrofit().create(NetworkInterface.class).verifyOtp(Constants.CLIENT_ID,Constants.CLIENT_SECRET,otp,"+91"+number);
+        call.enqueue(new retrofit2.Callback<VerifyOTPResponseRX>() {
+            @Override
+            public void onResponse(Call<VerifyOTPResponseRX> call, Response<VerifyOTPResponseRX> response) {
+
+                if (response.isSuccessful())
+                {
+                    if (response.body().getStatus()){
+                        callNextActivity();
+                    }else {
+                        showErrorMessage(response.body().getError().getError_message().getMessage().get(0));
+                    }
+                }
+                else
+                {
+                    showErrorMessage(Utilities.getErrorMessage(response.errorBody()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<VerifyOTPResponseRX> call, Throwable t) {
+                showErrorMessage(t.getLocalizedMessage());
+            }
+        });
+        hideProgress();
+
+    }
     @OnClick(R.id.back_button_otp)
     public void onBackBtnClick(){
 
@@ -265,14 +318,6 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
 
     }
 
-    public void verifyOTPRequest(){
-
-        String sendOTP=edt1.getText().toString()+edt2.getText().toString()+edt3.getText().toString()+edt4.getText().toString();
-
-        presenter=new VerifyOTPPresenter(this,"+91"+number,sendOTP);
-
-    }
-
     @OnClick(R.id.btnNotReceived)
     public void resendOtp(){
         sign_in_top_layout.setVisibility(View.GONE);
@@ -282,18 +327,12 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                sendOTPRequest();
-                getData(VerifyOtpActity.this);
+                sendOTPRequest(number);
             }
         },2000);
     }
 
-    public void sendOTPRequest(){
 
-        loginPresenter=new LoginPresenter(this,number);
-
-
-    }
 
     public static void hideKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -304,7 +343,7 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
-    @Override
+
     public void showProgress() {
 
         dialog.setCancelable(false);
@@ -317,7 +356,7 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
 
     }
 
-    @Override
+
     public void hideProgress() {
 
         edt1.setText("");
@@ -331,77 +370,13 @@ public class VerifyOtpActity extends Activity implements VerifyViewinterface,Log
 
     }
 
-    @Override
-    public void getOTP(LoginResponse response) {
-        if(response!=null) {
 
-            if(response!=null && response.getStatus().equals("true")){
-
-                otp=response.getData().getOtp();
-
-            }else if(response!=null && response.getStatus().equals("false")){
-//                showErrorMessage(response.getError().getError_message());
-            }
-
-            Log.d("Response Status",response.getStatus());
-
-        }else{
-            Log.d("OTP Response","Login response null");
-        }
-        hideProgress();
-    }
-
-    @Override
-    public void getUserData(VerifyOTPResponseRX response) {
-
-        if(response!=null) {
-
-            if(response!=null && response.getStatus().equals("true")){
-
-                token=response.getStatus();
-
-                if(token!=null){
-                    callNextActivity();
-                }
-
-            }else if(response!=null && response.getStatus().equals("false")){
-
-                showErrorMessage(response.getError().getError_message());
-
-            }
-
-            Log.d("Verify Response",response.getStatus());
-
-        }else{
-            Log.d("Verify Error","Verify response null");
-        }
-        hideProgress();
-
-    }
-
-
-    @Override
-    public void displayError(String error) {
-        showErrorMessage(error);
-        hideProgress();
-    }
-
-    public void getUserData(Context context){
-        presenter.getUserData(context);
-    }
 
     public void showErrorMessage(String message){
         txtError.setText(message);
         Animation animation = AnimationUtils.loadAnimation(VerifyOtpActity.this, R.anim.scale_down);
         sign_in_top_layout.startAnimation(animation);
         sign_in_top_layout.setVisibility(View.VISIBLE);
-    }
-
-    private void getData(Context context) {
-
-        loginPresenter.getData(context);
-
-
     }
 
 

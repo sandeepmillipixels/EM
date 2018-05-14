@@ -27,6 +27,7 @@ import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.widget.TextView;
 
+import com.application.millipixels.expense_rocket.CameraActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.adapter.DashboardAdapter;
 import com.application.millipixels.expense_rocket.adapter.ViewPagerAdapter;
@@ -130,7 +131,7 @@ public class Dashboard extends AppCompatActivity
         open_shoe_box.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Dashboard.this,GalleyActivity.class);
+                Intent intent=new Intent(Dashboard.this,CameraActivity.class);
                 intent.putExtra("dashboard","1");
                 startActivity(intent);
                 rightLabels.collapse();

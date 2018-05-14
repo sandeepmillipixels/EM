@@ -16,7 +16,6 @@
     <string name="error_otp_not_enter">You have not enter any code.</string>
 
 
-
     <string name="expense">Expense</string>
     <string name="rocket">Rocket</string>
     <string name="know_what_you_spend">Know what you spend!</string>
@@ -41,16 +40,14 @@
 
     <string name="we_just_sent_otp">We just sent a OTP to your \n mobile number 93*** ***09.Enter the \n OTP here to sign in. </string>
 
-<string name="trouble_in_signin">Trouble Signing In?</string>
+    <string name="trouble_in_signin">Trouble Signing In?</string>
 
     <string name="where_does_all_money">Where does all my\nmoney go?</string>
-    
+
     <string name="did_i_mail">Did I mail date night\nexpenses to HR?</string>
     <string name="oops_moment">Oops moments happen to all of us. With\nExpenseRocket, you’ll never mix up your\npersonal and business expenses. </string>
-    
-    <string name="we_designed_experience">We designed ExpenseRocket to help you\nsee how you\'re spending your money and\nget control over your expenses.Building\nthat fortune shouldn\'t be hard!</string>
-    
 
+    <string name="we_designed_experience">We designed ExpenseRocket to help you\nsee how you\'re spending your money and\nget control over your expenses.Building\nthat fortune shouldn\'t be hard!</string>
 
 
     <string name="signin">Sign In</string>
@@ -158,5 +155,12 @@
     <string name="message_secret_key">gUCrznkTcnsHakR9vcp8hEyBhTMKXMO7uTtl19ei</string>
     <string name="message_client_id">1</string>
 
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <!--<string name="server_client_id">AIzaSyBDpmXxChzca4tWBaLeIZWOKrnhMOeSFqo</string>-->
 </resources>

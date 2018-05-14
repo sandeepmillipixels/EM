@@ -12,6 +12,7 @@
     <!--android:layout_height="50dp">-->
     <RelativeLayout
 
+
         android:id="@+id/top_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -33,10 +34,10 @@
 
         <RelativeLayout
 
-            android:background="@color/red_button"
+            android:visibility="gone"
             android:layout_height="72dp"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:background="@color/red_error"
 
             android:id="@+id/sign_in_top_layout"
             android:layout_width="match_parent">

@@ -7,7 +7,7 @@ public class  VerifyOTPResponseRX {
 
     @SerializedName("status")
     @Expose
-    private String status;
+    private boolean status;
 
     @SerializedName("data")
     @Expose
@@ -19,7 +19,7 @@ public class  VerifyOTPResponseRX {
 
 
 
-    public VerifyOTPResponseRX(String status, ErrorResponse error, VerifyOTPData data){
+    public VerifyOTPResponseRX(boolean status, ErrorResponse error, VerifyOTPData data){
 
         this.data=data;
         this.status=status;
@@ -27,11 +27,11 @@ public class  VerifyOTPResponseRX {
 
     }
 
-    public String getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 

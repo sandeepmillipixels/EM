@@ -4,6 +4,8 @@ import com.application.millipixels.models.LoginResponse;
 import com.application.millipixels.models.VerifyOTPResponseRX;
 
 import io.reactivex.Observable;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.Header;
@@ -16,16 +18,16 @@ public interface NetworkInterface {
 
     @FormUrlEncoded
     @POST("sendOTP")
-    Observable<LoginResponse> getOtp(@Header("client_id") String clientId,
-                                      @Header("client_secret") String clientSecret,
-                                      @Field("mobile") String params);
+    Call<LoginResponse> getOtp(@Header("client_id") String clientId,
+                        @Header("client_secret") String clientSecret,
+                        @Field("mobile") String params);
 
 
     //////////////////////Verify OTP////////////////////////
 
     @FormUrlEncoded
     @POST("validateOTP")
-    Observable<VerifyOTPResponseRX> verifyOtp(@Header("client_id") String clientId,
+    Call<VerifyOTPResponseRX> verifyOtp(@Header("client_id") String clientId,
                                               @Header("client_secret") String clientSecret, @Field("otp") String otp,
                                               @Field("mobile") String mobileNumber);
 

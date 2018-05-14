@@ -6,6 +6,6 @@ public interface LoginViewInterface {
 
     void showProgress();
     void hideProgress();
-    void getOTP(LoginResponse response);
+    void getOTP(String response);
     void displayError(String error);
 }

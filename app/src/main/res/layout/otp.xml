@@ -29,7 +29,7 @@
 
         <RelativeLayout
 
-            android:background="@color/red_button"
+            android:background="@color/red_error"
             android:layout_height="72dp"
             android:orientation="vertical"
             android:visibility="gone"

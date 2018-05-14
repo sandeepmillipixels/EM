@@ -24,13 +24,19 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.application.millipixels.expense_rocket.MainActivity;
 import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
 import com.application.millipixels.expense_rocket.socialLogin.SocialLogin;
+import com.application.millipixels.expense_rocket.utils.Constants;
+import com.application.millipixels.expense_rocket.utils.Utilities;
 import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
 import com.application.millipixels.models.LoginResponse;
-import com.application.millipixels.ui.presenter.LoginPresenter;
+import com.application.millipixels.network.NetworkClient;
+import com.application.millipixels.network.NetworkInterface;
+
 import com.application.millipixels.ui.view.LoginViewInterface;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -56,6 +62,7 @@ import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
 
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -63,12 +70,14 @@ import java.io.InputStream;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Created by millipixelsinteractive_031 on 08/03/18.
  */
 
-public class LoginSignupActivity extends AppCompatActivity implements LoginViewInterface {
+public class LoginSignupActivity extends AppCompatActivity {
 
     @BindView(R.id.imgErrorBack)
     ImageView imgErrorBack;
@@ -122,7 +131,7 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
     ImageView back_button_otp;
 
 
-    LoginPresenter presenter;
+
 
 
     String mobileNumber;
@@ -290,6 +299,7 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     @OnClick(R.id.btnSendOtpLogin)
     public void onSendOtpLogin(View v){
 
@@ -322,7 +332,6 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
                 @Override
                 public void run() {
                     sendOTPRequest(mobileNumber);
-                    getData(LoginSignupActivity.this);
                 }
             },2000);
 
@@ -399,14 +408,40 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
 
         }
     }
-    public void sendOTPRequest(String mobileNumber){
+    public void sendOTPRequest(String num){
+        Call<LoginResponse> call = NetworkClient.getRetrofit().create(NetworkInterface.class).getOtp(Constants.CLIENT_ID,Constants.CLIENT_SECRET,"+91"+num);
+        call.enqueue(new retrofit2.Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
 
-        presenter=new LoginPresenter(this,mobileNumber);
+                if (response.isSuccessful())
+                {
+                   if (response.body().isStatus()){
+                       otp=response.body().getData().getOtp();
+                       Intent intent=new Intent(LoginSignupActivity.this,VerifyOtpActity.class);
+                       intent.putExtra("otp",otp);
+                       intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
+                       startActivity(intent);
+                   }else {
+                       showErrorMessage(response.body().getError().getError_message().getMessage().get(0));
+                   }
+                }
+                else
+                {
+                    showErrorMessage(Utilities.getErrorMessage(response.errorBody()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                showErrorMessage(t.getLocalizedMessage());
+            }
+        });
+        hideProgress();
 
     }
 
     public void showErrorMessage(String message){
-
 
         txtError.setText(message);
         Animation animation = AnimationUtils.loadAnimation(LoginSignupActivity.this, R.anim.scale_down);
@@ -415,7 +450,7 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
 
     }
 
-    @Override
+
     public void showProgress() {
 
         dialog.setCancelable(false);
@@ -428,49 +463,15 @@ public class LoginSignupActivity extends AppCompatActivity implements LoginViewI
 
     }
 
-    @Override
+
     public void hideProgress() {
-
-        dialog.dismiss();
-    }
-
-    @Override
-    public void getOTP(LoginResponse response) {
-
-        if(response!=null) {
-
-            if(response!=null && response.getStatus().equals("true")){
-
-                otp=response.getData().getOtp();
-
-                Intent intent=new Intent(LoginSignupActivity.this,VerifyOtpActity.class);
-                intent.putExtra("otp",otp);
-                intent.putExtra(VerifyOtpActity.OTP_NUMBER,mobileNumber);
-                startActivity(intent);
-            }else if(response!=null && response.getStatus().equals("false")){
-                showErrorMessage(response.getError().getError_message());
-            }
-
-            Log.d(TAG,response.getStatus());
-
-        }else{
-            Log.d(TAG,"Login response null");
+        if (dialog != null && dialog.isShowing()){
+            dialog.dismiss();
         }
-        hideProgress();
 
     }
 
-    @Override
-    public void displayError(String error) {
-        showErrorMessage(error);
-        hideProgress();
-    }
 
-    private void getData(Context context) {
-
-        presenter.getData(context);
-
-    }
 
 
     public void callNextActivity(){
