@@ -1,48 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/app_gradient">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="@dimen/margin_10_dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/ic_group_5" />
+    <ImageView
+        android:id="@+id/imageView_rocket"
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/relative_layout_bottom"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_80_dp"
+        android:layout_marginBottom="-40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_rock" />
 
 
     <RelativeLayout
+        android:id="@+id/relative_layout_bottom"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_marginBottom="@dimen/margin_50_dp"
+        android:layout_height="wrap_content">
 
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="@dimen/logo_width"
-            android:layout_height="@dimen/logo_height"
-            android:layout_above="@+id/splash_textView"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/logo_head" />
 
+        <com.application.millipixels.expense_rocket.typeface.FontsClass
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+            android:id="@+id/splash_expense_textView"
             android:layout_width="wrap_content"
-            android:gravity="center"
-            android:layout_centerInParent="true"
-            android:text="@string/splashText"
-            android:textColor="@color/white"
-            android:layout_marginTop="@dimen/margin_15_dp"
-            android:textSize="@dimen/size_25dp"
             android:layout_height="wrap_content"
-            android:id="@+id/splash_textView" />
-
-
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:text="@string/copyright"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/margin_20_dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_50_dp"
+            android:layout_alignParentStart="true"
+            android:text="@string/expense"
             android:textColor="@color/white"
-            android:textSize="@dimen/size_12dp"
-            android:layout_height="wrap_content" />
+            android:textSize="@dimen/size_48sp" />
+
+        <com.application.millipixels.expense_rocket.typeface.FontThin
+
+            android:id="@+id/splash_rocket_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignLeft="@+id/splash_expense_textView"
+            android:layout_alignStart="@+id/splash_expense_textView"
+            android:layout_below="@+id/splash_expense_textView"
+            android:letterSpacing="-0.05"
+            android:layout_marginTop="-20dp"
+            android:text="@string/rocket"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_40sp" />
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontThin
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/splash_rocket_textView"
+            android:layout_alignStart="@+id/splash_rocket_textView"
+            android:layout_below="@+id/splash_rocket_textView"
+            android:text="@string/intelligence_management"
+            android:textColor="@color/white70"
+            android:textSize="@dimen/size_20dp" />
+
 
 
 
     </RelativeLayout>
 
 
-</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_auto"
+        android:icon="@drawable/ic_auto"
+        android:title="Auto" />
+
+    <item
+        android:id="@+id/navigation_sunny"
+        android:icon="@drawable/ic_sunny"
+        android:title="Sunny" />
+
+    <!--<item-->
+    <!--android:id="@+id/navigation_rotate"-->
+    <!--android:icon="@drawable/ic_screen_rotation_black_24dp"-->
+    <!--android:title="Rotate" />-->
+    <item
+        android:id="@+id/navigation_cloudy"
+        android:icon="@drawable/ic_cloudy"
+        android:title="Cloudy" />
+    <item
+        android:id="@+id/navigation_fluorescent"
+        android:icon="@drawable/ic_fluorescent"
+        android:title="Fluroescent" />
+
+
+    <item
+        android:id="@+id/navigation_tungsten"
+        android:icon="@drawable/ic_tungsten"
+        android:title="Tungsten" />
+</menu>

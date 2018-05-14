@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent">
+
+
+    <!---->
+
+    <!---->
+    <!--android:layout_height="50dp">-->
+    <RelativeLayout
+
+
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <ImageView
+            android:layout_marginTop="@dimen/margin_60_dp"
+            android:id="@+id/back_button_otp"
+            android:background="@drawable/ic_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:tint="#808080"
+
+            android:layout_marginLeft="@dimen/margin_20_dp"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+
+            android:visibility="gone"
+            android:layout_height="72dp"
+            android:orientation="vertical"
+            android:background="@color/red_error"
+
+            android:id="@+id/sign_in_top_layout"
+            android:layout_width="match_parent">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/imgErrorBack"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_alert_icon"
+                android:layout_width="wrap_content"
+
+                android:foregroundGravity="center_vertical"
+                android:tint="#FFFFFF"
+                android:layout_marginLeft="@dimen/margin_20_dp"
+                android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin_20_dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgErrorBack"
+            android:background="@color/red_button"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+
+            android:layout_width="match_parent">
+
+
+            <com.application.millipixels.expense_rocket.typeface.FontsClass
+                android:text="Please enter a valid phone number"
+                android:id="@+id/txtError"
+
+                android:maxLines="3"
+                android:textSize="@dimen/size_15sp"
+                android:layout_marginRight="@dimen/margin_10_dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+                android:text="Try Again?"
+                android:id="@+id/try_again_txtError"
+
+                android:maxLines="1"
+                android:layout_marginTop="-4dp"
+                android:textSize="@dimen/size_15sp"
+
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sign_in_inside_layout"
+        android:layout_below="@+id/top_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_30_dp"
+        android:layout_height="wrap_content">
+
+
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClass
+            android:text="@string/signin"
+            android:textSize="36sp"
+            android:textColor="@color/purple_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+            android:layout_marginTop="@dimen/margin_5_dp"
+            android:text="@string/sign_in_with_your"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/light_black"
+            android:layout_height="wrap_content" />
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontEditText
+            android:id="@+id/edtPhoneLogin"
+            android:layout_width="match_parent"
+            android:hint="your mobile number"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10_dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:background="#00000000"
+            android:textSize="16sp"
+            android:maxLength="13"
+            android:paddingTop="@dimen/padding_50dp"
+            android:textAlignment="center"
+            android:layout_marginLeft="@dimen/margin_20_dp"
+            android:layout_marginRight="@dimen/margin_20_dp"
+
+
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginTop="@dimen/margin_10_dp"
+            android:layout_marginLeft="@dimen/margin_60_dp"
+            android:layout_marginRight="@dimen/margin_60_dp"
+            android:background="@color/line_color" />
+
+        <com.application.millipixels.expense_rocket.typeface.FontButton
+            android:id="@+id/btnSendOtpLogin"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_30_dp"
+            android:layout_marginLeft="@dimen/margin_90_dp"
+            android:layout_marginRight="@dimen/margin_90_dp"
+            android:paddingTop="@dimen/padding_15_dp"
+            android:paddingBottom="@dimen/padding_15_dp"
+            android:background="@drawable/app_round_button_drawable_purple"
+            android:text="@string/send_otp"
+            android:textSize="@dimen/size_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.application.millipixels.expense_rocket.typeface.FontsClassLight
+            android:textColor="@color/red_button"
+            android:layout_marginTop="@dimen/margin_30_dp"
+            android:id="@+id/trouble_in_sign_in"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/size_15dp"
+            android:text="@string/trouble_in_signin"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/sign_in_inside_layout"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/sign_in_bottom_layout"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_50_dp"
+            android:src="@drawable/ic_rocket_neww"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sign_in_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+
+            android:background="@color/line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+
+            android:layout_marginTop="@dimen/margin_20_dp"
+            android:layout_marginBottom="@dimen/margin_20_dp"
+            android:layout_height="wrap_content">
+
+
+
+
+            <ImageView
+                android:id="@+id/imgTwiiter"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/twitter"
+                android:layout_width="36dp"
+                android:layout_height="36dp" />
+            <ImageView
+                android:layout_toLeftOf="@+id/imgTwiiter"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:src="@drawable/google"
+                android:layout_width="36dp"
+                android:id="@+id/imgGPlus"
+                android:layout_height="36dp" />
+
+            <ImageView
+                android:layout_toLeftOf="@+id/imgGPlus"
+                android:layout_marginRight="@dimen/margin_50_dp"
+                android:src="@drawable/fb"
+                android:layout_width="36dp"
+                android:id="@+id/imgFb"
+                android:layout_height="36dp" />
+
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp" />
+            <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                android:elevation="5dp"
+                android:visibility="gone"
+                android:id="@+id/twitter_login"
+                android:layout_marginBottom="36dp"
+                android:layout_toLeftOf="@+id/imgFb"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="60dp"
+                android:layout_marginTop="2dp"
+                android:paddingRight="60dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="@string/send_otp"
+                android:background="@drawable/app_round_button_drawable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

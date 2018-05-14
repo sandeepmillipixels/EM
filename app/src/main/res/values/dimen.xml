@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="margin_2_dp">2dp</dimen>
+    <dimen name="margin_3_dp">3dp</dimen>
+    <dimen name="margin_4_dp">4dp</dimen>
     <dimen name="margin_5_dp">5dp</dimen>
+    <dimen name="margin_6_dp">6dp</dimen>
+    <dimen name="margin_7_dp">7dp</dimen>
+    <dimen name="margin_8_dp">8dp</dimen>
+    <dimen name="margin_9_dp">9dp</dimen>
+
     <dimen name="margin_10_dp">10dp</dimen>
     <dimen name="margin_15_dp">15dp</dimen>
     <dimen name="margin_20_dp">20dp</dimen>
@@ -14,12 +22,17 @@
     <dimen name="margin_80_dp">80dp</dimen>
     <dimen name="margin_90_dp">90dp</dimen>
 
+    <dimen name="margin_120_dp">120dp</dimen>
+    <dimen name="margin_140_dp">140dp</dimen>
+    <dimen name="margin_150_dp">150dp</dimen>
+
     <dimen name="logo_height">60dp</dimen>
     <dimen name="logo_width">100dp</dimen>
 
     <dimen name="topbar_Height">50dp</dimen>
 
     <dimen name="size_10dp">10dp</dimen>
+    <dimen name="size_11dp">11dp</dimen>
     <dimen name="size_12dp">12dp</dimen>
     <dimen name="size_13dp">13dp</dimen>
     <dimen name="size_14dp">14dp</dimen>
@@ -45,5 +58,11 @@
     <dimen name="padding_40dp">40dp</dimen>
     <dimen name="padding_50dp">50dp</dimen>
     <dimen name="padding_60dp">60dp</dimen>
+    <dimen name="padding_70dp">70dp</dimen>
+
+    <dimen name="size_18sp">18sp</dimen>
+    <dimen name="size_40sp">40sp</dimen>
+    <dimen name="size_48sp">48sp</dimen>
+    <dimen name="size_15sp">15sp</dimen>
 
 </resources>

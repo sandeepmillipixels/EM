@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+            <com.application.millipixels.expense_rocket.typeface.FontsClassLight
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:id="@+id/txtEnterText"
@@ -47,14 +47,15 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-
-                        android:id="@+id/first_digit_EditText"
-                        android:inputType="number"
+                    <com.application.millipixels.expense_rocket.typeface.FontEditText
+                        android:inputType="numberPassword"
+                        android:id="@+id/edt1"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:singleLine="true"
+                        android:cursorVisible="false"
                         android:lines="1"
+                        android:maxLength="1"
                         android:imeOptions="actionNext"
                         android:gravity="center"
                         android:hint="X"
@@ -66,13 +67,15 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-                        android:id="@+id/second_digit_EditText"
-                        android:inputType="number"
+                    <com.application.millipixels.expense_rocket.typeface.FontEditText
+                        android:inputType="numberPassword"
                         android:padding="12dp"
+                        android:id="@+id/edt2"
                         android:textSize="14sp"
+                        android:cursorVisible="false"
                         android:singleLine="true"
                         android:lines="1"
+                        android:maxLength="1"
                         android:imeOptions="actionNext"
                         android:gravity="center"
                         android:hint="X"
@@ -84,16 +87,18 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-                        android:id="@+id/third_digit_EditText"
-                        android:inputType="number"
+                    <com.application.millipixels.expense_rocket.typeface.FontEditText
+                        android:inputType="numberPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:singleLine="true"
                         android:lines="1"
+                        android:id="@+id/edt3"
                         android:imeOptions="actionNext"
                         android:gravity="center"
                         android:hint="X"
+                        android:cursorVisible="false"
+                        android:maxLength="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -103,9 +108,8 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
-                    <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-                        android:id="@+id/fourth_digit_EditText"
-                        android:inputType="number"
+                    <com.application.millipixels.expense_rocket.typeface.FontEditText
+                        android:inputType="numberPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:singleLine="true"
@@ -113,6 +117,9 @@
                         android:imeOptions="actionDone"
                         android:gravity="center"
                         android:hint="X"
+                        android:maxLength="1"
+                        android:cursorVisible="false"
+                        android:id="@+id/edt4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -126,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+                <com.application.millipixels.expense_rocket.typeface.FontsClassLight
                     android:textColor="@android:color/black"
                     android:textSize="14sp"
                     android:text="@string/not_received_otp"
@@ -134,17 +141,17 @@
                     android:layout_height="wrap_content" />
 
 
-                <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+                <com.application.millipixels.expense_rocket.typeface.FontsClassLight
                     android:layout_alignParentRight="true"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"
-
+                    android:id="@+id/txtResendOtp"
                     android:text="@string/resend_otp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
 
-            <com.example.millipixelsinteractive_031.em.typeface.FontButton
+            <com.application.millipixels.expense_rocket.typeface.FontButton
                 android:id="@+id/btnVerify"
 
                 android:layout_below="@+id/layout_resend_otp"
@@ -157,7 +164,7 @@
                 android:layout_width="180dp"
                 android:layout_height="wrap_content" />
 
-            <com.example.millipixelsinteractive_031.em.typeface.FontButton
+            <com.application.millipixels.expense_rocket.typeface.FontButton
                 android:layout_marginBottom="36dp"
                 android:layout_below="@+id/btnVerify"
                 android:layout_centerHorizontal="true"

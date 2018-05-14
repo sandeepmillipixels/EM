@@ -1,28 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">EM</string>
+    <string name="already_have_account">Already a Member?</string>
     <string name="skip">Skip</string>
+
+    <string name="app_name_tour"></string>
+
+    <string name="take_a_tour">TAKE THE TOUR</string>
+
+    <string name="intelligence_management">Intelligent Expense Management\nfor everyone</string>
+
+    <string name="error_not_valid_number">Enter the valid phone number to sign in!</string>
+    <string name="error_empty_number">You have not enter phone number.</string>
+    <string name="error_enter_otp">Enter the correct code to sign in!</string>
+    <string name="error_otp_not_enter">You have not enter any code.</string>
+
+
+    <string name="expense">Expense</string>
+    <string name="rocket">Rocket</string>
+    <string name="know_what_you_spend">Know what you spend!</string>
+    <string name="expense_rocket_enable_you_to">ExpenseRocket enable you to manage \nyour personal and business expenses in \na single place.it's the answer to your \nprayers!No,really!</string>
 
     <string name="login">Login</string>
 
+    <string name="where_is_the_receipt">Hey,Where is that\nreceipt from last\nweek?</string>
+    <string name="never_lose_a_receipt">Never lose a receipt with the ExpenseRocket\nShoebox - the single place to store all your\npersonal and business receipts. Access from\nanywhere. Anytime.</string>
+    <string name="anytime_anywhere_access">Anytime, Anywhere Access!</string>
 
+    <string name="mailed_datre_night">Mailed Date Night\n expenses to HR?</string>
+    <string name="never_mix_up">Never mix up your business and \n personal receipts.Manage everything in \n one place.</string>
+
+    <string name="did_not_received">Didn\'t receive the code?</string>
+
+    <string name="lets_get_started">ADD AN EXPENSE</string>
+
+    <string name="sign_in_with_your">Sign in with your mobile number!</string>
+
+    <string name="use_social_signin">Use Social Sign In?</string>
+
+    <string name="we_just_sent_otp">We just sent a OTP to your \n mobile number 93*** ***09.Enter the \n OTP here to sign in. </string>
+
+    <string name="trouble_in_signin">Trouble Signing In?</string>
+
+    <string name="where_does_all_money">Where does all my\nmoney go?</string>
+
+    <string name="did_i_mail">Did I mail date night\nexpenses to HR?</string>
+    <string name="oops_moment">Oops moments happen to all of us. With\nExpenseRocket, you’ll never mix up your\npersonal and business expenses. </string>
+
+    <string name="we_designed_experience">We designed ExpenseRocket to help you\nsee how you\'re spending your money and\nget control over your expenses.Building\nthat fortune shouldn\'t be hard!</string>
+
+
+    <string name="signin">Sign In</string>
     <string name="signup">Sign up</string>
     <string name="verify">Verify</string>
-    <string name="send_otp">Send OTP</string>
+    <string name="send_otp">Send CODE</string>
     <string name="change_number">Change Number</string>
     <string name="not_received_otp">Did not receive OTP?</string>
     <string name="resend_otp">Resend OTP</string>
-    <string name="enter_phone_email">Enter your Phone Number and Email</string>
+    <string name="enter_phone_email">Enter Your Email</string>
     <string name="enter_email">Enter Email</string>
     <string name="enter_phone">Enter Phone Number</string>
-    <string name="enter_your_phone">Enter Your Phone Number</string>
+    <string name="enter_your_phone">Enter Your Email</string>
     <string name="copyright">Copyrights 2018. All Rights Reserved.</string>
     <string name="verify_mobile">Verify Mobile Number</string>
     <string name="splashText">Keep eye on your \n every expense</string>
     <string name="wallet">Wallet</string>
     <string name="saving">Saving</string>
+    <string name="select_country">Select Country</string>
 
-    <string name="total_spending">Total Spendings Monthly</string>
+    <string name="view_my_dashboard">View My Dashboard</string>
+
+
+    <string name="twitter_status_fmt">Twitter User: %s</string>
+    <string name="twitter_title_text">Twitter Login</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+
+    <string name="total_spending">Total Monthly Expense</string>
+
+    <string name="total_spending2">Total Spending</string>
 
     <string name="monthly">Monthly</string>
     <string name="weekly">Weekly</string>
@@ -30,8 +86,10 @@
 
     <string name="save">Save</string>
 
+    <string name="expense_name">Expense Name</string>
     <string name="amount">Amount</string>
     <string name="category">Category</string>
+    <string name="choose_category">Choose Category</string>
     <string name="notes">Notes(Optional)</string>
     <string name="date">Date</string>
     <string name="thumbnail">Add Slips</string>
@@ -49,9 +107,21 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="action_my_account">My Account</string>
     <string name="action_settings">Settings</string>
 
+    <string name="shoebox_gallery">ShoeBox</string>
+
     <string name="add_expense">Add Expense</string>
+
+    <string name="add_an_expense">Add an Expense</string>
+
+    <string name="learn_more">Learn more about <b>ExpenseRocket</b></string>
+
+    <string name="shoebox">ShoeBox</string>
+    <string name="filter">Filter</string>
+
+    <string name="crop_image">Edit Slip</string>
 
     <string-array name="categoryArray">
         <item>Food</item>
@@ -63,7 +133,34 @@
 
     </string-array>
 
+    <string name="title_activity_tabbed">Expense Rocket</string>
+
+    <string name="backup">Backup &amp; Restore</string>
+    <string name="categories">Categories</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pick_image_intent_text">Choose an image</string>
 
+
+    <string name="twitter_consumer_key">fXVRs7GGMfkPRgo2GPXoCf9QM</string>
+    <string name="twitter_consumer_secret">vMcvanrynsKJwfX6Tq49Sjz5bsgJEUe62dah7YjC3rvoxk3Tf3</string>
+
+    <!--<string name="facebook_app_id">569502020097138</string>-->
+    <string name="facebook_app_id">602414690137667</string>
+    <string name="fb_login_protocol_scheme">fb569502020097138</string>
+
+    <string name="server_client_id">726909209209-0se81flctvddlmjt1j33kv53m1fjogcf.apps.googleusercontent.com</string>
+    <string name="title_activity_edit_image">EditImageActivity</string>
+
+    <string name="message_secret_key">gUCrznkTcnsHakR9vcp8hEyBhTMKXMO7uTtl19ei</string>
+    <string name="message_client_id">1</string>
+
+    <string name="title_activity_camera">CameraActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="picture">Picture</string>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <!--<string name="server_client_id">AIzaSyBDpmXxChzca4tWBaLeIZWOKrnhMOeSFqo</string>-->
 </resources>
