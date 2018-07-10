@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.millipixelsinteractive_031.em.R;
+import com.example.millipixelsinteractive_031.em.model.ExpenseCategory;
 
 
 import java.util.List;
@@ -23,9 +24,8 @@ import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
 
-    List<String> arrayList;
+    List<ExpenseCategory> arrayList;
     String symbol;
-
     Context context;
     private final OnItemClickListener listener;
 
@@ -40,11 +40,10 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
             catTextview = view.findViewById(R.id.catTextview);
             catImageView=view.findViewById(R.id.catImageView);
             cat_layout=view.findViewById(R.id.cat_layout);
-
         }
     }
 
-    public CategoryAdapter(List<String> arrayList, Context context,OnItemClickListener listener) {
+    public CategoryAdapter(List<ExpenseCategory> arrayList, Context context, OnItemClickListener listener) {
         this.arrayList = arrayList;
         this.context = context;
         this.listener=listener;
@@ -61,48 +60,32 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
 
-        holder.catTextview.setText(arrayList.get(position));
+        holder.catTextview.setText(arrayList.get(position).getCatName());
 
-        String catName=arrayList.get(position);
-
+        String catName=arrayList.get(position).getCatName();
 
         if(catName!=null && catName.equalsIgnoreCase("Food")){
-
             holder.catImageView.setImageResource(R.drawable.ic_heart);
             holder.cat_layout.setBackgroundColor(Color.parseColor("#fcf7f7"));
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("Grocery")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#f0f7fb"));
             holder.catImageView.setImageResource(R.drawable.ic_groceries);
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("Traveling")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#fcf7ec"));
-
             holder.catImageView.setImageResource(R.drawable.ic_luggage);
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("Fashion")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#fcf7f7"));
-
             holder.catImageView.setImageResource(R.drawable.ic_shirt);
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("Entertainment")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#f6f7f9"));
-
             holder.catImageView.setImageResource(R.drawable.ic_tickets);
-
         }
         else if(catName!=null && catName.equalsIgnoreCase("HealthCare")){
-
             holder.cat_layout.setBackgroundColor(Color.parseColor("#fcf7f7"));
-
             holder.catImageView.setImageResource(R.drawable.ic_heart);
 
         }
@@ -114,12 +97,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
                 }
             }
         });
-
-
-
-
-
-
     }
 
     @Override

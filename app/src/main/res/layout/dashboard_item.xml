@@ -7,7 +7,7 @@
     <RelativeLayout
         android:id="@+id/layout_dashboard_item"
         android:layout_width="wrap_content"
-        android:layout_margin="@dimen/margin_10_dp"
+        android:layout_marginTop="@dimen/margin_5_dp"
         android:padding="@dimen/padding_10dp"
         android:layout_height="@dimen/margin_80_dp">
 
@@ -35,7 +35,7 @@
             android:id="@+id/categoryNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/categoryTextView"
+
             android:layout_marginLeft="14dp"
             android:layout_marginStart="14dp"
             android:layout_toEndOf="@+id/card_view"
@@ -43,50 +43,42 @@
             android:text="jdgau"
             android:textColor="@color/black" />
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
-            android:id="@+id/categoryTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/categoryNameTextView"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/categoryNameTextView"
-            android:layout_marginBottom="10dp"
-            android:text="jkfg" />
-
-
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
-            android:id="@+id/dateTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/categoryTextView"
-            android:layout_alignBottom="@+id/categoryTextView"
-            android:layout_toEndOf="@+id/categoryNameTextView"
-            android:layout_toRightOf="@+id/categoryNameTextView"
-            android:layout_marginLeft="@dimen/margin_10_dp"
-            android:text="jksdsdsdfg" />
-
         <com.example.millipixelsinteractive_031.em.typeface.FontsClass
             android:id="@+id/amountTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/statusTextView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginEnd="11dp"
             android:layout_marginRight="11dp"
-            android:text="fkjgjgf"
-            android:textColor="@color/black" />
+            android:text="$3.50"
+            />
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
-            android:id="@+id/statusTextView"
+        <SeekBar
+            android:layout_marginTop="14dp"
+            android:progress="30"
+            android:thumb="@null"
+            android:focusableInTouchMode="false"
+            android:layout_toLeftOf="@+id/percentTextView"
+            android:layout_below="@+id/categoryNameTextView"
+            android:layout_toRightOf="@+id/card_view"
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+            android:id="@+id/percentTextView"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/amountTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/dateTextView"
-            android:layout_alignBottom="@+id/dateTextView"
-            android:layout_alignEnd="@+id/amountTextView"
-            android:layout_alignRight="@+id/amountTextView"
-            android:text="Pending" />
-
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:text="$3.50"
+            />
     </RelativeLayout>
 
 

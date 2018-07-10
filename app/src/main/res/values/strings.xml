@@ -21,8 +21,11 @@
     <string name="splashText">Keep eye on your \n every expense</string>
     <string name="wallet">Wallet</string>
     <string name="saving">Saving</string>
+    <string name="select_country">Select Country</string>
 
-    <string name="total_spending">Total Spendings Monthly</string>
+    <string name="total_spending">Total Monthly Expense</string>
+
+    <string name="total_spending2">Total Spending</string>
 
     <string name="monthly">Monthly</string>
     <string name="weekly">Weekly</string>
@@ -30,8 +33,10 @@
 
     <string name="save">Save</string>
 
+    <string name="expense_name">Expense Name</string>
     <string name="amount">Amount</string>
     <string name="category">Category</string>
+    <string name="choose_category">Choose Category</string>
     <string name="notes">Notes(Optional)</string>
     <string name="date">Date</string>
     <string name="thumbnail">Add Slips</string>
@@ -49,9 +54,15 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="action_my_account">My Account</string>
     <string name="action_settings">Settings</string>
 
     <string name="add_expense">Add Expense</string>
+
+    <string name="shoebox">ShoeBox</string>
+    <string name="filter">Filter</string>
+
+    <string name="crop_image">Edit Slip</string>
 
     <string-array name="categoryArray">
         <item>Food</item>
@@ -63,7 +74,11 @@
 
     </string-array>
 
+    <string name="title_activity_tabbed">Expense Rocket</string>
+
+    <string name="backup">Backup &amp; Restore</string>
+    <string name="categories">Categories</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="pick_image_intent_text">Choose an image</string>
 </resources>

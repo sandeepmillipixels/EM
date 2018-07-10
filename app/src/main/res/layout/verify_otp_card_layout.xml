@@ -48,13 +48,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-
-                        android:id="@+id/first_digit_EditText"
-                        android:inputType="number"
+                        android:inputType="numberPassword"
+                        android:id="@+id/edt1"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:singleLine="true"
                         android:lines="1"
+                        android:maxLength="1"
                         android:imeOptions="actionNext"
                         android:gravity="center"
                         android:hint="X"
@@ -67,12 +67,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-                        android:id="@+id/second_digit_EditText"
-                        android:inputType="number"
+                        android:inputType="numberPassword"
                         android:padding="12dp"
+                        android:id="@+id/edt2"
                         android:textSize="14sp"
                         android:singleLine="true"
                         android:lines="1"
+                        android:maxLength="1"
                         android:imeOptions="actionNext"
                         android:gravity="center"
                         android:hint="X"
@@ -85,15 +86,16 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-                        android:id="@+id/third_digit_EditText"
-                        android:inputType="number"
+                        android:inputType="numberPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:singleLine="true"
                         android:lines="1"
+                        android:id="@+id/edt3"
                         android:imeOptions="actionNext"
                         android:gravity="center"
                         android:hint="X"
+                        android:maxLength="1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -104,8 +106,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
                     <com.example.millipixelsinteractive_031.em.typeface.FontEditText
-                        android:id="@+id/fourth_digit_EditText"
-                        android:inputType="number"
+                        android:inputType="numberPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:singleLine="true"
@@ -113,6 +114,8 @@
                         android:imeOptions="actionDone"
                         android:gravity="center"
                         android:hint="X"
+                        android:maxLength="1"
+                        android:id="@+id/edt4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
@@ -138,7 +141,7 @@
                     android:layout_alignParentRight="true"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"
-
+                    android:id="@+id/txtResendOtp"
                     android:text="@string/resend_otp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />

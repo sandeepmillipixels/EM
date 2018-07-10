@@ -18,35 +18,88 @@
         android:padding="@dimen/padding_15_dp"
         android:layout_height="@dimen/dashboard_amount_layout_height">
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClass
-            android:layout_centerVertical="true"
-            android:id="@+id/total_spending_title"
-            android:layout_width="match_parent"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_18dp"
-            android:text="@string/total_spending"
-            android:layout_height="wrap_content" />
 
-        <com.example.millipixelsinteractive_031.em.typeface.FontsClass
-            android:layout_below="@+id/total_spending_title"
-            android:id="@+id/total_amountTextView"
-            android:textColor="@color/white"
-            android:text="$3000"
-            android:textSize="@dimen/size_20dp"
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+          />
+
 
 
     </RelativeLayout>
 
+
+   <RelativeLayout
+       android:id="@+id/amount_layout"
+       android:background="@color/blue"
+       android:layout_width="match_parent"
+      android:paddingLeft="@dimen/padding_15_dp"
+       android:paddingTop="@dimen/padding_15_dp"
+       android:paddingRight="@dimen/padding_15_dp"
+       android:layout_below="@+id/dashboard_total_amount_layout"
+       android:layout_height="wrap_content">
+
+       <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+           android:id="@+id/total_spending_title"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentStart="true"
+           android:layout_alignParentTop="true"
+           android:text="@string/total_spending"
+           android:textColor="@color/white"
+           android:textSize="@dimen/size_17dp" />
+
+       <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+           android:layout_below="@+id/total_spending_title"
+           android:id="@+id/txtTotalAmount"
+           android:textColor="@color/white"
+           android:text="$3000"
+           android:textSize="@dimen/size_20dp"
+           android:layout_marginTop="@dimen/margin_10_dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+       <com.example.millipixelsinteractive_031.em.typeface.FontsClassLight
+           android:id="@+id/textView3"
+           android:layout_width="match_parent"
+          android:gravity="center"
+           android:layout_height="wrap_content"
+           android:layout_alignParentTop="true"
+           android:layout_toEndOf="@+id/total_spending_title"
+           android:layout_toRightOf="@+id/total_spending_title"
+           android:text="Budget"
+           android:textColor="@color/white"
+           android:textSize="@dimen/size_17dp" />
+
+       <com.example.millipixelsinteractive_031.em.typeface.FontsClass
+           android:id="@+id/textView4"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/textView3"
+           android:layout_alignStart="@+id/textView3"
+           android:layout_below="@+id/textView3"
+           android:text="$4000"
+           android:gravity="center"
+           android:layout_marginTop="@dimen/margin_10_dp"
+           android:textColor="@color/white"
+           android:textSize="@dimen/size_20dp" />
+
+
+   </RelativeLayout>
+
+
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_below="@+id/dashboard_total_amount_layout"
+        android:layout_below="@+id/amount_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue"
+        android:paddingTop="@dimen/padding_10dp"
         app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorColor="@color/greenFloating"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/white"
         app:tabMode="scrollable"

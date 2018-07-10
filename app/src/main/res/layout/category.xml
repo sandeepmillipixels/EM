@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.millipixelsinteractive_031.em.dashboard.Dashboard">
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -11,25 +18,15 @@
         android:background="@drawable/app_gradient"
         android:layout_height="@dimen/topbar_height">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_5_dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_groceries"
-            android:id="@+id/imageView3" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="@drawable/app_gradient"
+            android:layout_height="@dimen/topbar_height">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/imageView3"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/size_18dp"
-            android:text="@string/category" />
+
+
+        </android.support.v7.widget.Toolbar>
 
 
     </RelativeLayout>
@@ -52,3 +49,13 @@
 
 
 </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/greenFloating"
+        android:src="@drawable/ic_add_white_24dp"
+        />
+</android.support.design.widget.CoordinatorLayout>
