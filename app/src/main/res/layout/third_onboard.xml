@@ -13,7 +13,7 @@
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:background="@color/onboarding_background"
+        android:background="@color/transparent"
         android:layout_height="match_parent">
 
         <RelativeLayout
@@ -36,7 +36,7 @@
                 android:layout_alignEnd="@+id/textView2"
                 android:layout_alignParentTop="true"
                 android:layout_alignRight="@+id/textView2"
-                android:textColor="@color/white"
+                android:textColor="@color/black_87"
                 android:gravity="center|left"
                 android:layout_marginLeft="@dimen/margin_30_dp"
                 android:text="@string/where_does_all_money"
@@ -52,7 +52,7 @@
                 android:textSize="@dimen/size_14dp"
                 android:layout_marginLeft="@dimen/margin_60_dp"
                 android:layout_marginTop="@dimen/margin_8_dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black_54"
                 android:gravity="center|left"
                 android:text="@string/we_designed_experience" />
         </RelativeLayout>
@@ -63,7 +63,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/margin_40_dp"
-        android:textColor="@color/button_text_color"
+        android:textColor="@color/white"
         android:text="@string/add_an_expense"
         android:paddingLeft="@dimen/padding_40dp"
         android:paddingRight="@dimen/padding_40dp"

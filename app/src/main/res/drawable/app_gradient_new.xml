@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
 
-    <gradient
-        android:angle="90"
+    <!--<gradient-->
+        <!--android:angle="90"-->
 
-        android:endColor="@color/colorPrimary_er"
-        android:startColor="@color/colorSecondary_er"
+        <!--android:endColor="@color/colorPrimary_er"-->
+        <!--android:startColor="@color/colorSecondary_er"-->
+        <!--android:type="linear" />-->
+
+    <!--<corners-->
+        <!--android:radius="0dp"/>-->
+
+    <gradient
+        android:angle="135"
+
+        android:endColor="#FF742F"
+        android:startColor="#AE236B"
         android:type="linear" />
 
     <corners

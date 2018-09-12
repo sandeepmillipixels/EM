@@ -14,7 +14,7 @@ public class NetworkClient {
 
     public static Retrofit retrofit;
 
-    public static final String BASE_URL = "http://10.0.1.76/stable/expense-rocket/public/api/";
+    public static final String BASE_URL = "http://10.0.1.76/expense-rocket/public/api/";
 
 
     public static Retrofit getRetrofit(){

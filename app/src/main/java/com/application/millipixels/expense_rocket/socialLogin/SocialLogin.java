@@ -1,6 +1,7 @@
 package com.application.millipixels.expense_rocket.socialLogin;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,15 @@ import com.application.millipixels.expense_rocket.R;
 import com.application.millipixels.expense_rocket.dashboard.Dashboard;
 import com.application.millipixels.expense_rocket.login_signup.LoginSignupActivity;
 import com.application.millipixels.expense_rocket.prefs.PrefrenceClass;
+import com.application.millipixels.expense_rocket.utils.Constants;
+import com.application.millipixels.expense_rocket.utils.Utilities;
+import com.application.millipixels.expense_rocket.utils.Utility;
+import com.application.millipixels.expense_rocket.verify_otp.VerifyOtpActity;
+import com.application.millipixels.models.LoginResponse;
+import com.application.millipixels.models.RegisterResponse;
+import com.application.millipixels.network.NetworkClient;
+import com.application.millipixels.network.NetworkInterface;
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -37,6 +47,10 @@ import org.json.JSONObject;
 
 import java.util.Arrays;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class SocialLogin {
 
     Activity activity;
@@ -57,6 +71,11 @@ public class SocialLogin {
 
     GoogleApiClient mGoogleApiClient;
 
+    public static String userName;
+    public static String userEmail;
+    public static String userPhoto_url;
+    String social_token;
+
 
     ///////////////////////////Facebook//////////////////////////////
     public SocialLogin(CallbackManager callbackManager, LoginButton loginButton, Activity activity){
@@ -65,7 +84,7 @@ public class SocialLogin {
         this.loginButton=loginButton;
         this.activity=activity;
 
-        initFacebook();
+        initFacebook(activity);
 
 
     }
@@ -119,7 +138,7 @@ public class SocialLogin {
 
 
 
-    public void initFacebook(){
+    public void initFacebook(final Context context){
         loginButton.setReadPermissions(Arrays.asList("public_profile", "email"));
         callbackManager = CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
@@ -141,6 +160,11 @@ public class SocialLogin {
                 Log.e("","");
             }
         });
+
+
+
+
+
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
@@ -154,23 +178,28 @@ public class SocialLogin {
                                     public void onCompleted(JSONObject object, GraphResponse response) {
                                         Log.v("LoginActivity", response.toString());
 
-                                        // Application code
+
                                         try {
-                                            String email = object.getString("email");
+                                            userEmail = object.getString("email");
+                                            social_token = String.valueOf(AccessToken.getCurrentAccessToken());
 
 
                                             PrefrenceClass.saveInSharedPrefrence(activity,"login",true);
                                             PrefrenceClass.saveInSharedPrefrence(activity,"fb",true);
 
-                                            String name = object.getString("name"); // 01/31/1980 format
-                                            Toast.makeText(activity,"Welcome "+name,Toast.LENGTH_LONG).show();
+                                            userPhoto_url=object.getString("picture");
+
+                                            userName = object.getString("name"); // 01/31/1980 format
+                                            Toast.makeText(activity,"Welcome "+userName,Toast.LENGTH_LONG).show();
                                             LoginManager.getInstance().logOut();
 
-                                            callNextActivity();
+//                                            callNextActivity();
+                                            postSocialLoginData(context,"facebook",userName,userEmail,userPhoto_url,social_token);
 
                                         } catch (JSONException e) {
                                             e.printStackTrace();
                                         }
+
 
                                     }
                                 });
@@ -200,6 +229,52 @@ public class SocialLogin {
     public CallbackManager callbackManager(){
 
         return callbackManager;
+    }
+
+
+    public void postSocialLoginData(final Context context, final String loginType,String name,String email,String photoUri,String token){
+        // Application code
+
+        if(userEmail==null && userName==null && social_token==null){
+            userEmail=email;
+            userName=name;
+            social_token=token;
+
+        }
+
+        if(userPhoto_url==null ){
+            userPhoto_url=photoUri;
+        }
+
+        Call<RegisterResponse> call = NetworkClient.getRetrofit().create(NetworkInterface.class).registeration(Constants.CLIENT_ID,Constants.CLIENT_SECRET, Utility.deviceID(context),"deviceToken",Utility.deviceType(),userName,userEmail,loginType,social_token,"");
+
+        call.enqueue(new Callback<RegisterResponse>() {
+            @Override
+            public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+
+                if(response.isSuccessful()){
+                    if(loginType!=null && loginType.equals("google")){
+                        PrefrenceClass.saveInSharedPrefrence(context,"gmail",true);
+                    }else if(loginType!=null && loginType.equals("twitter")){
+                        PrefrenceClass.saveInSharedPrefrence(context,"twitter",true);
+                    }
+
+                    Log.d("Request Success",response.body().getData().getToken());
+
+                    userEmail=null;
+                    userName=null;
+                    social_token=null;
+
+                    callNextActivity();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<RegisterResponse> call, Throwable t) {
+             Log.d("Request Fail",t.getLocalizedMessage());
+            }
+        });
+
     }
 
     public void initGplus(){
@@ -243,6 +318,7 @@ public class SocialLogin {
 
     public void callNextActivity(){
 
+        PrefrenceClass.saveInSharedPrefrence(activity,"login",true);
         Intent intent = new Intent(activity, Dashboard.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         activity.startActivity(intent);
