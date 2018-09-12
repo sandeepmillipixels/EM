@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 
 import java.text.ParseException;
@@ -166,5 +167,18 @@ public class Utility {
      */
     public static boolean isMediaDocument(Uri uri) {
         return "com.android.providers.media.documents".equals(uri.getAuthority());
+    }
+
+    public static String deviceID(Context context){
+         String android_id = Settings.Secure.getString(context.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+
+         return android_id;
+    }
+
+    public static String deviceType(){
+        String deviceType="android";
+
+        return deviceType;
     }
 }

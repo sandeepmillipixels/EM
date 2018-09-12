@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
+    android:background="@drawable/app_gradient_new"
 
     android:layout_height="match_parent">
 
@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:padding="@dimen/padding_15_dp"
-        android:background="@color/white"
+
         android:gravity="center"
         android:layout_height="wrap_content">
 

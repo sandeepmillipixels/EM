@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/app_gradient_new"
     android:layout_height="match_parent">
 
 
@@ -126,7 +126,7 @@
                 android:id="@+id/add_an_expense_button_tour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/button_text_color"
+                android:textColor="@color/orange"
                 android:layout_alignTop="@+id/linearLayout2"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center|left"

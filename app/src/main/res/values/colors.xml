@@ -23,10 +23,15 @@
     <color name="line_color">#339B9B9B</color>
 
 
+    <!--<color name="colorSelect">@color/mb_gray</color>-->
+    <!--<color name="colorPrimary">#57479A</color>-->
+    <!--<color name="colorSecondary">#57479A</color>-->
+    <!--<color name="colorPrimaryDark">#57479A</color>-->
+    <!--<color name="colorAccent">#FFFFFF</color> -->
     <color name="colorSelect">@color/mb_gray</color>
-    <color name="colorPrimary">#57479A</color>
-    <color name="colorSecondary">#57479A</color>
-    <color name="colorPrimaryDark">#57479A</color>
+    <color name="colorPrimary">#FF742F</color>
+    <color name="colorSecondary">#FF742F</color>
+    <color name="colorPrimaryDark">#FF742F</color>
     <color name="colorAccent">#FFFFFF</color>
 
     <!--<color name="colorPrimary">#292788</color>-->
@@ -72,6 +77,11 @@
     <color name="onboarding_background">#4A90E2</color>
 
     <color name="button_text_color">#5C4293</color>
+
+    <color name="button_color">#4AC0E2</color>
+
+    <color name="orange">#FF742F</color>
+    <color name="magenta">#AE236B</color>
 
     <color name="white">#ffffff</color>
 

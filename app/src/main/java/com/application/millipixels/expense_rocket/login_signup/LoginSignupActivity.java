@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -38,6 +39,10 @@ import com.application.millipixels.network.NetworkClient;
 import com.application.millipixels.network.NetworkInterface;
 
 import com.application.millipixels.ui.view.LoginViewInterface;
+import com.facebook.AccessToken;
+import com.google.android.gms.auth.GoogleAuthException;
+import com.google.android.gms.auth.GoogleAuthUtil;
+import com.google.android.gms.auth.UserRecoverableAuthException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
@@ -150,6 +155,14 @@ public class LoginSignupActivity extends AppCompatActivity {
 
     SocialLogin socialLogin;
 
+    String name;
+     String email;
+    String photo_url;
+
+    String googleToken=null;
+
+    String accountName;
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -202,10 +215,7 @@ public class LoginSignupActivity extends AppCompatActivity {
 
     @OnClick(R.id.imgTwiiter)
     public void onTwiiterTapped(){
-        socialLogin=new SocialLogin(this,callbackManager,mLoginButton);
-        socialLogin.initTwitter();
-        callbackManager=socialLogin.callbackManager();
-
+        socialLoginTwitter();
         mLoginButton.performClick();
     }
 
@@ -213,19 +223,14 @@ public class LoginSignupActivity extends AppCompatActivity {
     @OnClick(R.id.imgFb)
     public void onFbTapped(){
 
-        socialLogin=new SocialLogin(callbackManager,loginButton,this);
-        socialLogin.initFacebook();
-        callbackManager=socialLogin.callbackManager();
+        socialLoginFacebook();
 
         loginButton.performClick();
     }
     @OnClick(R.id.imgGPlus)
     public void onGPlusTapped(){
 
-        socialLogin=new SocialLogin(this,mGoogleSignInClient,signInButton);
-        socialLogin.initGplus();
-        mGoogleSignInClient=socialLogin.GoogleSignInClient();
-
+        socialLoginGmail();
         signIn();
     }
 
@@ -234,15 +239,19 @@ public class LoginSignupActivity extends AppCompatActivity {
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
-        }else {
+        }else if (requestCode == 140) {
+            mLoginButton.onActivityResult(requestCode, resultCode, data);
+
+        }
+
+        else {
             if (callbackManager != null) {
                 callbackManager.onActivityResult(requestCode, resultCode, data);
+
             }
         }
 
         // Pass the activity result to the Twitter login button.
-        if (requestCode == 140)
-        mLoginButton.onActivityResult(requestCode, resultCode, data);
 
         super.onActivityResult(requestCode, resultCode, data);
     }
@@ -267,11 +276,23 @@ public class LoginSignupActivity extends AppCompatActivity {
 
     private void updateUIGoogle(@Nullable GoogleSignInAccount account) {
         if (account != null) {
-            Toast.makeText(LoginSignupActivity.this,"Welcome "+account.getDisplayName(),Toast.LENGTH_LONG).show();
 
-            PrefrenceClass.saveInSharedPrefrence(this,"gmail",true);
+ name=account.getDisplayName();
+ email=account.getEmail();
+ photo_url=String.valueOf(account.getPhotoUrl());
 
-            callNextActivity();
+
+ new RetrieveTokenTask().execute(email);
+ 
+
+
+
+//            Toast.makeText(LoginSignupActivity.this,"Welcome "+account.getDisplayName(),Toast.LENGTH_LONG).show();
+//
+//            PrefrenceClass.saveInSharedPrefrence(this,"gmail",true);
+
+
+//            callNextActivity();
 
         }
     }
@@ -401,10 +422,16 @@ public class LoginSignupActivity extends AppCompatActivity {
         if (user != null) {
 
             String email=user.getEmail();
+            String name=user.getDisplayName();
+            String photoUri=String.valueOf(user.getPhotoUrl());
+            String token=user.getUid();
+            socialLoginTwitter();
 
-            PrefrenceClass.saveInSharedPrefrence(this,"login",true);
-
-            callNextActivity();
+            socialLogin.postSocialLoginData(this,"twitter",name,email,photoUri,token);
+//
+//            PrefrenceClass.saveInSharedPrefrence(this,"login",true);
+//
+//            callNextActivity();
 
         }
     }
@@ -473,6 +500,35 @@ public class LoginSignupActivity extends AppCompatActivity {
 
 
 
+    private class RetrieveTokenTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            String accountName = params[0];
+            String scopes = "oauth2:profile email";
+
+            try {
+                googleToken = GoogleAuthUtil.getToken(getApplicationContext(), accountName, scopes);
+            } catch (IOException e) {
+                Log.e(TAG, e.getMessage());
+            } catch (UserRecoverableAuthException e) {
+
+            } catch (GoogleAuthException e) {
+                Log.e(TAG, e.getMessage());
+            }
+            return googleToken;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            socialLoginGmail();
+            socialLogin.postSocialLoginData(LoginSignupActivity.this,"google",name,email,photo_url,googleToken);
+
+        }
+    }
+
+
 
     public void callNextActivity(){
 
@@ -482,5 +538,26 @@ public class LoginSignupActivity extends AppCompatActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
+    }
+
+    public void socialLoginGmail(){
+        socialLogin=new SocialLogin(this,mGoogleSignInClient,signInButton);
+        socialLogin.initGplus();
+        mGoogleSignInClient=socialLogin.GoogleSignInClient();
+    }
+
+
+    public void socialLoginTwitter(){
+        socialLogin=new SocialLogin(this,callbackManager,mLoginButton);
+        socialLogin.initTwitter();
+        callbackManager=socialLogin.callbackManager();
+
+    }
+
+
+    public void socialLoginFacebook(){
+        socialLogin=new SocialLogin(callbackManager,loginButton,this);
+       // socialLogin.initFacebook(this);
+        callbackManager=socialLogin.callbackManager();
     }
 }
